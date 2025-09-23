@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**profile** | [**V1SoftwareAutoUpgradeDefaultGet200ResponseProfile**](V1SoftwareAutoUpgradeDefaultGet200ResponseProfile.md) |  | [optional] 
+**details** | [**V1SoftwareAutoUpgradeDefaultGet200ResponseDetails**](V1SoftwareAutoUpgradeDefaultGet200ResponseDetails.md) |  | [optional] 
 **release** | **str** |  | [optional] 
 
 ## Example

@@ -6,7 +6,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **conversation_list** | [**List[V2AssistantGetConversationsPost200ResponseConversationListInner]**](V2AssistantGetConversationsPost200ResponseConversationListInner.md) |  | [optional] 
-**enable_context_history** | **bool** |  | [optional] 
 
 ## Example
 
