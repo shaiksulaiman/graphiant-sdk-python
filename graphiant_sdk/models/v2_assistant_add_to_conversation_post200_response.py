@@ -36,8 +36,7 @@ class V2AssistantAddToConversationPost200Response(BaseModel):
     response_text: Optional[StrictStr] = Field(default=None, alias="responseText")
     response_timestamp: Optional[StrictInt] = Field(default=None, alias="responseTimestamp")
     response_type: Optional[StrictStr] = Field(default=None, alias="responseType")
-    visualization_summary: Optional[StrictStr] = Field(default=None, alias="visualizationSummary")
-    __properties: ClassVar[List[str]] = ["conversationId", "dataframeDictionary", "originalQuestion", "responseId", "responseLanguage", "responseText", "responseTimestamp", "responseType", "visualizationSummary"]
+    __properties: ClassVar[List[str]] = ["conversationId", "dataframeDictionary", "originalQuestion", "responseId", "responseLanguage", "responseText", "responseTimestamp", "responseType"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -107,8 +106,7 @@ class V2AssistantAddToConversationPost200Response(BaseModel):
             "responseLanguage": obj.get("responseLanguage"),
             "responseText": obj.get("responseText"),
             "responseTimestamp": obj.get("responseTimestamp"),
-            "responseType": obj.get("responseType"),
-            "visualizationSummary": obj.get("visualizationSummary")
+            "responseType": obj.get("responseType")
         })
         return _obj
 
