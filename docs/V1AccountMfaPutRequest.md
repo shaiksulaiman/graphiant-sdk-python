@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **phone_number** | **str** |  | [optional] 
-**type** | **str** |  | [optional] 
+**type** | **str** |  (required) | 
 
 ## Example
 

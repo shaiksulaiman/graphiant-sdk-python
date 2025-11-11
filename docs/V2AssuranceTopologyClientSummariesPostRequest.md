@@ -8,10 +8,10 @@ Name | Type | Description | Notes
 **app_name** | **str** |  | [optional] 
 **app_server_key** | **str** |  | [optional] 
 **bucket_id** | **str** |  | [optional] 
-**filter** | [**V2AssuranceTopologyClientSessionsPostRequestFilter**](V2AssuranceTopologyClientSessionsPostRequestFilter.md) |  | [optional] 
+**filter** | [**AssuranceTopologyFilter**](AssuranceTopologyFilter.md) |  | [optional] 
 **flex_algo_id** | **int** |  | [optional] 
 **site_id** | **int** |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**time_window** | [**AssuranceTimeWindow**](AssuranceTimeWindow.md) |  | [optional] 
 
 ## Example
 

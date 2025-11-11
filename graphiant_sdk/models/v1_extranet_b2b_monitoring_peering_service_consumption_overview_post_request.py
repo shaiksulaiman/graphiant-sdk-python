@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.statsmon_time_window import StatsmonTimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -29,11 +29,11 @@ class V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest(BaseMo
     """ # noqa: E501
     customer_name: Optional[StrictStr] = Field(default=None, alias="customerName")
     flipped_view: Optional[StrictBool] = Field(default=None, alias="flippedView")
-    id: Optional[StrictInt] = None
+    id: Optional[StrictInt] = Field(default=None, description="the id associated with an entity - consumer_id for consumer, and service_id for the producer/service")
     is_b2_b: Optional[StrictBool] = Field(default=None, alias="isB2B")
     is_provider: Optional[StrictBool] = Field(default=None, alias="isProvider")
     site_id: Optional[StrictInt] = Field(default=None, alias="siteId")
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    time_window: Optional[StatsmonTimeWindow] = Field(default=None, alias="timeWindow")
     vrf_id: Optional[StrictInt] = Field(default=None, alias="vrfId")
     __properties: ClassVar[List[str]] = ["customerName", "flippedView", "id", "isB2B", "isProvider", "siteId", "timeWindow", "vrfId"]
 
@@ -97,7 +97,7 @@ class V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest(BaseMo
             "isB2B": obj.get("isB2B"),
             "isProvider": obj.get("isProvider"),
             "siteId": obj.get("siteId"),
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None,
+            "timeWindow": StatsmonTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None,
             "vrfId": obj.get("vrfId")
         })
         return _obj

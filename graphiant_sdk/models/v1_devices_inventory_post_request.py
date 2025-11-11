@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_devices_inventory_get200_response_inventory_inner import V1DevicesInventoryGet200ResponseInventoryInner
+from graphiant_sdk.models.onboarding_hardware_inventory import OnboardingHardwareInventory
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class V1DevicesInventoryPostRequest(BaseModel):
     """
     V1DevicesInventoryPostRequest
     """ # noqa: E501
-    hardware_inventory_list: Optional[List[V1DevicesInventoryGet200ResponseInventoryInner]] = Field(default=None, alias="hardwareInventoryList")
+    hardware_inventory_list: Optional[List[OnboardingHardwareInventory]] = Field(default=None, alias="hardwareInventoryList")
     __properties: ClassVar[List[str]] = ["hardwareInventoryList"]
 
     model_config = ConfigDict(
@@ -88,7 +88,7 @@ class V1DevicesInventoryPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "hardwareInventoryList": [V1DevicesInventoryGet200ResponseInventoryInner.from_dict(_item) for _item in obj["hardwareInventoryList"]] if obj.get("hardwareInventoryList") is not None else None
+            "hardwareInventoryList": [OnboardingHardwareInventory.from_dict(_item) for _item in obj["hardwareInventoryList"]] if obj.get("hardwareInventoryList") is not None else None
         })
         return _obj
 

@@ -37,12 +37,12 @@ class TestV1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostRequest(un
             return V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostRequest(
                 id = 1234567891011,
                 is_provider = True,
-                time_window = graphiant_sdk.models._v2_notificationlist_post_request_time_window._v2_notificationlist_post_request_timeWindow(
+                time_window = graphiant_sdk.models.statsmon_time_window.statsmonTimeWindow(
                     bucket_size_sec = 123, 
-                    old_ts = graphiant_sdk.models._v1_alarm_history_get_200_response_history_inner_time._v1_alarm_history_get_200_response_history_inner_time(
+                    old_ts = graphiant_sdk.models.google_protobuf_timestamp.googleProtobufTimestamp(
                         nanos = 123, 
                         seconds = 1234567891011, ), 
-                    recent_ts = graphiant_sdk.models._v1_alarm_history_get_200_response_history_inner_time._v1_alarm_history_get_200_response_history_inner_time(
+                    recent_ts = graphiant_sdk.models.google_protobuf_timestamp.googleProtobufTimestamp(
                         nanos = 123, 
                         seconds = 1234567891011, ), )
             )

@@ -19,8 +19,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v2_assurance_topology_client_sessions_post_request_filter import V2AssuranceTopologyClientSessionsPostRequestFilter
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.assurance_time_window import AssuranceTimeWindow
+from graphiant_sdk.models.assurance_topology_filter import AssuranceTopologyFilter
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -32,10 +32,10 @@ class V2AssuranceTopologyClientSessionsPostRequest(BaseModel):
     app_server_key: Optional[StrictStr] = Field(default=None, alias="appServerKey")
     bucket_id: Optional[StrictStr] = Field(default=None, alias="bucketId")
     client_ip: Optional[StrictStr] = Field(default=None, alias="clientIp")
-    filter: Optional[V2AssuranceTopologyClientSessionsPostRequestFilter] = None
+    filter: Optional[AssuranceTopologyFilter] = None
     flex_algo_id: Optional[StrictInt] = Field(default=None, alias="flexAlgoId")
     site_id: Optional[StrictInt] = Field(default=None, alias="siteId")
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    time_window: Optional[AssuranceTimeWindow] = Field(default=None, alias="timeWindow")
     __properties: ClassVar[List[str]] = ["appName", "appServerKey", "bucketId", "clientIp", "filter", "flexAlgoId", "siteId", "timeWindow"]
 
     model_config = ConfigDict(
@@ -99,10 +99,10 @@ class V2AssuranceTopologyClientSessionsPostRequest(BaseModel):
             "appServerKey": obj.get("appServerKey"),
             "bucketId": obj.get("bucketId"),
             "clientIp": obj.get("clientIp"),
-            "filter": V2AssuranceTopologyClientSessionsPostRequestFilter.from_dict(obj["filter"]) if obj.get("filter") is not None else None,
+            "filter": AssuranceTopologyFilter.from_dict(obj["filter"]) if obj.get("filter") is not None else None,
             "flexAlgoId": obj.get("flexAlgoId"),
             "siteId": obj.get("siteId"),
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
+            "timeWindow": AssuranceTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
         })
         return _obj
 

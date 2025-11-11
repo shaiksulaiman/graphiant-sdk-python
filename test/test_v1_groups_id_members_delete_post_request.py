@@ -41,6 +41,9 @@ class TestV1GroupsIdMembersDeletePostRequest(unittest.TestCase):
             )
         else:
             return V1GroupsIdMembersDeletePostRequest(
+                member_ids = [
+                    'example string'
+                    ],
         )
         """
 

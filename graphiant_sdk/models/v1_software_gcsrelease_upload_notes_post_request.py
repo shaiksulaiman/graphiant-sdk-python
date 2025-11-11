@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_software_gcsrelease_upload_notes_post_request_details import V1SoftwareGcsreleaseUploadNotesPostRequestDetails
+from graphiant_sdk.models.upgrade_gcs_release_details import UpgradeGcsReleaseDetails
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class V1SoftwareGcsreleaseUploadNotesPostRequest(BaseModel):
     """
     V1SoftwareGcsreleaseUploadNotesPostRequest
     """ # noqa: E501
-    details: Optional[V1SoftwareGcsreleaseUploadNotesPostRequestDetails] = None
+    details: Optional[UpgradeGcsReleaseDetails] = None
     __properties: ClassVar[List[str]] = ["details"]
 
     model_config = ConfigDict(
@@ -84,7 +84,7 @@ class V1SoftwareGcsreleaseUploadNotesPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "details": V1SoftwareGcsreleaseUploadNotesPostRequestDetails.from_dict(obj["details"]) if obj.get("details") is not None else None
+            "details": UpgradeGcsReleaseDetails.from_dict(obj["details"]) if obj.get("details") is not None else None
         })
         return _obj
 

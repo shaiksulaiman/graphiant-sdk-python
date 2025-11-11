@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_gateways_put_request_details import V1GatewaysPutRequestDetails
+from graphiant_sdk.models.mana_v2_gateway_details import ManaV2GatewayDetails
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class V1GatewaysPostRequest(BaseModel):
     """
     V1GatewaysPostRequest
     """ # noqa: E501
-    details: Optional[V1GatewaysPutRequestDetails] = None
+    details: Optional[ManaV2GatewayDetails] = None
     __properties: ClassVar[List[str]] = ["details"]
 
     model_config = ConfigDict(
@@ -84,7 +84,7 @@ class V1GatewaysPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "details": V1GatewaysPutRequestDetails.from_dict(obj["details"]) if obj.get("details") is not None else None
+            "details": ManaV2GatewayDetails.from_dict(obj["details"]) if obj.get("details") is not None else None
         })
         return _obj
 

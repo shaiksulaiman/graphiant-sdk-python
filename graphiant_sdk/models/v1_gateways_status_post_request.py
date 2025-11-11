@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_gateways_status_post_request_device_info_inner import V1GatewaysStatusPostRequestDeviceInfoInner
+from graphiant_sdk.models.v1_gateways_status_post_request_device_info import V1GatewaysStatusPostRequestDeviceInfo
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class V1GatewaysStatusPostRequest(BaseModel):
     """
     V1GatewaysStatusPostRequest
     """ # noqa: E501
-    device_info: Optional[List[V1GatewaysStatusPostRequestDeviceInfoInner]] = Field(default=None, alias="deviceInfo")
+    device_info: Optional[List[V1GatewaysStatusPostRequestDeviceInfo]] = Field(default=None, alias="deviceInfo")
     id: Optional[StrictInt] = None
     status: Optional[StrictStr] = None
     support_status: Optional[StrictStr] = Field(default=None, alias="supportStatus")
@@ -91,7 +91,7 @@ class V1GatewaysStatusPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "deviceInfo": [V1GatewaysStatusPostRequestDeviceInfoInner.from_dict(_item) for _item in obj["deviceInfo"]] if obj.get("deviceInfo") is not None else None,
+            "deviceInfo": [V1GatewaysStatusPostRequestDeviceInfo.from_dict(_item) for _item in obj["deviceInfo"]] if obj.get("deviceInfo") is not None else None,
             "id": obj.get("id"),
             "status": obj.get("status"),
             "supportStatus": obj.get("supportStatus")

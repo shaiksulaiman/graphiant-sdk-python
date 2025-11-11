@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**configuration_metadata** | [**V1VersionPostRequestConfigurationMetadata**](V1VersionPostRequestConfigurationMetadata.md) |  | [optional] 
-**core** | [**V1DevicesDeviceIdConfigPutRequestCore**](V1DevicesDeviceIdConfigPutRequestCore.md) |  | [optional] 
+**configuration_metadata** | [**ManaV2ConfigurationMetadata**](ManaV2ConfigurationMetadata.md) |  | [optional] 
+**core** | [**ManaV2CoreDeviceConfig**](ManaV2CoreDeviceConfig.md) |  | [optional] 
 **description** | **str** |  | [optional] 
-**edge** | [**V1DevicesDeviceIdConfigPutRequestEdge**](V1DevicesDeviceIdConfigPutRequestEdge.md) |  | [optional] 
+**edge** | [**ManaV2EdgeDeviceConfig**](ManaV2EdgeDeviceConfig.md) |  | [optional] 
 **local_web_server_password** | **str** |  | [optional] 
 **replace** | **bool** |  | [optional] 
 

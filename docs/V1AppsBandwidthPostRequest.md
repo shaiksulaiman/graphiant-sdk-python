@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **dl_circuit_name** | **str** |  | [optional] 
 **is_dia** | **bool** |  | [optional] 
 **sla_class** | **str** |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**time_window** | [**StatsmonTimeWindow**](StatsmonTimeWindow.md) |  | [optional] 
 **ul_circuit_name** | **str** |  | [optional] 
 
 ## Example

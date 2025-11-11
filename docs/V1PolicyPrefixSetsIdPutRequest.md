@@ -6,9 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **str** |  | [optional] 
-**entries** | [**Dict[str, V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValueEntry]**](V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValueEntry.md) |  | [optional] 
+**entries** | [**Dict[str, V1PolicyPrefixSetsIdPutRequestEntry]**](V1PolicyPrefixSetsIdPutRequestEntry.md) |  | [optional] 
 **name** | **str** |  | [optional] 
-**prefix_set_entries** | [**Dict[str, V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValue]**](V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValue.md) |  | [optional] 
+**prefix_set_entries** | [**Dict[str, V1PolicyPrefixSetsIdPutRequestNullableEntry]**](V1PolicyPrefixSetsIdPutRequestNullableEntry.md) |  | [optional] 
 
 ## Example
 

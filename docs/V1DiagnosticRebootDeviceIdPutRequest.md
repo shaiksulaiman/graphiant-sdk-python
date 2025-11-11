@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**reason** | **str** |  | [optional] 
+**reason** | **str** | Reason for reboot (required) | 
 
 ## Example
 

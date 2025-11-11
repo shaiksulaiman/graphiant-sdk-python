@@ -19,8 +19,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_monitoring_circuits_bandwidth_post_request_selectors_inner import V1MonitoringCircuitsBandwidthPostRequestSelectorsInner
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.statsmon_v2_circuit_bandwidth_stats_selector import StatsmonV2CircuitBandwidthStatsSelector
+from graphiant_sdk.models.statsmon_v2_time_window import StatsmonV2TimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,8 +28,8 @@ class V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest(BaseModel):
     """
     V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest
     """ # noqa: E501
-    selectors: Optional[List[V1MonitoringCircuitsBandwidthPostRequestSelectorsInner]] = None
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    selectors: Optional[List[StatsmonV2CircuitBandwidthStatsSelector]] = None
+    time_window: Optional[StatsmonV2TimeWindow] = Field(default=None, alias="timeWindow")
     __properties: ClassVar[List[str]] = ["selectors", "timeWindow"]
 
     model_config = ConfigDict(
@@ -93,8 +93,8 @@ class V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "selectors": [V1MonitoringCircuitsBandwidthPostRequestSelectorsInner.from_dict(_item) for _item in obj["selectors"]] if obj.get("selectors") is not None else None,
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
+            "selectors": [StatsmonV2CircuitBandwidthStatsSelector.from_dict(_item) for _item in obj["selectors"]] if obj.get("selectors") is not None else None,
+            "timeWindow": StatsmonV2TimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
         })
         return _obj
 

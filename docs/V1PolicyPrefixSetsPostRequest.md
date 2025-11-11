@@ -6,10 +6,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **str** |  | [optional] 
-**entries** | [**Dict[str, V1PolicyPrefixSetsPostRequestEntriesValue]**](V1PolicyPrefixSetsPostRequestEntriesValue.md) |  | [optional] 
+**entries** | [**Dict[str, V1PolicyPrefixSetsPostRequestEntry]**](V1PolicyPrefixSetsPostRequestEntry.md) |  | [optional] 
 **mode** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
-**prefix_set_entries** | [**Dict[str, V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValueEntry]**](V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValueEntry.md) |  | [optional] 
+**prefix_set_entries** | [**Dict[str, V1PolicyPrefixSetsPostRequestPrefixSetEntry]**](V1PolicyPrefixSetsPostRequestPrefixSetEntry.md) |  | [optional] 
 
 ## Example
 

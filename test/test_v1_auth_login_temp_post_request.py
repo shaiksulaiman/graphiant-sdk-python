@@ -36,10 +36,14 @@ class TestV1AuthLoginTempPostRequest(unittest.TestCase):
         if include_optional:
             return V1AuthLoginTempPostRequest(
                 email = 'user@example.com',
-                temp_password = 'temp123456'
+                temp_password = 'temp123456',
+                match_id = 12345
             )
         else:
             return V1AuthLoginTempPostRequest(
+                email = 'user@example.com',
+                temp_password = 'temp123456',
+                match_id = 12345,
         )
         """
 

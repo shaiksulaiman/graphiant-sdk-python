@@ -36,17 +36,17 @@ class TestV1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest(unittest.TestCa
         if include_optional:
             return V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest(
                 id = 1234567891011,
-                service = graphiant_sdk.models._v1_extranets_b2b_peering_match_service_to_customer_post_request_service._v1_extranets_b2b_peering_match_service_to_customer_post_request_service(
+                service = graphiant_sdk.models.mana_v2_b2b_extranet_match_service_to_customer.manaV2B2bExtranetMatchServiceToCustomer(
                     id = 1234567891011, 
                     lan_segment = 1234567891011, 
                     nat = [
-                        graphiant_sdk.models._v1_extranets_b2b_peering_match_service_to_customer_post_request_service_nat_inner._v1_extranets_b2b_peering_match_service_to_customer_post_request_service_nat_inner(
+                        graphiant_sdk.models.mana_v2_b2b_nat.manaV2B2bNat(
                             outside_nat_prefix = 'example string', 
                             prefix = 'example string', )
                         ], 
                     num_customers = 123, 
                     service_prefixes = [
-                        graphiant_sdk.models._v1_extranets_b2b_peering_match_service_to_customer_post_request_service_service_prefixes_inner._v1_extranets_b2b_peering_match_service_to_customer_post_request_service_servicePrefixes_inner(
+                        graphiant_sdk.models.mana_v2_b2b_extranet_prefix_tag.manaV2B2bExtranetPrefixTag(
                             prefix = 'example string', 
                             tag = 'example string', )
                         ], )

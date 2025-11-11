@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_global_config_site_post_request_ipfix_exporter_ops_v2_value import V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value
+from graphiant_sdk.models.mana_v2_global_object_operation_config import ManaV2GlobalObjectOperationConfig
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -29,13 +29,13 @@ class V1GlobalConfigSitePostRequest(BaseModel):
     """ # noqa: E501
     global_prefix_set_ops: Optional[Dict[str, StrictStr]] = Field(default=None, alias="globalPrefixSetOps")
     ipfix_exporter_ops: Optional[Dict[str, StrictStr]] = Field(default=None, alias="ipfixExporterOps")
-    ipfix_exporter_ops_v2: Optional[Dict[str, V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value]] = Field(default=None, alias="ipfixExporterOpsV2")
+    ipfix_exporter_ops_v2: Optional[Dict[str, ManaV2GlobalObjectOperationConfig]] = Field(default=None, alias="ipfixExporterOpsV2")
     prefix_set_ops: Optional[Dict[str, StrictStr]] = Field(default=None, alias="prefixSetOps")
     routing_policy_ops: Optional[Dict[str, StrictStr]] = Field(default=None, alias="routingPolicyOps")
     site_id: Optional[StrictInt] = Field(default=None, alias="siteId")
     snmp_ops: Optional[Dict[str, StrictStr]] = Field(default=None, alias="snmpOps")
     syslog_server_ops: Optional[Dict[str, StrictStr]] = Field(default=None, alias="syslogServerOps")
-    syslog_server_ops_v2: Optional[Dict[str, V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value]] = Field(default=None, alias="syslogServerOpsV2")
+    syslog_server_ops_v2: Optional[Dict[str, ManaV2GlobalObjectOperationConfig]] = Field(default=None, alias="syslogServerOpsV2")
     traffic_policy_ops: Optional[Dict[str, StrictStr]] = Field(default=None, alias="trafficPolicyOps")
     __properties: ClassVar[List[str]] = ["globalPrefixSetOps", "ipfixExporterOps", "ipfixExporterOpsV2", "prefixSetOps", "routingPolicyOps", "siteId", "snmpOps", "syslogServerOps", "syslogServerOpsV2", "trafficPolicyOps"]
 
@@ -107,7 +107,7 @@ class V1GlobalConfigSitePostRequest(BaseModel):
             "globalPrefixSetOps": obj.get("globalPrefixSetOps"),
             "ipfixExporterOps": obj.get("ipfixExporterOps"),
             "ipfixExporterOpsV2": dict(
-                (_k, V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value.from_dict(_v))
+                (_k, ManaV2GlobalObjectOperationConfig.from_dict(_v))
                 for _k, _v in obj["ipfixExporterOpsV2"].items()
             )
             if obj.get("ipfixExporterOpsV2") is not None
@@ -118,7 +118,7 @@ class V1GlobalConfigSitePostRequest(BaseModel):
             "snmpOps": obj.get("snmpOps"),
             "syslogServerOps": obj.get("syslogServerOps"),
             "syslogServerOpsV2": dict(
-                (_k, V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value.from_dict(_v))
+                (_k, ManaV2GlobalObjectOperationConfig.from_dict(_v))
                 for _k, _v in obj["syslogServerOpsV2"].items()
             )
             if obj.get("syslogServerOpsV2") is not None

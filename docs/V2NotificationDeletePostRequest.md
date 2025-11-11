@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**notification_id_list** | **List[str]** |  | [optional] 
+**notification_id_list** | **List[str]** |  | 
 
 ## Example
 

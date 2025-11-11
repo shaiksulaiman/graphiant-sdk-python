@@ -20,9 +20,9 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from graphiant_sdk.models.v1_alarm_history_get200_response_history_inner_time import V1AlarmHistoryGet200ResponseHistoryInnerTime
-from graphiant_sdk.models.v1_flows_flow_table_post_request_selector import V1FlowsFlowTablePostRequestSelector
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.google_protobuf_timestamp import GoogleProtobufTimestamp
+from graphiant_sdk.models.ipfix_app_flow_table_selector import IpfixAppFlowTableSelector
+from graphiant_sdk.models.statsmon_time_window import StatsmonTimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -30,14 +30,14 @@ class V1FlowsFlowTablePostRequest(BaseModel):
     """
     V1FlowsFlowTablePostRequest
     """ # noqa: E501
-    app_id: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="appId")
+    app_id: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, description="the app ID in the question from overall visuals view", alias="appId")
     app_name: Optional[StrictStr] = Field(default=None, alias="appName")
-    cursor_ref: Optional[V1AlarmHistoryGet200ResponseHistoryInnerTime] = Field(default=None, alias="cursorRef")
+    cursor_ref: Optional[GoogleProtobufTimestamp] = Field(default=None, alias="cursorRef")
     device_id: Optional[StrictInt] = Field(default=None, alias="deviceId")
     is_dia: Optional[StrictBool] = Field(default=None, alias="isDia")
-    num_flow_records: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="numFlowRecords")
-    selector: Optional[V1FlowsFlowTablePostRequestSelector] = None
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    num_flow_records: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, description="Number of app flow records requested by UI.", alias="numFlowRecords")
+    selector: Optional[IpfixAppFlowTableSelector] = None
+    time_window: Optional[StatsmonTimeWindow] = Field(default=None, alias="timeWindow")
     __properties: ClassVar[List[str]] = ["appId", "appName", "cursorRef", "deviceId", "isDia", "numFlowRecords", "selector", "timeWindow"]
 
     model_config = ConfigDict(
@@ -102,12 +102,12 @@ class V1FlowsFlowTablePostRequest(BaseModel):
         _obj = cls.model_validate({
             "appId": obj.get("appId"),
             "appName": obj.get("appName"),
-            "cursorRef": V1AlarmHistoryGet200ResponseHistoryInnerTime.from_dict(obj["cursorRef"]) if obj.get("cursorRef") is not None else None,
+            "cursorRef": GoogleProtobufTimestamp.from_dict(obj["cursorRef"]) if obj.get("cursorRef") is not None else None,
             "deviceId": obj.get("deviceId"),
             "isDia": obj.get("isDia"),
             "numFlowRecords": obj.get("numFlowRecords"),
-            "selector": V1FlowsFlowTablePostRequestSelector.from_dict(obj["selector"]) if obj.get("selector") is not None else None,
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
+            "selector": IpfixAppFlowTableSelector.from_dict(obj["selector"]) if obj.get("selector") is not None else None,
+            "timeWindow": StatsmonTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
         })
         return _obj
 

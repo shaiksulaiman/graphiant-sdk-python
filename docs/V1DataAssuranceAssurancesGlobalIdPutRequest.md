@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **app_removal_reason** | **str** |  | [optional] 
-**config** | [**V1DataAssuranceAssurancesGlobalPostRequestConfig**](V1DataAssuranceAssurancesGlobalPostRequestConfig.md) |  | [optional] 
+**config** | [**ManaV2AssuranceConfig**](ManaV2AssuranceConfig.md) |  | [optional] 
 
 ## Example
 

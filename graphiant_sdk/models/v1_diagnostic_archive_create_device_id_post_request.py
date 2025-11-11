@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -26,7 +26,7 @@ class V1DiagnosticArchiveCreateDeviceIdPostRequest(BaseModel):
     """
     V1DiagnosticArchiveCreateDeviceIdPostRequest
     """ # noqa: E501
-    description: Optional[StrictStr] = None
+    description: Optional[StrictStr] = Field(default=None, description="Description of the requested archive")
     __properties: ClassVar[List[str]] = ["description"]
 
     model_config = ConfigDict(

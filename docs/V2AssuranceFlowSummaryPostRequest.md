@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **client_ip** | **str** |  | [optional] 
 **server_ip** | **str** |  | [optional] 
 **server_port** | **int** |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**time_window** | [**AssuranceTimeWindow**](AssuranceTimeWindow.md) |  | [optional] 
 
 ## Example
 

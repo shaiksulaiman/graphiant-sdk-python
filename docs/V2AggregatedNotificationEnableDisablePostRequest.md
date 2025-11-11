@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**enable** | **bool** |  | [optional] 
+**enable** | **bool** | Enable or disable aggregated notifications. True means enabled (required) | 
 
 ## Example
 

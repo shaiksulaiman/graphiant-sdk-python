@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_groups_get200_response_groups_inner_permissions import V1GroupsGet200ResponseGroupsInnerPermissions
+from graphiant_sdk.models.common_permissions import CommonPermissions
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,12 +27,12 @@ class V1GroupsPutRequest(BaseModel):
     """
     V1GroupsPutRequest
     """ # noqa: E501
-    description: Optional[StrictStr] = None
-    group_id: Optional[StrictStr] = Field(default=None, alias="groupId")
+    description: StrictStr = Field(description=" (required)")
+    group_id: Optional[StrictStr] = Field(default=None, description="Only supply if enterprise uses an idp", alias="groupId")
     group_type: Optional[StrictStr] = Field(default=None, alias="groupType")
     manages_enterprises: Optional[StrictBool] = Field(default=None, alias="managesEnterprises")
-    name: Optional[StrictStr] = None
-    permissions: Optional[V1GroupsGet200ResponseGroupsInnerPermissions] = None
+    name: StrictStr = Field(description=" (required)")
+    permissions: Optional[CommonPermissions] = None
     time_window_end: Optional[StrictInt] = Field(default=None, alias="timeWindowEnd")
     time_window_start: Optional[StrictInt] = Field(default=None, alias="timeWindowStart")
     __properties: ClassVar[List[str]] = ["description", "groupId", "groupType", "managesEnterprises", "name", "permissions", "timeWindowEnd", "timeWindowStart"]
@@ -96,7 +96,7 @@ class V1GroupsPutRequest(BaseModel):
             "groupType": obj.get("groupType"),
             "managesEnterprises": obj.get("managesEnterprises"),
             "name": obj.get("name"),
-            "permissions": V1GroupsGet200ResponseGroupsInnerPermissions.from_dict(obj["permissions"]) if obj.get("permissions") is not None else None,
+            "permissions": CommonPermissions.from_dict(obj["permissions"]) if obj.get("permissions") is not None else None,
             "timeWindowEnd": obj.get("timeWindowEnd"),
             "timeWindowStart": obj.get("timeWindowStart")
         })

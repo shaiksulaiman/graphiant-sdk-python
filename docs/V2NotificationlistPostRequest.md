@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**time_window** | [**AlertserviceTimeWindow**](AlertserviceTimeWindow.md) |  | [optional] 
 
 ## Example
 

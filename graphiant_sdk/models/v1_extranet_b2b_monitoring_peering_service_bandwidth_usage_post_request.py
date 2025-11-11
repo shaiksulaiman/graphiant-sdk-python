@@ -17,9 +17,9 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.statsmon_time_window import StatsmonTimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,14 +27,15 @@ class V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest(BaseModel):
     """
     V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest
     """ # noqa: E501
-    id: Optional[StrictInt] = None
+    id: Optional[StrictInt] = Field(default=None, description="the id associated with an entity - consumer_id for consumer, and service_id for the producer/service")
     is_b2_b: Optional[StrictBool] = Field(default=None, alias="isB2B")
     is_provider: Optional[StrictBool] = Field(default=None, alias="isProvider")
     service_id: Optional[StrictInt] = Field(default=None, alias="serviceId")
     site_id: Optional[StrictInt] = Field(default=None, alias="siteId")
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    subscription_name: Optional[StrictStr] = Field(default=None, description="Optional subscription name for filter", alias="subscriptionName")
+    time_window: Optional[StatsmonTimeWindow] = Field(default=None, alias="timeWindow")
     vrf_id: Optional[StrictInt] = Field(default=None, alias="vrfId")
-    __properties: ClassVar[List[str]] = ["id", "isB2B", "isProvider", "serviceId", "siteId", "timeWindow", "vrfId"]
+    __properties: ClassVar[List[str]] = ["id", "isB2B", "isProvider", "serviceId", "siteId", "subscriptionName", "timeWindow", "vrfId"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -95,7 +96,8 @@ class V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest(BaseModel):
             "isProvider": obj.get("isProvider"),
             "serviceId": obj.get("serviceId"),
             "siteId": obj.get("siteId"),
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None,
+            "subscriptionName": obj.get("subscriptionName"),
+            "timeWindow": StatsmonTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None,
             "vrfId": obj.get("vrfId")
         })
         return _obj

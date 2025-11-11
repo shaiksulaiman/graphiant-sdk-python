@@ -81,6 +81,111 @@ except Exception as e:
     print(f"Failed to get device summary: {e}")
 ```
 
+## 🔄 Migration Guide: Upgrading from 25.10.2 to 25.11.1
+
+The 25.11.1 API is optimized to reuse redundant schemas, which results in changes to inner class types. You may need to update your existing scripts to use the newer class names.
+
+### Benefits of Upgrading
+
+The new API specification (25.11.1) brings significant improvements:
+
+- **Reduced Specification Size**: The API specification file size has been reduced from **9.8M to 1.5M** (~85% reduction) through schema optimization and reuse
+- **Enhanced Documentation**: The new spec includes more comprehensive documentation for better developer experience
+- **Cleaner Class Names**: Response classes no longer include HTTP status codes, making imports and type references more intuitive
+- **Reusable Schemas**: Inner classes now use reusable schema names, meaning **common schemas share the same inner class names across different endpoints**. This reduces code duplication, improves maintainability, and allows you to reuse the same imports and type references for similar data structures
+
+### Important Changes
+
+#### 1. Remove Status Code from Class Names
+
+Response class names no longer include HTTP status codes. Update your imports and type references:
+
+**Before (25.10.2):**
+```python
+from graphiant_sdk.models.v1_edges_summary_get200_response import V1EdgesSummaryGet200Response
+from graphiant_sdk.models.v1_global_summary_post200_response import V1GlobalSummaryPost200Response
+from graphiant_sdk.models.v1_devices_device_id_config_put202_response import V1DevicesDeviceIdConfigPut202Response
+```
+
+**After (25.11.1):**
+```python
+from graphiant_sdk.models.v1_edges_summary_get_response import V1EdgesSummaryGetResponse
+from graphiant_sdk.models.v1_global_summary_post_response import V1GlobalSummaryPostResponse
+from graphiant_sdk.models.v1_devices_device_id_config_put_response import V1DevicesDeviceIdConfigPutResponse
+```
+
+**Common patterns to update:**
+- `Post200Response` → `PostResponse`
+- `Get200Response` → `GetResponse`
+- `Put202Response` → `PutResponse`
+- `Put204Response` → `PutResponse`
+- `Post201Response` → `PostResponse`
+
+> **Note**: The vast majority of response classes have been updated. A few exceptions may remain (e.g., `V1AuthRefreshGet200Response`), but these are rare edge cases. When in doubt, check the current API file (`graphiant_sdk/api/default_api.py`) or the model documentation.
+
+#### 2. Find and Rename Inner Property Class Names
+
+Inner classes have been renamed to use reusable schema names. **Because schemas are now reused, common schemas will share the same inner class names across different endpoints.** This means you can reuse the same import and type references for similar data structures.
+
+To find the new class name:
+
+1. **Step 1**: Find the top-level class name by removing the status code (if it exists) and trimming to `Response`:
+   - `V1GlobalSummaryPost200Response` → `V1GlobalSummaryPostResponse`
+
+2. **Step 2**: Check the documentation for the inner property's new class name:
+   - Open `docs/V1GlobalSummaryPostResponse.md`
+   - Find the property (e.g., `summaries`)
+   - Note the new class name (e.g., `ManaV2GlobalObjectSummary`)
+
+**Key Benefit**: If multiple endpoints use the same schema structure, they will now share the same inner class name. For example, if both `V1GlobalSummaryPostResponse` and `V1EdgesSummaryGetResponse` use the same summary schema, they will both use `ManaV2GlobalObjectSummary` as the inner class type.
+
+**Example Migration:**
+
+**Before (25.10.2):**
+```python
+from graphiant_sdk.models.v1_global_summary_post200_response import V1GlobalSummaryPost200Response
+from graphiant_sdk.models.v1_global_summary_post200_response_summaries_inner import V1GlobalSummaryPost200ResponseSummariesInner
+
+response = api.v1_global_summary_post(...)
+for summary in response.summaries:
+    # summary is V1GlobalSummaryPost200ResponseSummariesInner
+    print(summary.name)
+```
+
+**After (25.11.1):**
+```python
+from graphiant_sdk.models.v1_global_summary_post_response import V1GlobalSummaryPostResponse
+from graphiant_sdk.models.mana_v2_global_object_summary import ManaV2GlobalObjectSummary
+# or
+from graphiant_sdk.models import ManaV2GlobalObjectSummary
+
+response = api.v1_global_summary_post(...)
+for summary in response.summaries:
+    # summary is ManaV2GlobalObjectSummary
+    print(summary.name)
+```
+
+#### 3. Finding Endpoint Request/Response Models
+
+To find all endpoints and their request/response models:
+
+- **API Reference**: See `graphiant_sdk/api/default_api.py` or `docs/DefaultApi.md`
+- **Model Documentation**: Check individual model files in `docs/` directory (e.g., `docs/V1GlobalSummaryPostResponse.md`)
+
+### Migration Checklist
+
+- [ ] Search and replace all `200Response`, `202Response`, `201Response`, `204Response` patterns
+- [ ] Update imports for response classes
+- [ ] Find and update inner class references (check documentation files)
+- [ ] Test all API calls with new class names
+- [ ] Update type hints and annotations
+
+### Need Help?
+
+- Check the [API Reference](docs/DefaultApi.md) for endpoint details
+- Review model documentation in the `docs/` directory
+- See [Support](#-support) section for additional resources
+
 ## 🔧 Advanced Usage
 
 ### Device Configuration Management
@@ -156,7 +261,7 @@ def configure_device_interfaces(api, bearer_token, device_id):
     }
     
     # Create configuration request
-    edge_config = graphiant_sdk.V1DevicesDeviceIdConfigPutRequestEdge(
+    edge_config = graphiant_sdk.ManaV2EdgeDeviceConfig(
         circuits=circuits,
         interfaces=interfaces
     )
@@ -257,12 +362,12 @@ brew install openapi-generator  # macOS
 
 # Generate SDK
 openapi-generator generate \
-    -i graphiant_api_docs_v25.10.2.json \
+    -i graphiant_api_docs_v25.11.1.json \
     -g python \
     --git-user-id Graphiant-Inc \
     --git-repo-id graphiant-sdk-python \
     --package-name graphiant_sdk \
-    --additional-properties=packageVersion=25.10.2
+    --additional-properties=packageVersion=25.11.1
 ```
 
 > **Note**: Latest API documentation can be downloaded from the Graphiant portal under "Support Hub" > "Developer Tools".
@@ -288,8 +393,11 @@ python -m pytest tests/ --cov=graphiant_sdk --cov-report=html
 ### Key Models
 
 - **`V1AuthLoginPostRequest`**: Authentication request
-- **`V1EdgesSummaryGet200Response`**: Device summary response
+- **`V1AuthLoginPostResponse`**: Authentication response
+- **`V1EdgesSummaryGetResponse`**: Device summary response
 - **`V1DevicesDeviceIdConfigPutRequest`**: Device configuration request
+- **`V1DevicesDeviceIdConfigPutResponse`**: Device configuration response
+- **`V1GlobalSummaryPostResponse`**: Global summary response (uses `ManaV2GlobalObjectSummary` for inner items)
 
 ### Common Endpoints
 

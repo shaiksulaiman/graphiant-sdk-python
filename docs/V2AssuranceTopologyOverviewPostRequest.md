@@ -8,11 +8,11 @@ Name | Type | Description | Notes
 **app_name** | **str** |  | [optional] 
 **app_server_key** | **str** |  | [optional] 
 **bucket_id** | **str** |  | [optional] 
-**filter** | [**V2AssuranceTopologyClientSessionsPostRequestFilter**](V2AssuranceTopologyClientSessionsPostRequestFilter.md) |  | [optional] 
+**filter** | [**V2AssuranceTopologyOverviewPostRequestTopologyFilter**](V2AssuranceTopologyOverviewPostRequestTopologyFilter.md) |  | [optional] 
 **flex_algo_id** | **int** |  | [optional] 
-**slider_time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
-**topology_ts** | [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
+**slider_time_window** | [**AssuranceTimeWindow**](AssuranceTimeWindow.md) |  | [optional] 
+**time_window** | [**AssuranceTimeWindow**](AssuranceTimeWindow.md) |  | [optional] 
+**topology_ts** | [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 
 **topology_type** | **str** |  | [optional] 
 
 ## Example

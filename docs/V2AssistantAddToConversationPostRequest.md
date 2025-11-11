@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **conversation_id** | **str** |  | [optional] 
-**question** | [**V2AssistantAddToConversationPostRequestQuestion**](V2AssistantAddToConversationPostRequestQuestion.md) |  | [optional] 
+**question** | [**AssistantAssistantQuestion**](AssistantAssistantQuestion.md) |  | [optional] 
 
 ## Example
 

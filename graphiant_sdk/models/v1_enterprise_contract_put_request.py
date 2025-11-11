@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from graphiant_sdk.models.v1_enterprise_allocation_get200_response_consumption_summary_contractual_summary_expiration_date import V1EnterpriseAllocationGet200ResponseConsumptionSummaryContractualSummaryExpirationDate
+from graphiant_sdk.models.mana_v2_time_period import ManaV2TimePeriod
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,8 +27,8 @@ class V1EnterpriseContractPutRequest(BaseModel):
     """
     V1EnterpriseContractPutRequest
     """ # noqa: E501
-    contracted_credits: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="contractedCredits")
-    expiration_date: Optional[V1EnterpriseAllocationGet200ResponseConsumptionSummaryContractualSummaryExpirationDate] = Field(default=None, alias="expirationDate")
+    contracted_credits: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Amount of credits billed for a contract term or monthly if no expiration date is provided", alias="contractedCredits")
+    expiration_date: Optional[ManaV2TimePeriod] = Field(default=None, alias="expirationDate")
     __properties: ClassVar[List[str]] = ["contractedCredits", "expirationDate"]
 
     model_config = ConfigDict(
@@ -86,7 +86,7 @@ class V1EnterpriseContractPutRequest(BaseModel):
 
         _obj = cls.model_validate({
             "contractedCredits": obj.get("contractedCredits"),
-            "expirationDate": V1EnterpriseAllocationGet200ResponseConsumptionSummaryContractualSummaryExpirationDate.from_dict(obj["expirationDate"]) if obj.get("expirationDate") is not None else None
+            "expirationDate": ManaV2TimePeriod.from_dict(obj["expirationDate"]) if obj.get("expirationDate") is not None else None
         })
         return _obj
 

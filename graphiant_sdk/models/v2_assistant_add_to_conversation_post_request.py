@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v2_assistant_add_to_conversation_post_request_question import V2AssistantAddToConversationPostRequestQuestion
+from graphiant_sdk.models.assistant_assistant_question import AssistantAssistantQuestion
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class V2AssistantAddToConversationPostRequest(BaseModel):
     V2AssistantAddToConversationPostRequest
     """ # noqa: E501
     conversation_id: Optional[StrictStr] = Field(default=None, alias="conversationId")
-    question: Optional[V2AssistantAddToConversationPostRequestQuestion] = None
+    question: Optional[AssistantAssistantQuestion] = None
     __properties: ClassVar[List[str]] = ["conversationId", "question"]
 
     model_config = ConfigDict(
@@ -86,7 +86,7 @@ class V2AssistantAddToConversationPostRequest(BaseModel):
 
         _obj = cls.model_validate({
             "conversationId": obj.get("conversationId"),
-            "question": V2AssistantAddToConversationPostRequestQuestion.from_dict(obj["question"]) if obj.get("question") is not None else None
+            "question": AssistantAssistantQuestion.from_dict(obj["question"]) if obj.get("question") is not None else None
         })
         return _obj
 

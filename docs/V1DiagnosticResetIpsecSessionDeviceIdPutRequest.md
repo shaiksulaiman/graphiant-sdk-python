@@ -5,9 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**all3_rd_party** | **bool** |  | [optional] 
-**all_controllers** | **bool** |  | [optional] 
-**all_e2_e** | **bool** |  | [optional] 
+**all3_rd_party** | **bool** | All 3rd Party IPSec sessions | [optional] 
+**all_controllers** | **bool** | All Graphiant controllers IPSec sessions | [optional] 
+**all_e2_e** | **bool** | All Edge to Edge sessions | [optional] 
 **vrf** | **List[str]** |  | [optional] 
 
 ## Example

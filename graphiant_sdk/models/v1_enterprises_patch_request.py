@@ -31,7 +31,7 @@ class V1EnterprisesPatchRequest(BaseModel):
     cloud_provider: Optional[StrictStr] = Field(default=None, alias="cloudProvider")
     company_name: Optional[StrictStr] = Field(default=None, alias="companyName")
     credit_limit: Optional[StrictInt] = Field(default=None, alias="creditLimit")
-    enterprise_id: Optional[StrictInt] = Field(default=None, alias="enterpriseId")
+    enterprise_id: StrictInt = Field(description=" (required)", alias="enterpriseId")
     impersonation_enabled: Optional[StrictBool] = Field(default=None, alias="impersonationEnabled")
     logo: Optional[StrictStr] = None
     portal_banner: Optional[StrictStr] = Field(default=None, alias="portalBanner")

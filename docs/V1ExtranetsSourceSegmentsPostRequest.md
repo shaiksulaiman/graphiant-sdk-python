@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **filter** | **str** |  | [optional] 
-**target** | [**V1ExtranetsPostRequestPolicyBranches**](V1ExtranetsPostRequestPolicyBranches.md) |  | [optional] 
+**target** | [**ManaV2PolicyTargetInput**](ManaV2PolicyTargetInput.md) |  | [optional] 
 
 ## Example
 

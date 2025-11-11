@@ -26,10 +26,10 @@ class V1DiagnosticBgpResetDeviceIdPutRequest(BaseModel):
     """
     V1DiagnosticBgpResetDeviceIdPutRequest
     """ # noqa: E501
-    hard: Optional[StrictBool] = None
-    lan_segment: Optional[StrictStr] = Field(default=None, alias="lanSegment")
-    local_interface: Optional[StrictStr] = Field(default=None, alias="localInterface")
-    neighbor: Optional[StrictStr] = None
+    hard: Optional[StrictBool] = Field(default=None, description="BGP process restarts if set to true. if false, BGP route is only relearned")
+    lan_segment: Optional[StrictStr] = Field(default=None, description="The segment over which this route is learned", alias="lanSegment")
+    local_interface: Optional[StrictStr] = Field(default=None, description="The local interface over which this route is learned", alias="localInterface")
+    neighbor: Optional[StrictStr] = Field(default=None, description="The neighbor to reset")
     __properties: ClassVar[List[str]] = ["hard", "lanSegment", "localInterface", "neighbor"]
 
     model_config = ConfigDict(

@@ -7,10 +7,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cursor_ref** | **str** |  | [optional] 
 **num_logs** | **int** |  | [optional] 
-**old_ts** | [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
-**recent_ts** | [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
-**selector** | [**V1ActivityLogsPostRequestSelector**](V1ActivityLogsPostRequestSelector.md) |  | [optional] 
-**selector_v2** | [**V1ActivityLogsPostRequestSelectorV2**](V1ActivityLogsPostRequestSelectorV2.md) |  | [optional] 
+**old_ts** | [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 
+**recent_ts** | [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 
+**selector** | [**AuditmonActivityLogsSelector**](AuditmonActivityLogsSelector.md) |  | [optional] 
+**selector_v2** | [**AuditmonActivityLogsSelectorV2**](AuditmonActivityLogsSelectorV2.md) |  | [optional] 
 
 ## Example
 

@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
-from typing import Any, ClassVar, Dict, List, Optional
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -26,7 +26,7 @@ class V1GroupsIdEnterprisesPostRequest(BaseModel):
     """
     V1GroupsIdEnterprisesPostRequest
     """ # noqa: E501
-    enterprise_ids: Optional[List[StrictInt]] = Field(default=None, alias="enterpriseIds")
+    enterprise_ids: List[StrictInt] = Field(alias="enterpriseIds")
     __properties: ClassVar[List[str]] = ["enterpriseIds"]
 
     model_config = ConfigDict(

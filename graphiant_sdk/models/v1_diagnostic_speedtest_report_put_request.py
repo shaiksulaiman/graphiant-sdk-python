@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field
-from typing import Any, ClassVar, Dict, List, Optional
+from typing import Any, ClassVar, Dict, List
 from typing_extensions import Annotated
 from typing import Optional, Set
 from typing_extensions import Self
@@ -27,8 +27,8 @@ class V1DiagnosticSpeedtestReportPutRequest(BaseModel):
     """
     V1DiagnosticSpeedtestReportPutRequest
     """ # noqa: E501
-    device_id: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="deviceId")
-    history_length: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="historyLength")
+    device_id: Annotated[int, Field(strict=True, ge=0)] = Field(description="Unique identifier for a specific device (required)", alias="deviceId")
+    history_length: Annotated[int, Field(strict=True, ge=0)] = Field(description="Number of most recent speedtest records to return for a specific device (required)", alias="historyLength")
     __properties: ClassVar[List[str]] = ["deviceId", "historyLength"]
 
     model_config = ConfigDict(

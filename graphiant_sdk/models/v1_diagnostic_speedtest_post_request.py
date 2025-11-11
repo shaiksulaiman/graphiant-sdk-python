@@ -20,7 +20,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from graphiant_sdk.models.v1_diagnostic_speedtest_post_request_params import V1DiagnosticSpeedtestPostRequestParams
+from graphiant_sdk.models.diagnostic_tools_speedtest_params import DiagnosticToolsSpeedtestParams
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,8 +28,8 @@ class V1DiagnosticSpeedtestPostRequest(BaseModel):
     """
     V1DiagnosticSpeedtestPostRequest
     """ # noqa: E501
-    device_id: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="deviceId")
-    params: Optional[V1DiagnosticSpeedtestPostRequestParams] = None
+    device_id: Annotated[int, Field(strict=True, ge=0)] = Field(description="Unique identifier for a specific device (required)", alias="deviceId")
+    params: Optional[DiagnosticToolsSpeedtestParams] = None
     __properties: ClassVar[List[str]] = ["deviceId", "params"]
 
     model_config = ConfigDict(
@@ -87,7 +87,7 @@ class V1DiagnosticSpeedtestPostRequest(BaseModel):
 
         _obj = cls.model_validate({
             "deviceId": obj.get("deviceId"),
-            "params": V1DiagnosticSpeedtestPostRequestParams.from_dict(obj["params"]) if obj.get("params") is not None else None
+            "params": DiagnosticToolsSpeedtestParams.from_dict(obj["params"]) if obj.get("params") is not None else None
         })
         return _obj
 

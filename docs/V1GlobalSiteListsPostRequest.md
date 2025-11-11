@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **str** |  | [optional] 
-**entries** | [**List[V1GlobalSiteListsPostRequestEntriesInner]**](V1GlobalSiteListsPostRequestEntriesInner.md) |  | [optional] 
+**entries** | [**List[ManaV2SiteListEntry]**](ManaV2SiteListEntry.md) |  | [optional] 
 **name** | **str** |  | [optional] 
 
 ## Example

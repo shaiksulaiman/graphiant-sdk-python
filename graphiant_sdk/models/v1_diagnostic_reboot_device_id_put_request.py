@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -26,7 +26,7 @@ class V1DiagnosticRebootDeviceIdPutRequest(BaseModel):
     """
     V1DiagnosticRebootDeviceIdPutRequest
     """ # noqa: E501
-    reason: Optional[StrictStr] = None
+    reason: StrictStr = Field(description="Reason for reboot (required)")
     __properties: ClassVar[List[str]] = ["reason"]
 
     model_config = ConfigDict(

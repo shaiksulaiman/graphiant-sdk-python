@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**enterprise_ids** | **List[int]** |  | [optional] 
+**enterprise_ids** | **List[int]** |  | 
 
 ## Example
 

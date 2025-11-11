@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**device_id** | **int** |  | [optional] 
-**history_length** | **int** |  | [optional] 
+**device_id** | **int** | Unique identifier for a specific device (required) | 
+**history_length** | **int** | Number of most recent speedtest records to return for a specific device (required) | 
 
 ## Example
 

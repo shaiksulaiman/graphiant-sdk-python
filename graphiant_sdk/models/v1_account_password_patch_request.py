@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -26,8 +26,8 @@ class V1AccountPasswordPatchRequest(BaseModel):
     """
     V1AccountPasswordPatchRequest
     """ # noqa: E501
-    old_password: Optional[StrictStr] = Field(default=None, alias="oldPassword")
-    password: Optional[StrictStr] = None
+    old_password: StrictStr = Field(description=" (required)", alias="oldPassword")
+    password: StrictStr = Field(description=" (required)")
     __properties: ClassVar[List[str]] = ["oldPassword", "password"]
 
     model_config = ConfigDict(

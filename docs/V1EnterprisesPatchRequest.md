@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **cloud_provider** | **str** |  | [optional] 
 **company_name** | **str** |  | [optional] 
 **credit_limit** | **int** |  | [optional] 
-**enterprise_id** | **int** |  | [optional] 
+**enterprise_id** | **int** |  (required) | 
 **impersonation_enabled** | **bool** |  | [optional] 
 **logo** | **str** |  | [optional] 
 **portal_banner** | **str** |  | [optional] 

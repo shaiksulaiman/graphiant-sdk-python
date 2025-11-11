@@ -19,8 +19,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_flows_topology_post_request_app_selector import V1FlowsTopologyPostRequestAppSelector
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.ipfix_app_topology_selector import IpfixAppTopologySelector
+from graphiant_sdk.models.statsmon_time_window import StatsmonTimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,9 +28,9 @@ class V1FlowsTopologyPostRequest(BaseModel):
     """
     V1FlowsTopologyPostRequest
     """ # noqa: E501
-    app_selector: Optional[V1FlowsTopologyPostRequestAppSelector] = Field(default=None, alias="appSelector")
+    app_selector: Optional[IpfixAppTopologySelector] = Field(default=None, alias="appSelector")
     device_id: Optional[StrictInt] = Field(default=None, alias="deviceId")
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    time_window: Optional[StatsmonTimeWindow] = Field(default=None, alias="timeWindow")
     __properties: ClassVar[List[str]] = ["appSelector", "deviceId", "timeWindow"]
 
     model_config = ConfigDict(
@@ -90,9 +90,9 @@ class V1FlowsTopologyPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "appSelector": V1FlowsTopologyPostRequestAppSelector.from_dict(obj["appSelector"]) if obj.get("appSelector") is not None else None,
+            "appSelector": IpfixAppTopologySelector.from_dict(obj["appSelector"]) if obj.get("appSelector") is not None else None,
             "deviceId": obj.get("deviceId"),
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
+            "timeWindow": StatsmonTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
         })
         return _obj
 

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**details** | [**V1SoftwareGcsreleaseUploadNotesPostRequestDetails**](V1SoftwareGcsreleaseUploadNotesPostRequestDetails.md) |  | [optional] 
+**details** | [**UpgradeGcsReleaseDetails**](UpgradeGcsReleaseDetails.md) |  | [optional] 
 
 ## Example
 

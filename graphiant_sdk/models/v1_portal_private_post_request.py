@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_portal_private_post_request_details import V1PortalPrivatePostRequestDetails
+from graphiant_sdk.models.onboarding_private_gcs_details import OnboardingPrivateGcsDetails
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class V1PortalPrivatePostRequest(BaseModel):
     """
     V1PortalPrivatePostRequest
     """ # noqa: E501
-    details: Optional[V1PortalPrivatePostRequestDetails] = None
+    details: Optional[OnboardingPrivateGcsDetails] = None
     __properties: ClassVar[List[str]] = ["details"]
 
     model_config = ConfigDict(
@@ -84,7 +84,7 @@ class V1PortalPrivatePostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "details": V1PortalPrivatePostRequestDetails.from_dict(obj["details"]) if obj.get("details") is not None else None
+            "details": OnboardingPrivateGcsDetails.from_dict(obj["details"]) if obj.get("details") is not None else None
         })
         return _obj
 

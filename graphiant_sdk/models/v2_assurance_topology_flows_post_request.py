@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.assurance_time_window import AssuranceTimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class V2AssuranceTopologyFlowsPostRequest(BaseModel):
     V2AssuranceTopologyFlowsPostRequest
     """ # noqa: E501
     app_name: Optional[StrictStr] = Field(default=None, alias="appName")
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    time_window: Optional[AssuranceTimeWindow] = Field(default=None, alias="timeWindow")
     topology_id: Optional[StrictInt] = Field(default=None, alias="topologyId")
     topology_type: Optional[StrictStr] = Field(default=None, alias="topologyType")
     __properties: ClassVar[List[str]] = ["appName", "timeWindow", "topologyId", "topologyType"]
@@ -88,7 +88,7 @@ class V2AssuranceTopologyFlowsPostRequest(BaseModel):
 
         _obj = cls.model_validate({
             "appName": obj.get("appName"),
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None,
+            "timeWindow": AssuranceTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None,
             "topologyId": obj.get("topologyId"),
             "topologyType": obj.get("topologyType")
         })

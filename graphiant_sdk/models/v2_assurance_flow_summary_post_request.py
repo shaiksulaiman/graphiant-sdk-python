@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.assurance_time_window import AssuranceTimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -30,7 +30,7 @@ class V2AssuranceFlowSummaryPostRequest(BaseModel):
     client_ip: Optional[StrictStr] = Field(default=None, alias="clientIp")
     server_ip: Optional[StrictStr] = Field(default=None, alias="serverIp")
     server_port: Optional[StrictInt] = Field(default=None, alias="serverPort")
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    time_window: Optional[AssuranceTimeWindow] = Field(default=None, alias="timeWindow")
     __properties: ClassVar[List[str]] = ["clientIp", "serverIp", "serverPort", "timeWindow"]
 
     model_config = ConfigDict(
@@ -90,7 +90,7 @@ class V2AssuranceFlowSummaryPostRequest(BaseModel):
             "clientIp": obj.get("clientIp"),
             "serverIp": obj.get("serverIp"),
             "serverPort": obj.get("serverPort"),
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
+            "timeWindow": AssuranceTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
         })
         return _obj
 

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**invite** | [**V1ExtranetsB2bPeeringCustomerPostRequestInvite**](V1ExtranetsB2bPeeringCustomerPostRequestInvite.md) |  | [optional] 
+**invite** | [**ManaV2B2bExtranetPeeringServiceCustomerInvite**](ManaV2B2bExtranetPeeringServiceCustomerInvite.md) |  | [optional] 
 **name** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
 

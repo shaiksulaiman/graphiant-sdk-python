@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**device_id** | **int** |  | [optional] 
-**vrf_name** | **List[str]** |  | [optional] 
+**device_id** | **int** | Valid configured device ID &gt; 0 (required) | 
+**vrf_name** | **List[str]** |  | 
 
 ## Example
 

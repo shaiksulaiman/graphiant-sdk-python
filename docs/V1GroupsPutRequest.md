@@ -5,12 +5,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**description** | **str** |  | [optional] 
-**group_id** | **str** |  | [optional] 
+**description** | **str** |  (required) | 
+**group_id** | **str** | Only supply if enterprise uses an idp | [optional] 
 **group_type** | **str** |  | [optional] 
 **manages_enterprises** | **bool** |  | [optional] 
-**name** | **str** |  | [optional] 
-**permissions** | [**V1GroupsGet200ResponseGroupsInnerPermissions**](V1GroupsGet200ResponseGroupsInnerPermissions.md) |  | [optional] 
+**name** | **str** |  (required) | 
+**permissions** | [**CommonPermissions**](CommonPermissions.md) |  | [optional] 
 **time_window_end** | **int** |  | [optional] 
 **time_window_start** | **int** |  | [optional] 
 

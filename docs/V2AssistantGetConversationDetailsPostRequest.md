@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **conversation_id** | **str** |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**time_window** | [**AssistantTimeWindow**](AssistantTimeWindow.md) |  | [optional] 
 **user_id** | **str** |  | [optional] 
 
 ## Example

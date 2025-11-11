@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -26,7 +26,7 @@ class V1DiagnosticInterfaceResetDeviceIdPutRequest(BaseModel):
     """
     V1DiagnosticInterfaceResetDeviceIdPutRequest
     """ # noqa: E501
-    interface: Optional[StrictStr] = None
+    interface: Optional[StrictStr] = Field(default=None, description="interface name")
     __properties: ClassVar[List[str]] = ["interface"]
 
     model_config = ConfigDict(

@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.ipfix_time_window import IpfixTimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -29,7 +29,7 @@ class V1AppsAppSummaryPostRequest(BaseModel):
     """ # noqa: E501
     device_id: Optional[StrictInt] = Field(default=None, alias="deviceId")
     is_dia: Optional[StrictBool] = Field(default=None, alias="isDia")
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    time_window: Optional[IpfixTimeWindow] = Field(default=None, alias="timeWindow")
     __properties: ClassVar[List[str]] = ["deviceId", "isDia", "timeWindow"]
 
     model_config = ConfigDict(
@@ -88,7 +88,7 @@ class V1AppsAppSummaryPostRequest(BaseModel):
         _obj = cls.model_validate({
             "deviceId": obj.get("deviceId"),
             "isDia": obj.get("isDia"),
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
+            "timeWindow": IpfixTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
         })
         return _obj
 

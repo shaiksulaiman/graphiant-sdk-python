@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -26,8 +26,8 @@ class V2NotificationEnabledisablePostRequest(BaseModel):
     """
     V2NotificationEnabledisablePostRequest
     """ # noqa: E501
-    enable: Optional[StrictBool] = None
-    notification_id_list: Optional[List[StrictStr]] = Field(default=None, alias="notificationIdList")
+    enable: StrictBool = Field(description="Enable or disable. True means enable (required)")
+    notification_id_list: List[StrictStr] = Field(alias="notificationIdList")
     __properties: ClassVar[List[str]] = ["enable", "notificationIdList"]
 
     model_config = ConfigDict(

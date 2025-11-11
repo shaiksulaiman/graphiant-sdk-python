@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**details** | [**V1GatewaysPutRequestDetails**](V1GatewaysPutRequestDetails.md) |  | [optional] 
+**details** | [**ManaV2GatewayDetails**](ManaV2GatewayDetails.md) |  | [optional] 
 **id** | **int** |  | [optional] 
 
 ## Example

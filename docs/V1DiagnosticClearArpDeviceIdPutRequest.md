@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**entry** | [**List[V1DiagnosticClearArpDeviceIdPutRequestEntryInner]**](V1DiagnosticClearArpDeviceIdPutRequestEntryInner.md) |  | [optional] 
+**entry** | [**List[DiagnosticToolsArpEntry]**](DiagnosticToolsArpEntry.md) |  | [optional] 
 
 ## Example
 

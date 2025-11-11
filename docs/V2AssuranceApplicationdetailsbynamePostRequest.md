@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **app_name** | **str** |  | [optional] 
 **bucket_id** | **str** |  | [optional] 
 **flex_algo_id** | **int** |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**time_window** | [**AssuranceTimeWindow**](AssuranceTimeWindow.md) |  | [optional] 
 
 ## Example
 

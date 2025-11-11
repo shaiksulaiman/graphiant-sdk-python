@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_alarm_history_get200_response_history_inner_time import V1AlarmHistoryGet200ResponseHistoryInnerTime
+from graphiant_sdk.models.google_protobuf_timestamp import GoogleProtobufTimestamp
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class V1DevicesBringupTokenPostRequest(BaseModel):
     V1DevicesBringupTokenPostRequest
     """ # noqa: E501
     role: Optional[StrictStr] = None
-    valid_till_ts: Optional[V1AlarmHistoryGet200ResponseHistoryInnerTime] = Field(default=None, alias="validTillTs")
+    valid_till_ts: Optional[GoogleProtobufTimestamp] = Field(default=None, alias="validTillTs")
     validity_sec: Optional[StrictInt] = Field(default=None, alias="validitySec")
     __properties: ClassVar[List[str]] = ["role", "validTillTs", "validitySec"]
 
@@ -87,7 +87,7 @@ class V1DevicesBringupTokenPostRequest(BaseModel):
 
         _obj = cls.model_validate({
             "role": obj.get("role"),
-            "validTillTs": V1AlarmHistoryGet200ResponseHistoryInnerTime.from_dict(obj["validTillTs"]) if obj.get("validTillTs") is not None else None,
+            "validTillTs": GoogleProtobufTimestamp.from_dict(obj["validTillTs"]) if obj.get("validTillTs") is not None else None,
             "validitySec": obj.get("validitySec")
         })
         return _obj

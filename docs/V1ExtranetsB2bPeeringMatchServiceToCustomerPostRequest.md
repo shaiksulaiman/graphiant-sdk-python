@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
-**service** | [**V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestService**](V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestService.md) |  | [optional] 
+**service** | [**ManaV2B2bExtranetMatchServiceToCustomer**](ManaV2B2bExtranetMatchServiceToCustomer.md) |  | [optional] 
 
 ## Example
 

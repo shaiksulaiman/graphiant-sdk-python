@@ -6,8 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **device_id** | **int** |  | [optional] 
-**selectors** | [**List[V2MonitoringBfdPostRequestSelectorsInner]**](V2MonitoringBfdPostRequestSelectorsInner.md) |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**selectors** | [**List[StatsmonV2BfdStatsSelector]**](StatsmonV2BfdStatsSelector.md) |  | [optional] 
+**time_window** | [**StatsmonV2TimeWindow**](StatsmonV2TimeWindow.md) |  | [optional] 
 
 ## Example
 

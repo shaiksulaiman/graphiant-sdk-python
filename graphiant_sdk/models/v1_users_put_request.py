@@ -26,10 +26,10 @@ class V1UsersPutRequest(BaseModel):
     """
     V1UsersPutRequest
     """ # noqa: E501
-    email: Optional[StrictStr] = None
-    first_name: Optional[StrictStr] = Field(default=None, alias="firstName")
+    email: StrictStr = Field(description=" (required)")
+    first_name: StrictStr = Field(description=" (required)", alias="firstName")
     group_id: Optional[StrictStr] = Field(default=None, alias="groupId")
-    last_name: Optional[StrictStr] = Field(default=None, alias="lastName")
+    last_name: StrictStr = Field(description=" (required)", alias="lastName")
     time_zone: Optional[StrictStr] = Field(default=None, alias="timeZone")
     __properties: ClassVar[List[str]] = ["email", "firstName", "groupId", "lastName", "timeZone"]
 

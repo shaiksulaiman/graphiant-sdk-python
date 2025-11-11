@@ -20,8 +20,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from graphiant_sdk.models.v1_diagnostic_packetcapture_start_post_request_filter import V1DiagnosticPacketcaptureStartPostRequestFilter
-from graphiant_sdk.models.v1_diagnostic_packetcapture_start_post_request_target import V1DiagnosticPacketcaptureStartPostRequestTarget
+from graphiant_sdk.models.diagnostic_tools_p_cap_filter import DiagnosticToolsPCapFilter
+from graphiant_sdk.models.diagnostic_tools_target_type import DiagnosticToolsTargetType
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -29,11 +29,11 @@ class V1DiagnosticPacketcaptureStartPostRequest(BaseModel):
     """
     V1DiagnosticPacketcaptureStartPostRequest
     """ # noqa: E501
-    device_id: Optional[StrictInt] = Field(default=None, alias="deviceId")
-    duration: Optional[Annotated[int, Field(strict=True, ge=0)]] = None
-    filter: Optional[V1DiagnosticPacketcaptureStartPostRequestFilter] = None
-    max_packet_counter: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="maxPacketCounter")
-    target: Optional[V1DiagnosticPacketcaptureStartPostRequestTarget] = None
+    device_id: StrictInt = Field(description="Unique identifier for a specific device (required)", alias="deviceId")
+    duration: Annotated[int, Field(strict=True, ge=0)] = Field(description="Packet capture duration. Accepted values are 30, 60, 180 (required)")
+    filter: Optional[DiagnosticToolsPCapFilter] = None
+    max_packet_counter: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, description="Packet capture limit.", alias="maxPacketCounter")
+    target: DiagnosticToolsTargetType
     __properties: ClassVar[List[str]] = ["deviceId", "duration", "filter", "maxPacketCounter", "target"]
 
     model_config = ConfigDict(
@@ -95,9 +95,9 @@ class V1DiagnosticPacketcaptureStartPostRequest(BaseModel):
         _obj = cls.model_validate({
             "deviceId": obj.get("deviceId"),
             "duration": obj.get("duration"),
-            "filter": V1DiagnosticPacketcaptureStartPostRequestFilter.from_dict(obj["filter"]) if obj.get("filter") is not None else None,
+            "filter": DiagnosticToolsPCapFilter.from_dict(obj["filter"]) if obj.get("filter") is not None else None,
             "maxPacketCounter": obj.get("maxPacketCounter"),
-            "target": V1DiagnosticPacketcaptureStartPostRequestTarget.from_dict(obj["target"]) if obj.get("target") is not None else None
+            "target": DiagnosticToolsTargetType.from_dict(obj["target"]) if obj.get("target") is not None else None
         })
         return _obj
 

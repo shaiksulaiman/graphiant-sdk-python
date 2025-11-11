@@ -20,7 +20,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.statsmon_time_window import StatsmonTimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -33,7 +33,7 @@ class V1AppsBandwidthPostRequest(BaseModel):
     dl_circuit_name: Optional[StrictStr] = Field(default=None, alias="dlCircuitName")
     is_dia: Optional[StrictBool] = Field(default=None, alias="isDia")
     sla_class: Optional[StrictStr] = Field(default=None, alias="slaClass")
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    time_window: Optional[StatsmonTimeWindow] = Field(default=None, alias="timeWindow")
     ul_circuit_name: Optional[StrictStr] = Field(default=None, alias="ulCircuitName")
     __properties: ClassVar[List[str]] = ["appId", "deviceId", "dlCircuitName", "isDia", "slaClass", "timeWindow", "ulCircuitName"]
 
@@ -96,7 +96,7 @@ class V1AppsBandwidthPostRequest(BaseModel):
             "dlCircuitName": obj.get("dlCircuitName"),
             "isDia": obj.get("isDia"),
             "slaClass": obj.get("slaClass"),
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None,
+            "timeWindow": StatsmonTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None,
             "ulCircuitName": obj.get("ulCircuitName")
         })
         return _obj

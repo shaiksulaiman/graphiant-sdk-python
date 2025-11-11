@@ -26,13 +26,13 @@ class V1EnterprisesPutRequest(BaseModel):
     """
     V1EnterprisesPutRequest
     """ # noqa: E501
-    account_type: Optional[StrictStr] = Field(default=None, alias="accountType")
+    account_type: StrictStr = Field(description=" (required)", alias="accountType")
     admin_email: Optional[StrictStr] = Field(default=None, alias="adminEmail")
     admin_first_name: Optional[StrictStr] = Field(default=None, alias="adminFirstName")
     admin_last_name: Optional[StrictStr] = Field(default=None, alias="adminLastName")
     admin_time_zone: Optional[StrictStr] = Field(default=None, alias="adminTimeZone")
     cloud_provider: Optional[StrictStr] = Field(default=None, alias="cloudProvider")
-    company_name: Optional[StrictStr] = Field(default=None, alias="companyName")
+    company_name: StrictStr = Field(description=" (required)", alias="companyName")
     credit_limit: Optional[StrictInt] = Field(default=None, alias="creditLimit")
     logo: Optional[StrictStr] = None
     small_logo: Optional[StrictStr] = Field(default=None, alias="smallLogo")

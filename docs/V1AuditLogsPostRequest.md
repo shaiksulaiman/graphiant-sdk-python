@@ -8,9 +8,9 @@ Name | Type | Description | Notes
 **cursor_ref** | **str** |  | [optional] 
 **histogram_bucket_size_sec** | **int** |  | [optional] 
 **num_logs** | **int** |  | [optional] 
-**old_ts** | [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
-**recent_ts** | [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
-**selectors** | [**List[V1AuditLogsPostRequestSelectorsInner]**](V1AuditLogsPostRequestSelectorsInner.md) |  | [optional] 
+**old_ts** | [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 
+**recent_ts** | [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 
+**selectors** | [**List[AuditmonSelector]**](AuditmonSelector.md) |  | [optional] 
 
 ## Example
 

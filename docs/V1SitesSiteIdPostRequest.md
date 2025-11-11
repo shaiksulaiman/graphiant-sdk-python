@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**site** | [**V1SitesPostRequestSite**](V1SitesPostRequestSite.md) |  | [optional] 
+**site** | [**ManaV2NewSite**](ManaV2NewSite.md) |  | [optional] 
 
 ## Example
 

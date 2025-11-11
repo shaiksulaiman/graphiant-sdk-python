@@ -19,9 +19,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_devices_device_id_config_put_request_core import V1DevicesDeviceIdConfigPutRequestCore
-from graphiant_sdk.models.v1_devices_device_id_config_put_request_edge import V1DevicesDeviceIdConfigPutRequestEdge
-from graphiant_sdk.models.v1_version_post_request_configuration_metadata import V1VersionPostRequestConfigurationMetadata
+from graphiant_sdk.models.mana_v2_configuration_metadata import ManaV2ConfigurationMetadata
+from graphiant_sdk.models.mana_v2_core_device_config import ManaV2CoreDeviceConfig
+from graphiant_sdk.models.mana_v2_edge_device_config import ManaV2EdgeDeviceConfig
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -29,10 +29,10 @@ class V1DevicesDeviceIdConfigPutRequest(BaseModel):
     """
     V1DevicesDeviceIdConfigPutRequest
     """ # noqa: E501
-    configuration_metadata: Optional[V1VersionPostRequestConfigurationMetadata] = Field(default=None, alias="configurationMetadata")
-    core: Optional[V1DevicesDeviceIdConfigPutRequestCore] = None
+    configuration_metadata: Optional[ManaV2ConfigurationMetadata] = Field(default=None, alias="configurationMetadata")
+    core: Optional[ManaV2CoreDeviceConfig] = None
     description: Optional[StrictStr] = None
-    edge: Optional[V1DevicesDeviceIdConfigPutRequestEdge] = None
+    edge: Optional[ManaV2EdgeDeviceConfig] = None
     local_web_server_password: Optional[StrictStr] = Field(default=None, alias="localWebServerPassword")
     replace: Optional[StrictBool] = None
     __properties: ClassVar[List[str]] = ["configurationMetadata", "core", "description", "edge", "localWebServerPassword", "replace"]
@@ -97,10 +97,10 @@ class V1DevicesDeviceIdConfigPutRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "configurationMetadata": V1VersionPostRequestConfigurationMetadata.from_dict(obj["configurationMetadata"]) if obj.get("configurationMetadata") is not None else None,
-            "core": V1DevicesDeviceIdConfigPutRequestCore.from_dict(obj["core"]) if obj.get("core") is not None else None,
+            "configurationMetadata": ManaV2ConfigurationMetadata.from_dict(obj["configurationMetadata"]) if obj.get("configurationMetadata") is not None else None,
+            "core": ManaV2CoreDeviceConfig.from_dict(obj["core"]) if obj.get("core") is not None else None,
             "description": obj.get("description"),
-            "edge": V1DevicesDeviceIdConfigPutRequestEdge.from_dict(obj["edge"]) if obj.get("edge") is not None else None,
+            "edge": ManaV2EdgeDeviceConfig.from_dict(obj["edge"]) if obj.get("edge") is not None else None,
             "localWebServerPassword": obj.get("localWebServerPassword"),
             "replace": obj.get("replace")
         })

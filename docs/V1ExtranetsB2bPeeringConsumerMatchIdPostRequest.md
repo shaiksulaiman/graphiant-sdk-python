@@ -6,12 +6,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **customer_id** | **int** |  | [optional] 
-**global_object_ops** | [**Dict[str, V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue]**](V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue.md) |  | [optional] 
-**id** | **int** |  | [optional] 
-**nat** | [**List[V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceNatInner]**](V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceNatInner.md) |  | [optional] 
-**policy** | [**List[V1ExtranetsB2bPeeringConsumerMatchIdPostRequestPolicyInner]**](V1ExtranetsB2bPeeringConsumerMatchIdPostRequestPolicyInner.md) |  | [optional] 
-**site_information** | [**List[V1ExtranetsB2bConsumerPostRequestSiteInformationInner]**](V1ExtranetsB2bConsumerPostRequestSiteInformationInner.md) |  | [optional] 
-**site_to_site_vpn** | [**V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpn**](V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpn.md) |  | [optional] 
+**global_object_ops** | [**Dict[str, ManaV2GlobalObjectServiceOps]**](ManaV2GlobalObjectServiceOps.md) |  | [optional] 
+**id** | **int** | ID of the service. | [optional] 
+**nat** | [**List[ManaV2B2bNat]**](ManaV2B2bNat.md) |  | [optional] 
+**policy** | [**List[ManaV2B2bExtranetPeeringServiceConsumerLanSegmentPolicy]**](ManaV2B2bExtranetPeeringServiceConsumerLanSegmentPolicy.md) |  | [optional] 
+**site_information** | [**List[ManaV2B2bSiteInformation]**](ManaV2B2bSiteInformation.md) |  | [optional] 
+**site_to_site_vpn** | [**ManaV2GuestConsumerSiteToSiteVpnConfig**](ManaV2GuestConsumerSiteToSiteVpnConfig.md) |  | [optional] 
 
 ## Example
 

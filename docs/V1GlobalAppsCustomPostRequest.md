@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**app_config** | [**V1GlobalAppsCustomGet200ResponseEntriesInnerAppConfig**](V1GlobalAppsCustomGet200ResponseEntriesInnerAppConfig.md) |  | [optional] 
+**app_config** | [**ManaV2GlobalAppConfig**](ManaV2GlobalAppConfig.md) |  | [optional] 
 
 ## Example
 

@@ -26,8 +26,8 @@ class V2AckCreateupdatePostRequest(BaseModel):
     """
     V2AckCreateupdatePostRequest
     """ # noqa: E501
-    alert_id_list: Optional[List[StrictStr]] = Field(default=None, alias="alertIdList")
-    reason: Optional[StrictStr] = None
+    alert_id_list: List[StrictStr] = Field(alias="alertIdList")
+    reason: Optional[StrictStr] = Field(default=None, description="Optional triage message in acknowledgement")
     __properties: ClassVar[List[str]] = ["alertIdList", "reason"]
 
     model_config = ConfigDict(

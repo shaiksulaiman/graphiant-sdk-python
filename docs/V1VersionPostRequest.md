@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**configuration_metadata** | [**V1VersionPostRequestConfigurationMetadata**](V1VersionPostRequestConfigurationMetadata.md) |  | [optional] 
+**configuration_metadata** | [**ManaV2ConfigurationMetadata**](ManaV2ConfigurationMetadata.md) |  | [optional] 
 **device_id** | **int** |  | [optional] 
 **version** | **int** |  | [optional] 
 

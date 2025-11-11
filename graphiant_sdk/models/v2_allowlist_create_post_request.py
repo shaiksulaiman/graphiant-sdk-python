@@ -26,8 +26,8 @@ class V2AllowlistCreatePostRequest(BaseModel):
     """
     V2AllowlistCreatePostRequest
     """ # noqa: E501
-    alert_id: Optional[StrictStr] = Field(default=None, alias="alertId")
-    note_text: Optional[StrictStr] = Field(default=None, alias="noteText")
+    alert_id: StrictStr = Field(description="Alert id of the alert to create allowlist/mutelist for (required)", alias="alertId")
+    note_text: Optional[StrictStr] = Field(default=None, description="Optional note", alias="noteText")
     __properties: ClassVar[List[str]] = ["alertId", "noteText"]
 
     model_config = ConfigDict(

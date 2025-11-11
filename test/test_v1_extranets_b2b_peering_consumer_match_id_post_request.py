@@ -37,32 +37,32 @@ class TestV1ExtranetsB2bPeeringConsumerMatchIdPostRequest(unittest.TestCase):
             return V1ExtranetsB2bPeeringConsumerMatchIdPostRequest(
                 customer_id = 1234567891011,
                 global_object_ops = {
-                    'key' : graphiant_sdk.models._v1_extranets_b2b_peering_consumer__match_id__post_request_global_object_ops_value._v1_extranets_b2b_peering_consumer__matchId__post_request_globalObjectOps_value(
+                    'key' : graphiant_sdk.models.mana_v2_global_object_service_ops.manaV2GlobalObjectServiceOps(
                         routing_policy_ops = {
                             'key' : 'ENUM_VALUE'
                             }, )
                     },
                 id = 1234567891011,
                 nat = [
-                    graphiant_sdk.models._v1_extranets_b2b_peering_match_service_to_customer_post_request_service_nat_inner._v1_extranets_b2b_peering_match_service_to_customer_post_request_service_nat_inner(
+                    graphiant_sdk.models.mana_v2_b2b_nat.manaV2B2bNat(
                         outside_nat_prefix = 'example string', 
                         prefix = 'example string', )
                     ],
                 policy = [
-                    graphiant_sdk.models._v1_extranets_b2b_peering_consumer__match_id__post_request_policy_inner._v1_extranets_b2b_peering_consumer__matchId__post_request_policy_inner(
+                    graphiant_sdk.models.mana_v2_b2b_extranet_peering_service_consumer_lan_segment_policy.manaV2B2bExtranetPeeringServiceConsumerLanSegmentPolicy(
                         consumer_prefixes = [
                             'example string'
                             ], 
                         lan_segment = 1234567891011, )
                     ],
                 site_information = [
-                    graphiant_sdk.models._v1_extranets_b2b_consumer_post_request_site_information_inner._v1_extranets_b2b_consumer_post_request_siteInformation_inner(
+                    graphiant_sdk.models.mana_v2_b2b_site_information.manaV2B2bSiteInformation(
                         bw_allocation_site_lists = 123, 
                         bw_allocation_sites = 123, 
-                        policer_site_lists = graphiant_sdk.models._v1_extranets_b2b_consumer_post_request_site_information_inner_policer_site_lists._v1_extranets_b2b_consumer_post_request_siteInformation_inner_policerSiteLists(
+                        policer_site_lists = graphiant_sdk.models.mana_v2_policer.manaV2Policer(
                             burst_size = 123, 
                             bw = 123, ), 
-                        policer_sites = graphiant_sdk.models._v1_extranets_b2b_consumer_post_request_site_information_inner_policer_site_lists._v1_extranets_b2b_consumer_post_request_siteInformation_inner_policerSiteLists(
+                        policer_sites = graphiant_sdk.models.mana_v2_policer.manaV2Policer(
                             burst_size = 123, 
                             bw = 123, ), 
                         site_lists = [
@@ -72,43 +72,43 @@ class TestV1ExtranetsB2bPeeringConsumerMatchIdPostRequest(unittest.TestCase):
                             1234567891011
                             ], )
                     ],
-                site_to_site_vpn = graphiant_sdk.models._v1_extranets_b2b_peering_consumer__match_id__post_request_site_to_site_vpn._v1_extranets_b2b_peering_consumer__matchId__post_request_siteToSiteVpn(
+                site_to_site_vpn = graphiant_sdk.models.mana_v2_guest_consumer_site_to_site_vpn_config.manaV2GuestConsumerSiteToSiteVpnConfig(
                     emails = [
                         'example string'
                         ], 
-                    ipsec_gateway_details = graphiant_sdk.models._v1_extranets_b2b_peering_consumer__match_id__post_request_site_to_site_vpn_ipsec_gateway_details._v1_extranets_b2b_peering_consumer__matchId__post_request_siteToSiteVpn_ipsecGatewayDetails(
+                    ipsec_gateway_details = graphiant_sdk.models.mana_v2_i_psec_gateway_details.manaV2IPsecGatewayDetails(
                         destination_address = 'example string', 
                         ike_initiator = True, 
                         mtu = 123, 
                         name = 'example string', 
                         remote_ike_peer_identity = 'example string', 
-                        routing = graphiant_sdk.models._v1_extranets_b2b_peering_consumer__match_id__post_request_site_to_site_vpn_ipsec_gateway_details_routing._v1_extranets_b2b_peering_consumer__matchId__post_request_siteToSiteVpn_ipsecGatewayDetails_routing(
-                            bgp = graphiant_sdk.models._v1_extranets_b2b_peering_consumer__match_id__post_request_site_to_site_vpn_ipsec_gateway_details_routing_bgp._v1_extranets_b2b_peering_consumer__matchId__post_request_siteToSiteVpn_ipsecGatewayDetails_routing_bgp(
+                        routing = graphiant_sdk.models.mana_v2_ipsec_routing_config.manaV2IpsecRoutingConfig(
+                            bgp = graphiant_sdk.models.mana_v2_i_psec_bgp_route_config.manaV2IPsecBgpRouteConfig(
                                 address_families = {
-                                    'key' : graphiant_sdk.models._v1_extranets_b2b_peering_consumer__match_id__post_request_site_to_site_vpn_ipsec_gateway_details_routing_bgp_address_families_value._v1_extranets_b2b_peering_consumer__matchId__post_request_siteToSiteVpn_ipsecGatewayDetails_routing_bgp_addressFamilies_value(
-                                        family = graphiant_sdk.models._v1_extranets_b2b_peering_consumer__match_id__post_request_site_to_site_vpn_ipsec_gateway_details_routing_bgp_address_families_value_family._v1_extranets_b2b_peering_consumer__matchId__post_request_siteToSiteVpn_ipsecGatewayDetails_routing_bgp_addressFamilies_value_family(
+                                    'key' : graphiant_sdk.models.mana_v2_nullable_bgp_neighbor_address_family_config.manaV2NullableBgpNeighborAddressFamilyConfig(
+                                        family = graphiant_sdk.models.mana_v2_bgp_neighbor_address_family_config.manaV2BgpNeighborAddressFamilyConfig(
                                             address_family = 'ENUM_VALUE', 
-                                            inbound_policy = graphiant_sdk.models._v1_global_config_patch_request_routing_policies_value_policy_statements_value_statement_actions_value_action_call_policy._v1_global_config_patch_request_routingPolicies_value_policy_statements_value_statement_actions_value_action_callPolicy(
+                                            inbound_policy = graphiant_sdk.models.mana_v2_nullable_policy_name.manaV2NullablePolicyName(
                                                 policy = 'example string', ), 
-                                            outbound_policy = graphiant_sdk.models._v1_global_config_patch_request_routing_policies_value_policy_statements_value_statement_actions_value_action_call_policy._v1_global_config_patch_request_routingPolicies_value_policy_statements_value_statement_actions_value_action_callPolicy(
+                                            outbound_policy = graphiant_sdk.models.mana_v2_nullable_policy_name.manaV2NullablePolicyName(
                                                 policy = 'example string', ), ), )
                                     }, 
                                 hold_timer = 123, 
                                 keepalive_timer = 123, 
-                                md5_password = graphiant_sdk.models._v1_extranets_b2b_peering_consumer__match_id__post_request_site_to_site_vpn_ipsec_gateway_details_routing_bgp_md5_password._v1_extranets_b2b_peering_consumer__matchId__post_request_siteToSiteVpn_ipsecGatewayDetails_routing_bgp_md5Password(), 
+                                md5_password = graphiant_sdk.models.mana_v2_nullable_md5_password.manaV2NullableMd5Password(), 
                                 peer_asn = 123, 
                                 send_community = True, ), 
-                            static = graphiant_sdk.models._v1_extranets_b2b_peering_consumer__match_id__post_request_site_to_site_vpn_ipsec_gateway_details_routing_static._v1_extranets_b2b_peering_consumer__matchId__post_request_siteToSiteVpn_ipsecGatewayDetails_routing_static(
+                            static = graphiant_sdk.models.mana_v2_i_psec_static_route_config.manaV2IPsecStaticRouteConfig(
                                 destination_prefix = [
                                     'example string'
                                     ], ), ), 
                         tcp_mss = 123, 
-                        tunnel1 = graphiant_sdk.models._v1_extranets_b2b_peering_consumer__match_id__post_request_site_to_site_vpn_ipsec_gateway_details_tunnel1._v1_extranets_b2b_peering_consumer__matchId__post_request_siteToSiteVpn_ipsecGatewayDetails_tunnel1(
+                        tunnel1 = graphiant_sdk.models.mana_v2_i_psec_gateway_tunnel_details.manaV2IPsecGatewayTunnelDetails(
                             inside_ipv4_cidr = 'example string', 
                             inside_ipv6_cidr = 'example string', 
                             local_ike_peer_identity = 'example string', 
                             psk = 'example string', ), 
-                        tunnel2 = graphiant_sdk.models._v1_extranets_b2b_peering_consumer__match_id__post_request_site_to_site_vpn_ipsec_gateway_details_tunnel1._v1_extranets_b2b_peering_consumer__matchId__post_request_siteToSiteVpn_ipsecGatewayDetails_tunnel1(
+                        tunnel2 = graphiant_sdk.models.mana_v2_i_psec_gateway_tunnel_details.manaV2IPsecGatewayTunnelDetails(
                             inside_ipv4_cidr = 'example string', 
                             inside_ipv6_cidr = 'example string', 
                             local_ike_peer_identity = 'example string', 

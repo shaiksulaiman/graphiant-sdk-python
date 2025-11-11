@@ -19,8 +19,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_global_config_patch_request_global_prefix_sets_value_prefix_set_entries_value import V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValue
-from graphiant_sdk.models.v1_global_config_patch_request_global_prefix_sets_value_prefix_set_entries_value_entry import V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValueEntry
+from graphiant_sdk.models.v1_policy_prefix_sets_id_put_request_entry import V1PolicyPrefixSetsIdPutRequestEntry
+from graphiant_sdk.models.v1_policy_prefix_sets_id_put_request_nullable_entry import V1PolicyPrefixSetsIdPutRequestNullableEntry
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -29,9 +29,9 @@ class V1PolicyPrefixSetsIdPutRequest(BaseModel):
     V1PolicyPrefixSetsIdPutRequest
     """ # noqa: E501
     description: Optional[StrictStr] = None
-    entries: Optional[Dict[str, V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValueEntry]] = None
+    entries: Optional[Dict[str, V1PolicyPrefixSetsIdPutRequestEntry]] = None
     name: Optional[StrictStr] = None
-    prefix_set_entries: Optional[Dict[str, V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValue]] = Field(default=None, alias="prefixSetEntries")
+    prefix_set_entries: Optional[Dict[str, V1PolicyPrefixSetsIdPutRequestNullableEntry]] = Field(default=None, alias="prefixSetEntries")
     __properties: ClassVar[List[str]] = ["description", "entries", "name", "prefixSetEntries"]
 
     model_config = ConfigDict(
@@ -101,14 +101,14 @@ class V1PolicyPrefixSetsIdPutRequest(BaseModel):
         _obj = cls.model_validate({
             "description": obj.get("description"),
             "entries": dict(
-                (_k, V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValueEntry.from_dict(_v))
+                (_k, V1PolicyPrefixSetsIdPutRequestEntry.from_dict(_v))
                 for _k, _v in obj["entries"].items()
             )
             if obj.get("entries") is not None
             else None,
             "name": obj.get("name"),
             "prefixSetEntries": dict(
-                (_k, V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValue.from_dict(_v))
+                (_k, V1PolicyPrefixSetsIdPutRequestNullableEntry.from_dict(_v))
                 for _k, _v in obj["prefixSetEntries"].items()
             )
             if obj.get("prefixSetEntries") is not None

@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_extranets_b2b_id_customer_post_request_invites_inner import V1ExtranetsB2bIdCustomerPostRequestInvitesInner
+from graphiant_sdk.models.mana_v2_b2b_extranet_application_invite import ManaV2B2bExtranetApplicationInvite
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class V1ExtranetsB2bIdCustomerPostRequest(BaseModel):
     """
     V1ExtranetsB2bIdCustomerPostRequest
     """ # noqa: E501
-    invites: Optional[List[V1ExtranetsB2bIdCustomerPostRequestInvitesInner]] = None
+    invites: Optional[List[ManaV2B2bExtranetApplicationInvite]] = None
     __properties: ClassVar[List[str]] = ["invites"]
 
     model_config = ConfigDict(
@@ -88,7 +88,7 @@ class V1ExtranetsB2bIdCustomerPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "invites": [V1ExtranetsB2bIdCustomerPostRequestInvitesInner.from_dict(_item) for _item in obj["invites"]] if obj.get("invites") is not None else None
+            "invites": [ManaV2B2bExtranetApplicationInvite.from_dict(_item) for _item in obj["invites"]] if obj.get("invites") is not None else None
         })
         return _obj
 

@@ -39,10 +39,14 @@ class TestV1TempPasswordPutRequest(unittest.TestCase):
                 emails = [
                     'example string'
                     ],
+                match_id = 1234567891011,
                 service_name = 'example string'
             )
         else:
             return V1TempPasswordPutRequest(
+                emails = [
+                    'example string'
+                    ],
         )
         """
 

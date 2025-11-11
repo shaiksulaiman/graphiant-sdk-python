@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.assistant_time_window import AssistantTimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class V2AssistantGetConversationsPostRequest(BaseModel):
     """
     V2AssistantGetConversationsPostRequest
     """ # noqa: E501
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    time_window: Optional[AssistantTimeWindow] = Field(default=None, alias="timeWindow")
     user_id: Optional[StrictStr] = Field(default=None, alias="userId")
     __properties: ClassVar[List[str]] = ["timeWindow", "userId"]
 
@@ -85,7 +85,7 @@ class V2AssistantGetConversationsPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None,
+            "timeWindow": AssistantTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None,
             "userId": obj.get("userId")
         })
         return _obj

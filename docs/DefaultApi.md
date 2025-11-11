@@ -23,17 +23,24 @@ Method | HTTP request | Description
 [**v1_apps_visualization_post**](DefaultApi.md#v1_apps_visualization_post) | **POST** /v1/apps/visualization | 
 [**v1_audit_logs_post**](DefaultApi.md#v1_audit_logs_post) | **POST** /v1/audit/logs | 
 [**v1_auth_delete**](DefaultApi.md#v1_auth_delete) | **DELETE** /v1/auth | 
+[**v1_auth_gcs_post**](DefaultApi.md#v1_auth_gcs_post) | **POST** /v1/auth/gcs | 
 [**v1_auth_get**](DefaultApi.md#v1_auth_get) | **GET** /v1/auth | 
-[**v1_auth_login_post**](DefaultApi.md#v1_auth_login_post) | **POST** /v1/auth/login | Authenticate user and return token
-[**v1_auth_login_pre_get**](DefaultApi.md#v1_auth_login_pre_get) | **GET** /v1/auth/login/pre | Pre-login endpoint
-[**v1_auth_login_temp_post**](DefaultApi.md#v1_auth_login_temp_post) | **POST** /v1/auth/login/temp | Authenticate user with temporary password
+[**v1_auth_login_callback_post**](DefaultApi.md#v1_auth_login_callback_post) | **POST** /v1/auth/login/callback | 
+[**v1_auth_login_post**](DefaultApi.md#v1_auth_login_post) | **POST** /v1/auth/login | 
+[**v1_auth_login_pre_get**](DefaultApi.md#v1_auth_login_pre_get) | **GET** /v1/auth/login/pre | 
+[**v1_auth_login_saml_get**](DefaultApi.md#v1_auth_login_saml_get) | **GET** /v1/auth/login/saml | 
+[**v1_auth_login_temp_post**](DefaultApi.md#v1_auth_login_temp_post) | **POST** /v1/auth/login/temp | 
 [**v1_auth_mfa_delete**](DefaultApi.md#v1_auth_mfa_delete) | **DELETE** /v1/auth/mfa | 
 [**v1_auth_mfa_patch**](DefaultApi.md#v1_auth_mfa_patch) | **PATCH** /v1/auth/mfa | 
+[**v1_auth_mfa_post**](DefaultApi.md#v1_auth_mfa_post) | **POST** /v1/auth/mfa | 
 [**v1_auth_mfa_types_get**](DefaultApi.md#v1_auth_mfa_types_get) | **GET** /v1/auth/mfa/types | 
 [**v1_auth_mfa_types_put**](DefaultApi.md#v1_auth_mfa_types_put) | **PUT** /v1/auth/mfa/types | 
 [**v1_auth_patch**](DefaultApi.md#v1_auth_patch) | **PATCH** /v1/auth | 
 [**v1_auth_put**](DefaultApi.md#v1_auth_put) | **PUT** /v1/auth | 
-[**v1_auth_user_get**](DefaultApi.md#v1_auth_user_get) | **GET** /v1/auth/user | Get authenticated user information
+[**v1_auth_refresh_get**](DefaultApi.md#v1_auth_refresh_get) | **GET** /v1/auth/refresh | 
+[**v1_auth_session_get**](DefaultApi.md#v1_auth_session_get) | **GET** /v1/auth/session | 
+[**v1_auth_session_root_get**](DefaultApi.md#v1_auth_session_root_get) | **GET** /v1/auth/session/root | 
+[**v1_auth_user_get**](DefaultApi.md#v1_auth_user_get) | **GET** /v1/auth/user | 
 [**v1_b2b_extranet_monitoring_filter_post**](DefaultApi.md#v1_b2b_extranet_monitoring_filter_post) | **POST** /v1/b2b-extranet-monitoring/filter | 
 [**v1_backbone_health_device_device_id_post**](DefaultApi.md#v1_backbone_health_device_device_id_post) | **POST** /v1/backbone-health/device/{deviceId} | 
 [**v1_backbone_health_et_wan_matrix_get**](DefaultApi.md#v1_backbone_health_et_wan_matrix_get) | **GET** /v1/backbone-health/et-wan-matrix | 
@@ -147,6 +154,9 @@ Method | HTTP request | Description
 [**v1_devices_inventory_request_return_post**](DefaultApi.md#v1_devices_inventory_request_return_post) | **POST** /v1/devices/inventory/request-return | 
 [**v1_devices_inventory_serial_num_delete**](DefaultApi.md#v1_devices_inventory_serial_num_delete) | **DELETE** /v1/devices/inventory/serial-num | 
 [**v1_devices_inventory_serial_num_post**](DefaultApi.md#v1_devices_inventory_serial_num_post) | **POST** /v1/devices/inventory/serial-num | 
+[**v1_devices_oauth_authorization_get**](DefaultApi.md#v1_devices_oauth_authorization_get) | **GET** /v1/devices/oauth/authorization | 
+[**v1_devices_oauth_get**](DefaultApi.md#v1_devices_oauth_get) | **GET** /v1/devices/oauth | 
+[**v1_devices_oauth_post**](DefaultApi.md#v1_devices_oauth_post) | **POST** /v1/devices/oauth | 
 [**v1_devices_oauth_redirect_get**](DefaultApi.md#v1_devices_oauth_redirect_get) | **GET** //v1/devices/oauth/redirect | 
 [**v1_devices_rma_post**](DefaultApi.md#v1_devices_rma_post) | **POST** /v1/devices/rma | 
 [**v1_devices_routing_vrf_protocol_route_count_get**](DefaultApi.md#v1_devices_routing_vrf_protocol_route_count_get) | **GET** /v1/devices/routing/vrf/protocol-route-count | 
@@ -226,8 +236,10 @@ Method | HTTP request | Description
 [**v1_extranets_b2b_peering_customer_id_delete**](DefaultApi.md#v1_extranets_b2b_peering_customer_id_delete) | **DELETE** /v1/extranets-b2b-peering/customer/{id} | 
 [**v1_extranets_b2b_peering_customer_id_get**](DefaultApi.md#v1_extranets_b2b_peering_customer_id_get) | **GET** /v1/extranets-b2b-peering/customer/{id} | 
 [**v1_extranets_b2b_peering_customer_post**](DefaultApi.md#v1_extranets_b2b_peering_customer_post) | **POST** /v1/extranets-b2b-peering/customer | 
+[**v1_extranets_b2b_peering_match_service_to_customer_id_delete**](DefaultApi.md#v1_extranets_b2b_peering_match_service_to_customer_id_delete) | **DELETE** /v1/extranets-b2b-peering/match/service-to-customer/{id} | 
+[**v1_extranets_b2b_peering_match_service_to_customer_id_get**](DefaultApi.md#v1_extranets_b2b_peering_match_service_to_customer_id_get) | **GET** /v1/extranets-b2b-peering/match/service-to-customer/{id} | 
 [**v1_extranets_b2b_peering_match_service_to_customer_post**](DefaultApi.md#v1_extranets_b2b_peering_match_service_to_customer_post) | **POST** /v1/extranets-b2b-peering/match/service-to-customer | 
-[**v1_extranets_b2b_peering_match_services_summary_get**](DefaultApi.md#v1_extranets_b2b_peering_match_services_summary_get) | **GET** /v1/extranets-b2b-peering/match/services/summary | 
+[**v1_extranets_b2b_peering_match_services_summary_id_get**](DefaultApi.md#v1_extranets_b2b_peering_match_services_summary_id_get) | **GET** /v1/extranets-b2b-peering/match/services/summary/{id} | 
 [**v1_extranets_b2b_peering_producer_id_get**](DefaultApi.md#v1_extranets_b2b_peering_producer_id_get) | **GET** /v1/extranets-b2b-peering/producer/{id} | 
 [**v1_extranets_b2b_peering_producer_id_matching_customers_summary_get**](DefaultApi.md#v1_extranets_b2b_peering_producer_id_matching_customers_summary_get) | **GET** /v1/extranets-b2b-peering/producer/{id}/matching-customers-summary | 
 [**v1_extranets_b2b_peering_producer_post**](DefaultApi.md#v1_extranets_b2b_peering_producer_post) | **POST** /v1/extranets-b2b-peering/producer | 
@@ -254,6 +266,7 @@ Method | HTTP request | Description
 [**v1_gateways_ipsec_regions_region_id_vrfs_vrf_id_inside_subnet_get**](DefaultApi.md#v1_gateways_ipsec_regions_region_id_vrfs_vrf_id_inside_subnet_get) | **GET** /v1/gateways/ipsec/regions/{regionId}/vrfs/{vrfId}/inside-subnet | 
 [**v1_gateways_post**](DefaultApi.md#v1_gateways_post) | **POST** /v1/gateways | 
 [**v1_gateways_put**](DefaultApi.md#v1_gateways_put) | **PUT** /v1/gateways | 
+[**v1_gateways_reference_consumer_get**](DefaultApi.md#v1_gateways_reference_consumer_get) | **GET** /v1/gateways/reference-consumer | 
 [**v1_gateways_regions_get**](DefaultApi.md#v1_gateways_regions_get) | **GET** /v1/gateways/regions | 
 [**v1_gateways_status_post**](DefaultApi.md#v1_gateways_status_post) | **POST** /v1/gateways/status | 
 [**v1_gateways_summary_get**](DefaultApi.md#v1_gateways_summary_get) | **GET** /v1/gateways/summary | 
@@ -389,6 +402,9 @@ Method | HTTP request | Description
 [**v1_troubleshooting_site_site_id_get**](DefaultApi.md#v1_troubleshooting_site_site_id_get) | **GET** /v1/troubleshooting/site/{siteId} | 
 [**v1_troubleshooting_top_sites_by_alerts_post**](DefaultApi.md#v1_troubleshooting_top_sites_by_alerts_post) | **POST** /v1/troubleshooting/top-sites-by-alerts | 
 [**v1_tt_tt_identity_device_status_get**](DefaultApi.md#v1_tt_tt_identity_device_status_get) | **GET** /v1/tt/{ttIdentity}/device-status | 
+[**v1_users_email_password_patch**](DefaultApi.md#v1_users_email_password_patch) | **PATCH** /v1/users/{email}/password | 
+[**v1_users_email_recovery_get**](DefaultApi.md#v1_users_email_recovery_get) | **GET** /v1/users/{email}/recovery | 
+[**v1_users_email_verified_patch**](DefaultApi.md#v1_users_email_verified_patch) | **PATCH** /v1/users/{email}/verified | 
 [**v1_users_get**](DefaultApi.md#v1_users_get) | **GET** /v1/users | 
 [**v1_users_id_delete**](DefaultApi.md#v1_users_id_delete) | **DELETE** /v1/users/{id} | 
 [**v1_users_id_enterprises_get**](DefaultApi.md#v1_users_id_enterprises_get) | **GET** /v1/users/{id}/enterprises | 
@@ -510,6 +526,8 @@ Method | HTTP request | Description
 # **v1_account_email_patch**
 > object v1_account_email_patch(authorization, v1_account_email_patch_request)
 
+Update user's email address with verification.
+
 ### Example
 
 * Api Key Authentication (jwtAuth):
@@ -586,6 +604,8 @@ Name | Type | Description  | Notes
 # **v1_account_info_patch**
 > object v1_account_info_patch(authorization, v1_account_info_patch_request)
 
+Update current user's profile information.
+
 ### Example
 
 * Api Key Authentication (jwtAuth):
@@ -660,7 +680,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_account_mfa_confirmation_post**
-> V1AccountMfaConfirmationPost200Response v1_account_mfa_confirmation_post(authorization, v1_account_mfa_confirmation_post_request)
+> V1AccountMfaConfirmationPostResponse v1_account_mfa_confirmation_post(authorization, v1_account_mfa_confirmation_post_request)
+
+Confirm MFA type change with verification code.
 
 ### Example
 
@@ -668,8 +690,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_account_mfa_confirmation_post200_response import V1AccountMfaConfirmationPost200Response
 from graphiant_sdk.models.v1_account_mfa_confirmation_post_request import V1AccountMfaConfirmationPostRequest
+from graphiant_sdk.models.v1_account_mfa_confirmation_post_response import V1AccountMfaConfirmationPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -717,7 +739,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AccountMfaConfirmationPost200Response**](V1AccountMfaConfirmationPost200Response.md)
+[**V1AccountMfaConfirmationPostResponse**](V1AccountMfaConfirmationPostResponse.md)
 
 ### Authorization
 
@@ -738,6 +760,8 @@ Name | Type | Description  | Notes
 
 # **v1_account_mfa_delete**
 > object v1_account_mfa_delete(authorization)
+
+Remove user's MFA enrollment.
 
 ### Example
 
@@ -810,7 +834,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_account_mfa_get**
-> V1AccountMfaGet200Response v1_account_mfa_get(authorization)
+> V1AccountMfaGetResponse v1_account_mfa_get(authorization)
+
+Get user's current MFA type and enrollment status.
 
 ### Example
 
@@ -818,7 +844,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_account_mfa_get200_response import V1AccountMfaGet200Response
+from graphiant_sdk.models.v1_account_mfa_get_response import V1AccountMfaGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -864,7 +890,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AccountMfaGet200Response**](V1AccountMfaGet200Response.md)
+[**V1AccountMfaGetResponse**](V1AccountMfaGetResponse.md)
 
 ### Authorization
 
@@ -884,7 +910,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_account_mfa_put**
-> V1AccountMfaPut200Response v1_account_mfa_put(authorization, v1_account_mfa_put_request)
+> V1AccountMfaPutResponse v1_account_mfa_put(authorization, v1_account_mfa_put_request)
+
+Update user's MFA type (SMS, GoogleAuth) with verification.
 
 ### Example
 
@@ -892,8 +920,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_account_mfa_put200_response import V1AccountMfaPut200Response
 from graphiant_sdk.models.v1_account_mfa_put_request import V1AccountMfaPutRequest
+from graphiant_sdk.models.v1_account_mfa_put_response import V1AccountMfaPutResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -941,7 +969,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AccountMfaPut200Response**](V1AccountMfaPut200Response.md)
+[**V1AccountMfaPutResponse**](V1AccountMfaPutResponse.md)
 
 ### Authorization
 
@@ -962,6 +990,8 @@ Name | Type | Description  | Notes
 
 # **v1_account_password_patch**
 > object v1_account_password_patch(authorization, v1_account_password_patch_request)
+
+Change user password with current password verification (Graphiant cloud only).
 
 ### Example
 
@@ -1037,7 +1067,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_activity_logs_post**
-> V1ActivityLogsPost200Response v1_activity_logs_post(authorization, v1_activity_logs_post_request)
+> V1ActivityLogsPostResponse v1_activity_logs_post(authorization, v1_activity_logs_post_request)
 
 ### Example
 
@@ -1045,8 +1075,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_activity_logs_post200_response import V1ActivityLogsPost200Response
 from graphiant_sdk.models.v1_activity_logs_post_request import V1ActivityLogsPostRequest
+from graphiant_sdk.models.v1_activity_logs_post_response import V1ActivityLogsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -1094,7 +1124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ActivityLogsPost200Response**](V1ActivityLogsPost200Response.md)
+[**V1ActivityLogsPostResponse**](V1ActivityLogsPostResponse.md)
 
 ### Authorization
 
@@ -1114,7 +1144,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_alarm_history_get**
-> V1AlarmHistoryGet200Response v1_alarm_history_get(authorization)
+> V1AlarmHistoryGetResponse v1_alarm_history_get(authorization)
 
 ### Example
 
@@ -1122,7 +1152,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_alarm_history_get200_response import V1AlarmHistoryGet200Response
+from graphiant_sdk.models.v1_alarm_history_get_response import V1AlarmHistoryGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -1168,7 +1198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AlarmHistoryGet200Response**](V1AlarmHistoryGet200Response.md)
+[**V1AlarmHistoryGetResponse**](V1AlarmHistoryGetResponse.md)
 
 ### Authorization
 
@@ -1266,7 +1296,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_alarms_events_get**
-> V1AlarmsEventsGet200Response v1_alarms_events_get(authorization)
+> V1AlarmsEventsGetResponse v1_alarms_events_get(authorization)
 
 ### Example
 
@@ -1274,7 +1304,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_alarms_events_get200_response import V1AlarmsEventsGet200Response
+from graphiant_sdk.models.v1_alarms_events_get_response import V1AlarmsEventsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -1320,7 +1350,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AlarmsEventsGet200Response**](V1AlarmsEventsGet200Response.md)
+[**V1AlarmsEventsGetResponse**](V1AlarmsEventsGetResponse.md)
 
 ### Authorization
 
@@ -1340,7 +1370,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_alarms_list_get**
-> V1AlarmsListGet200Response v1_alarms_list_get(authorization)
+> V1AlarmsListGetResponse v1_alarms_list_get(authorization)
 
 ### Example
 
@@ -1348,7 +1378,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_alarms_list_get200_response import V1AlarmsListGet200Response
+from graphiant_sdk.models.v1_alarms_list_get_response import V1AlarmsListGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -1394,7 +1424,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AlarmsListGet200Response**](V1AlarmsListGet200Response.md)
+[**V1AlarmsListGetResponse**](V1AlarmsListGetResponse.md)
 
 ### Authorization
 
@@ -1414,7 +1444,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_apps_app_summary_post**
-> V1AppsAppSummaryPost200Response v1_apps_app_summary_post(authorization, v1_apps_app_summary_post_request)
+> V1AppsAppSummaryPostResponse v1_apps_app_summary_post(authorization, v1_apps_app_summary_post_request)
+
+Get app state summary counts
 
 ### Example
 
@@ -1422,8 +1454,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_apps_app_summary_post200_response import V1AppsAppSummaryPost200Response
 from graphiant_sdk.models.v1_apps_app_summary_post_request import V1AppsAppSummaryPostRequest
+from graphiant_sdk.models.v1_apps_app_summary_post_response import V1AppsAppSummaryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -1471,7 +1503,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AppsAppSummaryPost200Response**](V1AppsAppSummaryPost200Response.md)
+[**V1AppsAppSummaryPostResponse**](V1AppsAppSummaryPostResponse.md)
 
 ### Authorization
 
@@ -1491,7 +1523,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_apps_bandwidth_post**
-> V1AppsBandwidthPost200Response v1_apps_bandwidth_post(authorization, v1_apps_bandwidth_post_request)
+> V1AppsBandwidthPostResponse v1_apps_bandwidth_post(authorization, v1_apps_bandwidth_post_request)
 
 ### Example
 
@@ -1499,8 +1531,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_apps_bandwidth_post200_response import V1AppsBandwidthPost200Response
 from graphiant_sdk.models.v1_apps_bandwidth_post_request import V1AppsBandwidthPostRequest
+from graphiant_sdk.models.v1_apps_bandwidth_post_response import V1AppsBandwidthPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -1548,7 +1580,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AppsBandwidthPost200Response**](V1AppsBandwidthPost200Response.md)
+[**V1AppsBandwidthPostResponse**](V1AppsBandwidthPostResponse.md)
 
 ### Authorization
 
@@ -1568,7 +1600,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_apps_device_device_id_top_post**
-> V1AppsDeviceDeviceIdTopPost200Response v1_apps_device_device_id_top_post(authorization, device_id, v1_apps_device_device_id_top_post_request)
+> V1AppsDeviceDeviceIdTopPostResponse v1_apps_device_device_id_top_post(authorization, device_id, v1_apps_device_device_id_top_post_request)
+
+Get top apps for a device
 
 ### Example
 
@@ -1576,8 +1610,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_apps_device_device_id_top_post200_response import V1AppsDeviceDeviceIdTopPost200Response
 from graphiant_sdk.models.v1_apps_device_device_id_top_post_request import V1AppsDeviceDeviceIdTopPostRequest
+from graphiant_sdk.models.v1_apps_device_device_id_top_post_response import V1AppsDeviceDeviceIdTopPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -1627,7 +1661,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AppsDeviceDeviceIdTopPost200Response**](V1AppsDeviceDeviceIdTopPost200Response.md)
+[**V1AppsDeviceDeviceIdTopPostResponse**](V1AppsDeviceDeviceIdTopPostResponse.md)
 
 ### Authorization
 
@@ -1647,7 +1681,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_apps_site_site_id_top_post**
-> V1AppsDeviceDeviceIdTopPost200Response v1_apps_site_site_id_top_post(authorization, site_id, v1_apps_device_device_id_top_post_request)
+> V1AppsSiteSiteIdTopPostResponse v1_apps_site_site_id_top_post(authorization, site_id, v1_apps_site_site_id_top_post_request)
+
+Get top apps for a site
 
 ### Example
 
@@ -1655,8 +1691,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_apps_device_device_id_top_post200_response import V1AppsDeviceDeviceIdTopPost200Response
-from graphiant_sdk.models.v1_apps_device_device_id_top_post_request import V1AppsDeviceDeviceIdTopPostRequest
+from graphiant_sdk.models.v1_apps_site_site_id_top_post_request import V1AppsSiteSiteIdTopPostRequest
+from graphiant_sdk.models.v1_apps_site_site_id_top_post_response import V1AppsSiteSiteIdTopPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -1683,10 +1719,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
     site_id = 1234567891011 # int | 
-    v1_apps_device_device_id_top_post_request = graphiant_sdk.V1AppsDeviceDeviceIdTopPostRequest() # V1AppsDeviceDeviceIdTopPostRequest | 
+    v1_apps_site_site_id_top_post_request = graphiant_sdk.V1AppsSiteSiteIdTopPostRequest() # V1AppsSiteSiteIdTopPostRequest | 
 
     try:
-        api_response = api_instance.v1_apps_site_site_id_top_post(authorization, site_id, v1_apps_device_device_id_top_post_request)
+        api_response = api_instance.v1_apps_site_site_id_top_post(authorization, site_id, v1_apps_site_site_id_top_post_request)
         print("The response of DefaultApi->v1_apps_site_site_id_top_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1702,11 +1738,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **site_id** | **int**|  | 
- **v1_apps_device_device_id_top_post_request** | [**V1AppsDeviceDeviceIdTopPostRequest**](V1AppsDeviceDeviceIdTopPostRequest.md)|  | 
+ **v1_apps_site_site_id_top_post_request** | [**V1AppsSiteSiteIdTopPostRequest**](V1AppsSiteSiteIdTopPostRequest.md)|  | 
 
 ### Return type
 
-[**V1AppsDeviceDeviceIdTopPost200Response**](V1AppsDeviceDeviceIdTopPost200Response.md)
+[**V1AppsSiteSiteIdTopPostResponse**](V1AppsSiteSiteIdTopPostResponse.md)
 
 ### Authorization
 
@@ -1726,7 +1762,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_apps_visualization_post**
-> V1AppsVisualizationPost200Response v1_apps_visualization_post(authorization, v1_apps_visualization_post_request)
+> V1AppsVisualizationPostResponse v1_apps_visualization_post(authorization, v1_apps_visualization_post_request)
+
+Get the app and circuit visualization info for the device
 
 ### Example
 
@@ -1734,8 +1772,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_apps_visualization_post200_response import V1AppsVisualizationPost200Response
 from graphiant_sdk.models.v1_apps_visualization_post_request import V1AppsVisualizationPostRequest
+from graphiant_sdk.models.v1_apps_visualization_post_response import V1AppsVisualizationPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -1783,7 +1821,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AppsVisualizationPost200Response**](V1AppsVisualizationPost200Response.md)
+[**V1AppsVisualizationPostResponse**](V1AppsVisualizationPostResponse.md)
 
 ### Authorization
 
@@ -1803,7 +1841,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_audit_logs_post**
-> V1AuditLogsPost200Response v1_audit_logs_post(authorization, v1_audit_logs_post_request)
+> V1AuditLogsPostResponse v1_audit_logs_post(authorization, v1_audit_logs_post_request)
 
 ### Example
 
@@ -1811,8 +1849,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_audit_logs_post200_response import V1AuditLogsPost200Response
 from graphiant_sdk.models.v1_audit_logs_post_request import V1AuditLogsPostRequest
+from graphiant_sdk.models.v1_audit_logs_post_response import V1AuditLogsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -1860,7 +1898,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuditLogsPost200Response**](V1AuditLogsPost200Response.md)
+[**V1AuditLogsPostResponse**](V1AuditLogsPostResponse.md)
 
 ### Authorization
 
@@ -1880,7 +1918,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_auth_delete**
-> V1AuthPut204Response v1_auth_delete(authorization)
+> V1AuthDeleteResponse v1_auth_delete(authorization)
+
+Remove Identity Provider configuration and revert to default authentication.
 
 ### Example
 
@@ -1888,7 +1928,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_auth_put204_response import V1AuthPut204Response
+from graphiant_sdk.models.v1_auth_delete_response import V1AuthDeleteResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -1934,7 +1974,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuthPut204Response**](V1AuthPut204Response.md)
+[**V1AuthDeleteResponse**](V1AuthDeleteResponse.md)
 
 ### Authorization
 
@@ -1953,8 +1993,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_auth_get**
-> V1AuthGet200Response v1_auth_get(authorization)
+# **v1_auth_gcs_post**
+> V1AuthLoginPostResponse v1_auth_gcs_post(v1_auth_gcs_post_request)
 
 ### Example
 
@@ -1962,7 +2002,86 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_auth_get200_response import V1AuthGet200Response
+from graphiant_sdk.models.v1_auth_gcs_post_request import V1AuthGcsPostRequest
+from graphiant_sdk.models.v1_auth_login_post_response import V1AuthLoginPostResponse
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    v1_auth_gcs_post_request = graphiant_sdk.V1AuthGcsPostRequest() # V1AuthGcsPostRequest | 
+
+    try:
+        api_response = api_instance.v1_auth_gcs_post(v1_auth_gcs_post_request)
+        print("The response of DefaultApi->v1_auth_gcs_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_auth_gcs_post: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **v1_auth_gcs_post_request** | [**V1AuthGcsPostRequest**](V1AuthGcsPostRequest.md)|  | 
+
+### Return type
+
+[**V1AuthLoginPostResponse**](V1AuthLoginPostResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Authentication successful |  -  |
+**400** | Bad request - Missing required fields |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_auth_get**
+> V1AuthGetResponse v1_auth_get(authorization)
+
+Get current Identity Provider configuration for enterprise.
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.models.v1_auth_get_response import V1AuthGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -2008,7 +2127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuthGet200Response**](V1AuthGet200Response.md)
+[**V1AuthGetResponse**](V1AuthGetResponse.md)
 
 ### Authorization
 
@@ -2027,10 +2146,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_auth_login_post**
-> V1AuthLoginPost200Response v1_auth_login_post(v1_auth_login_post_request)
-
-Authenticate user and return token
+# **v1_auth_login_callback_post**
+> v1_auth_login_callback_post(saml_response, relay_state=relay_state)
 
 ### Example
 
@@ -2038,8 +2155,83 @@ Authenticate user and return token
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_auth_login_post200_response import V1AuthLoginPost200Response
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    saml_response = 'saml_response_example' # str | 
+    relay_state = 'relay_state_example' # str |  (optional)
+
+    try:
+        api_instance.v1_auth_login_callback_post(saml_response, relay_state=relay_state)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_auth_login_callback_post: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **saml_response** | **str**|  | 
+ **relay_state** | **str**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**302** | Redirects to portal with SSO token |  -  |
+**401** | Authentication failed |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_auth_login_post**
+> V1AuthLoginPostResponse v1_auth_login_post(v1_auth_login_post_request)
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
 from graphiant_sdk.models.v1_auth_login_post_request import V1AuthLoginPostRequest
+from graphiant_sdk.models.v1_auth_login_post_response import V1AuthLoginPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -2067,7 +2259,6 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     v1_auth_login_post_request = graphiant_sdk.V1AuthLoginPostRequest() # V1AuthLoginPostRequest | 
 
     try:
-        # Authenticate user and return token
         api_response = api_instance.v1_auth_login_post(v1_auth_login_post_request)
         print("The response of DefaultApi->v1_auth_login_post:\n")
         pprint(api_response)
@@ -2086,7 +2277,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuthLoginPost200Response**](V1AuthLoginPost200Response.md)
+[**V1AuthLoginPostResponse**](V1AuthLoginPostResponse.md)
 
 ### Authorization
 
@@ -2103,13 +2294,12 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | OK |  -  |
 **400** | Not Authenticated |  -  |
+**401** | Authenticated Failed |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_auth_login_pre_get**
-> V1AuthLoginPreGet200Response v1_auth_login_pre_get()
-
-Pre-login endpoint
+> V1AuthLoginPreGetResponse v1_auth_login_pre_get(email, relay_state=relay_state)
 
 ### Example
 
@@ -2117,7 +2307,7 @@ Pre-login endpoint
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_auth_login_pre_get200_response import V1AuthLoginPreGet200Response
+from graphiant_sdk.models.v1_auth_login_pre_get_response import V1AuthLoginPreGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -2142,10 +2332,11 @@ configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
 with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
+    email = 'user@example.com' # str | User email address
+    relay_state = 'information-to-relay' # str | State to relay after authentication (optional)
 
     try:
-        # Pre-login endpoint
-        api_response = api_instance.v1_auth_login_pre_get()
+        api_response = api_instance.v1_auth_login_pre_get(email, relay_state=relay_state)
         print("The response of DefaultApi->v1_auth_login_pre_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -2156,11 +2347,15 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **str**| User email address | 
+ **relay_state** | **str**| State to relay after authentication | [optional] 
 
 ### Return type
 
-[**V1AuthLoginPreGet200Response**](V1AuthLoginPreGet200Response.md)
+[**V1AuthLoginPreGetResponse**](V1AuthLoginPreGetResponse.md)
 
 ### Authorization
 
@@ -2180,10 +2375,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_auth_login_temp_post**
-> V1AuthLoginTempPost200Response v1_auth_login_temp_post(v1_auth_login_temp_post_request)
-
-Authenticate user with temporary password
+# **v1_auth_login_saml_get**
+> v1_auth_login_saml_get(email, relay_state=relay_state)
 
 ### Example
 
@@ -2191,7 +2384,82 @@ Authenticate user with temporary password
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_auth_login_temp_post200_response import V1AuthLoginTempPost200Response
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    email = 'user@example.com' # str | User email address
+    relay_state = 'information-to-relay' # str | State to relay after authentication (optional)
+
+    try:
+        api_instance.v1_auth_login_saml_get(email, relay_state=relay_state)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_auth_login_saml_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **str**| User email address | 
+ **relay_state** | **str**| State to relay after authentication | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Redirects to SAML identity provider |  -  |
+**401** | Missing email parameter |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_auth_login_temp_post**
+> V1AuthLoginPostResponse v1_auth_login_temp_post(v1_auth_login_temp_post_request)
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.models.v1_auth_login_post_response import V1AuthLoginPostResponse
 from graphiant_sdk.models.v1_auth_login_temp_post_request import V1AuthLoginTempPostRequest
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
@@ -2220,7 +2488,6 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     v1_auth_login_temp_post_request = graphiant_sdk.V1AuthLoginTempPostRequest() # V1AuthLoginTempPostRequest | 
 
     try:
-        # Authenticate user with temporary password
         api_response = api_instance.v1_auth_login_temp_post(v1_auth_login_temp_post_request)
         print("The response of DefaultApi->v1_auth_login_temp_post:\n")
         pprint(api_response)
@@ -2239,7 +2506,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuthLoginTempPost200Response**](V1AuthLoginTempPost200Response.md)
+[**V1AuthLoginPostResponse**](V1AuthLoginPostResponse.md)
 
 ### Authorization
 
@@ -2261,6 +2528,8 @@ Name | Type | Description  | Notes
 
 # **v1_auth_mfa_delete**
 > object v1_auth_mfa_delete(authorization)
+
+Remove Multi-Factor Authentication enrollment for the tenant.
 
 ### Example
 
@@ -2335,6 +2604,8 @@ Name | Type | Description  | Notes
 # **v1_auth_mfa_patch**
 > object v1_auth_mfa_patch(authorization, v1_auth_mfa_patch_request)
 
+Enroll tenant in Multi-Factor Authentication (SMS, GoogleAuth).
+
 ### Example
 
 * Api Key Authentication (jwtAuth):
@@ -2408,8 +2679,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_auth_mfa_types_get**
-> V1AuthMfaPatchRequest v1_auth_mfa_types_get(authorization)
+# **v1_auth_mfa_post**
+> V1AuthLoginPostResponse v1_auth_mfa_post(v1_auth_mfa_post_request)
 
 ### Example
 
@@ -2417,7 +2688,86 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_auth_mfa_patch_request import V1AuthMfaPatchRequest
+from graphiant_sdk.models.v1_auth_login_post_response import V1AuthLoginPostResponse
+from graphiant_sdk.models.v1_auth_mfa_post_request import V1AuthMfaPostRequest
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    v1_auth_mfa_post_request = graphiant_sdk.V1AuthMfaPostRequest() # V1AuthMfaPostRequest | 
+
+    try:
+        api_response = api_instance.v1_auth_mfa_post(v1_auth_mfa_post_request)
+        print("The response of DefaultApi->v1_auth_mfa_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_auth_mfa_post: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **v1_auth_mfa_post_request** | [**V1AuthMfaPostRequest**](V1AuthMfaPostRequest.md)|  | 
+
+### Return type
+
+[**V1AuthLoginPostResponse**](V1AuthLoginPostResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | MFA verification successful |  -  |
+**400** | Bad request - Missing required fields |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_auth_mfa_types_get**
+> V1AuthMfaTypesGetResponse v1_auth_mfa_types_get(authorization)
+
+Get MFA types allowed by enterprise policy.
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.models.v1_auth_mfa_types_get_response import V1AuthMfaTypesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -2463,7 +2813,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuthMfaPatchRequest**](V1AuthMfaPatchRequest.md)
+[**V1AuthMfaTypesGetResponse**](V1AuthMfaTypesGetResponse.md)
 
 ### Authorization
 
@@ -2483,7 +2833,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_auth_mfa_types_put**
-> object v1_auth_mfa_types_put(authorization, v1_auth_mfa_patch_request)
+> object v1_auth_mfa_types_put(authorization, v1_auth_mfa_types_put_request)
+
+Update enterprise MFA policy to allow/disallow specific MFA types.
 
 ### Example
 
@@ -2491,7 +2843,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_auth_mfa_patch_request import V1AuthMfaPatchRequest
+from graphiant_sdk.models.v1_auth_mfa_types_put_request import V1AuthMfaTypesPutRequest
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -2517,10 +2869,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_auth_mfa_patch_request = graphiant_sdk.V1AuthMfaPatchRequest() # V1AuthMfaPatchRequest | 
+    v1_auth_mfa_types_put_request = graphiant_sdk.V1AuthMfaTypesPutRequest() # V1AuthMfaTypesPutRequest | 
 
     try:
-        api_response = api_instance.v1_auth_mfa_types_put(authorization, v1_auth_mfa_patch_request)
+        api_response = api_instance.v1_auth_mfa_types_put(authorization, v1_auth_mfa_types_put_request)
         print("The response of DefaultApi->v1_auth_mfa_types_put:\n")
         pprint(api_response)
     except Exception as e:
@@ -2535,7 +2887,7 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_auth_mfa_patch_request** | [**V1AuthMfaPatchRequest**](V1AuthMfaPatchRequest.md)|  | 
+ **v1_auth_mfa_types_put_request** | [**V1AuthMfaTypesPutRequest**](V1AuthMfaTypesPutRequest.md)|  | 
 
 ### Return type
 
@@ -2559,7 +2911,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_auth_patch**
-> V1AuthPut204Response v1_auth_patch(authorization, v1_auth_get200_response)
+> V1AuthPatchResponse v1_auth_patch(authorization, v1_auth_patch_request)
+
+Update Identity Provider configuration (certificates, endpoints, etc.).
 
 ### Example
 
@@ -2567,8 +2921,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_auth_get200_response import V1AuthGet200Response
-from graphiant_sdk.models.v1_auth_put204_response import V1AuthPut204Response
+from graphiant_sdk.models.v1_auth_patch_request import V1AuthPatchRequest
+from graphiant_sdk.models.v1_auth_patch_response import V1AuthPatchResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -2594,10 +2948,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_auth_get200_response = graphiant_sdk.V1AuthGet200Response() # V1AuthGet200Response | 
+    v1_auth_patch_request = graphiant_sdk.V1AuthPatchRequest() # V1AuthPatchRequest | 
 
     try:
-        api_response = api_instance.v1_auth_patch(authorization, v1_auth_get200_response)
+        api_response = api_instance.v1_auth_patch(authorization, v1_auth_patch_request)
         print("The response of DefaultApi->v1_auth_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -2612,11 +2966,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_auth_get200_response** | [**V1AuthGet200Response**](V1AuthGet200Response.md)|  | 
+ **v1_auth_patch_request** | [**V1AuthPatchRequest**](V1AuthPatchRequest.md)|  | 
 
 ### Return type
 
-[**V1AuthPut204Response**](V1AuthPut204Response.md)
+[**V1AuthPatchResponse**](V1AuthPatchResponse.md)
 
 ### Authorization
 
@@ -2636,7 +2990,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_auth_put**
-> V1AuthPut204Response v1_auth_put(authorization, v1_auth_get200_response)
+> V1AuthPutResponse v1_auth_put(authorization, v1_auth_put_request)
+
+Configure Identity Provider (SAML) for enterprise. Creates IDP configuration affecting all users in the enterprise.
 
 ### Example
 
@@ -2644,8 +3000,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_auth_get200_response import V1AuthGet200Response
-from graphiant_sdk.models.v1_auth_put204_response import V1AuthPut204Response
+from graphiant_sdk.models.v1_auth_put_request import V1AuthPutRequest
+from graphiant_sdk.models.v1_auth_put_response import V1AuthPutResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -2671,10 +3027,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_auth_get200_response = graphiant_sdk.V1AuthGet200Response() # V1AuthGet200Response | 
+    v1_auth_put_request = graphiant_sdk.V1AuthPutRequest() # V1AuthPutRequest | 
 
     try:
-        api_response = api_instance.v1_auth_put(authorization, v1_auth_get200_response)
+        api_response = api_instance.v1_auth_put(authorization, v1_auth_put_request)
         print("The response of DefaultApi->v1_auth_put:\n")
         pprint(api_response)
     except Exception as e:
@@ -2689,11 +3045,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_auth_get200_response** | [**V1AuthGet200Response**](V1AuthGet200Response.md)|  | 
+ **v1_auth_put_request** | [**V1AuthPutRequest**](V1AuthPutRequest.md)|  | 
 
 ### Return type
 
-[**V1AuthPut204Response**](V1AuthPut204Response.md)
+[**V1AuthPutResponse**](V1AuthPutResponse.md)
 
 ### Authorization
 
@@ -2712,10 +3068,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_auth_user_get**
-> V1AuthUserGet200Response v1_auth_user_get(authorization)
-
-Get authenticated user information
+# **v1_auth_refresh_get**
+> V1AuthRefreshGet200Response v1_auth_refresh_get(authorization, current_path=current_path)
 
 ### Example
 
@@ -2723,7 +3077,163 @@ Get authenticated user information
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_auth_user_get200_response import V1AuthUserGet200Response
+from graphiant_sdk.models.v1_auth_refresh_get200_response import V1AuthRefreshGet200Response
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
+    current_path = '/dashboard' # str | Current path to redirect to after refresh (optional)
+
+    try:
+        api_response = api_instance.v1_auth_refresh_get(authorization, current_path=current_path)
+        print("The response of DefaultApi->v1_auth_refresh_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_auth_refresh_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **current_path** | **str**| Current path to redirect to after refresh | [optional] 
+
+### Return type
+
+[**V1AuthRefreshGet200Response**](V1AuthRefreshGet200Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Token refreshed successfully |  -  |
+**403** | Forbidden - Could not refresh token |  -  |
+**422** | Unprocessable Entity |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_auth_session_get**
+> object v1_auth_session_get(authorization, enterprise_id)
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
+    enterprise_id = 1234567891011 # int | Enterprise ID to get permissions for
+
+    try:
+        api_response = api_instance.v1_auth_session_get(authorization, enterprise_id)
+        print("The response of DefaultApi->v1_auth_session_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_auth_session_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **enterprise_id** | **int**| Enterprise ID to get permissions for | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Session updated successfully |  -  |
+**403** | Forbidden - Token expired |  -  |
+**422** | Unprocessable Entity - GRPC error |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_auth_session_root_get**
+> object v1_auth_session_root_get(authorization)
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -2751,7 +3261,83 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
 
     try:
-        # Get authenticated user information
+        api_response = api_instance.v1_auth_session_root_get(authorization)
+        print("The response of DefaultApi->v1_auth_session_root_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_auth_session_root_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Session updated with root permissions successfully |  -  |
+**403** | Forbidden - Token expired |  -  |
+**422** | Unprocessable Entity - GRPC error |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_auth_user_get**
+> V1AuthUserGetResponse v1_auth_user_get(authorization)
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.models.v1_auth_user_get_response import V1AuthUserGetResponse
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
+
+    try:
         api_response = api_instance.v1_auth_user_get(authorization)
         print("The response of DefaultApi->v1_auth_user_get:\n")
         pprint(api_response)
@@ -2770,7 +3356,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuthUserGet200Response**](V1AuthUserGet200Response.md)
+[**V1AuthUserGetResponse**](V1AuthUserGetResponse.md)
 
 ### Authorization
 
@@ -2791,7 +3377,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_b2b_extranet_monitoring_filter_post**
-> V1B2bExtranetMonitoringFilterPost200Response v1_b2b_extranet_monitoring_filter_post(authorization, v1_b2b_extranet_monitoring_filter_post_request)
+> V1B2bExtranetMonitoringFilterPostResponse v1_b2b_extranet_monitoring_filter_post(authorization, v1_b2b_extranet_monitoring_filter_post_request)
 
 ### Example
 
@@ -2799,8 +3385,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_b2b_extranet_monitoring_filter_post200_response import V1B2bExtranetMonitoringFilterPost200Response
 from graphiant_sdk.models.v1_b2b_extranet_monitoring_filter_post_request import V1B2bExtranetMonitoringFilterPostRequest
+from graphiant_sdk.models.v1_b2b_extranet_monitoring_filter_post_response import V1B2bExtranetMonitoringFilterPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -2848,7 +3434,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1B2bExtranetMonitoringFilterPost200Response**](V1B2bExtranetMonitoringFilterPost200Response.md)
+[**V1B2bExtranetMonitoringFilterPostResponse**](V1B2bExtranetMonitoringFilterPostResponse.md)
 
 ### Authorization
 
@@ -2868,7 +3454,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_backbone_health_device_device_id_post**
-> V1BackboneHealthDeviceDeviceIdPost200Response v1_backbone_health_device_device_id_post(authorization, device_id, v2_notificationlist_post_request)
+> V1BackboneHealthDeviceDeviceIdPostResponse v1_backbone_health_device_device_id_post(authorization, device_id, v1_backbone_health_device_device_id_post_request)
 
 ### Example
 
@@ -2876,8 +3462,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_backbone_health_device_device_id_post200_response import V1BackboneHealthDeviceDeviceIdPost200Response
-from graphiant_sdk.models.v2_notificationlist_post_request import V2NotificationlistPostRequest
+from graphiant_sdk.models.v1_backbone_health_device_device_id_post_request import V1BackboneHealthDeviceDeviceIdPostRequest
+from graphiant_sdk.models.v1_backbone_health_device_device_id_post_response import V1BackboneHealthDeviceDeviceIdPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -2904,10 +3490,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
     device_id = 1234567891011 # int | 
-    v2_notificationlist_post_request = graphiant_sdk.V2NotificationlistPostRequest() # V2NotificationlistPostRequest | 
+    v1_backbone_health_device_device_id_post_request = graphiant_sdk.V1BackboneHealthDeviceDeviceIdPostRequest() # V1BackboneHealthDeviceDeviceIdPostRequest | 
 
     try:
-        api_response = api_instance.v1_backbone_health_device_device_id_post(authorization, device_id, v2_notificationlist_post_request)
+        api_response = api_instance.v1_backbone_health_device_device_id_post(authorization, device_id, v1_backbone_health_device_device_id_post_request)
         print("The response of DefaultApi->v1_backbone_health_device_device_id_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -2923,11 +3509,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **device_id** | **int**|  | 
- **v2_notificationlist_post_request** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md)|  | 
+ **v1_backbone_health_device_device_id_post_request** | [**V1BackboneHealthDeviceDeviceIdPostRequest**](V1BackboneHealthDeviceDeviceIdPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BackboneHealthDeviceDeviceIdPost200Response**](V1BackboneHealthDeviceDeviceIdPost200Response.md)
+[**V1BackboneHealthDeviceDeviceIdPostResponse**](V1BackboneHealthDeviceDeviceIdPostResponse.md)
 
 ### Authorization
 
@@ -2947,7 +3533,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_backbone_health_et_wan_matrix_get**
-> V1BackboneHealthEtWanMatrixGet200Response v1_backbone_health_et_wan_matrix_get(authorization)
+> V1BackboneHealthEtWanMatrixGetResponse v1_backbone_health_et_wan_matrix_get(authorization)
 
 ### Example
 
@@ -2955,7 +3541,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_backbone_health_et_wan_matrix_get200_response import V1BackboneHealthEtWanMatrixGet200Response
+from graphiant_sdk.models.v1_backbone_health_et_wan_matrix_get_response import V1BackboneHealthEtWanMatrixGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -3001,7 +3587,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1BackboneHealthEtWanMatrixGet200Response**](V1BackboneHealthEtWanMatrixGet200Response.md)
+[**V1BackboneHealthEtWanMatrixGetResponse**](V1BackboneHealthEtWanMatrixGetResponse.md)
 
 ### Authorization
 
@@ -3021,7 +3607,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_backbone_health_etet_sla_matrix_get**
-> V1BackboneHealthEtetSlaMatrixGet200Response v1_backbone_health_etet_sla_matrix_get(authorization)
+> V1BackboneHealthEtetSlaMatrixGetResponse v1_backbone_health_etet_sla_matrix_get(authorization)
 
 ### Example
 
@@ -3029,7 +3615,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_backbone_health_etet_sla_matrix_get200_response import V1BackboneHealthEtetSlaMatrixGet200Response
+from graphiant_sdk.models.v1_backbone_health_etet_sla_matrix_get_response import V1BackboneHealthEtetSlaMatrixGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -3075,7 +3661,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1BackboneHealthEtetSlaMatrixGet200Response**](V1BackboneHealthEtetSlaMatrixGet200Response.md)
+[**V1BackboneHealthEtetSlaMatrixGetResponse**](V1BackboneHealthEtetSlaMatrixGetResponse.md)
 
 ### Authorization
 
@@ -3095,7 +3681,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_backbone_health_filter_get**
-> V1BackboneHealthFilterGet200Response v1_backbone_health_filter_get(authorization)
+> V1BackboneHealthFilterGetResponse v1_backbone_health_filter_get(authorization)
 
 ### Example
 
@@ -3103,7 +3689,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_backbone_health_filter_get200_response import V1BackboneHealthFilterGet200Response
+from graphiant_sdk.models.v1_backbone_health_filter_get_response import V1BackboneHealthFilterGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -3149,7 +3735,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1BackboneHealthFilterGet200Response**](V1BackboneHealthFilterGet200Response.md)
+[**V1BackboneHealthFilterGetResponse**](V1BackboneHealthFilterGetResponse.md)
 
 ### Authorization
 
@@ -3169,7 +3755,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_backbone_health_overview_post**
-> V1BackboneHealthOverviewPost200Response v1_backbone_health_overview_post(authorization, v1_backbone_health_overview_post_request)
+> V1BackboneHealthOverviewPostResponse v1_backbone_health_overview_post(authorization, v1_backbone_health_overview_post_request)
 
 ### Example
 
@@ -3177,8 +3763,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_backbone_health_overview_post200_response import V1BackboneHealthOverviewPost200Response
 from graphiant_sdk.models.v1_backbone_health_overview_post_request import V1BackboneHealthOverviewPostRequest
+from graphiant_sdk.models.v1_backbone_health_overview_post_response import V1BackboneHealthOverviewPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -3226,7 +3812,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1BackboneHealthOverviewPost200Response**](V1BackboneHealthOverviewPost200Response.md)
+[**V1BackboneHealthOverviewPostResponse**](V1BackboneHealthOverviewPostResponse.md)
 
 ### Authorization
 
@@ -3246,7 +3832,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_backbone_health_top_devices_by_alerts_post**
-> V1BackboneHealthTopDevicesByAlertsPost200Response v1_backbone_health_top_devices_by_alerts_post(authorization, v1_backbone_health_top_devices_by_alerts_post_request)
+> V1BackboneHealthTopDevicesByAlertsPostResponse v1_backbone_health_top_devices_by_alerts_post(authorization, v1_backbone_health_top_devices_by_alerts_post_request)
 
 ### Example
 
@@ -3254,8 +3840,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_backbone_health_top_devices_by_alerts_post200_response import V1BackboneHealthTopDevicesByAlertsPost200Response
 from graphiant_sdk.models.v1_backbone_health_top_devices_by_alerts_post_request import V1BackboneHealthTopDevicesByAlertsPostRequest
+from graphiant_sdk.models.v1_backbone_health_top_devices_by_alerts_post_response import V1BackboneHealthTopDevicesByAlertsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -3303,7 +3889,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1BackboneHealthTopDevicesByAlertsPost200Response**](V1BackboneHealthTopDevicesByAlertsPost200Response.md)
+[**V1BackboneHealthTopDevicesByAlertsPostResponse**](V1BackboneHealthTopDevicesByAlertsPostResponse.md)
 
 ### Authorization
 
@@ -3323,7 +3909,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_enterprise_csv_post**
-> V1BwtrackerEnterpriseCsvPost200Response v1_bwtracker_enterprise_csv_post(authorization, v2_notificationlist_post_request)
+> V1BwtrackerEnterpriseCsvPostResponse v1_bwtracker_enterprise_csv_post(authorization, v1_bwtracker_enterprise_csv_post_request)
 
 ### Example
 
@@ -3331,8 +3917,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_enterprise_csv_post200_response import V1BwtrackerEnterpriseCsvPost200Response
-from graphiant_sdk.models.v2_notificationlist_post_request import V2NotificationlistPostRequest
+from graphiant_sdk.models.v1_bwtracker_enterprise_csv_post_request import V1BwtrackerEnterpriseCsvPostRequest
+from graphiant_sdk.models.v1_bwtracker_enterprise_csv_post_response import V1BwtrackerEnterpriseCsvPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -3358,10 +3944,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v2_notificationlist_post_request = graphiant_sdk.V2NotificationlistPostRequest() # V2NotificationlistPostRequest | 
+    v1_bwtracker_enterprise_csv_post_request = graphiant_sdk.V1BwtrackerEnterpriseCsvPostRequest() # V1BwtrackerEnterpriseCsvPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_enterprise_csv_post(authorization, v2_notificationlist_post_request)
+        api_response = api_instance.v1_bwtracker_enterprise_csv_post(authorization, v1_bwtracker_enterprise_csv_post_request)
         print("The response of DefaultApi->v1_bwtracker_enterprise_csv_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -3376,11 +3962,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2_notificationlist_post_request** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md)|  | 
+ **v1_bwtracker_enterprise_csv_post_request** | [**V1BwtrackerEnterpriseCsvPostRequest**](V1BwtrackerEnterpriseCsvPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerEnterpriseCsvPost200Response**](V1BwtrackerEnterpriseCsvPost200Response.md)
+[**V1BwtrackerEnterpriseCsvPostResponse**](V1BwtrackerEnterpriseCsvPostResponse.md)
 
 ### Authorization
 
@@ -3400,7 +3986,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_enterprise_details_post**
-> V1BwtrackerEnterpriseDetailsPost200Response v1_bwtracker_enterprise_details_post(authorization, v2_notificationlist_post_request)
+> V1BwtrackerEnterpriseDetailsPostResponse v1_bwtracker_enterprise_details_post(authorization, v1_bwtracker_enterprise_details_post_request)
 
 ### Example
 
@@ -3408,8 +3994,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_enterprise_details_post200_response import V1BwtrackerEnterpriseDetailsPost200Response
-from graphiant_sdk.models.v2_notificationlist_post_request import V2NotificationlistPostRequest
+from graphiant_sdk.models.v1_bwtracker_enterprise_details_post_request import V1BwtrackerEnterpriseDetailsPostRequest
+from graphiant_sdk.models.v1_bwtracker_enterprise_details_post_response import V1BwtrackerEnterpriseDetailsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -3435,10 +4021,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v2_notificationlist_post_request = graphiant_sdk.V2NotificationlistPostRequest() # V2NotificationlistPostRequest | 
+    v1_bwtracker_enterprise_details_post_request = graphiant_sdk.V1BwtrackerEnterpriseDetailsPostRequest() # V1BwtrackerEnterpriseDetailsPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_enterprise_details_post(authorization, v2_notificationlist_post_request)
+        api_response = api_instance.v1_bwtracker_enterprise_details_post(authorization, v1_bwtracker_enterprise_details_post_request)
         print("The response of DefaultApi->v1_bwtracker_enterprise_details_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -3453,11 +4039,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2_notificationlist_post_request** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md)|  | 
+ **v1_bwtracker_enterprise_details_post_request** | [**V1BwtrackerEnterpriseDetailsPostRequest**](V1BwtrackerEnterpriseDetailsPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerEnterpriseDetailsPost200Response**](V1BwtrackerEnterpriseDetailsPost200Response.md)
+[**V1BwtrackerEnterpriseDetailsPostResponse**](V1BwtrackerEnterpriseDetailsPostResponse.md)
 
 ### Authorization
 
@@ -3477,7 +4063,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_enterprise_summary_post**
-> V1BwtrackerEnterpriseSummaryPost200Response v1_bwtracker_enterprise_summary_post(authorization, v2_notificationlist_post_request)
+> V1BwtrackerEnterpriseSummaryPostResponse v1_bwtracker_enterprise_summary_post(authorization, v1_bwtracker_enterprise_summary_post_request)
 
 ### Example
 
@@ -3485,8 +4071,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_enterprise_summary_post200_response import V1BwtrackerEnterpriseSummaryPost200Response
-from graphiant_sdk.models.v2_notificationlist_post_request import V2NotificationlistPostRequest
+from graphiant_sdk.models.v1_bwtracker_enterprise_summary_post_request import V1BwtrackerEnterpriseSummaryPostRequest
+from graphiant_sdk.models.v1_bwtracker_enterprise_summary_post_response import V1BwtrackerEnterpriseSummaryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -3512,10 +4098,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v2_notificationlist_post_request = graphiant_sdk.V2NotificationlistPostRequest() # V2NotificationlistPostRequest | 
+    v1_bwtracker_enterprise_summary_post_request = graphiant_sdk.V1BwtrackerEnterpriseSummaryPostRequest() # V1BwtrackerEnterpriseSummaryPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_enterprise_summary_post(authorization, v2_notificationlist_post_request)
+        api_response = api_instance.v1_bwtracker_enterprise_summary_post(authorization, v1_bwtracker_enterprise_summary_post_request)
         print("The response of DefaultApi->v1_bwtracker_enterprise_summary_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -3530,11 +4116,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2_notificationlist_post_request** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md)|  | 
+ **v1_bwtracker_enterprise_summary_post_request** | [**V1BwtrackerEnterpriseSummaryPostRequest**](V1BwtrackerEnterpriseSummaryPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerEnterpriseSummaryPost200Response**](V1BwtrackerEnterpriseSummaryPost200Response.md)
+[**V1BwtrackerEnterpriseSummaryPostResponse**](V1BwtrackerEnterpriseSummaryPostResponse.md)
 
 ### Authorization
 
@@ -3554,7 +4140,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_region_cloud_chart_post**
-> V1BwtrackerRegionCloudChartPost200Response v1_bwtracker_region_cloud_chart_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+> V1BwtrackerRegionCloudChartPostResponse v1_bwtracker_region_cloud_chart_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
 
 ### Example
 
@@ -3562,8 +4148,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_region_cloud_chart_post200_response import V1BwtrackerRegionCloudChartPost200Response
 from graphiant_sdk.models.v1_bwtracker_region_cloud_chart_post_request import V1BwtrackerRegionCloudChartPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_cloud_chart_post_response import V1BwtrackerRegionCloudChartPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -3611,7 +4197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1BwtrackerRegionCloudChartPost200Response**](V1BwtrackerRegionCloudChartPost200Response.md)
+[**V1BwtrackerRegionCloudChartPostResponse**](V1BwtrackerRegionCloudChartPostResponse.md)
 
 ### Authorization
 
@@ -3631,7 +4217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_region_cloud_csv_post**
-> V1BwtrackerEnterpriseCsvPost200Response v1_bwtracker_region_cloud_csv_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+> V1BwtrackerRegionCloudCsvPostResponse v1_bwtracker_region_cloud_csv_post(authorization, v1_bwtracker_region_cloud_csv_post_request)
 
 ### Example
 
@@ -3639,8 +4225,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_enterprise_csv_post200_response import V1BwtrackerEnterpriseCsvPost200Response
-from graphiant_sdk.models.v1_bwtracker_region_cloud_chart_post_request import V1BwtrackerRegionCloudChartPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_cloud_csv_post_request import V1BwtrackerRegionCloudCsvPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_cloud_csv_post_response import V1BwtrackerRegionCloudCsvPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -3666,10 +4252,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_bwtracker_region_cloud_chart_post_request = graphiant_sdk.V1BwtrackerRegionCloudChartPostRequest() # V1BwtrackerRegionCloudChartPostRequest | 
+    v1_bwtracker_region_cloud_csv_post_request = graphiant_sdk.V1BwtrackerRegionCloudCsvPostRequest() # V1BwtrackerRegionCloudCsvPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_region_cloud_csv_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+        api_response = api_instance.v1_bwtracker_region_cloud_csv_post(authorization, v1_bwtracker_region_cloud_csv_post_request)
         print("The response of DefaultApi->v1_bwtracker_region_cloud_csv_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -3684,11 +4270,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_bwtracker_region_cloud_chart_post_request** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md)|  | 
+ **v1_bwtracker_region_cloud_csv_post_request** | [**V1BwtrackerRegionCloudCsvPostRequest**](V1BwtrackerRegionCloudCsvPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerEnterpriseCsvPost200Response**](V1BwtrackerEnterpriseCsvPost200Response.md)
+[**V1BwtrackerRegionCloudCsvPostResponse**](V1BwtrackerRegionCloudCsvPostResponse.md)
 
 ### Authorization
 
@@ -3708,7 +4294,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_region_cloud_summary_post**
-> V1BwtrackerRegionCloudSummaryPost200Response v1_bwtracker_region_cloud_summary_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+> V1BwtrackerRegionCloudSummaryPostResponse v1_bwtracker_region_cloud_summary_post(authorization, v1_bwtracker_region_cloud_summary_post_request)
 
 ### Example
 
@@ -3716,8 +4302,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_region_cloud_chart_post_request import V1BwtrackerRegionCloudChartPostRequest
-from graphiant_sdk.models.v1_bwtracker_region_cloud_summary_post200_response import V1BwtrackerRegionCloudSummaryPost200Response
+from graphiant_sdk.models.v1_bwtracker_region_cloud_summary_post_request import V1BwtrackerRegionCloudSummaryPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_cloud_summary_post_response import V1BwtrackerRegionCloudSummaryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -3743,10 +4329,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_bwtracker_region_cloud_chart_post_request = graphiant_sdk.V1BwtrackerRegionCloudChartPostRequest() # V1BwtrackerRegionCloudChartPostRequest | 
+    v1_bwtracker_region_cloud_summary_post_request = graphiant_sdk.V1BwtrackerRegionCloudSummaryPostRequest() # V1BwtrackerRegionCloudSummaryPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_region_cloud_summary_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+        api_response = api_instance.v1_bwtracker_region_cloud_summary_post(authorization, v1_bwtracker_region_cloud_summary_post_request)
         print("The response of DefaultApi->v1_bwtracker_region_cloud_summary_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -3761,11 +4347,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_bwtracker_region_cloud_chart_post_request** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md)|  | 
+ **v1_bwtracker_region_cloud_summary_post_request** | [**V1BwtrackerRegionCloudSummaryPostRequest**](V1BwtrackerRegionCloudSummaryPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerRegionCloudSummaryPost200Response**](V1BwtrackerRegionCloudSummaryPost200Response.md)
+[**V1BwtrackerRegionCloudSummaryPostResponse**](V1BwtrackerRegionCloudSummaryPostResponse.md)
 
 ### Authorization
 
@@ -3785,7 +4371,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_region_edge_chart_post**
-> V1BwtrackerRegionCloudChartPost200Response v1_bwtracker_region_edge_chart_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+> V1BwtrackerRegionEdgeChartPostResponse v1_bwtracker_region_edge_chart_post(authorization, v1_bwtracker_region_edge_chart_post_request)
 
 ### Example
 
@@ -3793,8 +4379,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_region_cloud_chart_post200_response import V1BwtrackerRegionCloudChartPost200Response
-from graphiant_sdk.models.v1_bwtracker_region_cloud_chart_post_request import V1BwtrackerRegionCloudChartPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_edge_chart_post_request import V1BwtrackerRegionEdgeChartPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_edge_chart_post_response import V1BwtrackerRegionEdgeChartPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -3820,10 +4406,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_bwtracker_region_cloud_chart_post_request = graphiant_sdk.V1BwtrackerRegionCloudChartPostRequest() # V1BwtrackerRegionCloudChartPostRequest | 
+    v1_bwtracker_region_edge_chart_post_request = graphiant_sdk.V1BwtrackerRegionEdgeChartPostRequest() # V1BwtrackerRegionEdgeChartPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_region_edge_chart_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+        api_response = api_instance.v1_bwtracker_region_edge_chart_post(authorization, v1_bwtracker_region_edge_chart_post_request)
         print("The response of DefaultApi->v1_bwtracker_region_edge_chart_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -3838,11 +4424,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_bwtracker_region_cloud_chart_post_request** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md)|  | 
+ **v1_bwtracker_region_edge_chart_post_request** | [**V1BwtrackerRegionEdgeChartPostRequest**](V1BwtrackerRegionEdgeChartPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerRegionCloudChartPost200Response**](V1BwtrackerRegionCloudChartPost200Response.md)
+[**V1BwtrackerRegionEdgeChartPostResponse**](V1BwtrackerRegionEdgeChartPostResponse.md)
 
 ### Authorization
 
@@ -3862,7 +4448,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_region_edge_csv_post**
-> V1BwtrackerEnterpriseCsvPost200Response v1_bwtracker_region_edge_csv_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+> V1BwtrackerRegionEdgeCsvPostResponse v1_bwtracker_region_edge_csv_post(authorization, v1_bwtracker_region_edge_csv_post_request)
 
 ### Example
 
@@ -3870,8 +4456,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_enterprise_csv_post200_response import V1BwtrackerEnterpriseCsvPost200Response
-from graphiant_sdk.models.v1_bwtracker_region_cloud_chart_post_request import V1BwtrackerRegionCloudChartPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_edge_csv_post_request import V1BwtrackerRegionEdgeCsvPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_edge_csv_post_response import V1BwtrackerRegionEdgeCsvPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -3897,10 +4483,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_bwtracker_region_cloud_chart_post_request = graphiant_sdk.V1BwtrackerRegionCloudChartPostRequest() # V1BwtrackerRegionCloudChartPostRequest | 
+    v1_bwtracker_region_edge_csv_post_request = graphiant_sdk.V1BwtrackerRegionEdgeCsvPostRequest() # V1BwtrackerRegionEdgeCsvPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_region_edge_csv_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+        api_response = api_instance.v1_bwtracker_region_edge_csv_post(authorization, v1_bwtracker_region_edge_csv_post_request)
         print("The response of DefaultApi->v1_bwtracker_region_edge_csv_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -3915,11 +4501,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_bwtracker_region_cloud_chart_post_request** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md)|  | 
+ **v1_bwtracker_region_edge_csv_post_request** | [**V1BwtrackerRegionEdgeCsvPostRequest**](V1BwtrackerRegionEdgeCsvPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerEnterpriseCsvPost200Response**](V1BwtrackerEnterpriseCsvPost200Response.md)
+[**V1BwtrackerRegionEdgeCsvPostResponse**](V1BwtrackerRegionEdgeCsvPostResponse.md)
 
 ### Authorization
 
@@ -3939,7 +4525,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_region_edge_details_post**
-> V1BwtrackerRegionEdgeDetailsPost200Response v1_bwtracker_region_edge_details_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+> V1BwtrackerRegionEdgeDetailsPostResponse v1_bwtracker_region_edge_details_post(authorization, v1_bwtracker_region_edge_details_post_request)
 
 ### Example
 
@@ -3947,8 +4533,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_region_cloud_chart_post_request import V1BwtrackerRegionCloudChartPostRequest
-from graphiant_sdk.models.v1_bwtracker_region_edge_details_post200_response import V1BwtrackerRegionEdgeDetailsPost200Response
+from graphiant_sdk.models.v1_bwtracker_region_edge_details_post_request import V1BwtrackerRegionEdgeDetailsPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_edge_details_post_response import V1BwtrackerRegionEdgeDetailsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -3974,10 +4560,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_bwtracker_region_cloud_chart_post_request = graphiant_sdk.V1BwtrackerRegionCloudChartPostRequest() # V1BwtrackerRegionCloudChartPostRequest | 
+    v1_bwtracker_region_edge_details_post_request = graphiant_sdk.V1BwtrackerRegionEdgeDetailsPostRequest() # V1BwtrackerRegionEdgeDetailsPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_region_edge_details_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+        api_response = api_instance.v1_bwtracker_region_edge_details_post(authorization, v1_bwtracker_region_edge_details_post_request)
         print("The response of DefaultApi->v1_bwtracker_region_edge_details_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -3992,11 +4578,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_bwtracker_region_cloud_chart_post_request** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md)|  | 
+ **v1_bwtracker_region_edge_details_post_request** | [**V1BwtrackerRegionEdgeDetailsPostRequest**](V1BwtrackerRegionEdgeDetailsPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerRegionEdgeDetailsPost200Response**](V1BwtrackerRegionEdgeDetailsPost200Response.md)
+[**V1BwtrackerRegionEdgeDetailsPostResponse**](V1BwtrackerRegionEdgeDetailsPostResponse.md)
 
 ### Authorization
 
@@ -4016,7 +4602,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_region_edge_summary_post**
-> V1BwtrackerRegionEdgeSummaryPost200Response v1_bwtracker_region_edge_summary_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+> V1BwtrackerRegionEdgeSummaryPostResponse v1_bwtracker_region_edge_summary_post(authorization, v1_bwtracker_region_edge_summary_post_request)
 
 ### Example
 
@@ -4024,8 +4610,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_region_cloud_chart_post_request import V1BwtrackerRegionCloudChartPostRequest
-from graphiant_sdk.models.v1_bwtracker_region_edge_summary_post200_response import V1BwtrackerRegionEdgeSummaryPost200Response
+from graphiant_sdk.models.v1_bwtracker_region_edge_summary_post_request import V1BwtrackerRegionEdgeSummaryPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_edge_summary_post_response import V1BwtrackerRegionEdgeSummaryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -4051,10 +4637,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_bwtracker_region_cloud_chart_post_request = graphiant_sdk.V1BwtrackerRegionCloudChartPostRequest() # V1BwtrackerRegionCloudChartPostRequest | 
+    v1_bwtracker_region_edge_summary_post_request = graphiant_sdk.V1BwtrackerRegionEdgeSummaryPostRequest() # V1BwtrackerRegionEdgeSummaryPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_region_edge_summary_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+        api_response = api_instance.v1_bwtracker_region_edge_summary_post(authorization, v1_bwtracker_region_edge_summary_post_request)
         print("The response of DefaultApi->v1_bwtracker_region_edge_summary_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -4069,11 +4655,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_bwtracker_region_cloud_chart_post_request** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md)|  | 
+ **v1_bwtracker_region_edge_summary_post_request** | [**V1BwtrackerRegionEdgeSummaryPostRequest**](V1BwtrackerRegionEdgeSummaryPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerRegionEdgeSummaryPost200Response**](V1BwtrackerRegionEdgeSummaryPost200Response.md)
+[**V1BwtrackerRegionEdgeSummaryPostResponse**](V1BwtrackerRegionEdgeSummaryPostResponse.md)
 
 ### Authorization
 
@@ -4093,7 +4679,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_region_gateway_chart_post**
-> V1BwtrackerRegionCloudChartPost200Response v1_bwtracker_region_gateway_chart_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+> V1BwtrackerRegionGatewayChartPostResponse v1_bwtracker_region_gateway_chart_post(authorization, v1_bwtracker_region_gateway_chart_post_request)
 
 ### Example
 
@@ -4101,8 +4687,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_region_cloud_chart_post200_response import V1BwtrackerRegionCloudChartPost200Response
-from graphiant_sdk.models.v1_bwtracker_region_cloud_chart_post_request import V1BwtrackerRegionCloudChartPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_gateway_chart_post_request import V1BwtrackerRegionGatewayChartPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_gateway_chart_post_response import V1BwtrackerRegionGatewayChartPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -4128,10 +4714,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_bwtracker_region_cloud_chart_post_request = graphiant_sdk.V1BwtrackerRegionCloudChartPostRequest() # V1BwtrackerRegionCloudChartPostRequest | 
+    v1_bwtracker_region_gateway_chart_post_request = graphiant_sdk.V1BwtrackerRegionGatewayChartPostRequest() # V1BwtrackerRegionGatewayChartPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_region_gateway_chart_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+        api_response = api_instance.v1_bwtracker_region_gateway_chart_post(authorization, v1_bwtracker_region_gateway_chart_post_request)
         print("The response of DefaultApi->v1_bwtracker_region_gateway_chart_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -4146,11 +4732,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_bwtracker_region_cloud_chart_post_request** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md)|  | 
+ **v1_bwtracker_region_gateway_chart_post_request** | [**V1BwtrackerRegionGatewayChartPostRequest**](V1BwtrackerRegionGatewayChartPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerRegionCloudChartPost200Response**](V1BwtrackerRegionCloudChartPost200Response.md)
+[**V1BwtrackerRegionGatewayChartPostResponse**](V1BwtrackerRegionGatewayChartPostResponse.md)
 
 ### Authorization
 
@@ -4170,7 +4756,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_region_gateway_csv_post**
-> V1BwtrackerEnterpriseCsvPost200Response v1_bwtracker_region_gateway_csv_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+> V1BwtrackerRegionGatewayCsvPostResponse v1_bwtracker_region_gateway_csv_post(authorization, v1_bwtracker_region_gateway_csv_post_request)
 
 ### Example
 
@@ -4178,8 +4764,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_enterprise_csv_post200_response import V1BwtrackerEnterpriseCsvPost200Response
-from graphiant_sdk.models.v1_bwtracker_region_cloud_chart_post_request import V1BwtrackerRegionCloudChartPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_gateway_csv_post_request import V1BwtrackerRegionGatewayCsvPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_gateway_csv_post_response import V1BwtrackerRegionGatewayCsvPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -4205,10 +4791,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_bwtracker_region_cloud_chart_post_request = graphiant_sdk.V1BwtrackerRegionCloudChartPostRequest() # V1BwtrackerRegionCloudChartPostRequest | 
+    v1_bwtracker_region_gateway_csv_post_request = graphiant_sdk.V1BwtrackerRegionGatewayCsvPostRequest() # V1BwtrackerRegionGatewayCsvPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_region_gateway_csv_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+        api_response = api_instance.v1_bwtracker_region_gateway_csv_post(authorization, v1_bwtracker_region_gateway_csv_post_request)
         print("The response of DefaultApi->v1_bwtracker_region_gateway_csv_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -4223,11 +4809,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_bwtracker_region_cloud_chart_post_request** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md)|  | 
+ **v1_bwtracker_region_gateway_csv_post_request** | [**V1BwtrackerRegionGatewayCsvPostRequest**](V1BwtrackerRegionGatewayCsvPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerEnterpriseCsvPost200Response**](V1BwtrackerEnterpriseCsvPost200Response.md)
+[**V1BwtrackerRegionGatewayCsvPostResponse**](V1BwtrackerRegionGatewayCsvPostResponse.md)
 
 ### Authorization
 
@@ -4247,7 +4833,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_region_gateway_details_post**
-> V1BwtrackerRegionEdgeDetailsPost200Response v1_bwtracker_region_gateway_details_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+> V1BwtrackerRegionGatewayDetailsPostResponse v1_bwtracker_region_gateway_details_post(authorization, v1_bwtracker_region_gateway_details_post_request)
 
 ### Example
 
@@ -4255,8 +4841,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_region_cloud_chart_post_request import V1BwtrackerRegionCloudChartPostRequest
-from graphiant_sdk.models.v1_bwtracker_region_edge_details_post200_response import V1BwtrackerRegionEdgeDetailsPost200Response
+from graphiant_sdk.models.v1_bwtracker_region_gateway_details_post_request import V1BwtrackerRegionGatewayDetailsPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_gateway_details_post_response import V1BwtrackerRegionGatewayDetailsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -4282,10 +4868,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_bwtracker_region_cloud_chart_post_request = graphiant_sdk.V1BwtrackerRegionCloudChartPostRequest() # V1BwtrackerRegionCloudChartPostRequest | 
+    v1_bwtracker_region_gateway_details_post_request = graphiant_sdk.V1BwtrackerRegionGatewayDetailsPostRequest() # V1BwtrackerRegionGatewayDetailsPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_region_gateway_details_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+        api_response = api_instance.v1_bwtracker_region_gateway_details_post(authorization, v1_bwtracker_region_gateway_details_post_request)
         print("The response of DefaultApi->v1_bwtracker_region_gateway_details_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -4300,11 +4886,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_bwtracker_region_cloud_chart_post_request** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md)|  | 
+ **v1_bwtracker_region_gateway_details_post_request** | [**V1BwtrackerRegionGatewayDetailsPostRequest**](V1BwtrackerRegionGatewayDetailsPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerRegionEdgeDetailsPost200Response**](V1BwtrackerRegionEdgeDetailsPost200Response.md)
+[**V1BwtrackerRegionGatewayDetailsPostResponse**](V1BwtrackerRegionGatewayDetailsPostResponse.md)
 
 ### Authorization
 
@@ -4324,7 +4910,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_region_gateway_summary_post**
-> V1BwtrackerRegionEdgeSummaryPost200Response v1_bwtracker_region_gateway_summary_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+> V1BwtrackerRegionGatewaySummaryPostResponse v1_bwtracker_region_gateway_summary_post(authorization, v1_bwtracker_region_gateway_summary_post_request)
 
 ### Example
 
@@ -4332,8 +4918,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_region_cloud_chart_post_request import V1BwtrackerRegionCloudChartPostRequest
-from graphiant_sdk.models.v1_bwtracker_region_edge_summary_post200_response import V1BwtrackerRegionEdgeSummaryPost200Response
+from graphiant_sdk.models.v1_bwtracker_region_gateway_summary_post_request import V1BwtrackerRegionGatewaySummaryPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_gateway_summary_post_response import V1BwtrackerRegionGatewaySummaryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -4359,10 +4945,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_bwtracker_region_cloud_chart_post_request = graphiant_sdk.V1BwtrackerRegionCloudChartPostRequest() # V1BwtrackerRegionCloudChartPostRequest | 
+    v1_bwtracker_region_gateway_summary_post_request = graphiant_sdk.V1BwtrackerRegionGatewaySummaryPostRequest() # V1BwtrackerRegionGatewaySummaryPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_region_gateway_summary_post(authorization, v1_bwtracker_region_cloud_chart_post_request)
+        api_response = api_instance.v1_bwtracker_region_gateway_summary_post(authorization, v1_bwtracker_region_gateway_summary_post_request)
         print("The response of DefaultApi->v1_bwtracker_region_gateway_summary_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -4377,11 +4963,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_bwtracker_region_cloud_chart_post_request** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md)|  | 
+ **v1_bwtracker_region_gateway_summary_post_request** | [**V1BwtrackerRegionGatewaySummaryPostRequest**](V1BwtrackerRegionGatewaySummaryPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerRegionEdgeSummaryPost200Response**](V1BwtrackerRegionEdgeSummaryPost200Response.md)
+[**V1BwtrackerRegionGatewaySummaryPostResponse**](V1BwtrackerRegionGatewaySummaryPostResponse.md)
 
 ### Authorization
 
@@ -4401,7 +4987,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_region_site_chart_post**
-> V1BwtrackerRegionCloudChartPost200Response v1_bwtracker_region_site_chart_post(authorization, v1_bwtracker_region_site_chart_post_request)
+> V1BwtrackerRegionSiteChartPostResponse v1_bwtracker_region_site_chart_post(authorization, v1_bwtracker_region_site_chart_post_request)
 
 ### Example
 
@@ -4409,8 +4995,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_region_cloud_chart_post200_response import V1BwtrackerRegionCloudChartPost200Response
 from graphiant_sdk.models.v1_bwtracker_region_site_chart_post_request import V1BwtrackerRegionSiteChartPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_site_chart_post_response import V1BwtrackerRegionSiteChartPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -4458,7 +5044,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1BwtrackerRegionCloudChartPost200Response**](V1BwtrackerRegionCloudChartPost200Response.md)
+[**V1BwtrackerRegionSiteChartPostResponse**](V1BwtrackerRegionSiteChartPostResponse.md)
 
 ### Authorization
 
@@ -4478,7 +5064,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_region_site_details_post**
-> V1BwtrackerRegionSiteDetailsPost200Response v1_bwtracker_region_site_details_post(authorization, v1_bwtracker_region_site_chart_post_request)
+> V1BwtrackerRegionSiteDetailsPostResponse v1_bwtracker_region_site_details_post(authorization, v1_bwtracker_region_site_details_post_request)
 
 ### Example
 
@@ -4486,8 +5072,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_region_site_chart_post_request import V1BwtrackerRegionSiteChartPostRequest
-from graphiant_sdk.models.v1_bwtracker_region_site_details_post200_response import V1BwtrackerRegionSiteDetailsPost200Response
+from graphiant_sdk.models.v1_bwtracker_region_site_details_post_request import V1BwtrackerRegionSiteDetailsPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_site_details_post_response import V1BwtrackerRegionSiteDetailsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -4513,10 +5099,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_bwtracker_region_site_chart_post_request = graphiant_sdk.V1BwtrackerRegionSiteChartPostRequest() # V1BwtrackerRegionSiteChartPostRequest | 
+    v1_bwtracker_region_site_details_post_request = graphiant_sdk.V1BwtrackerRegionSiteDetailsPostRequest() # V1BwtrackerRegionSiteDetailsPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_region_site_details_post(authorization, v1_bwtracker_region_site_chart_post_request)
+        api_response = api_instance.v1_bwtracker_region_site_details_post(authorization, v1_bwtracker_region_site_details_post_request)
         print("The response of DefaultApi->v1_bwtracker_region_site_details_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -4531,11 +5117,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_bwtracker_region_site_chart_post_request** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md)|  | 
+ **v1_bwtracker_region_site_details_post_request** | [**V1BwtrackerRegionSiteDetailsPostRequest**](V1BwtrackerRegionSiteDetailsPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerRegionSiteDetailsPost200Response**](V1BwtrackerRegionSiteDetailsPost200Response.md)
+[**V1BwtrackerRegionSiteDetailsPostResponse**](V1BwtrackerRegionSiteDetailsPostResponse.md)
 
 ### Authorization
 
@@ -4555,7 +5141,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_region_site_gateway_chart_post**
-> V1BwtrackerRegionCloudChartPost200Response v1_bwtracker_region_site_gateway_chart_post(authorization, v1_bwtracker_region_site_chart_post_request)
+> V1BwtrackerRegionSiteGatewayChartPostResponse v1_bwtracker_region_site_gateway_chart_post(authorization, v1_bwtracker_region_site_gateway_chart_post_request)
 
 ### Example
 
@@ -4563,8 +5149,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_region_cloud_chart_post200_response import V1BwtrackerRegionCloudChartPost200Response
-from graphiant_sdk.models.v1_bwtracker_region_site_chart_post_request import V1BwtrackerRegionSiteChartPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_site_gateway_chart_post_request import V1BwtrackerRegionSiteGatewayChartPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_site_gateway_chart_post_response import V1BwtrackerRegionSiteGatewayChartPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -4590,10 +5176,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_bwtracker_region_site_chart_post_request = graphiant_sdk.V1BwtrackerRegionSiteChartPostRequest() # V1BwtrackerRegionSiteChartPostRequest | 
+    v1_bwtracker_region_site_gateway_chart_post_request = graphiant_sdk.V1BwtrackerRegionSiteGatewayChartPostRequest() # V1BwtrackerRegionSiteGatewayChartPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_region_site_gateway_chart_post(authorization, v1_bwtracker_region_site_chart_post_request)
+        api_response = api_instance.v1_bwtracker_region_site_gateway_chart_post(authorization, v1_bwtracker_region_site_gateway_chart_post_request)
         print("The response of DefaultApi->v1_bwtracker_region_site_gateway_chart_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -4608,11 +5194,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_bwtracker_region_site_chart_post_request** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md)|  | 
+ **v1_bwtracker_region_site_gateway_chart_post_request** | [**V1BwtrackerRegionSiteGatewayChartPostRequest**](V1BwtrackerRegionSiteGatewayChartPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerRegionCloudChartPost200Response**](V1BwtrackerRegionCloudChartPost200Response.md)
+[**V1BwtrackerRegionSiteGatewayChartPostResponse**](V1BwtrackerRegionSiteGatewayChartPostResponse.md)
 
 ### Authorization
 
@@ -4632,7 +5218,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_region_site_gateway_details_post**
-> V1BwtrackerRegionSiteDetailsPost200Response v1_bwtracker_region_site_gateway_details_post(authorization, v1_bwtracker_region_site_chart_post_request)
+> V1BwtrackerRegionSiteGatewayDetailsPostResponse v1_bwtracker_region_site_gateway_details_post(authorization, v1_bwtracker_region_site_gateway_details_post_request)
 
 ### Example
 
@@ -4640,8 +5226,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_region_site_chart_post_request import V1BwtrackerRegionSiteChartPostRequest
-from graphiant_sdk.models.v1_bwtracker_region_site_details_post200_response import V1BwtrackerRegionSiteDetailsPost200Response
+from graphiant_sdk.models.v1_bwtracker_region_site_gateway_details_post_request import V1BwtrackerRegionSiteGatewayDetailsPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_site_gateway_details_post_response import V1BwtrackerRegionSiteGatewayDetailsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -4667,10 +5253,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_bwtracker_region_site_chart_post_request = graphiant_sdk.V1BwtrackerRegionSiteChartPostRequest() # V1BwtrackerRegionSiteChartPostRequest | 
+    v1_bwtracker_region_site_gateway_details_post_request = graphiant_sdk.V1BwtrackerRegionSiteGatewayDetailsPostRequest() # V1BwtrackerRegionSiteGatewayDetailsPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_region_site_gateway_details_post(authorization, v1_bwtracker_region_site_chart_post_request)
+        api_response = api_instance.v1_bwtracker_region_site_gateway_details_post(authorization, v1_bwtracker_region_site_gateway_details_post_request)
         print("The response of DefaultApi->v1_bwtracker_region_site_gateway_details_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -4685,11 +5271,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_bwtracker_region_site_chart_post_request** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md)|  | 
+ **v1_bwtracker_region_site_gateway_details_post_request** | [**V1BwtrackerRegionSiteGatewayDetailsPostRequest**](V1BwtrackerRegionSiteGatewayDetailsPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerRegionSiteDetailsPost200Response**](V1BwtrackerRegionSiteDetailsPost200Response.md)
+[**V1BwtrackerRegionSiteGatewayDetailsPostResponse**](V1BwtrackerRegionSiteGatewayDetailsPostResponse.md)
 
 ### Authorization
 
@@ -4709,7 +5295,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_region_site_gateway_summary_post**
-> V1BwtrackerRegionSiteGatewaySummaryPost200Response v1_bwtracker_region_site_gateway_summary_post(authorization, v1_bwtracker_region_site_chart_post_request)
+> V1BwtrackerRegionSiteGatewaySummaryPostResponse v1_bwtracker_region_site_gateway_summary_post(authorization, v1_bwtracker_region_site_gateway_summary_post_request)
 
 ### Example
 
@@ -4717,8 +5303,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_region_site_chart_post_request import V1BwtrackerRegionSiteChartPostRequest
-from graphiant_sdk.models.v1_bwtracker_region_site_gateway_summary_post200_response import V1BwtrackerRegionSiteGatewaySummaryPost200Response
+from graphiant_sdk.models.v1_bwtracker_region_site_gateway_summary_post_request import V1BwtrackerRegionSiteGatewaySummaryPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_site_gateway_summary_post_response import V1BwtrackerRegionSiteGatewaySummaryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -4744,10 +5330,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_bwtracker_region_site_chart_post_request = graphiant_sdk.V1BwtrackerRegionSiteChartPostRequest() # V1BwtrackerRegionSiteChartPostRequest | 
+    v1_bwtracker_region_site_gateway_summary_post_request = graphiant_sdk.V1BwtrackerRegionSiteGatewaySummaryPostRequest() # V1BwtrackerRegionSiteGatewaySummaryPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_region_site_gateway_summary_post(authorization, v1_bwtracker_region_site_chart_post_request)
+        api_response = api_instance.v1_bwtracker_region_site_gateway_summary_post(authorization, v1_bwtracker_region_site_gateway_summary_post_request)
         print("The response of DefaultApi->v1_bwtracker_region_site_gateway_summary_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -4762,11 +5348,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_bwtracker_region_site_chart_post_request** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md)|  | 
+ **v1_bwtracker_region_site_gateway_summary_post_request** | [**V1BwtrackerRegionSiteGatewaySummaryPostRequest**](V1BwtrackerRegionSiteGatewaySummaryPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerRegionSiteGatewaySummaryPost200Response**](V1BwtrackerRegionSiteGatewaySummaryPost200Response.md)
+[**V1BwtrackerRegionSiteGatewaySummaryPostResponse**](V1BwtrackerRegionSiteGatewaySummaryPostResponse.md)
 
 ### Authorization
 
@@ -4786,7 +5372,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_region_site_summary_post**
-> V1BwtrackerRegionSiteGatewaySummaryPost200Response v1_bwtracker_region_site_summary_post(authorization, v1_bwtracker_region_site_chart_post_request)
+> V1BwtrackerRegionSiteSummaryPostResponse v1_bwtracker_region_site_summary_post(authorization, v1_bwtracker_region_site_summary_post_request)
 
 ### Example
 
@@ -4794,8 +5380,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_region_site_chart_post_request import V1BwtrackerRegionSiteChartPostRequest
-from graphiant_sdk.models.v1_bwtracker_region_site_gateway_summary_post200_response import V1BwtrackerRegionSiteGatewaySummaryPost200Response
+from graphiant_sdk.models.v1_bwtracker_region_site_summary_post_request import V1BwtrackerRegionSiteSummaryPostRequest
+from graphiant_sdk.models.v1_bwtracker_region_site_summary_post_response import V1BwtrackerRegionSiteSummaryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -4821,10 +5407,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_bwtracker_region_site_chart_post_request = graphiant_sdk.V1BwtrackerRegionSiteChartPostRequest() # V1BwtrackerRegionSiteChartPostRequest | 
+    v1_bwtracker_region_site_summary_post_request = graphiant_sdk.V1BwtrackerRegionSiteSummaryPostRequest() # V1BwtrackerRegionSiteSummaryPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_region_site_summary_post(authorization, v1_bwtracker_region_site_chart_post_request)
+        api_response = api_instance.v1_bwtracker_region_site_summary_post(authorization, v1_bwtracker_region_site_summary_post_request)
         print("The response of DefaultApi->v1_bwtracker_region_site_summary_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -4839,11 +5425,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_bwtracker_region_site_chart_post_request** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md)|  | 
+ **v1_bwtracker_region_site_summary_post_request** | [**V1BwtrackerRegionSiteSummaryPostRequest**](V1BwtrackerRegionSiteSummaryPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerRegionSiteGatewaySummaryPost200Response**](V1BwtrackerRegionSiteGatewaySummaryPost200Response.md)
+[**V1BwtrackerRegionSiteSummaryPostResponse**](V1BwtrackerRegionSiteSummaryPostResponse.md)
 
 ### Authorization
 
@@ -4863,7 +5449,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_site_csv_post**
-> V1BwtrackerEnterpriseCsvPost200Response v1_bwtracker_site_csv_post(authorization, v1_bwtracker_region_site_chart_post_request)
+> V1BwtrackerSiteCsvPostResponse v1_bwtracker_site_csv_post(authorization, v1_bwtracker_site_csv_post_request)
 
 ### Example
 
@@ -4871,8 +5457,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_enterprise_csv_post200_response import V1BwtrackerEnterpriseCsvPost200Response
-from graphiant_sdk.models.v1_bwtracker_region_site_chart_post_request import V1BwtrackerRegionSiteChartPostRequest
+from graphiant_sdk.models.v1_bwtracker_site_csv_post_request import V1BwtrackerSiteCsvPostRequest
+from graphiant_sdk.models.v1_bwtracker_site_csv_post_response import V1BwtrackerSiteCsvPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -4898,10 +5484,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_bwtracker_region_site_chart_post_request = graphiant_sdk.V1BwtrackerRegionSiteChartPostRequest() # V1BwtrackerRegionSiteChartPostRequest | 
+    v1_bwtracker_site_csv_post_request = graphiant_sdk.V1BwtrackerSiteCsvPostRequest() # V1BwtrackerSiteCsvPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_site_csv_post(authorization, v1_bwtracker_region_site_chart_post_request)
+        api_response = api_instance.v1_bwtracker_site_csv_post(authorization, v1_bwtracker_site_csv_post_request)
         print("The response of DefaultApi->v1_bwtracker_site_csv_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -4916,11 +5502,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_bwtracker_region_site_chart_post_request** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md)|  | 
+ **v1_bwtracker_site_csv_post_request** | [**V1BwtrackerSiteCsvPostRequest**](V1BwtrackerSiteCsvPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerEnterpriseCsvPost200Response**](V1BwtrackerEnterpriseCsvPost200Response.md)
+[**V1BwtrackerSiteCsvPostResponse**](V1BwtrackerSiteCsvPostResponse.md)
 
 ### Authorization
 
@@ -4940,7 +5526,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_bwtracker_site_gateway_csv_post**
-> V1BwtrackerEnterpriseCsvPost200Response v1_bwtracker_site_gateway_csv_post(authorization, v1_bwtracker_region_site_chart_post_request)
+> V1BwtrackerSiteGatewayCsvPostResponse v1_bwtracker_site_gateway_csv_post(authorization, v1_bwtracker_site_gateway_csv_post_request)
 
 ### Example
 
@@ -4948,8 +5534,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_bwtracker_enterprise_csv_post200_response import V1BwtrackerEnterpriseCsvPost200Response
-from graphiant_sdk.models.v1_bwtracker_region_site_chart_post_request import V1BwtrackerRegionSiteChartPostRequest
+from graphiant_sdk.models.v1_bwtracker_site_gateway_csv_post_request import V1BwtrackerSiteGatewayCsvPostRequest
+from graphiant_sdk.models.v1_bwtracker_site_gateway_csv_post_response import V1BwtrackerSiteGatewayCsvPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -4975,10 +5561,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_bwtracker_region_site_chart_post_request = graphiant_sdk.V1BwtrackerRegionSiteChartPostRequest() # V1BwtrackerRegionSiteChartPostRequest | 
+    v1_bwtracker_site_gateway_csv_post_request = graphiant_sdk.V1BwtrackerSiteGatewayCsvPostRequest() # V1BwtrackerSiteGatewayCsvPostRequest | 
 
     try:
-        api_response = api_instance.v1_bwtracker_site_gateway_csv_post(authorization, v1_bwtracker_region_site_chart_post_request)
+        api_response = api_instance.v1_bwtracker_site_gateway_csv_post(authorization, v1_bwtracker_site_gateway_csv_post_request)
         print("The response of DefaultApi->v1_bwtracker_site_gateway_csv_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -4993,11 +5579,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_bwtracker_region_site_chart_post_request** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md)|  | 
+ **v1_bwtracker_site_gateway_csv_post_request** | [**V1BwtrackerSiteGatewayCsvPostRequest**](V1BwtrackerSiteGatewayCsvPostRequest.md)|  | 
 
 ### Return type
 
-[**V1BwtrackerEnterpriseCsvPost200Response**](V1BwtrackerEnterpriseCsvPost200Response.md)
+[**V1BwtrackerSiteGatewayCsvPostResponse**](V1BwtrackerSiteGatewayCsvPostResponse.md)
 
 ### Authorization
 
@@ -5017,7 +5603,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_data_assurance_assurances_applications_bucket_app_name_get**
-> V1DataAssuranceAssurancesApplicationsBucketAppNameGet200Response v1_data_assurance_assurances_applications_bucket_app_name_get(authorization, bucket_app_name)
+> V1DataAssuranceAssurancesApplicationsBucketAppNameGetResponse v1_data_assurance_assurances_applications_bucket_app_name_get(authorization, bucket_app_name)
+
+Gets the assurance details for all edges under the current enterprise
 
 ### Example
 
@@ -5025,7 +5613,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_data_assurance_assurances_applications_bucket_app_name_get200_response import V1DataAssuranceAssurancesApplicationsBucketAppNameGet200Response
+from graphiant_sdk.models.v1_data_assurance_assurances_applications_bucket_app_name_get_response import V1DataAssuranceAssurancesApplicationsBucketAppNameGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -5073,7 +5661,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DataAssuranceAssurancesApplicationsBucketAppNameGet200Response**](V1DataAssuranceAssurancesApplicationsBucketAppNameGet200Response.md)
+[**V1DataAssuranceAssurancesApplicationsBucketAppNameGetResponse**](V1DataAssuranceAssurancesApplicationsBucketAppNameGetResponse.md)
 
 ### Authorization
 
@@ -5093,7 +5681,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_data_assurance_assurances_global_get**
-> V1DataAssuranceAssurancesGlobalGet200Response v1_data_assurance_assurances_global_get(authorization)
+> V1DataAssuranceAssurancesGlobalGetResponse v1_data_assurance_assurances_global_get(authorization)
+
+Get all assurances under the current enterprise
 
 ### Example
 
@@ -5101,7 +5691,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_data_assurance_assurances_global_get200_response import V1DataAssuranceAssurancesGlobalGet200Response
+from graphiant_sdk.models.v1_data_assurance_assurances_global_get_response import V1DataAssuranceAssurancesGlobalGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -5147,7 +5737,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DataAssuranceAssurancesGlobalGet200Response**](V1DataAssuranceAssurancesGlobalGet200Response.md)
+[**V1DataAssuranceAssurancesGlobalGetResponse**](V1DataAssuranceAssurancesGlobalGetResponse.md)
 
 ### Authorization
 
@@ -5168,6 +5758,8 @@ Name | Type | Description  | Notes
 
 # **v1_data_assurance_assurances_global_id_delete**
 > object v1_data_assurance_assurances_global_id_delete(authorization, id)
+
+Delete an assurance under the current enterprise
 
 ### Example
 
@@ -5242,7 +5834,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_data_assurance_assurances_global_id_get**
-> V1DataAssuranceAssurancesGlobalPostRequest v1_data_assurance_assurances_global_id_get(authorization, id)
+> V1DataAssuranceAssurancesGlobalIdGetResponse v1_data_assurance_assurances_global_id_get(authorization, id)
+
+Get the config for an assurance under the current enterprise
 
 ### Example
 
@@ -5250,7 +5844,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_data_assurance_assurances_global_post_request import V1DataAssuranceAssurancesGlobalPostRequest
+from graphiant_sdk.models.v1_data_assurance_assurances_global_id_get_response import V1DataAssuranceAssurancesGlobalIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -5298,7 +5892,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DataAssuranceAssurancesGlobalPostRequest**](V1DataAssuranceAssurancesGlobalPostRequest.md)
+[**V1DataAssuranceAssurancesGlobalIdGetResponse**](V1DataAssuranceAssurancesGlobalIdGetResponse.md)
 
 ### Authorization
 
@@ -5318,7 +5912,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_data_assurance_assurances_global_id_put**
-> V1DataAssuranceAssurancesGlobalIdPut200Response v1_data_assurance_assurances_global_id_put(authorization, id, v1_data_assurance_assurances_global_id_put_request)
+> V1DataAssuranceAssurancesGlobalIdPutResponse v1_data_assurance_assurances_global_id_put(authorization, id, v1_data_assurance_assurances_global_id_put_request)
+
+Overwrite a pre-existing assurance under the current enterprise
 
 ### Example
 
@@ -5326,8 +5922,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_data_assurance_assurances_global_id_put200_response import V1DataAssuranceAssurancesGlobalIdPut200Response
 from graphiant_sdk.models.v1_data_assurance_assurances_global_id_put_request import V1DataAssuranceAssurancesGlobalIdPutRequest
+from graphiant_sdk.models.v1_data_assurance_assurances_global_id_put_response import V1DataAssuranceAssurancesGlobalIdPutResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -5377,7 +5973,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DataAssuranceAssurancesGlobalIdPut200Response**](V1DataAssuranceAssurancesGlobalIdPut200Response.md)
+[**V1DataAssuranceAssurancesGlobalIdPutResponse**](V1DataAssuranceAssurancesGlobalIdPutResponse.md)
 
 ### Authorization
 
@@ -5397,7 +5993,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_data_assurance_assurances_global_post**
-> V1DataAssuranceAssurancesGlobalPost200Response v1_data_assurance_assurances_global_post(authorization, v1_data_assurance_assurances_global_post_request)
+> V1DataAssuranceAssurancesGlobalPostResponse v1_data_assurance_assurances_global_post(authorization, v1_data_assurance_assurances_global_post_request)
+
+Configure a new assurance under the current enterprise
 
 ### Example
 
@@ -5405,8 +6003,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_data_assurance_assurances_global_post200_response import V1DataAssuranceAssurancesGlobalPost200Response
 from graphiant_sdk.models.v1_data_assurance_assurances_global_post_request import V1DataAssuranceAssurancesGlobalPostRequest
+from graphiant_sdk.models.v1_data_assurance_assurances_global_post_response import V1DataAssuranceAssurancesGlobalPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -5454,7 +6052,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DataAssuranceAssurancesGlobalPost200Response**](V1DataAssuranceAssurancesGlobalPost200Response.md)
+[**V1DataAssuranceAssurancesGlobalPostResponse**](V1DataAssuranceAssurancesGlobalPostResponse.md)
 
 ### Authorization
 
@@ -5474,7 +6072,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_data_assurance_flex_algos_get**
-> V1DataAssuranceFlexAlgosGet200Response v1_data_assurance_flex_algos_get(authorization)
+> V1DataAssuranceFlexAlgosGetResponse v1_data_assurance_flex_algos_get(authorization)
+
+Get all configurable flex algos under the current enterprise
 
 ### Example
 
@@ -5482,7 +6082,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_data_assurance_flex_algos_get200_response import V1DataAssuranceFlexAlgosGet200Response
+from graphiant_sdk.models.v1_data_assurance_flex_algos_get_response import V1DataAssuranceFlexAlgosGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -5528,7 +6128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DataAssuranceFlexAlgosGet200Response**](V1DataAssuranceFlexAlgosGet200Response.md)
+[**V1DataAssuranceFlexAlgosGetResponse**](V1DataAssuranceFlexAlgosGetResponse.md)
 
 ### Authorization
 
@@ -5548,7 +6148,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_bgp_nbr_stats_get**
-> V1DeviceRoutingBgpNbrStatsGet200Response v1_device_routing_bgp_nbr_stats_get(authorization, afi_name=afi_name, device_id=device_id, instance_name=instance_name, nbr_address=nbr_address, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingBgpNbrStatsGetResponse v1_device_routing_bgp_nbr_stats_get(authorization, afi_name, device_id, nbr_address, vrf_name, instance_name=instance_name)
+
+Get BGP Nbr Stats Table
 
 ### Example
 
@@ -5556,7 +6158,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_bgp_nbr_stats_get200_response import V1DeviceRoutingBgpNbrStatsGet200Response
+from graphiant_sdk.models.v1_device_routing_bgp_nbr_stats_get_response import V1DeviceRoutingBgpNbrStatsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -5582,15 +6184,14 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    afi_name = 'ipv4-unicast' # str | Valid configured BGP AfiSafi (optional)
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
+    afi_name = 'ipv4-unicast' # str | Valid configured BGP AfiSafi
+    device_id = 1000000 # int | Valid configured device ID > 0
+    nbr_address = '1314:1:abcd::1dea' # str | Valid configured BGP Nbr address
+    vrf_name = 'default' # str | Valid configured VRF name
     instance_name = 'BGP-ODP' # str | Valid configured BGP Instance name (optional)
-    nbr_address = '1314:1:abcd::1dea' # str | Valid configured BGP Nbr address (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'default' # str | Valid configured VRF name (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_bgp_nbr_stats_get(authorization, afi_name=afi_name, device_id=device_id, instance_name=instance_name, nbr_address=nbr_address, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_bgp_nbr_stats_get(authorization, afi_name, device_id, nbr_address, vrf_name, instance_name=instance_name)
         print("The response of DefaultApi->v1_device_routing_bgp_nbr_stats_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -5605,16 +6206,15 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **afi_name** | **str**| Valid configured BGP AfiSafi | [optional] 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
+ **afi_name** | **str**| Valid configured BGP AfiSafi | 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **nbr_address** | **str**| Valid configured BGP Nbr address | 
+ **vrf_name** | **str**| Valid configured VRF name | 
  **instance_name** | **str**| Valid configured BGP Instance name | [optional] 
- **nbr_address** | **str**| Valid configured BGP Nbr address | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingBgpNbrStatsGet200Response**](V1DeviceRoutingBgpNbrStatsGet200Response.md)
+[**V1DeviceRoutingBgpNbrStatsGetResponse**](V1DeviceRoutingBgpNbrStatsGetResponse.md)
 
 ### Authorization
 
@@ -5634,7 +6234,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_bgp_nbrid_get**
-> V1DeviceRoutingBgpNbridGet200Response v1_device_routing_bgp_nbrid_get(authorization, device_id=device_id, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingBgpNbridGetResponse v1_device_routing_bgp_nbrid_get(authorization, device_id, vrf_name)
+
+Get BGP Neighbor ID Table
 
 ### Example
 
@@ -5642,7 +6244,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_bgp_nbrid_get200_response import V1DeviceRoutingBgpNbridGet200Response
+from graphiant_sdk.models.v1_device_routing_bgp_nbrid_get_response import V1DeviceRoutingBgpNbridGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -5668,12 +6270,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'default' # str | Valid configured VRF name (optional)
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'default' # str | Valid configured VRF name
 
     try:
-        api_response = api_instance.v1_device_routing_bgp_nbrid_get(authorization, device_id=device_id, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_bgp_nbrid_get(authorization, device_id, vrf_name)
         print("The response of DefaultApi->v1_device_routing_bgp_nbrid_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -5688,13 +6289,12 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF name | 
 
 ### Return type
 
-[**V1DeviceRoutingBgpNbridGet200Response**](V1DeviceRoutingBgpNbridGet200Response.md)
+[**V1DeviceRoutingBgpNbridGetResponse**](V1DeviceRoutingBgpNbridGetResponse.md)
 
 ### Authorization
 
@@ -5714,7 +6314,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_bgp_nbrs_counters_get**
-> V1DeviceRoutingBgpNbrsCountersGet200Response v1_device_routing_bgp_nbrs_counters_get(authorization)
+> V1DeviceRoutingBgpNbrsCountersGetResponse v1_device_routing_bgp_nbrs_counters_get(authorization)
+
+Get BGP Neighbor Counters
 
 ### Example
 
@@ -5722,7 +6324,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_bgp_nbrs_counters_get200_response import V1DeviceRoutingBgpNbrsCountersGet200Response
+from graphiant_sdk.models.v1_device_routing_bgp_nbrs_counters_get_response import V1DeviceRoutingBgpNbrsCountersGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -5768,7 +6370,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceRoutingBgpNbrsCountersGet200Response**](V1DeviceRoutingBgpNbrsCountersGet200Response.md)
+[**V1DeviceRoutingBgpNbrsCountersGetResponse**](V1DeviceRoutingBgpNbrsCountersGetResponse.md)
 
 ### Authorization
 
@@ -5788,7 +6390,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_bgp_nbrs_details_get**
-> V1DeviceRoutingBgpNbrsDetailsGet200Response v1_device_routing_bgp_nbrs_details_get(authorization, address=address, device_id=device_id, interface=interface, vrf_name=vrf_name)
+> V1DeviceRoutingBgpNbrsDetailsGetResponse v1_device_routing_bgp_nbrs_details_get(authorization, address, device_id, vrf_name, interface=interface)
+
+Get BGP Neighbor Details Table
 
 ### Example
 
@@ -5796,7 +6400,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_bgp_nbrs_details_get200_response import V1DeviceRoutingBgpNbrsDetailsGet200Response
+from graphiant_sdk.models.v1_device_routing_bgp_nbrs_details_get_response import V1DeviceRoutingBgpNbrsDetailsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -5822,13 +6426,13 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    address = '10.121.12.34' # str | BGP Nbr address (optional)
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
+    address = '10.121.12.34' # str | BGP Nbr address
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'default' # str | Valid configured VRF name
     interface = 'Ethernet3/0' # str | Interface name. Used in case of link local address (optional)
-    vrf_name = 'default' # str | Valid configured VRF name (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_bgp_nbrs_details_get(authorization, address=address, device_id=device_id, interface=interface, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_bgp_nbrs_details_get(authorization, address, device_id, vrf_name, interface=interface)
         print("The response of DefaultApi->v1_device_routing_bgp_nbrs_details_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -5843,14 +6447,14 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **address** | **str**| BGP Nbr address | [optional] 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
+ **address** | **str**| BGP Nbr address | 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF name | 
  **interface** | **str**| Interface name. Used in case of link local address | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingBgpNbrsDetailsGet200Response**](V1DeviceRoutingBgpNbrsDetailsGet200Response.md)
+[**V1DeviceRoutingBgpNbrsDetailsGetResponse**](V1DeviceRoutingBgpNbrsDetailsGetResponse.md)
 
 ### Authorization
 
@@ -5870,7 +6474,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_bgp_nbrs_per_afi_prefix_get**
-> V1DeviceRoutingBgpNbrsPerAfiPrefixGet200Response v1_device_routing_bgp_nbrs_per_afi_prefix_get(authorization, address=address, device_id=device_id, interface=interface, vrf_name=vrf_name)
+> V1DeviceRoutingBgpNbrsPerAfiPrefixGetResponse v1_device_routing_bgp_nbrs_per_afi_prefix_get(authorization, address, device_id, vrf_name, interface=interface)
+
+Get BGP Neighbor Per Afi Prefix Counter
 
 ### Example
 
@@ -5878,7 +6484,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_bgp_nbrs_per_afi_prefix_get200_response import V1DeviceRoutingBgpNbrsPerAfiPrefixGet200Response
+from graphiant_sdk.models.v1_device_routing_bgp_nbrs_per_afi_prefix_get_response import V1DeviceRoutingBgpNbrsPerAfiPrefixGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -5904,13 +6510,13 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    address = '10.121.12.34' # str | BGP Nbr address (optional)
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
+    address = '10.121.12.34' # str | BGP Nbr address
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'default' # str | Valid configured VRF name
     interface = 'Ethernet3/0' # str | Interface name. Used in case of link local address (optional)
-    vrf_name = 'default' # str | Valid configured VRF name (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_bgp_nbrs_per_afi_prefix_get(authorization, address=address, device_id=device_id, interface=interface, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_bgp_nbrs_per_afi_prefix_get(authorization, address, device_id, vrf_name, interface=interface)
         print("The response of DefaultApi->v1_device_routing_bgp_nbrs_per_afi_prefix_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -5925,14 +6531,14 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **address** | **str**| BGP Nbr address | [optional] 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
+ **address** | **str**| BGP Nbr address | 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF name | 
  **interface** | **str**| Interface name. Used in case of link local address | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingBgpNbrsPerAfiPrefixGet200Response**](V1DeviceRoutingBgpNbrsPerAfiPrefixGet200Response.md)
+[**V1DeviceRoutingBgpNbrsPerAfiPrefixGetResponse**](V1DeviceRoutingBgpNbrsPerAfiPrefixGetResponse.md)
 
 ### Authorization
 
@@ -5952,7 +6558,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_odp_nbrid_get**
-> V1DeviceRoutingBgpNbridGet200Response v1_device_routing_odp_nbrid_get(authorization, device_id=device_id, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingOdpNbridGetResponse v1_device_routing_odp_nbrid_get(authorization, device_id, vrf_name)
+
+Get BGP Neighbor addresses from ODP server
 
 ### Example
 
@@ -5960,7 +6568,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_bgp_nbrid_get200_response import V1DeviceRoutingBgpNbridGet200Response
+from graphiant_sdk.models.v1_device_routing_odp_nbrid_get_response import V1DeviceRoutingOdpNbridGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -5986,12 +6594,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'default' # str | Valid configured VRF name (optional)
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'default' # str | Valid configured VRF name
 
     try:
-        api_response = api_instance.v1_device_routing_odp_nbrid_get(authorization, device_id=device_id, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_odp_nbrid_get(authorization, device_id, vrf_name)
         print("The response of DefaultApi->v1_device_routing_odp_nbrid_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -6006,13 +6613,12 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF name | 
 
 ### Return type
 
-[**V1DeviceRoutingBgpNbridGet200Response**](V1DeviceRoutingBgpNbridGet200Response.md)
+[**V1DeviceRoutingOdpNbridGetResponse**](V1DeviceRoutingOdpNbridGetResponse.md)
 
 ### Authorization
 
@@ -6032,7 +6638,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv2_area_interface_get**
-> V1DeviceRoutingOspfv2AreaInterfaceGet200Response v1_device_routing_ospfv2_area_interface_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingOspfv2AreaInterfaceGetResponse v1_device_routing_ospfv2_area_interface_get(authorization, area_id, device_id, vrf_name, instance_name=instance_name)
+
+Get OSPFv2 Area's Interface specific Information
 
 ### Example
 
@@ -6040,7 +6648,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_area_interface_get200_response import V1DeviceRoutingOspfv2AreaInterfaceGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv2_area_interface_get_response import V1DeviceRoutingOspfv2AreaInterfaceGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -6066,14 +6674,13 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    area_id = '0.0.0.0' # str | Valid configured Area ID (optional)
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
+    area_id = '0.0.0.0' # str | Valid configured Area ID
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'default' # str | Valid configured VRF name
     instance_name = 'OSPF1' # str | Valid configured OSPF Instance name (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'default' # str | Valid configured VRF name (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv2_area_interface_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_ospfv2_area_interface_get(authorization, area_id, device_id, vrf_name, instance_name=instance_name)
         print("The response of DefaultApi->v1_device_routing_ospfv2_area_interface_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -6088,15 +6695,14 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **area_id** | **str**| Valid configured Area ID | [optional] 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
+ **area_id** | **str**| Valid configured Area ID | 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF name | 
  **instance_name** | **str**| Valid configured OSPF Instance name | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaInterfaceGet200Response**](V1DeviceRoutingOspfv2AreaInterfaceGet200Response.md)
+[**V1DeviceRoutingOspfv2AreaInterfaceGetResponse**](V1DeviceRoutingOspfv2AreaInterfaceGetResponse.md)
 
 ### Authorization
 
@@ -6116,7 +6722,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv2_area_interface_nbrid_get**
-> V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response v1_device_routing_ospfv2_area_interface_nbrid_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, interface_id=interface_id, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingOspfv2AreaInterfaceNbridGetResponse v1_device_routing_ospfv2_area_interface_nbrid_get(authorization, area_id, device_id, interface_id, vrf_name, instance_name=instance_name)
+
+Get OSPFv2 Area's interface's Nbr ID table
 
 ### Example
 
@@ -6124,7 +6732,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_area_interface_nbrid_get200_response import V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv2_area_interface_nbrid_get_response import V1DeviceRoutingOspfv2AreaInterfaceNbridGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -6150,15 +6758,14 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    area_id = '0.0.0.0' # str | Valid configured Area ID (optional)
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
+    area_id = '0.0.0.0' # str | Valid configured Area ID
+    device_id = 1000000 # int | Valid configured device ID > 0
+    interface_id = 'ToATT, ISP2' # str | Valid configured Interface name
+    vrf_name = 'default' # str | Valid configured VRF name
     instance_name = 'OSPF1' # str | Valid configured OSPF Instance name (optional)
-    interface_id = 'ToATT, ISP2' # str | Valid configured Interface name (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'default' # str | Valid configured VRF name (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv2_area_interface_nbrid_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, interface_id=interface_id, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_ospfv2_area_interface_nbrid_get(authorization, area_id, device_id, interface_id, vrf_name, instance_name=instance_name)
         print("The response of DefaultApi->v1_device_routing_ospfv2_area_interface_nbrid_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -6173,16 +6780,15 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **area_id** | **str**| Valid configured Area ID | [optional] 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
+ **area_id** | **str**| Valid configured Area ID | 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **interface_id** | **str**| Valid configured Interface name | 
+ **vrf_name** | **str**| Valid configured VRF name | 
  **instance_name** | **str**| Valid configured OSPF Instance name | [optional] 
- **interface_id** | **str**| Valid configured Interface name | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response**](V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response.md)
+[**V1DeviceRoutingOspfv2AreaInterfaceNbridGetResponse**](V1DeviceRoutingOspfv2AreaInterfaceNbridGetResponse.md)
 
 ### Authorization
 
@@ -6202,7 +6808,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv2_area_interfaceid_get**
-> V1DeviceRoutingOspfv2AreaInterfaceidGet200Response v1_device_routing_ospfv2_area_interfaceid_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingOspfv2AreaInterfaceidGetResponse v1_device_routing_ospfv2_area_interfaceid_get(authorization, area_id, device_id, vrf_name, instance_name=instance_name)
+
+Get OSPFv2 Area's Interface ID Table
 
 ### Example
 
@@ -6210,7 +6818,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_area_interfaceid_get200_response import V1DeviceRoutingOspfv2AreaInterfaceidGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv2_area_interfaceid_get_response import V1DeviceRoutingOspfv2AreaInterfaceidGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -6236,14 +6844,13 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    area_id = '0.0.0.0' # str | Valid configured Area ID (optional)
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
+    area_id = '0.0.0.0' # str | Valid configured Area ID
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'default' # str | Valid configured VRF name
     instance_name = 'OSPF1' # str | Valid configured OSPF Instance name (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'default' # str | Valid configured VRF name (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv2_area_interfaceid_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_ospfv2_area_interfaceid_get(authorization, area_id, device_id, vrf_name, instance_name=instance_name)
         print("The response of DefaultApi->v1_device_routing_ospfv2_area_interfaceid_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -6258,15 +6865,14 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **area_id** | **str**| Valid configured Area ID | [optional] 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
+ **area_id** | **str**| Valid configured Area ID | 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF name | 
  **instance_name** | **str**| Valid configured OSPF Instance name | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaInterfaceidGet200Response**](V1DeviceRoutingOspfv2AreaInterfaceidGet200Response.md)
+[**V1DeviceRoutingOspfv2AreaInterfaceidGetResponse**](V1DeviceRoutingOspfv2AreaInterfaceidGetResponse.md)
 
 ### Authorization
 
@@ -6286,7 +6892,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv2_area_lsdb_get**
-> V1DeviceRoutingOspfv2AreaLsdbGet200Response v1_device_routing_ospfv2_area_lsdb_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingOspfv2AreaLsdbGetResponse v1_device_routing_ospfv2_area_lsdb_get(authorization, area_id, device_id, instance_name, vrf_name)
+
+Get OSPFv2 Area specific LSDB Table
 
 ### Example
 
@@ -6294,7 +6902,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_area_lsdb_get200_response import V1DeviceRoutingOspfv2AreaLsdbGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv2_area_lsdb_get_response import V1DeviceRoutingOspfv2AreaLsdbGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -6320,14 +6928,13 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    area_id = '0.0.0.0' # str | Valid configured Area ID (optional)
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
-    instance_name = 'OSPF1' # str | Valid configured OSPF Instance name (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'default' # str | Valid configured VRF name (optional)
+    area_id = '0.0.0.0' # str | Valid configured Area ID
+    device_id = 1000000 # int | Valid configured device ID > 0
+    instance_name = 'OSPF1' # str | Valid configured OSPF Instance name
+    vrf_name = 'default' # str | Valid configured VRF name
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv2_area_lsdb_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_ospfv2_area_lsdb_get(authorization, area_id, device_id, instance_name, vrf_name)
         print("The response of DefaultApi->v1_device_routing_ospfv2_area_lsdb_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -6342,15 +6949,14 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **area_id** | **str**| Valid configured Area ID | [optional] 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
- **instance_name** | **str**| Valid configured OSPF Instance name | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
+ **area_id** | **str**| Valid configured Area ID | 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **instance_name** | **str**| Valid configured OSPF Instance name | 
+ **vrf_name** | **str**| Valid configured VRF name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaLsdbGet200Response**](V1DeviceRoutingOspfv2AreaLsdbGet200Response.md)
+[**V1DeviceRoutingOspfv2AreaLsdbGetResponse**](V1DeviceRoutingOspfv2AreaLsdbGetResponse.md)
 
 ### Authorization
 
@@ -6370,7 +6976,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv2_area_nbr_get**
-> V1DeviceRoutingOspfv2AreaNbrGet200Response v1_device_routing_ospfv2_area_nbr_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingOspfv2AreaNbrGetResponse v1_device_routing_ospfv2_area_nbr_get(authorization, area_id, device_id, vrf_name, instance_name=instance_name)
+
+Get OSPFv2 Area's Neighbors Information
 
 ### Example
 
@@ -6378,7 +6986,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_area_nbr_get200_response import V1DeviceRoutingOspfv2AreaNbrGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv2_area_nbr_get_response import V1DeviceRoutingOspfv2AreaNbrGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -6404,14 +7012,13 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    area_id = '0.0.0.0' # str | Valid configured Area ID (optional)
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
+    area_id = '0.0.0.0' # str | Valid configured Area ID
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'default' # str | Valid configured VRF name
     instance_name = 'OSPF1' # str | Valid configured OSPF Instance name (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'default' # str | Valid configured VRF name (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv2_area_nbr_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_ospfv2_area_nbr_get(authorization, area_id, device_id, vrf_name, instance_name=instance_name)
         print("The response of DefaultApi->v1_device_routing_ospfv2_area_nbr_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -6426,15 +7033,14 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **area_id** | **str**| Valid configured Area ID | [optional] 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
+ **area_id** | **str**| Valid configured Area ID | 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF name | 
  **instance_name** | **str**| Valid configured OSPF Instance name | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaNbrGet200Response**](V1DeviceRoutingOspfv2AreaNbrGet200Response.md)
+[**V1DeviceRoutingOspfv2AreaNbrGetResponse**](V1DeviceRoutingOspfv2AreaNbrGetResponse.md)
 
 ### Authorization
 
@@ -6454,7 +7060,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv2_areaid_get**
-> V1DeviceRoutingOspfv2AreaidGet200Response v1_device_routing_ospfv2_areaid_get(authorization, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingOspfv2AreaidGetResponse v1_device_routing_ospfv2_areaid_get(authorization, device_id, vrf_name, instance_name=instance_name)
+
+Get OSPFv2 Area ID Table
 
 ### Example
 
@@ -6462,7 +7070,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_areaid_get200_response import V1DeviceRoutingOspfv2AreaidGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv2_areaid_get_response import V1DeviceRoutingOspfv2AreaidGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -6488,13 +7096,12 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'default' # str | Valid configured VRF name
     instance_name = 'OSPF1' # str | Valid configured OSPF Instance name (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'default' # str | Valid configured VRF name (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv2_areaid_get(authorization, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_ospfv2_areaid_get(authorization, device_id, vrf_name, instance_name=instance_name)
         print("The response of DefaultApi->v1_device_routing_ospfv2_areaid_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -6509,14 +7116,13 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF name | 
  **instance_name** | **str**| Valid configured OSPF Instance name | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaidGet200Response**](V1DeviceRoutingOspfv2AreaidGet200Response.md)
+[**V1DeviceRoutingOspfv2AreaidGetResponse**](V1DeviceRoutingOspfv2AreaidGetResponse.md)
 
 ### Authorization
 
@@ -6536,7 +7142,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv2_lsdb_get**
-> V1DeviceRoutingOspfv2AreaLsdbGet200Response v1_device_routing_ospfv2_lsdb_get(authorization, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingOspfv2LsdbGetResponse v1_device_routing_ospfv2_lsdb_get(authorization, device_id, vrf_name, instance_name=instance_name)
+
+Get OSPFv2 global LSDB Table
 
 ### Example
 
@@ -6544,7 +7152,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_area_lsdb_get200_response import V1DeviceRoutingOspfv2AreaLsdbGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv2_lsdb_get_response import V1DeviceRoutingOspfv2LsdbGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -6570,13 +7178,12 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'management' # str | Valid configured VRF name
     instance_name = 'ospf-demo' # str | Valid configured OSPF Instance name (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'management' # str | Valid configured VRF name (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv2_lsdb_get(authorization, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_ospfv2_lsdb_get(authorization, device_id, vrf_name, instance_name=instance_name)
         print("The response of DefaultApi->v1_device_routing_ospfv2_lsdb_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -6591,14 +7198,13 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF name | 
  **instance_name** | **str**| Valid configured OSPF Instance name | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaLsdbGet200Response**](V1DeviceRoutingOspfv2AreaLsdbGet200Response.md)
+[**V1DeviceRoutingOspfv2LsdbGetResponse**](V1DeviceRoutingOspfv2LsdbGetResponse.md)
 
 ### Authorization
 
@@ -6618,7 +7224,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv2_rib_get**
-> V1DeviceRoutingOspfv2RibGet200Response v1_device_routing_ospfv2_rib_get(authorization, device_id=device_id, instance_name=instance_name, before=before, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingOspfv2RibGetResponse v1_device_routing_ospfv2_rib_get(authorization, device_id, vrf_name, instance_name=instance_name, before=before, last=last)
+
+Get OSPFv2 Local RIB Table
 
 ### Example
 
@@ -6626,7 +7234,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_rib_get200_response import V1DeviceRoutingOspfv2RibGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv2_rib_get_response import V1DeviceRoutingOspfv2RibGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -6652,14 +7260,14 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'management' # str | Valid configured VRF name
     instance_name = 'BGP-ODP' # str | Valid configured OSPF Instance name (optional)
     before = 'example string' # str |  (optional)
     last = 123 # int |  (optional)
-    vrf_name = 'management' # str | Valid configured VRF name (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv2_rib_get(authorization, device_id=device_id, instance_name=instance_name, before=before, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_ospfv2_rib_get(authorization, device_id, vrf_name, instance_name=instance_name, before=before, last=last)
         print("The response of DefaultApi->v1_device_routing_ospfv2_rib_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -6674,15 +7282,15 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF name | 
  **instance_name** | **str**| Valid configured OSPF Instance name | [optional] 
  **before** | **str**|  | [optional] 
  **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2RibGet200Response**](V1DeviceRoutingOspfv2RibGet200Response.md)
+[**V1DeviceRoutingOspfv2RibGetResponse**](V1DeviceRoutingOspfv2RibGetResponse.md)
 
 ### Authorization
 
@@ -6702,7 +7310,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv2_statistics_get**
-> V1DeviceRoutingOspfv2StatisticsGet200Response v1_device_routing_ospfv2_statistics_get(authorization, device_id=device_id, vrf_names=vrf_names)
+> V1DeviceRoutingOspfv2StatisticsGetResponse v1_device_routing_ospfv2_statistics_get(authorization, device_id, vrf_names)
+
+Get OSPFv2 Statistics
 
 ### Example
 
@@ -6710,7 +7320,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_statistics_get200_response import V1DeviceRoutingOspfv2StatisticsGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv2_statistics_get_response import V1DeviceRoutingOspfv2StatisticsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -6736,11 +7346,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
-    vrf_names = ['vrf_names_example'] # List[str] | Valid configured VRF name (optional)
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_names = ['vrf_names_example'] # List[str] | Valid configured VRF name
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv2_statistics_get(authorization, device_id=device_id, vrf_names=vrf_names)
+        api_response = api_instance.v1_device_routing_ospfv2_statistics_get(authorization, device_id, vrf_names)
         print("The response of DefaultApi->v1_device_routing_ospfv2_statistics_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -6755,12 +7365,12 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
- **vrf_names** | [**List[str]**](str.md)| Valid configured VRF name | [optional] 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_names** | [**List[str]**](str.md)| Valid configured VRF name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2StatisticsGet200Response**](V1DeviceRoutingOspfv2StatisticsGet200Response.md)
+[**V1DeviceRoutingOspfv2StatisticsGetResponse**](V1DeviceRoutingOspfv2StatisticsGetResponse.md)
 
 ### Authorization
 
@@ -6780,7 +7390,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv3_area_interface_get**
-> V1DeviceRoutingOspfv2AreaInterfaceGet200Response v1_device_routing_ospfv3_area_interface_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingOspfv3AreaInterfaceGetResponse v1_device_routing_ospfv3_area_interface_get(authorization, area_id, device_id, vrf_name, instance_name=instance_name)
+
+Get OSPFv3 Area's Interface specific Information
 
 ### Example
 
@@ -6788,7 +7400,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_area_interface_get200_response import V1DeviceRoutingOspfv2AreaInterfaceGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv3_area_interface_get_response import V1DeviceRoutingOspfv3AreaInterfaceGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -6814,14 +7426,13 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    area_id = '0.0.0.0' # str | Valid configured Area ID (optional)
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
+    area_id = '0.0.0.0' # str | Valid configured Area ID
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'default' # str | Valid configured VRF name
     instance_name = 'OSPF1' # str | Valid configured OSPF Instance name (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'default' # str | Valid configured VRF name (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv3_area_interface_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_ospfv3_area_interface_get(authorization, area_id, device_id, vrf_name, instance_name=instance_name)
         print("The response of DefaultApi->v1_device_routing_ospfv3_area_interface_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -6836,15 +7447,14 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **area_id** | **str**| Valid configured Area ID | [optional] 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
+ **area_id** | **str**| Valid configured Area ID | 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF name | 
  **instance_name** | **str**| Valid configured OSPF Instance name | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaInterfaceGet200Response**](V1DeviceRoutingOspfv2AreaInterfaceGet200Response.md)
+[**V1DeviceRoutingOspfv3AreaInterfaceGetResponse**](V1DeviceRoutingOspfv3AreaInterfaceGetResponse.md)
 
 ### Authorization
 
@@ -6864,7 +7474,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv3_area_interface_nbrid_get**
-> V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response v1_device_routing_ospfv3_area_interface_nbrid_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, interface_id=interface_id, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingOspfv3AreaInterfaceNbridGetResponse v1_device_routing_ospfv3_area_interface_nbrid_get(authorization, area_id, device_id, interface_id, vrf_name, instance_name=instance_name)
+
+Get OSPFv3 Area's interface's List of Nbr IDs
 
 ### Example
 
@@ -6872,7 +7484,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_area_interface_nbrid_get200_response import V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv3_area_interface_nbrid_get_response import V1DeviceRoutingOspfv3AreaInterfaceNbridGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -6898,15 +7510,14 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    area_id = '0.0.0.0' # str | Valid configured Area ID (optional)
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
+    area_id = '0.0.0.0' # str | Valid configured Area ID
+    device_id = 1000000 # int | Valid configured device ID > 0
+    interface_id = 'ToATT, ISP2' # str | Valid configured Interface name
+    vrf_name = 'default' # str | Valid configured VRF name
     instance_name = 'OSPF1' # str | Valid configured OSPF Instance name (optional)
-    interface_id = 'ToATT, ISP2' # str | Valid configured Interface name (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'default' # str | Valid configured VRF name (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv3_area_interface_nbrid_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, interface_id=interface_id, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_ospfv3_area_interface_nbrid_get(authorization, area_id, device_id, interface_id, vrf_name, instance_name=instance_name)
         print("The response of DefaultApi->v1_device_routing_ospfv3_area_interface_nbrid_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -6921,16 +7532,15 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **area_id** | **str**| Valid configured Area ID | [optional] 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
+ **area_id** | **str**| Valid configured Area ID | 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **interface_id** | **str**| Valid configured Interface name | 
+ **vrf_name** | **str**| Valid configured VRF name | 
  **instance_name** | **str**| Valid configured OSPF Instance name | [optional] 
- **interface_id** | **str**| Valid configured Interface name | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response**](V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response.md)
+[**V1DeviceRoutingOspfv3AreaInterfaceNbridGetResponse**](V1DeviceRoutingOspfv3AreaInterfaceNbridGetResponse.md)
 
 ### Authorization
 
@@ -6950,7 +7560,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv3_area_interfaceid_get**
-> V1DeviceRoutingOspfv2AreaInterfaceidGet200Response v1_device_routing_ospfv3_area_interfaceid_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingOspfv3AreaInterfaceidGetResponse v1_device_routing_ospfv3_area_interfaceid_get(authorization, area_id, device_id, vrf_name, instance_name=instance_name)
+
+Get OSPFv3 Area's Interface ID Table
 
 ### Example
 
@@ -6958,7 +7570,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_area_interfaceid_get200_response import V1DeviceRoutingOspfv2AreaInterfaceidGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv3_area_interfaceid_get_response import V1DeviceRoutingOspfv3AreaInterfaceidGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -6984,14 +7596,13 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    area_id = '0.0.0.0' # str | Valid configured Area ID (optional)
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
+    area_id = '0.0.0.0' # str | Valid configured Area ID
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'default' # str | Valid configured VRF name
     instance_name = 'OSPF1' # str | Valid configured OSPF Instance name (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'default' # str | Valid configured VRF name (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv3_area_interfaceid_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_ospfv3_area_interfaceid_get(authorization, area_id, device_id, vrf_name, instance_name=instance_name)
         print("The response of DefaultApi->v1_device_routing_ospfv3_area_interfaceid_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -7006,15 +7617,14 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **area_id** | **str**| Valid configured Area ID | [optional] 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
+ **area_id** | **str**| Valid configured Area ID | 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF name | 
  **instance_name** | **str**| Valid configured OSPF Instance name | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaInterfaceidGet200Response**](V1DeviceRoutingOspfv2AreaInterfaceidGet200Response.md)
+[**V1DeviceRoutingOspfv3AreaInterfaceidGetResponse**](V1DeviceRoutingOspfv3AreaInterfaceidGetResponse.md)
 
 ### Authorization
 
@@ -7034,7 +7644,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv3_area_lsdb_get**
-> V1DeviceRoutingOspfv2AreaLsdbGet200Response v1_device_routing_ospfv3_area_lsdb_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingOspfv3AreaLsdbGetResponse v1_device_routing_ospfv3_area_lsdb_get(authorization, area_id, device_id, instance_name, vrf_name)
+
+Get OSPFv3 Area LSDB Table
 
 ### Example
 
@@ -7042,7 +7654,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_area_lsdb_get200_response import V1DeviceRoutingOspfv2AreaLsdbGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv3_area_lsdb_get_response import V1DeviceRoutingOspfv3AreaLsdbGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -7068,14 +7680,13 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    area_id = '0.0.0.0' # str | Valid configured Area ID (optional)
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
-    instance_name = 'OSPF1' # str | Valid configured OSPF Instance name (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'default' # str | Valid configured VRF name (optional)
+    area_id = '0.0.0.0' # str | Valid configured Area ID
+    device_id = 1000000 # int | Valid configured device ID > 0
+    instance_name = 'OSPF1' # str | Valid configured OSPF Instance name
+    vrf_name = 'default' # str | Valid configured VRF name
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv3_area_lsdb_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_ospfv3_area_lsdb_get(authorization, area_id, device_id, instance_name, vrf_name)
         print("The response of DefaultApi->v1_device_routing_ospfv3_area_lsdb_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -7090,15 +7701,14 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **area_id** | **str**| Valid configured Area ID | [optional] 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
- **instance_name** | **str**| Valid configured OSPF Instance name | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
+ **area_id** | **str**| Valid configured Area ID | 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **instance_name** | **str**| Valid configured OSPF Instance name | 
+ **vrf_name** | **str**| Valid configured VRF name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaLsdbGet200Response**](V1DeviceRoutingOspfv2AreaLsdbGet200Response.md)
+[**V1DeviceRoutingOspfv3AreaLsdbGetResponse**](V1DeviceRoutingOspfv3AreaLsdbGetResponse.md)
 
 ### Authorization
 
@@ -7118,7 +7728,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv3_area_nbr_get**
-> V1DeviceRoutingOspfv2AreaNbrGet200Response v1_device_routing_ospfv3_area_nbr_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingOspfv3AreaNbrGetResponse v1_device_routing_ospfv3_area_nbr_get(authorization, area_id, device_id, vrf_name, instance_name=instance_name)
+
+Get OSPFv3 Area's Neighbors Information
 
 ### Example
 
@@ -7126,7 +7738,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_area_nbr_get200_response import V1DeviceRoutingOspfv2AreaNbrGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv3_area_nbr_get_response import V1DeviceRoutingOspfv3AreaNbrGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -7152,14 +7764,13 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    area_id = '0.0.0.0' # str | Valid configured Area ID (optional)
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
+    area_id = '0.0.0.0' # str | Valid configured Area ID
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'default' # str | Valid configured VRF name
     instance_name = 'OSPF1' # str | Valid configured OSPF Instance name (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'default' # str | Valid configured VRF name (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv3_area_nbr_get(authorization, area_id=area_id, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_ospfv3_area_nbr_get(authorization, area_id, device_id, vrf_name, instance_name=instance_name)
         print("The response of DefaultApi->v1_device_routing_ospfv3_area_nbr_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -7174,15 +7785,14 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **area_id** | **str**| Valid configured Area ID | [optional] 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
+ **area_id** | **str**| Valid configured Area ID | 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF name | 
  **instance_name** | **str**| Valid configured OSPF Instance name | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaNbrGet200Response**](V1DeviceRoutingOspfv2AreaNbrGet200Response.md)
+[**V1DeviceRoutingOspfv3AreaNbrGetResponse**](V1DeviceRoutingOspfv3AreaNbrGetResponse.md)
 
 ### Authorization
 
@@ -7202,7 +7812,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv3_areaid_get**
-> V1DeviceRoutingOspfv2AreaidGet200Response v1_device_routing_ospfv3_areaid_get(authorization, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingOspfv3AreaidGetResponse v1_device_routing_ospfv3_areaid_get(authorization, device_id, vrf_name, instance_name=instance_name)
+
+Get OSPFv3 Area ID Table
 
 ### Example
 
@@ -7210,7 +7822,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_areaid_get200_response import V1DeviceRoutingOspfv2AreaidGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv3_areaid_get_response import V1DeviceRoutingOspfv3AreaidGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -7236,13 +7848,12 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'default' # str | Valid configured VRF name
     instance_name = 'OSPF1' # str | Valid configured OSPF Instance name (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'default' # str | Valid configured VRF name (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv3_areaid_get(authorization, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_ospfv3_areaid_get(authorization, device_id, vrf_name, instance_name=instance_name)
         print("The response of DefaultApi->v1_device_routing_ospfv3_areaid_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -7257,14 +7868,13 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF name | 
  **instance_name** | **str**| Valid configured OSPF Instance name | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaidGet200Response**](V1DeviceRoutingOspfv2AreaidGet200Response.md)
+[**V1DeviceRoutingOspfv3AreaidGetResponse**](V1DeviceRoutingOspfv3AreaidGetResponse.md)
 
 ### Authorization
 
@@ -7284,7 +7894,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv3_lsdb_get**
-> V1DeviceRoutingOspfv2AreaLsdbGet200Response v1_device_routing_ospfv3_lsdb_get(authorization, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingOspfv3LsdbGetResponse v1_device_routing_ospfv3_lsdb_get(authorization, device_id, vrf_name, instance_name=instance_name)
+
+Get OSPFv3 global LSDB Table
 
 ### Example
 
@@ -7292,7 +7904,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_area_lsdb_get200_response import V1DeviceRoutingOspfv2AreaLsdbGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv3_lsdb_get_response import V1DeviceRoutingOspfv3LsdbGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -7318,13 +7930,12 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'management' # str | Valid configured VRF name
     instance_name = 'ospf-demo' # str | Valid configured OSPF Instance name (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'management' # str | Valid configured VRF name (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv3_lsdb_get(authorization, device_id=device_id, instance_name=instance_name, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_ospfv3_lsdb_get(authorization, device_id, vrf_name, instance_name=instance_name)
         print("The response of DefaultApi->v1_device_routing_ospfv3_lsdb_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -7339,14 +7950,13 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF name | 
  **instance_name** | **str**| Valid configured OSPF Instance name | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaLsdbGet200Response**](V1DeviceRoutingOspfv2AreaLsdbGet200Response.md)
+[**V1DeviceRoutingOspfv3LsdbGetResponse**](V1DeviceRoutingOspfv3LsdbGetResponse.md)
 
 ### Authorization
 
@@ -7366,7 +7976,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv3_rib_get**
-> V1DeviceRoutingOspfv2RibGet200Response v1_device_routing_ospfv3_rib_get(authorization, device_id=device_id, instance_name=instance_name, before=before, last=last, vrf_name=vrf_name)
+> V1DeviceRoutingOspfv3RibGetResponse v1_device_routing_ospfv3_rib_get(authorization, device_id, vrf_name, instance_name=instance_name)
+
+Get OSPFv3 Local RIB Table
 
 ### Example
 
@@ -7374,7 +7986,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_rib_get200_response import V1DeviceRoutingOspfv2RibGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv3_rib_get_response import V1DeviceRoutingOspfv3RibGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -7400,14 +8012,12 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'management' # str | Valid configured VRF name
     instance_name = 'BGP-ODP' # str | Valid configured OSPF Instance name (optional)
-    before = 'example string' # str |  (optional)
-    last = 123 # int |  (optional)
-    vrf_name = 'management' # str | Valid configured VRF name (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv3_rib_get(authorization, device_id=device_id, instance_name=instance_name, before=before, last=last, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_ospfv3_rib_get(authorization, device_id, vrf_name, instance_name=instance_name)
         print("The response of DefaultApi->v1_device_routing_ospfv3_rib_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -7422,15 +8032,13 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF name | 
  **instance_name** | **str**| Valid configured OSPF Instance name | [optional] 
- **before** | **str**|  | [optional] 
- **last** | **int**|  | [optional] 
- **vrf_name** | **str**| Valid configured VRF name | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2RibGet200Response**](V1DeviceRoutingOspfv2RibGet200Response.md)
+[**V1DeviceRoutingOspfv3RibGetResponse**](V1DeviceRoutingOspfv3RibGetResponse.md)
 
 ### Authorization
 
@@ -7450,7 +8058,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_ospfv3_statistics_get**
-> V1DeviceRoutingOspfv2StatisticsGet200Response v1_device_routing_ospfv3_statistics_get(authorization, device_id=device_id, vrf_names=vrf_names)
+> V1DeviceRoutingOspfv3StatisticsGetResponse v1_device_routing_ospfv3_statistics_get(authorization, device_id, vrf_names)
+
+Get OSPFv3 Statistics
 
 ### Example
 
@@ -7458,7 +8068,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_ospfv2_statistics_get200_response import V1DeviceRoutingOspfv2StatisticsGet200Response
+from graphiant_sdk.models.v1_device_routing_ospfv3_statistics_get_response import V1DeviceRoutingOspfv3StatisticsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -7484,11 +8094,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
-    vrf_names = ['vrf_names_example'] # List[str] | Valid configured VRF name (optional)
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_names = ['vrf_names_example'] # List[str] | Valid configured VRF name
 
     try:
-        api_response = api_instance.v1_device_routing_ospfv3_statistics_get(authorization, device_id=device_id, vrf_names=vrf_names)
+        api_response = api_instance.v1_device_routing_ospfv3_statistics_get(authorization, device_id, vrf_names)
         print("The response of DefaultApi->v1_device_routing_ospfv3_statistics_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -7503,12 +8113,12 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
- **vrf_names** | [**List[str]**](str.md)| Valid configured VRF name | [optional] 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_names** | [**List[str]**](str.md)| Valid configured VRF name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2StatisticsGet200Response**](V1DeviceRoutingOspfv2StatisticsGet200Response.md)
+[**V1DeviceRoutingOspfv3StatisticsGetResponse**](V1DeviceRoutingOspfv3StatisticsGetResponse.md)
 
 ### Authorization
 
@@ -7528,7 +8138,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_rib_route_count_post**
-> V1DeviceRoutingVrfBgpRouteCountPost200Response v1_device_routing_rib_route_count_post(authorization, body, device_id=device_id, vrf_name=vrf_name)
+> V1DeviceRoutingRibRouteCountPostResponse v1_device_routing_rib_route_count_post(authorization, device_id, vrf_name, body)
+
+Get BGP VRF installed route count
 
 ### Example
 
@@ -7536,7 +8148,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_vrf_bgp_route_count_post200_response import V1DeviceRoutingVrfBgpRouteCountPost200Response
+from graphiant_sdk.models.v1_device_routing_rib_route_count_post_response import V1DeviceRoutingRibRouteCountPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -7562,12 +8174,12 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = ['vrf_name_example'] # List[str] | Valid configured VRF names
     body = None # object | 
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
-    vrf_name = ['vrf_name_example'] # List[str] | Valid configured VRF names (optional)
 
     try:
-        api_response = api_instance.v1_device_routing_rib_route_count_post(authorization, body, device_id=device_id, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_rib_route_count_post(authorization, device_id, vrf_name, body)
         print("The response of DefaultApi->v1_device_routing_rib_route_count_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -7582,13 +8194,13 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | [**List[str]**](str.md)| Valid configured VRF names | 
  **body** | **object**|  | 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
- **vrf_name** | [**List[str]**](str.md)| Valid configured VRF names | [optional] 
 
 ### Return type
 
-[**V1DeviceRoutingVrfBgpRouteCountPost200Response**](V1DeviceRoutingVrfBgpRouteCountPost200Response.md)
+[**V1DeviceRoutingRibRouteCountPostResponse**](V1DeviceRoutingRibRouteCountPostResponse.md)
 
 ### Authorization
 
@@ -7608,7 +8220,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_vrf_bgp_eibgp_route_count_get**
-> V1DeviceRoutingVrfBgpEibgpRouteCountGet200Response v1_device_routing_vrf_bgp_eibgp_route_count_get(authorization, device_id=device_id, vrf_name=vrf_name)
+> V1DeviceRoutingVrfBgpEibgpRouteCountGetResponse v1_device_routing_vrf_bgp_eibgp_route_count_get(authorization, device_id, vrf_name)
+
+Get eBGP/iBGP VRF route count
 
 ### Example
 
@@ -7616,7 +8230,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_vrf_bgp_eibgp_route_count_get200_response import V1DeviceRoutingVrfBgpEibgpRouteCountGet200Response
+from graphiant_sdk.models.v1_device_routing_vrf_bgp_eibgp_route_count_get_response import V1DeviceRoutingVrfBgpEibgpRouteCountGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -7642,11 +8256,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
-    vrf_name = 'management' # str | Valid configured VRF names (optional)
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'management' # str | Valid configured VRF names
 
     try:
-        api_response = api_instance.v1_device_routing_vrf_bgp_eibgp_route_count_get(authorization, device_id=device_id, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_vrf_bgp_eibgp_route_count_get(authorization, device_id, vrf_name)
         print("The response of DefaultApi->v1_device_routing_vrf_bgp_eibgp_route_count_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -7661,12 +8275,12 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
- **vrf_name** | **str**| Valid configured VRF names | [optional] 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF names | 
 
 ### Return type
 
-[**V1DeviceRoutingVrfBgpEibgpRouteCountGet200Response**](V1DeviceRoutingVrfBgpEibgpRouteCountGet200Response.md)
+[**V1DeviceRoutingVrfBgpEibgpRouteCountGetResponse**](V1DeviceRoutingVrfBgpEibgpRouteCountGetResponse.md)
 
 ### Authorization
 
@@ -7686,7 +8300,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_vrf_bgp_graphiant_eiroute_count_get**
-> V1DeviceRoutingVrfBgpGraphiantEirouteCountGet200Response v1_device_routing_vrf_bgp_graphiant_eiroute_count_get(authorization, device_id=device_id, vrf_name=vrf_name)
+> V1DeviceRoutingVrfBgpGraphiantEirouteCountGetResponse v1_device_routing_vrf_bgp_graphiant_eiroute_count_get(authorization, device_id, vrf_name)
+
+Get eBGP and iBGP VRF route count
 
 ### Example
 
@@ -7694,7 +8310,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_vrf_bgp_graphiant_eiroute_count_get200_response import V1DeviceRoutingVrfBgpGraphiantEirouteCountGet200Response
+from graphiant_sdk.models.v1_device_routing_vrf_bgp_graphiant_eiroute_count_get_response import V1DeviceRoutingVrfBgpGraphiantEirouteCountGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -7720,11 +8336,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
-    vrf_name = 'management' # str | Valid configured VRF names (optional)
+    device_id = 1000000 # int | Valid configured device ID > 0
+    vrf_name = 'management' # str | Valid configured VRF names
 
     try:
-        api_response = api_instance.v1_device_routing_vrf_bgp_graphiant_eiroute_count_get(authorization, device_id=device_id, vrf_name=vrf_name)
+        api_response = api_instance.v1_device_routing_vrf_bgp_graphiant_eiroute_count_get(authorization, device_id, vrf_name)
         print("The response of DefaultApi->v1_device_routing_vrf_bgp_graphiant_eiroute_count_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -7739,12 +8355,12 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
- **vrf_name** | **str**| Valid configured VRF names | [optional] 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **vrf_name** | **str**| Valid configured VRF names | 
 
 ### Return type
 
-[**V1DeviceRoutingVrfBgpGraphiantEirouteCountGet200Response**](V1DeviceRoutingVrfBgpGraphiantEirouteCountGet200Response.md)
+[**V1DeviceRoutingVrfBgpGraphiantEirouteCountGetResponse**](V1DeviceRoutingVrfBgpGraphiantEirouteCountGetResponse.md)
 
 ### Authorization
 
@@ -7764,7 +8380,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_routing_vrf_bgp_route_count_post**
-> V1DeviceRoutingVrfBgpRouteCountPost200Response v1_device_routing_vrf_bgp_route_count_post(authorization, v1_device_routing_vrf_bgp_route_count_post_request)
+> V1DeviceRoutingVrfBgpRouteCountPostResponse v1_device_routing_vrf_bgp_route_count_post(authorization, v1_device_routing_vrf_bgp_route_count_post_request)
+
+Get BGP VRF route count
 
 ### Example
 
@@ -7772,8 +8390,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_routing_vrf_bgp_route_count_post200_response import V1DeviceRoutingVrfBgpRouteCountPost200Response
 from graphiant_sdk.models.v1_device_routing_vrf_bgp_route_count_post_request import V1DeviceRoutingVrfBgpRouteCountPostRequest
+from graphiant_sdk.models.v1_device_routing_vrf_bgp_route_count_post_response import V1DeviceRoutingVrfBgpRouteCountPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -7821,7 +8439,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceRoutingVrfBgpRouteCountPost200Response**](V1DeviceRoutingVrfBgpRouteCountPost200Response.md)
+[**V1DeviceRoutingVrfBgpRouteCountPostResponse**](V1DeviceRoutingVrfBgpRouteCountPostResponse.md)
 
 ### Authorization
 
@@ -7841,7 +8459,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_snapshot_device_id_get**
-> V1DeviceSnapshotDeviceIdGet200Response v1_device_snapshot_device_id_get(authorization, device_id)
+> V1DeviceSnapshotDeviceIdGetResponse v1_device_snapshot_device_id_get(authorization, device_id)
+
+Get all of a device's snapshots
 
 ### Example
 
@@ -7849,7 +8469,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_snapshot_device_id_get200_response import V1DeviceSnapshotDeviceIdGet200Response
+from graphiant_sdk.models.v1_device_snapshot_device_id_get_response import V1DeviceSnapshotDeviceIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -7897,7 +8517,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceSnapshotDeviceIdGet200Response**](V1DeviceSnapshotDeviceIdGet200Response.md)
+[**V1DeviceSnapshotDeviceIdGetResponse**](V1DeviceSnapshotDeviceIdGetResponse.md)
 
 ### Authorization
 
@@ -7917,7 +8537,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_snapshot_get**
-> V1DeviceSnapshotGet200Response v1_device_snapshot_get(authorization)
+> V1DeviceSnapshotGetResponse v1_device_snapshot_get(authorization)
+
+Get the specified device snapshots using the snapshot id
 
 ### Example
 
@@ -7925,7 +8547,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_snapshot_get200_response import V1DeviceSnapshotGet200Response
+from graphiant_sdk.models.v1_device_snapshot_get_response import V1DeviceSnapshotGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -7971,7 +8593,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceSnapshotGet200Response**](V1DeviceSnapshotGet200Response.md)
+[**V1DeviceSnapshotGetResponse**](V1DeviceSnapshotGetResponse.md)
 
 ### Authorization
 
@@ -7992,6 +8614,8 @@ Name | Type | Description  | Notes
 
 # **v1_device_snapshot_post**
 > object v1_device_snapshot_post(authorization, v1_device_snapshot_post_request)
+
+Create a device snapshot
 
 ### Example
 
@@ -8069,6 +8693,8 @@ Name | Type | Description  | Notes
 # **v1_device_snapshot_put**
 > object v1_device_snapshot_put(authorization, v1_device_snapshot_put_request)
 
+Update an existing device snapshot
+
 ### Example
 
 * Api Key Authentication (jwtAuth):
@@ -8145,6 +8771,8 @@ Name | Type | Description  | Notes
 # **v1_device_snapshot_snapshot_id_delete**
 > object v1_device_snapshot_snapshot_id_delete(authorization, snapshot_id)
 
+Delete specified device snapshot
+
 ### Example
 
 * Api Key Authentication (jwtAuth):
@@ -8218,7 +8846,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_status_history_post**
-> V1DeviceStatusHistoryPost200Response v1_device_status_history_post(authorization, v1_device_status_history_post_request)
+> V1DeviceStatusHistoryPostResponse v1_device_status_history_post(authorization, v1_device_status_history_post_request)
 
 ### Example
 
@@ -8226,8 +8854,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_status_history_post200_response import V1DeviceStatusHistoryPost200Response
 from graphiant_sdk.models.v1_device_status_history_post_request import V1DeviceStatusHistoryPostRequest
+from graphiant_sdk.models.v1_device_status_history_post_response import V1DeviceStatusHistoryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -8275,7 +8903,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceStatusHistoryPost200Response**](V1DeviceStatusHistoryPost200Response.md)
+[**V1DeviceStatusHistoryPostResponse**](V1DeviceStatusHistoryPostResponse.md)
 
 ### Authorization
 
@@ -8295,7 +8923,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_device_status_post**
-> V1DeviceStatusPost200Response v1_device_status_post(authorization, v1_device_status_history_post_request)
+> V1DeviceStatusPostResponse v1_device_status_post(authorization, v1_device_status_post_request)
 
 ### Example
 
@@ -8303,8 +8931,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_status_history_post_request import V1DeviceStatusHistoryPostRequest
-from graphiant_sdk.models.v1_device_status_post200_response import V1DeviceStatusPost200Response
+from graphiant_sdk.models.v1_device_status_post_request import V1DeviceStatusPostRequest
+from graphiant_sdk.models.v1_device_status_post_response import V1DeviceStatusPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -8330,10 +8958,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_device_status_history_post_request = graphiant_sdk.V1DeviceStatusHistoryPostRequest() # V1DeviceStatusHistoryPostRequest | 
+    v1_device_status_post_request = graphiant_sdk.V1DeviceStatusPostRequest() # V1DeviceStatusPostRequest | 
 
     try:
-        api_response = api_instance.v1_device_status_post(authorization, v1_device_status_history_post_request)
+        api_response = api_instance.v1_device_status_post(authorization, v1_device_status_post_request)
         print("The response of DefaultApi->v1_device_status_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -8348,11 +8976,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_device_status_history_post_request** | [**V1DeviceStatusHistoryPostRequest**](V1DeviceStatusHistoryPostRequest.md)|  | 
+ **v1_device_status_post_request** | [**V1DeviceStatusPostRequest**](V1DeviceStatusPostRequest.md)|  | 
 
 ### Return type
 
-[**V1DeviceStatusPost200Response**](V1DeviceStatusPost200Response.md)
+[**V1DeviceStatusPostResponse**](V1DeviceStatusPostResponse.md)
 
 ### Authorization
 
@@ -8372,7 +9000,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_bringup_post**
-> V1DevicesBringupPost200Response v1_devices_bringup_post(authorization, v1_devices_bringup_post_request)
+> V1DevicesBringupPostResponse v1_devices_bringup_post(authorization, v1_devices_bringup_post_request)
 
 ### Example
 
@@ -8380,8 +9008,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_bringup_post200_response import V1DevicesBringupPost200Response
 from graphiant_sdk.models.v1_devices_bringup_post_request import V1DevicesBringupPostRequest
+from graphiant_sdk.models.v1_devices_bringup_post_response import V1DevicesBringupPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -8429,7 +9057,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesBringupPost200Response**](V1DevicesBringupPost200Response.md)
+[**V1DevicesBringupPostResponse**](V1DevicesBringupPostResponse.md)
 
 ### Authorization
 
@@ -8525,7 +9153,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_bringup_token_post**
-> V1DevicesBringupTokenPost200Response v1_devices_bringup_token_post(authorization, v1_devices_bringup_token_post_request)
+> V1DevicesBringupTokenPostResponse v1_devices_bringup_token_post(authorization, v1_devices_bringup_token_post_request)
+
+VM edge onboarding token
 
 ### Example
 
@@ -8533,8 +9163,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_bringup_token_post200_response import V1DevicesBringupTokenPost200Response
 from graphiant_sdk.models.v1_devices_bringup_token_post_request import V1DevicesBringupTokenPostRequest
+from graphiant_sdk.models.v1_devices_bringup_token_post_response import V1DevicesBringupTokenPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -8582,7 +9212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesBringupTokenPost200Response**](V1DevicesBringupTokenPost200Response.md)
+[**V1DevicesBringupTokenPostResponse**](V1DevicesBringupTokenPostResponse.md)
 
 ### Authorization
 
@@ -8677,7 +9307,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_arp_get**
-> V1DevicesDeviceIdArpGet200Response v1_devices_device_id_arp_get(authorization, device_id)
+> V1DevicesDeviceIdArpGetResponse v1_devices_device_id_arp_get(authorization, device_id)
+
+Get ARP monitoring table for a device
 
 ### Example
 
@@ -8685,7 +9317,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_arp_get200_response import V1DevicesDeviceIdArpGet200Response
+from graphiant_sdk.models.v1_devices_device_id_arp_get_response import V1DevicesDeviceIdArpGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -8733,7 +9365,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdArpGet200Response**](V1DevicesDeviceIdArpGet200Response.md)
+[**V1DevicesDeviceIdArpGetResponse**](V1DevicesDeviceIdArpGetResponse.md)
 
 ### Authorization
 
@@ -8753,7 +9385,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_candidate_circuits_get**
-> V1DevicesDeviceIdCandidateCircuitsGet200Response v1_devices_device_id_candidate_circuits_get(authorization, device_id)
+> V1DevicesDeviceIdCandidateCircuitsGetResponse v1_devices_device_id_candidate_circuits_get(authorization, device_id)
+
+Get the candidate circuits for a device
 
 ### Example
 
@@ -8761,7 +9395,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_candidate_circuits_get200_response import V1DevicesDeviceIdCandidateCircuitsGet200Response
+from graphiant_sdk.models.v1_devices_device_id_candidate_circuits_get_response import V1DevicesDeviceIdCandidateCircuitsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -8809,7 +9443,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdCandidateCircuitsGet200Response**](V1DevicesDeviceIdCandidateCircuitsGet200Response.md)
+[**V1DevicesDeviceIdCandidateCircuitsGetResponse**](V1DevicesDeviceIdCandidateCircuitsGetResponse.md)
 
 ### Authorization
 
@@ -8829,7 +9463,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_circuits_vrf_associations_get**
-> V1DevicesDeviceIdCircuitsVrfAssociationsGet200Response v1_devices_device_id_circuits_vrf_associations_get(authorization, device_id)
+> V1DevicesDeviceIdCircuitsVrfAssociationsGetResponse v1_devices_device_id_circuits_vrf_associations_get(authorization, device_id)
+
+Get the VRF, interface, &, if relevant, loopback interfaces for a list of circuits
 
 ### Example
 
@@ -8837,7 +9473,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_circuits_vrf_associations_get200_response import V1DevicesDeviceIdCircuitsVrfAssociationsGet200Response
+from graphiant_sdk.models.v1_devices_device_id_circuits_vrf_associations_get_response import V1DevicesDeviceIdCircuitsVrfAssociationsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -8885,7 +9521,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdCircuitsVrfAssociationsGet200Response**](V1DevicesDeviceIdCircuitsVrfAssociationsGet200Response.md)
+[**V1DevicesDeviceIdCircuitsVrfAssociationsGetResponse**](V1DevicesDeviceIdCircuitsVrfAssociationsGetResponse.md)
 
 ### Authorization
 
@@ -8905,7 +9541,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_config_put**
-> V1DevicesDeviceIdConfigPut202Response v1_devices_device_id_config_put(authorization, device_id, v1_devices_device_id_config_put_request)
+> V1DevicesDeviceIdConfigPutResponse v1_devices_device_id_config_put(authorization, device_id, v1_devices_device_id_config_put_request)
+
+Update a device
 
 ### Example
 
@@ -8913,8 +9551,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_config_put202_response import V1DevicesDeviceIdConfigPut202Response
 from graphiant_sdk.models.v1_devices_device_id_config_put_request import V1DevicesDeviceIdConfigPutRequest
+from graphiant_sdk.models.v1_devices_device_id_config_put_response import V1DevicesDeviceIdConfigPutResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -8964,7 +9602,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdConfigPut202Response**](V1DevicesDeviceIdConfigPut202Response.md)
+[**V1DevicesDeviceIdConfigPutResponse**](V1DevicesDeviceIdConfigPutResponse.md)
 
 ### Authorization
 
@@ -8984,7 +9622,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_connectivity_get**
-> V1DevicesDeviceIdConnectivityGet200Response v1_devices_device_id_connectivity_get(authorization, device_id)
+> V1DevicesDeviceIdConnectivityGetResponse v1_devices_device_id_connectivity_get(authorization, device_id)
+
+Get the connectivity graph for a device
 
 ### Example
 
@@ -8992,7 +9632,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_connectivity_get200_response import V1DevicesDeviceIdConnectivityGet200Response
+from graphiant_sdk.models.v1_devices_device_id_connectivity_get_response import V1DevicesDeviceIdConnectivityGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -9040,7 +9680,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdConnectivityGet200Response**](V1DevicesDeviceIdConnectivityGet200Response.md)
+[**V1DevicesDeviceIdConnectivityGetResponse**](V1DevicesDeviceIdConnectivityGetResponse.md)
 
 ### Authorization
 
@@ -9061,6 +9701,8 @@ Name | Type | Description  | Notes
 
 # **v1_devices_device_id_controller_peers_put**
 > object v1_devices_device_id_controller_peers_put(authorization, device_id, v1_devices_device_id_controller_peers_put_request)
+
+Update peer list for controller
 
 ### Example
 
@@ -9138,7 +9780,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_dhcp_server_leases_get**
-> V1DevicesDeviceIdDhcpServerLeasesGet200Response v1_devices_device_id_dhcp_server_leases_get(authorization, device_id)
+> V1DevicesDeviceIdDhcpServerLeasesGetResponse v1_devices_device_id_dhcp_server_leases_get(authorization, device_id)
+
+Get current DHCP leases for a device
 
 ### Example
 
@@ -9146,7 +9790,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_dhcp_server_leases_get200_response import V1DevicesDeviceIdDhcpServerLeasesGet200Response
+from graphiant_sdk.models.v1_devices_device_id_dhcp_server_leases_get_response import V1DevicesDeviceIdDhcpServerLeasesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -9194,7 +9838,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdDhcpServerLeasesGet200Response**](V1DevicesDeviceIdDhcpServerLeasesGet200Response.md)
+[**V1DevicesDeviceIdDhcpServerLeasesGetResponse**](V1DevicesDeviceIdDhcpServerLeasesGetResponse.md)
 
 ### Authorization
 
@@ -9215,6 +9859,8 @@ Name | Type | Description  | Notes
 
 # **v1_devices_device_id_draft_delete**
 > object v1_devices_device_id_draft_delete(authorization, device_id)
+
+Delete draft configuration
 
 ### Example
 
@@ -9289,7 +9935,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_draft_get**
-> V1DevicesDeviceIdDraftGet200Response v1_devices_device_id_draft_get(authorization, device_id)
+> V1DevicesDeviceIdDraftGetResponse v1_devices_device_id_draft_get(authorization, device_id)
+
+Get draft configuration
 
 ### Example
 
@@ -9297,7 +9945,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_draft_get200_response import V1DevicesDeviceIdDraftGet200Response
+from graphiant_sdk.models.v1_devices_device_id_draft_get_response import V1DevicesDeviceIdDraftGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -9345,7 +9993,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdDraftGet200Response**](V1DevicesDeviceIdDraftGet200Response.md)
+[**V1DevicesDeviceIdDraftGetResponse**](V1DevicesDeviceIdDraftGetResponse.md)
 
 ### Authorization
 
@@ -9365,7 +10013,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_draft_post**
-> V1DevicesDeviceIdDraftPost201Response v1_devices_device_id_draft_post(authorization, device_id, v1_devices_device_id_draft_post_request)
+> V1DevicesDeviceIdDraftPostResponse v1_devices_device_id_draft_post(authorization, device_id, v1_devices_device_id_draft_post_request)
+
+Save draft configuration
 
 ### Example
 
@@ -9373,8 +10023,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_draft_post201_response import V1DevicesDeviceIdDraftPost201Response
 from graphiant_sdk.models.v1_devices_device_id_draft_post_request import V1DevicesDeviceIdDraftPostRequest
+from graphiant_sdk.models.v1_devices_device_id_draft_post_response import V1DevicesDeviceIdDraftPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -9424,7 +10074,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdDraftPost201Response**](V1DevicesDeviceIdDraftPost201Response.md)
+[**V1DevicesDeviceIdDraftPostResponse**](V1DevicesDeviceIdDraftPostResponse.md)
 
 ### Authorization
 
@@ -9444,7 +10094,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_edges_get**
-> V1DevicesDeviceIdEdgesGet200Response v1_devices_device_id_edges_get(authorization, device_id)
+> V1DevicesDeviceIdEdgesGetResponse v1_devices_device_id_edges_get(authorization, device_id)
+
+Get a list of candidate edges for a Core, ODP server or T2
 
 ### Example
 
@@ -9452,7 +10104,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_edges_get200_response import V1DevicesDeviceIdEdgesGet200Response
+from graphiant_sdk.models.v1_devices_device_id_edges_get_response import V1DevicesDeviceIdEdgesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -9500,7 +10152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdEdgesGet200Response**](V1DevicesDeviceIdEdgesGet200Response.md)
+[**V1DevicesDeviceIdEdgesGetResponse**](V1DevicesDeviceIdEdgesGetResponse.md)
 
 ### Authorization
 
@@ -9520,7 +10172,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_get**
-> V1DevicesDeviceIdGet200Response v1_devices_device_id_get(authorization, device_id)
+> V1DevicesDeviceIdGetResponse v1_devices_device_id_get(authorization, device_id)
+
+Get a specific device
 
 ### Example
 
@@ -9528,7 +10182,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_get200_response import V1DevicesDeviceIdGet200Response
+from graphiant_sdk.models.v1_devices_device_id_get_response import V1DevicesDeviceIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -9576,7 +10230,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdGet200Response**](V1DevicesDeviceIdGet200Response.md)
+[**V1DevicesDeviceIdGetResponse**](V1DevicesDeviceIdGetResponse.md)
 
 ### Authorization
 
@@ -9596,7 +10250,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_interfaces_get**
-> V1DevicesDeviceIdInterfacesGet200Response v1_devices_device_id_interfaces_get(authorization, device_id)
+> V1DevicesDeviceIdInterfacesGetResponse v1_devices_device_id_interfaces_get(authorization, device_id)
+
+Get interfaces for the given device
 
 ### Example
 
@@ -9604,7 +10260,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_interfaces_get200_response import V1DevicesDeviceIdInterfacesGet200Response
+from graphiant_sdk.models.v1_devices_device_id_interfaces_get_response import V1DevicesDeviceIdInterfacesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -9652,7 +10308,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdInterfacesGet200Response**](V1DevicesDeviceIdInterfacesGet200Response.md)
+[**V1DevicesDeviceIdInterfacesGetResponse**](V1DevicesDeviceIdInterfacesGetResponse.md)
 
 ### Authorization
 
@@ -9672,7 +10328,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_jobs_job_id_get**
-> V1DevicesDeviceIdJobsJobIdGet200Response v1_devices_device_id_jobs_job_id_get(authorization, device_id, job_id)
+> V1DevicesDeviceIdJobsJobIdGetResponse v1_devices_device_id_jobs_job_id_get(authorization, device_id, job_id)
+
+Get device job status
 
 ### Example
 
@@ -9680,7 +10338,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_jobs_job_id_get200_response import V1DevicesDeviceIdJobsJobIdGet200Response
+from graphiant_sdk.models.v1_devices_device_id_jobs_job_id_get_response import V1DevicesDeviceIdJobsJobIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -9730,7 +10388,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdJobsJobIdGet200Response**](V1DevicesDeviceIdJobsJobIdGet200Response.md)
+[**V1DevicesDeviceIdJobsJobIdGetResponse**](V1DevicesDeviceIdJobsJobIdGetResponse.md)
 
 ### Authorization
 
@@ -9750,7 +10408,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_ndcache_get**
-> V1DevicesDeviceIdNdcacheGet200Response v1_devices_device_id_ndcache_get(authorization, device_id)
+> V1DevicesDeviceIdNdcacheGetResponse v1_devices_device_id_ndcache_get(authorization, device_id)
+
+Get ND ipv6 Cache for a device
 
 ### Example
 
@@ -9758,7 +10418,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_ndcache_get200_response import V1DevicesDeviceIdNdcacheGet200Response
+from graphiant_sdk.models.v1_devices_device_id_ndcache_get_response import V1DevicesDeviceIdNdcacheGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -9806,7 +10466,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdNdcacheGet200Response**](V1DevicesDeviceIdNdcacheGet200Response.md)
+[**V1DevicesDeviceIdNdcacheGetResponse**](V1DevicesDeviceIdNdcacheGetResponse.md)
 
 ### Authorization
 
@@ -9826,7 +10486,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_ospfv2_default_originate_get**
-> V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response v1_devices_device_id_ospfv2_default_originate_get(authorization, device_id)
+> V1DevicesDeviceIdOspfv2DefaultOriginateGetResponse v1_devices_device_id_ospfv2_default_originate_get(authorization, device_id)
 
 ### Example
 
@@ -9834,7 +10494,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_ospfv2_default_originate_get200_response import V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response
+from graphiant_sdk.models.v1_devices_device_id_ospfv2_default_originate_get_response import V1DevicesDeviceIdOspfv2DefaultOriginateGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -9882,7 +10542,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response**](V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response.md)
+[**V1DevicesDeviceIdOspfv2DefaultOriginateGetResponse**](V1DevicesDeviceIdOspfv2DefaultOriginateGetResponse.md)
 
 ### Authorization
 
@@ -9902,7 +10562,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_ospfv3_default_originate_get**
-> V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response v1_devices_device_id_ospfv3_default_originate_get(authorization, device_id)
+> V1DevicesDeviceIdOspfv3DefaultOriginateGetResponse v1_devices_device_id_ospfv3_default_originate_get(authorization, device_id)
 
 ### Example
 
@@ -9910,7 +10570,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_ospfv2_default_originate_get200_response import V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response
+from graphiant_sdk.models.v1_devices_device_id_ospfv3_default_originate_get_response import V1DevicesDeviceIdOspfv3DefaultOriginateGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -9958,7 +10618,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response**](V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response.md)
+[**V1DevicesDeviceIdOspfv3DefaultOriginateGetResponse**](V1DevicesDeviceIdOspfv3DefaultOriginateGetResponse.md)
 
 ### Authorization
 
@@ -9978,7 +10638,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_policy_applications_get**
-> V1PolicyApplicationsGet200Response v1_devices_device_id_policy_applications_get(authorization, device_id)
+> V1DevicesDeviceIdPolicyApplicationsGetResponse v1_devices_device_id_policy_applications_get(authorization, device_id)
+
+Get a list of builtin DPI applications able to be configured on a given device based on GNOS version
 
 ### Example
 
@@ -9986,7 +10648,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_policy_applications_get200_response import V1PolicyApplicationsGet200Response
+from graphiant_sdk.models.v1_devices_device_id_policy_applications_get_response import V1DevicesDeviceIdPolicyApplicationsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -10034,7 +10696,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyApplicationsGet200Response**](V1PolicyApplicationsGet200Response.md)
+[**V1DevicesDeviceIdPolicyApplicationsGetResponse**](V1DevicesDeviceIdPolicyApplicationsGetResponse.md)
 
 ### Authorization
 
@@ -10054,7 +10716,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_policy_customapplications_get**
-> V1PolicyApplicationsGet200Response v1_devices_device_id_policy_customapplications_get(authorization, device_id)
+> V1DevicesDeviceIdPolicyCustomapplicationsGetResponse v1_devices_device_id_policy_customapplications_get(authorization, device_id)
+
+Get a list of custom DPI applications able to be configured on a given device based on GNOS version
 
 ### Example
 
@@ -10062,7 +10726,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_policy_applications_get200_response import V1PolicyApplicationsGet200Response
+from graphiant_sdk.models.v1_devices_device_id_policy_customapplications_get_response import V1DevicesDeviceIdPolicyCustomapplicationsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -10110,7 +10774,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyApplicationsGet200Response**](V1PolicyApplicationsGet200Response.md)
+[**V1DevicesDeviceIdPolicyCustomapplicationsGetResponse**](V1DevicesDeviceIdPolicyCustomapplicationsGetResponse.md)
 
 ### Authorization
 
@@ -10130,7 +10794,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_policy_zonepairs_get**
-> V1DevicesDeviceIdPolicyZonepairsGet200Response v1_devices_device_id_policy_zonepairs_get(authorization, device_id)
+> V1DevicesDeviceIdPolicyZonepairsGetResponse v1_devices_device_id_policy_zonepairs_get(authorization, device_id)
+
+Get a list of firewall zone pairs each with holding nested policy rule sets
 
 ### Example
 
@@ -10138,7 +10804,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_policy_zonepairs_get200_response import V1DevicesDeviceIdPolicyZonepairsGet200Response
+from graphiant_sdk.models.v1_devices_device_id_policy_zonepairs_get_response import V1DevicesDeviceIdPolicyZonepairsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -10186,7 +10852,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdPolicyZonepairsGet200Response**](V1DevicesDeviceIdPolicyZonepairsGet200Response.md)
+[**V1DevicesDeviceIdPolicyZonepairsGetResponse**](V1DevicesDeviceIdPolicyZonepairsGetResponse.md)
 
 ### Authorization
 
@@ -10206,7 +10872,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_slice_peers_get**
-> V1DevicesDeviceIdSlicePeersGet200Response v1_devices_device_id_slice_peers_get(authorization, device_id)
+> V1DevicesDeviceIdSlicePeersGetResponse v1_devices_device_id_slice_peers_get(authorization, device_id)
 
 ### Example
 
@@ -10214,7 +10880,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_slice_peers_get200_response import V1DevicesDeviceIdSlicePeersGet200Response
+from graphiant_sdk.models.v1_devices_device_id_slice_peers_get_response import V1DevicesDeviceIdSlicePeersGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -10262,7 +10928,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdSlicePeersGet200Response**](V1DevicesDeviceIdSlicePeersGet200Response.md)
+[**V1DevicesDeviceIdSlicePeersGetResponse**](V1DevicesDeviceIdSlicePeersGetResponse.md)
 
 ### Authorization
 
@@ -10282,7 +10948,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_twamp_core_get**
-> V1DevicesDeviceIdTwampCoreGet200Response v1_devices_device_id_twamp_core_get(authorization, device_id)
+> V1DevicesDeviceIdTwampCoreGetResponse v1_devices_device_id_twamp_core_get(authorization, device_id)
+
+Get core TWAMP neighbors for a given device
 
 ### Example
 
@@ -10290,7 +10958,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_twamp_core_get200_response import V1DevicesDeviceIdTwampCoreGet200Response
+from graphiant_sdk.models.v1_devices_device_id_twamp_core_get_response import V1DevicesDeviceIdTwampCoreGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -10338,7 +11006,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdTwampCoreGet200Response**](V1DevicesDeviceIdTwampCoreGet200Response.md)
+[**V1DevicesDeviceIdTwampCoreGetResponse**](V1DevicesDeviceIdTwampCoreGetResponse.md)
 
 ### Authorization
 
@@ -10358,7 +11026,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_versions_compare_get**
-> V1DevicesDeviceIdVersionsCompareGet200Response v1_devices_device_id_versions_compare_get(authorization, device_id)
+> V1DevicesDeviceIdVersionsCompareGetResponse v1_devices_device_id_versions_compare_get(authorization, device_id)
+
+Compare device config versions
 
 ### Example
 
@@ -10366,7 +11036,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_versions_compare_get200_response import V1DevicesDeviceIdVersionsCompareGet200Response
+from graphiant_sdk.models.v1_devices_device_id_versions_compare_get_response import V1DevicesDeviceIdVersionsCompareGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -10414,7 +11084,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdVersionsCompareGet200Response**](V1DevicesDeviceIdVersionsCompareGet200Response.md)
+[**V1DevicesDeviceIdVersionsCompareGetResponse**](V1DevicesDeviceIdVersionsCompareGetResponse.md)
 
 ### Authorization
 
@@ -10434,7 +11104,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_versions_get**
-> V1DevicesDeviceIdVersionsGet200Response v1_devices_device_id_versions_get(authorization, device_id)
+> V1DevicesDeviceIdVersionsGetResponse v1_devices_device_id_versions_get(authorization, device_id)
+
+Get device config versions
 
 ### Example
 
@@ -10442,7 +11114,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_versions_get200_response import V1DevicesDeviceIdVersionsGet200Response
+from graphiant_sdk.models.v1_devices_device_id_versions_get_response import V1DevicesDeviceIdVersionsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -10490,7 +11162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdVersionsGet200Response**](V1DevicesDeviceIdVersionsGet200Response.md)
+[**V1DevicesDeviceIdVersionsGetResponse**](V1DevicesDeviceIdVersionsGetResponse.md)
 
 ### Authorization
 
@@ -10510,7 +11182,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_versions_version_get**
-> V1DevicesDeviceIdVersionsVersionGet200Response v1_devices_device_id_versions_version_get(authorization, device_id, version)
+> V1DevicesDeviceIdVersionsVersionGetResponse v1_devices_device_id_versions_version_get(authorization, device_id, version)
+
+Get device config for a specific version
 
 ### Example
 
@@ -10518,7 +11192,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_versions_version_get200_response import V1DevicesDeviceIdVersionsVersionGet200Response
+from graphiant_sdk.models.v1_devices_device_id_versions_version_get_response import V1DevicesDeviceIdVersionsVersionGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -10568,7 +11242,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdVersionsVersionGet200Response**](V1DevicesDeviceIdVersionsVersionGet200Response.md)
+[**V1DevicesDeviceIdVersionsVersionGetResponse**](V1DevicesDeviceIdVersionsVersionGetResponse.md)
 
 ### Authorization
 
@@ -10588,7 +11262,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_vrf_bgp_as_get**
-> V1DevicesDeviceIdVrfBgpAsGet200Response v1_devices_device_id_vrf_bgp_as_get(authorization, device_id)
+> V1DevicesDeviceIdVrfBgpAsGetResponse v1_devices_device_id_vrf_bgp_as_get(authorization, device_id)
 
 ### Example
 
@@ -10596,7 +11270,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_vrf_bgp_as_get200_response import V1DevicesDeviceIdVrfBgpAsGet200Response
+from graphiant_sdk.models.v1_devices_device_id_vrf_bgp_as_get_response import V1DevicesDeviceIdVrfBgpAsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -10644,7 +11318,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdVrfBgpAsGet200Response**](V1DevicesDeviceIdVrfBgpAsGet200Response.md)
+[**V1DevicesDeviceIdVrfBgpAsGetResponse**](V1DevicesDeviceIdVrfBgpAsGetResponse.md)
 
 ### Authorization
 
@@ -10664,7 +11338,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_vrf_protocols_get**
-> V1DevicesDeviceIdVrfProtocolsGet200Response v1_devices_device_id_vrf_protocols_get(authorization, device_id)
+> V1DevicesDeviceIdVrfProtocolsGetResponse v1_devices_device_id_vrf_protocols_get(authorization, device_id)
 
 ### Example
 
@@ -10672,7 +11346,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_vrf_protocols_get200_response import V1DevicesDeviceIdVrfProtocolsGet200Response
+from graphiant_sdk.models.v1_devices_device_id_vrf_protocols_get_response import V1DevicesDeviceIdVrfProtocolsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -10720,7 +11394,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdVrfProtocolsGet200Response**](V1DevicesDeviceIdVrfProtocolsGet200Response.md)
+[**V1DevicesDeviceIdVrfProtocolsGetResponse**](V1DevicesDeviceIdVrfProtocolsGetResponse.md)
 
 ### Authorization
 
@@ -10740,7 +11414,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_device_id_vrrp_get**
-> V1DevicesDeviceIdVrrpGet200Response v1_devices_device_id_vrrp_get(authorization, device_id)
+> V1DevicesDeviceIdVrrpGetResponse v1_devices_device_id_vrrp_get(authorization, device_id)
+
+Get VRRP monitoring table for a device
 
 ### Example
 
@@ -10748,7 +11424,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_vrrp_get200_response import V1DevicesDeviceIdVrrpGet200Response
+from graphiant_sdk.models.v1_devices_device_id_vrrp_get_response import V1DevicesDeviceIdVrrpGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -10796,7 +11472,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdVrrpGet200Response**](V1DevicesDeviceIdVrrpGet200Response.md)
+[**V1DevicesDeviceIdVrrpGetResponse**](V1DevicesDeviceIdVrrpGetResponse.md)
 
 ### Authorization
 
@@ -10816,7 +11492,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_get**
-> V1DevicesDeviceIdEdgesGet200Response v1_devices_get(authorization)
+> V1DevicesGetResponse v1_devices_get(authorization)
+
+Get devices for the current enterprise
 
 ### Example
 
@@ -10824,7 +11502,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_device_id_edges_get200_response import V1DevicesDeviceIdEdgesGet200Response
+from graphiant_sdk.models.v1_devices_get_response import V1DevicesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -10870,7 +11548,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdEdgesGet200Response**](V1DevicesDeviceIdEdgesGet200Response.md)
+[**V1DevicesGetResponse**](V1DevicesGetResponse.md)
 
 ### Authorization
 
@@ -11041,7 +11719,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_inventory_clear_return_post**
-> object v1_devices_inventory_clear_return_post(authorization, v1_devices_inventory_approve_return_post_request)
+> object v1_devices_inventory_clear_return_post(authorization, v1_devices_inventory_clear_return_post_request)
 
 ### Example
 
@@ -11049,7 +11727,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_inventory_approve_return_post_request import V1DevicesInventoryApproveReturnPostRequest
+from graphiant_sdk.models.v1_devices_inventory_clear_return_post_request import V1DevicesInventoryClearReturnPostRequest
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -11075,10 +11753,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_devices_inventory_approve_return_post_request = graphiant_sdk.V1DevicesInventoryApproveReturnPostRequest() # V1DevicesInventoryApproveReturnPostRequest | 
+    v1_devices_inventory_clear_return_post_request = graphiant_sdk.V1DevicesInventoryClearReturnPostRequest() # V1DevicesInventoryClearReturnPostRequest | 
 
     try:
-        api_response = api_instance.v1_devices_inventory_clear_return_post(authorization, v1_devices_inventory_approve_return_post_request)
+        api_response = api_instance.v1_devices_inventory_clear_return_post(authorization, v1_devices_inventory_clear_return_post_request)
         print("The response of DefaultApi->v1_devices_inventory_clear_return_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -11093,7 +11771,7 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_devices_inventory_approve_return_post_request** | [**V1DevicesInventoryApproveReturnPostRequest**](V1DevicesInventoryApproveReturnPostRequest.md)|  | 
+ **v1_devices_inventory_clear_return_post_request** | [**V1DevicesInventoryClearReturnPostRequest**](V1DevicesInventoryClearReturnPostRequest.md)|  | 
 
 ### Return type
 
@@ -11193,7 +11871,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_inventory_get**
-> V1DevicesInventoryGet200Response v1_devices_inventory_get(authorization)
+> V1DevicesInventoryGetResponse v1_devices_inventory_get(authorization)
 
 ### Example
 
@@ -11201,7 +11879,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_inventory_get200_response import V1DevicesInventoryGet200Response
+from graphiant_sdk.models.v1_devices_inventory_get_response import V1DevicesInventoryGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -11247,7 +11925,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesInventoryGet200Response**](V1DevicesInventoryGet200Response.md)
+[**V1DevicesInventoryGetResponse**](V1DevicesInventoryGetResponse.md)
 
 ### Authorization
 
@@ -11267,7 +11945,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_inventory_post**
-> V1DevicesInventoryPost200Response v1_devices_inventory_post(authorization, v1_devices_inventory_post_request)
+> V1DevicesInventoryPostResponse v1_devices_inventory_post(authorization, v1_devices_inventory_post_request)
 
 ### Example
 
@@ -11275,8 +11953,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_inventory_post200_response import V1DevicesInventoryPost200Response
 from graphiant_sdk.models.v1_devices_inventory_post_request import V1DevicesInventoryPostRequest
+from graphiant_sdk.models.v1_devices_inventory_post_response import V1DevicesInventoryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -11324,7 +12002,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesInventoryPost200Response**](V1DevicesInventoryPost200Response.md)
+[**V1DevicesInventoryPostResponse**](V1DevicesInventoryPostResponse.md)
 
 ### Authorization
 
@@ -11344,7 +12022,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_inventory_request_return_post**
-> object v1_devices_inventory_request_return_post(authorization, v1_devices_inventory_approve_return_post_request)
+> object v1_devices_inventory_request_return_post(authorization, v1_devices_inventory_request_return_post_request)
 
 ### Example
 
@@ -11352,7 +12030,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_inventory_approve_return_post_request import V1DevicesInventoryApproveReturnPostRequest
+from graphiant_sdk.models.v1_devices_inventory_request_return_post_request import V1DevicesInventoryRequestReturnPostRequest
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -11378,10 +12056,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_devices_inventory_approve_return_post_request = graphiant_sdk.V1DevicesInventoryApproveReturnPostRequest() # V1DevicesInventoryApproveReturnPostRequest | 
+    v1_devices_inventory_request_return_post_request = graphiant_sdk.V1DevicesInventoryRequestReturnPostRequest() # V1DevicesInventoryRequestReturnPostRequest | 
 
     try:
-        api_response = api_instance.v1_devices_inventory_request_return_post(authorization, v1_devices_inventory_approve_return_post_request)
+        api_response = api_instance.v1_devices_inventory_request_return_post(authorization, v1_devices_inventory_request_return_post_request)
         print("The response of DefaultApi->v1_devices_inventory_request_return_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -11396,7 +12074,7 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_devices_inventory_approve_return_post_request** | [**V1DevicesInventoryApproveReturnPostRequest**](V1DevicesInventoryApproveReturnPostRequest.md)|  | 
+ **v1_devices_inventory_request_return_post_request** | [**V1DevicesInventoryRequestReturnPostRequest**](V1DevicesInventoryRequestReturnPostRequest.md)|  | 
 
 ### Return type
 
@@ -11495,7 +12173,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_inventory_serial_num_post**
-> V1DevicesInventorySerialNumPost200Response v1_devices_inventory_serial_num_post(authorization, v1_devices_inventory_approve_return_post_request)
+> V1DevicesInventorySerialNumPostResponse v1_devices_inventory_serial_num_post(authorization, v1_devices_inventory_serial_num_post_request)
 
 ### Example
 
@@ -11503,8 +12181,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_inventory_approve_return_post_request import V1DevicesInventoryApproveReturnPostRequest
-from graphiant_sdk.models.v1_devices_inventory_serial_num_post200_response import V1DevicesInventorySerialNumPost200Response
+from graphiant_sdk.models.v1_devices_inventory_serial_num_post_request import V1DevicesInventorySerialNumPostRequest
+from graphiant_sdk.models.v1_devices_inventory_serial_num_post_response import V1DevicesInventorySerialNumPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -11530,10 +12208,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_devices_inventory_approve_return_post_request = graphiant_sdk.V1DevicesInventoryApproveReturnPostRequest() # V1DevicesInventoryApproveReturnPostRequest | 
+    v1_devices_inventory_serial_num_post_request = graphiant_sdk.V1DevicesInventorySerialNumPostRequest() # V1DevicesInventorySerialNumPostRequest | 
 
     try:
-        api_response = api_instance.v1_devices_inventory_serial_num_post(authorization, v1_devices_inventory_approve_return_post_request)
+        api_response = api_instance.v1_devices_inventory_serial_num_post(authorization, v1_devices_inventory_serial_num_post_request)
         print("The response of DefaultApi->v1_devices_inventory_serial_num_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -11548,11 +12226,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_devices_inventory_approve_return_post_request** | [**V1DevicesInventoryApproveReturnPostRequest**](V1DevicesInventoryApproveReturnPostRequest.md)|  | 
+ **v1_devices_inventory_serial_num_post_request** | [**V1DevicesInventorySerialNumPostRequest**](V1DevicesInventorySerialNumPostRequest.md)|  | 
 
 ### Return type
 
-[**V1DevicesInventorySerialNumPost200Response**](V1DevicesInventorySerialNumPost200Response.md)
+[**V1DevicesInventorySerialNumPostResponse**](V1DevicesInventorySerialNumPostResponse.md)
 
 ### Authorization
 
@@ -11571,8 +12249,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_devices_oauth_redirect_get**
-> V1DevicesOauthRedirectGet200Response v1_devices_oauth_redirect_get(authorization)
+# **v1_devices_oauth_authorization_get**
+> V1DevicesOauthAuthorizationGetResponse v1_devices_oauth_authorization_get(relay_state)
+
+Process OAuth authorization for device onboarding
 
 ### Example
 
@@ -11580,7 +12260,248 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_oauth_redirect_get200_response import V1DevicesOauthRedirectGet200Response
+from graphiant_sdk.models.v1_devices_oauth_authorization_get_response import V1DevicesOauthAuthorizationGetResponse
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    relay_state = 'eyJzY29wZSI6InR5cGU9enQtY3BlIHV1aWQ9ZGV2aWNlLXV1aWQtMTIzIGhvc3RuYW1lPWRldmljZS5leGFtcGxlLmNvbSIsInN0YXRlIjoic3RhdGUtMTIzNDUiLCJjb2RlX2NoYWxsZW5nZSI6ImNvZGUtY2hhbGxlbmdlLTEyMzQ1IiwiY29kZV9jaGFsbGVuZ2VfbWV0aG9kIjoiUzI1NiIsInB0IjoiaGFyZHdhcmUiLCJibSI6InAifQ==' # str | Base64 encoded relay state containing OAuth parameters
+
+    try:
+        api_response = api_instance.v1_devices_oauth_authorization_get(relay_state)
+        print("The response of DefaultApi->v1_devices_oauth_authorization_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_devices_oauth_authorization_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **relay_state** | **str**| Base64 encoded relay state containing OAuth parameters | 
+
+### Return type
+
+[**V1DevicesOauthAuthorizationGetResponse**](V1DevicesOauthAuthorizationGetResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Authorization code generated successfully |  -  |
+**400** | Bad request - Invalid relay state or parameters |  -  |
+**401** | Unauthorized - Invalid or missing token |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_devices_oauth_get**
+> v1_devices_oauth_get(scope, state=state, code_challenge=code_challenge, code_challenge_method=code_challenge_method, pt=pt, bm=bm)
+
+Redirect to OAuth authorization page for device onboarding
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    scope = 'type=zt-cpe uuid=device-uuid-123 hostname=device.example.com' # str | OAuth scope containing device type, UUID, and hostname
+    state = 'state-12345' # str | OAuth state parameter (optional)
+    code_challenge = 'code-challenge-12345' # str | PKCE code challenge (optional)
+    code_challenge_method = 'S256' # str | PKCE code challenge method (optional)
+    pt = 'hardware' # str | Platform type (optional)
+    bm = 'p' # str | Boot mode (optional)
+
+    try:
+        api_instance.v1_devices_oauth_get(scope, state=state, code_challenge=code_challenge, code_challenge_method=code_challenge_method, pt=pt, bm=bm)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_devices_oauth_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **scope** | **str**| OAuth scope containing device type, UUID, and hostname | 
+ **state** | **str**| OAuth state parameter | [optional] 
+ **code_challenge** | **str**| PKCE code challenge | [optional] 
+ **code_challenge_method** | **str**| PKCE code challenge method | [optional] 
+ **pt** | **str**| Platform type | [optional] 
+ **bm** | **str**| Boot mode | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**302** | Redirect to OAuth authorization page |  -  |
+**400** | Bad request - Invalid parameters |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_devices_oauth_post**
+> V1DevicesOauthPostResponse v1_devices_oauth_post(v1_devices_oauth_post_request)
+
+Process OAuth client credentials for device onboarding
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.models.v1_devices_oauth_post_request import V1DevicesOauthPostRequest
+from graphiant_sdk.models.v1_devices_oauth_post_response import V1DevicesOauthPostResponse
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    v1_devices_oauth_post_request = graphiant_sdk.V1DevicesOauthPostRequest() # V1DevicesOauthPostRequest | 
+
+    try:
+        api_response = api_instance.v1_devices_oauth_post(v1_devices_oauth_post_request)
+        print("The response of DefaultApi->v1_devices_oauth_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_devices_oauth_post: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **v1_devices_oauth_post_request** | [**V1DevicesOauthPostRequest**](V1DevicesOauthPostRequest.md)|  | 
+
+### Return type
+
+[**V1DevicesOauthPostResponse**](V1DevicesOauthPostResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OAuth token generated successfully |  -  |
+**400** | Bad request - Invalid input |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_devices_oauth_redirect_get**
+> V1DevicesOauthRedirectGetResponse v1_devices_oauth_redirect_get(authorization)
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.models.v1_devices_oauth_redirect_get_response import V1DevicesOauthRedirectGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -11626,7 +12547,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesOauthRedirectGet200Response**](V1DevicesOauthRedirectGet200Response.md)
+[**V1DevicesOauthRedirectGetResponse**](V1DevicesOauthRedirectGetResponse.md)
 
 ### Authorization
 
@@ -11722,7 +12643,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_routing_vrf_protocol_route_count_get**
-> V1DevicesRoutingVrfProtocolRouteCountGet200Response v1_devices_routing_vrf_protocol_route_count_get(authorization, device_id=device_id, protocols=protocols, vrf_name=vrf_name)
+> V1DevicesRoutingVrfProtocolRouteCountGetResponse v1_devices_routing_vrf_protocol_route_count_get(authorization, device_id, protocols, vrf_name)
+
+Get per VRF per protocol route count
 
 ### Example
 
@@ -11730,7 +12653,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_routing_vrf_protocol_route_count_get200_response import V1DevicesRoutingVrfProtocolRouteCountGet200Response
+from graphiant_sdk.models.v1_devices_routing_vrf_protocol_route_count_get_response import V1DevicesRoutingVrfProtocolRouteCountGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -11756,12 +12679,12 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    device_id = 1000000 # int | Valid configured device ID > 0 (optional)
-    protocols = ['protocols_example'] # List[str] | List of protocols names for which route count is needed (optional)
-    vrf_name = 'management' # str | Valid configured VRF names (optional)
+    device_id = 1000000 # int | Valid configured device ID > 0
+    protocols = ['protocols_example'] # List[str] | List of protocols names for which route count is needed
+    vrf_name = 'management' # str | Valid configured VRF names
 
     try:
-        api_response = api_instance.v1_devices_routing_vrf_protocol_route_count_get(authorization, device_id=device_id, protocols=protocols, vrf_name=vrf_name)
+        api_response = api_instance.v1_devices_routing_vrf_protocol_route_count_get(authorization, device_id, protocols, vrf_name)
         print("The response of DefaultApi->v1_devices_routing_vrf_protocol_route_count_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -11776,13 +12699,13 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **device_id** | **int**| Valid configured device ID &gt; 0 | [optional] 
- **protocols** | [**List[str]**](str.md)| List of protocols names for which route count is needed | [optional] 
- **vrf_name** | **str**| Valid configured VRF names | [optional] 
+ **device_id** | **int**| Valid configured device ID &gt; 0 | 
+ **protocols** | [**List[str]**](str.md)| List of protocols names for which route count is needed | 
+ **vrf_name** | **str**| Valid configured VRF names | 
 
 ### Return type
 
-[**V1DevicesRoutingVrfProtocolRouteCountGet200Response**](V1DevicesRoutingVrfProtocolRouteCountGet200Response.md)
+[**V1DevicesRoutingVrfProtocolRouteCountGetResponse**](V1DevicesRoutingVrfProtocolRouteCountGetResponse.md)
 
 ### Authorization
 
@@ -11802,7 +12725,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_running_version_post**
-> V1DevicesRunningVersionPost200Response v1_devices_running_version_post(authorization, v1_devices_session_status_post_request)
+> V1DevicesRunningVersionPostResponse v1_devices_running_version_post(authorization, v1_devices_running_version_post_request)
 
 ### Example
 
@@ -11810,8 +12733,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_running_version_post200_response import V1DevicesRunningVersionPost200Response
-from graphiant_sdk.models.v1_devices_session_status_post_request import V1DevicesSessionStatusPostRequest
+from graphiant_sdk.models.v1_devices_running_version_post_request import V1DevicesRunningVersionPostRequest
+from graphiant_sdk.models.v1_devices_running_version_post_response import V1DevicesRunningVersionPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -11837,10 +12760,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_devices_session_status_post_request = graphiant_sdk.V1DevicesSessionStatusPostRequest() # V1DevicesSessionStatusPostRequest | 
+    v1_devices_running_version_post_request = graphiant_sdk.V1DevicesRunningVersionPostRequest() # V1DevicesRunningVersionPostRequest | 
 
     try:
-        api_response = api_instance.v1_devices_running_version_post(authorization, v1_devices_session_status_post_request)
+        api_response = api_instance.v1_devices_running_version_post(authorization, v1_devices_running_version_post_request)
         print("The response of DefaultApi->v1_devices_running_version_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -11855,11 +12778,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_devices_session_status_post_request** | [**V1DevicesSessionStatusPostRequest**](V1DevicesSessionStatusPostRequest.md)|  | 
+ **v1_devices_running_version_post_request** | [**V1DevicesRunningVersionPostRequest**](V1DevicesRunningVersionPostRequest.md)|  | 
 
 ### Return type
 
-[**V1DevicesRunningVersionPost200Response**](V1DevicesRunningVersionPost200Response.md)
+[**V1DevicesRunningVersionPostResponse**](V1DevicesRunningVersionPostResponse.md)
 
 ### Authorization
 
@@ -11879,7 +12802,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_session_status_post**
-> V1DevicesSessionStatusPost200Response v1_devices_session_status_post(authorization, v1_devices_session_status_post_request)
+> V1DevicesSessionStatusPostResponse v1_devices_session_status_post(authorization, v1_devices_session_status_post_request)
+
+Get all the BGP session states for the devices
 
 ### Example
 
@@ -11887,8 +12812,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_session_status_post200_response import V1DevicesSessionStatusPost200Response
 from graphiant_sdk.models.v1_devices_session_status_post_request import V1DevicesSessionStatusPostRequest
+from graphiant_sdk.models.v1_devices_session_status_post_response import V1DevicesSessionStatusPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -11936,7 +12861,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesSessionStatusPost200Response**](V1DevicesSessionStatusPost200Response.md)
+[**V1DevicesSessionStatusPostResponse**](V1DevicesSessionStatusPostResponse.md)
 
 ### Authorization
 
@@ -11956,7 +12881,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_summary_get**
-> V1DevicesSummaryGet200Response v1_devices_summary_get(authorization)
+> V1DevicesSummaryGetResponse v1_devices_summary_get(authorization)
+
+Get devices summary for the specified enterprise
 
 ### Example
 
@@ -11964,7 +12891,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_summary_get200_response import V1DevicesSummaryGet200Response
+from graphiant_sdk.models.v1_devices_summary_get_response import V1DevicesSummaryGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -12010,7 +12937,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesSummaryGet200Response**](V1DevicesSummaryGet200Response.md)
+[**V1DevicesSummaryGetResponse**](V1DevicesSummaryGetResponse.md)
 
 ### Authorization
 
@@ -12030,7 +12957,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_devices_upgrade_cancel_put**
-> object v1_devices_upgrade_cancel_put(authorization, v1_devices_session_status_post_request)
+> object v1_devices_upgrade_cancel_put(authorization, v1_devices_upgrade_cancel_put_request)
 
 ### Example
 
@@ -12038,7 +12965,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_session_status_post_request import V1DevicesSessionStatusPostRequest
+from graphiant_sdk.models.v1_devices_upgrade_cancel_put_request import V1DevicesUpgradeCancelPutRequest
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -12064,10 +12991,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_devices_session_status_post_request = graphiant_sdk.V1DevicesSessionStatusPostRequest() # V1DevicesSessionStatusPostRequest | 
+    v1_devices_upgrade_cancel_put_request = graphiant_sdk.V1DevicesUpgradeCancelPutRequest() # V1DevicesUpgradeCancelPutRequest | 
 
     try:
-        api_response = api_instance.v1_devices_upgrade_cancel_put(authorization, v1_devices_session_status_post_request)
+        api_response = api_instance.v1_devices_upgrade_cancel_put(authorization, v1_devices_upgrade_cancel_put_request)
         print("The response of DefaultApi->v1_devices_upgrade_cancel_put:\n")
         pprint(api_response)
     except Exception as e:
@@ -12082,7 +13009,7 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_devices_session_status_post_request** | [**V1DevicesSessionStatusPostRequest**](V1DevicesSessionStatusPostRequest.md)|  | 
+ **v1_devices_upgrade_cancel_put_request** | [**V1DevicesUpgradeCancelPutRequest**](V1DevicesUpgradeCancelPutRequest.md)|  | 
 
 ### Return type
 
@@ -12182,7 +13109,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_diagnostic_archive_create_device_id_post**
-> V1DiagnosticArchiveCreateDeviceIdPost201Response v1_diagnostic_archive_create_device_id_post(authorization, device_id, v1_diagnostic_archive_create_device_id_post_request)
+> V1DiagnosticArchiveCreateDeviceIdPostResponse v1_diagnostic_archive_create_device_id_post(authorization, device_id, v1_diagnostic_archive_create_device_id_post_request)
+
+Create a device debug archive
 
 ### Example
 
@@ -12190,8 +13119,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_diagnostic_archive_create_device_id_post201_response import V1DiagnosticArchiveCreateDeviceIdPost201Response
 from graphiant_sdk.models.v1_diagnostic_archive_create_device_id_post_request import V1DiagnosticArchiveCreateDeviceIdPostRequest
+from graphiant_sdk.models.v1_diagnostic_archive_create_device_id_post_response import V1DiagnosticArchiveCreateDeviceIdPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -12241,7 +13170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticArchiveCreateDeviceIdPost201Response**](V1DiagnosticArchiveCreateDeviceIdPost201Response.md)
+[**V1DiagnosticArchiveCreateDeviceIdPostResponse**](V1DiagnosticArchiveCreateDeviceIdPostResponse.md)
 
 ### Authorization
 
@@ -12262,6 +13191,8 @@ Name | Type | Description  | Notes
 
 # **v1_diagnostic_archive_delete_archive_id_delete**
 > object v1_diagnostic_archive_delete_archive_id_delete(authorization, archive_id)
+
+Delete a device debug archive
 
 ### Example
 
@@ -12336,7 +13267,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_diagnostic_archive_edit_archive_id_put**
-> object v1_diagnostic_archive_edit_archive_id_put(authorization, archive_id, v1_diagnostic_archive_create_device_id_post_request)
+> object v1_diagnostic_archive_edit_archive_id_put(authorization, archive_id, v1_diagnostic_archive_edit_archive_id_put_request)
+
+Edit metadata for a previously generated device debug archive
 
 ### Example
 
@@ -12344,7 +13277,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_diagnostic_archive_create_device_id_post_request import V1DiagnosticArchiveCreateDeviceIdPostRequest
+from graphiant_sdk.models.v1_diagnostic_archive_edit_archive_id_put_request import V1DiagnosticArchiveEditArchiveIdPutRequest
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -12371,10 +13304,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
     archive_id = 1000000 # int | Unique identifier for a specific archive
-    v1_diagnostic_archive_create_device_id_post_request = graphiant_sdk.V1DiagnosticArchiveCreateDeviceIdPostRequest() # V1DiagnosticArchiveCreateDeviceIdPostRequest | 
+    v1_diagnostic_archive_edit_archive_id_put_request = graphiant_sdk.V1DiagnosticArchiveEditArchiveIdPutRequest() # V1DiagnosticArchiveEditArchiveIdPutRequest | 
 
     try:
-        api_response = api_instance.v1_diagnostic_archive_edit_archive_id_put(authorization, archive_id, v1_diagnostic_archive_create_device_id_post_request)
+        api_response = api_instance.v1_diagnostic_archive_edit_archive_id_put(authorization, archive_id, v1_diagnostic_archive_edit_archive_id_put_request)
         print("The response of DefaultApi->v1_diagnostic_archive_edit_archive_id_put:\n")
         pprint(api_response)
     except Exception as e:
@@ -12390,7 +13323,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **archive_id** | **int**| Unique identifier for a specific archive | 
- **v1_diagnostic_archive_create_device_id_post_request** | [**V1DiagnosticArchiveCreateDeviceIdPostRequest**](V1DiagnosticArchiveCreateDeviceIdPostRequest.md)|  | 
+ **v1_diagnostic_archive_edit_archive_id_put_request** | [**V1DiagnosticArchiveEditArchiveIdPutRequest**](V1DiagnosticArchiveEditArchiveIdPutRequest.md)|  | 
 
 ### Return type
 
@@ -12414,7 +13347,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_diagnostic_archives_device_id_get**
-> V1DiagnosticArchivesDeviceIdGet200Response v1_diagnostic_archives_device_id_get(authorization, device_id)
+> V1DiagnosticArchivesDeviceIdGetResponse v1_diagnostic_archives_device_id_get(authorization, device_id)
+
+Get a list of device debug archive collections
 
 ### Example
 
@@ -12422,7 +13357,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_diagnostic_archives_device_id_get200_response import V1DiagnosticArchivesDeviceIdGet200Response
+from graphiant_sdk.models.v1_diagnostic_archives_device_id_get_response import V1DiagnosticArchivesDeviceIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -12470,7 +13405,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticArchivesDeviceIdGet200Response**](V1DiagnosticArchivesDeviceIdGet200Response.md)
+[**V1DiagnosticArchivesDeviceIdGetResponse**](V1DiagnosticArchivesDeviceIdGetResponse.md)
 
 ### Authorization
 
@@ -12491,6 +13426,8 @@ Name | Type | Description  | Notes
 
 # **v1_diagnostic_bgp_reset_device_id_put**
 > object v1_diagnostic_bgp_reset_device_id_put(authorization, device_id, v1_diagnostic_bgp_reset_device_id_put_request)
+
+Reset a BGP neighbor
 
 ### Example
 
@@ -12570,6 +13507,8 @@ Name | Type | Description  | Notes
 # **v1_diagnostic_clear_arp_device_id_put**
 > object v1_diagnostic_clear_arp_device_id_put(authorization, device_id, v1_diagnostic_clear_arp_device_id_put_request)
 
+Clear arp entries
+
 ### Example
 
 * Api Key Authentication (jwtAuth):
@@ -12646,7 +13585,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_diagnostic_gnmi_ping_get**
-> V1DiagnosticGnmiPingGet200Response v1_diagnostic_gnmi_ping_get(authorization)
+> V1DiagnosticGnmiPingGetResponse v1_diagnostic_gnmi_ping_get(authorization)
+
+perform GNMI ping test
 
 ### Example
 
@@ -12654,7 +13595,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_diagnostic_gnmi_ping_get200_response import V1DiagnosticGnmiPingGet200Response
+from graphiant_sdk.models.v1_diagnostic_gnmi_ping_get_response import V1DiagnosticGnmiPingGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -12700,7 +13641,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticGnmiPingGet200Response**](V1DiagnosticGnmiPingGet200Response.md)
+[**V1DiagnosticGnmiPingGetResponse**](V1DiagnosticGnmiPingGetResponse.md)
 
 ### Authorization
 
@@ -12721,6 +13662,8 @@ Name | Type | Description  | Notes
 
 # **v1_diagnostic_interface_reset_device_id_put**
 > object v1_diagnostic_interface_reset_device_id_put(authorization, device_id, v1_diagnostic_interface_reset_device_id_put_request)
+
+Reset an interface
 
 ### Example
 
@@ -12798,7 +13741,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_diagnostic_otp_device_id_get**
-> V1DiagnosticOtpDeviceIdGet200Response v1_diagnostic_otp_device_id_get(authorization, device_id)
+> V1DiagnosticOtpDeviceIdGetResponse v1_diagnostic_otp_device_id_get(authorization, device_id)
+
+Get a one-time passcode to access a device
 
 ### Example
 
@@ -12806,7 +13751,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_diagnostic_otp_device_id_get200_response import V1DiagnosticOtpDeviceIdGet200Response
+from graphiant_sdk.models.v1_diagnostic_otp_device_id_get_response import V1DiagnosticOtpDeviceIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -12854,7 +13799,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticOtpDeviceIdGet200Response**](V1DiagnosticOtpDeviceIdGet200Response.md)
+[**V1DiagnosticOtpDeviceIdGetResponse**](V1DiagnosticOtpDeviceIdGetResponse.md)
 
 ### Authorization
 
@@ -12874,7 +13819,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_diagnostic_packetcapture_pcap_id_get**
-> V1DiagnosticPacketcapturePcapIdGet200Response v1_diagnostic_packetcapture_pcap_id_get(authorization, pcap_id)
+> V1DiagnosticPacketcapturePcapIdGetResponse v1_diagnostic_packetcapture_pcap_id_get(authorization, pcap_id)
+
+get a packet capture
 
 ### Example
 
@@ -12882,7 +13829,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_diagnostic_packetcapture_pcap_id_get200_response import V1DiagnosticPacketcapturePcapIdGet200Response
+from graphiant_sdk.models.v1_diagnostic_packetcapture_pcap_id_get_response import V1DiagnosticPacketcapturePcapIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -12930,7 +13877,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticPacketcapturePcapIdGet200Response**](V1DiagnosticPacketcapturePcapIdGet200Response.md)
+[**V1DiagnosticPacketcapturePcapIdGetResponse**](V1DiagnosticPacketcapturePcapIdGetResponse.md)
 
 ### Authorization
 
@@ -12950,7 +13897,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_diagnostic_packetcapture_start_post**
-> V1DiagnosticPacketcaptureStartPost201Response v1_diagnostic_packetcapture_start_post(authorization, v1_diagnostic_packetcapture_start_post_request)
+> V1DiagnosticPacketcaptureStartPostResponse v1_diagnostic_packetcapture_start_post(authorization, v1_diagnostic_packetcapture_start_post_request)
+
+Start packet capture
 
 ### Example
 
@@ -12958,8 +13907,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_diagnostic_packetcapture_start_post201_response import V1DiagnosticPacketcaptureStartPost201Response
 from graphiant_sdk.models.v1_diagnostic_packetcapture_start_post_request import V1DiagnosticPacketcaptureStartPostRequest
+from graphiant_sdk.models.v1_diagnostic_packetcapture_start_post_response import V1DiagnosticPacketcaptureStartPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -13007,7 +13956,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticPacketcaptureStartPost201Response**](V1DiagnosticPacketcaptureStartPost201Response.md)
+[**V1DiagnosticPacketcaptureStartPostResponse**](V1DiagnosticPacketcaptureStartPostResponse.md)
 
 ### Authorization
 
@@ -13027,7 +13976,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_diagnostic_packetcapture_stop_post**
-> object v1_diagnostic_packetcapture_stop_post(authorization, v1_diagnostic_packetcapture_start_post201_response)
+> object v1_diagnostic_packetcapture_stop_post(authorization, v1_diagnostic_packetcapture_stop_post_request)
+
+Stop packet capture
 
 ### Example
 
@@ -13035,7 +13986,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_diagnostic_packetcapture_start_post201_response import V1DiagnosticPacketcaptureStartPost201Response
+from graphiant_sdk.models.v1_diagnostic_packetcapture_stop_post_request import V1DiagnosticPacketcaptureStopPostRequest
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -13061,10 +14012,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_diagnostic_packetcapture_start_post201_response = graphiant_sdk.V1DiagnosticPacketcaptureStartPost201Response() # V1DiagnosticPacketcaptureStartPost201Response | 
+    v1_diagnostic_packetcapture_stop_post_request = graphiant_sdk.V1DiagnosticPacketcaptureStopPostRequest() # V1DiagnosticPacketcaptureStopPostRequest | 
 
     try:
-        api_response = api_instance.v1_diagnostic_packetcapture_stop_post(authorization, v1_diagnostic_packetcapture_start_post201_response)
+        api_response = api_instance.v1_diagnostic_packetcapture_stop_post(authorization, v1_diagnostic_packetcapture_stop_post_request)
         print("The response of DefaultApi->v1_diagnostic_packetcapture_stop_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -13079,7 +14030,7 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_diagnostic_packetcapture_start_post201_response** | [**V1DiagnosticPacketcaptureStartPost201Response**](V1DiagnosticPacketcaptureStartPost201Response.md)|  | 
+ **v1_diagnostic_packetcapture_stop_post_request** | [**V1DiagnosticPacketcaptureStopPostRequest**](V1DiagnosticPacketcaptureStopPostRequest.md)|  | 
 
 ### Return type
 
@@ -13103,7 +14054,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_diagnostic_ping_pause_resume_post**
-> V1DiagnosticPingPauseResumePost204Response v1_diagnostic_ping_pause_resume_post(authorization, v1_diagnostic_ping_pause_resume_post_request)
+> V1DiagnosticPingPauseResumePostResponse v1_diagnostic_ping_pause_resume_post(authorization, v1_diagnostic_ping_pause_resume_post_request)
+
+Pause and/or Resume a ping session
 
 ### Example
 
@@ -13111,8 +14064,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_diagnostic_ping_pause_resume_post204_response import V1DiagnosticPingPauseResumePost204Response
 from graphiant_sdk.models.v1_diagnostic_ping_pause_resume_post_request import V1DiagnosticPingPauseResumePostRequest
+from graphiant_sdk.models.v1_diagnostic_ping_pause_resume_post_response import V1DiagnosticPingPauseResumePostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -13160,7 +14113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticPingPauseResumePost204Response**](V1DiagnosticPingPauseResumePost204Response.md)
+[**V1DiagnosticPingPauseResumePostResponse**](V1DiagnosticPingPauseResumePostResponse.md)
 
 ### Authorization
 
@@ -13180,7 +14133,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_diagnostic_ping_post**
-> V1DiagnosticPingPauseResumePost204Response v1_diagnostic_ping_post(authorization, v1_diagnostic_ping_pause_resume_post_request)
+> V1DiagnosticPingPostResponse v1_diagnostic_ping_post(authorization, v1_diagnostic_ping_post_request)
+
+Trigger a diagnostic test
 
 ### Example
 
@@ -13188,8 +14143,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_diagnostic_ping_pause_resume_post204_response import V1DiagnosticPingPauseResumePost204Response
-from graphiant_sdk.models.v1_diagnostic_ping_pause_resume_post_request import V1DiagnosticPingPauseResumePostRequest
+from graphiant_sdk.models.v1_diagnostic_ping_post_request import V1DiagnosticPingPostRequest
+from graphiant_sdk.models.v1_diagnostic_ping_post_response import V1DiagnosticPingPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -13215,10 +14170,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_diagnostic_ping_pause_resume_post_request = graphiant_sdk.V1DiagnosticPingPauseResumePostRequest() # V1DiagnosticPingPauseResumePostRequest | 
+    v1_diagnostic_ping_post_request = graphiant_sdk.V1DiagnosticPingPostRequest() # V1DiagnosticPingPostRequest | 
 
     try:
-        api_response = api_instance.v1_diagnostic_ping_post(authorization, v1_diagnostic_ping_pause_resume_post_request)
+        api_response = api_instance.v1_diagnostic_ping_post(authorization, v1_diagnostic_ping_post_request)
         print("The response of DefaultApi->v1_diagnostic_ping_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -13233,11 +14188,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_diagnostic_ping_pause_resume_post_request** | [**V1DiagnosticPingPauseResumePostRequest**](V1DiagnosticPingPauseResumePostRequest.md)|  | 
+ **v1_diagnostic_ping_post_request** | [**V1DiagnosticPingPostRequest**](V1DiagnosticPingPostRequest.md)|  | 
 
 ### Return type
 
-[**V1DiagnosticPingPauseResumePost204Response**](V1DiagnosticPingPauseResumePost204Response.md)
+[**V1DiagnosticPingPostResponse**](V1DiagnosticPingPostResponse.md)
 
 ### Authorization
 
@@ -13258,6 +14213,8 @@ Name | Type | Description  | Notes
 
 # **v1_diagnostic_ping_stop_token_post**
 > object v1_diagnostic_ping_stop_token_post(authorization, token, body)
+
+Stop ping session
 
 ### Example
 
@@ -13335,6 +14292,8 @@ Name | Type | Description  | Notes
 
 # **v1_diagnostic_reboot_device_id_put**
 > object v1_diagnostic_reboot_device_id_put(authorization, device_id, v1_diagnostic_reboot_device_id_put_request)
+
+Trigger a device reboot
 
 ### Example
 
@@ -13414,6 +14373,8 @@ Name | Type | Description  | Notes
 # **v1_diagnostic_reset_ipsec_session_device_id_put**
 > object v1_diagnostic_reset_ipsec_session_device_id_put(authorization, device_id, v1_diagnostic_reset_ipsec_session_device_id_put_request)
 
+Reset IPSec sessions
+
 ### Example
 
 * Api Key Authentication (jwtAuth):
@@ -13490,7 +14451,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_diagnostic_speedtest_post**
-> V1DiagnosticSpeedtestPost200Response v1_diagnostic_speedtest_post(authorization, v1_diagnostic_speedtest_post_request)
+> V1DiagnosticSpeedtestPostResponse v1_diagnostic_speedtest_post(authorization, v1_diagnostic_speedtest_post_request)
+
+Trigger Speedtest utility
 
 ### Example
 
@@ -13498,8 +14461,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_diagnostic_speedtest_post200_response import V1DiagnosticSpeedtestPost200Response
 from graphiant_sdk.models.v1_diagnostic_speedtest_post_request import V1DiagnosticSpeedtestPostRequest
+from graphiant_sdk.models.v1_diagnostic_speedtest_post_response import V1DiagnosticSpeedtestPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -13547,7 +14510,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticSpeedtestPost200Response**](V1DiagnosticSpeedtestPost200Response.md)
+[**V1DiagnosticSpeedtestPostResponse**](V1DiagnosticSpeedtestPostResponse.md)
 
 ### Authorization
 
@@ -13567,7 +14530,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_diagnostic_speedtest_providers_get**
-> V1DiagnosticSpeedtestProvidersGet200Response v1_diagnostic_speedtest_providers_get(authorization)
+> V1DiagnosticSpeedtestProvidersGetResponse v1_diagnostic_speedtest_providers_get(authorization)
+
+Get list of supported speedtest service providers
 
 ### Example
 
@@ -13575,7 +14540,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_diagnostic_speedtest_providers_get200_response import V1DiagnosticSpeedtestProvidersGet200Response
+from graphiant_sdk.models.v1_diagnostic_speedtest_providers_get_response import V1DiagnosticSpeedtestProvidersGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -13621,7 +14586,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticSpeedtestProvidersGet200Response**](V1DiagnosticSpeedtestProvidersGet200Response.md)
+[**V1DiagnosticSpeedtestProvidersGetResponse**](V1DiagnosticSpeedtestProvidersGetResponse.md)
 
 ### Authorization
 
@@ -13641,7 +14606,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_diagnostic_speedtest_report_put**
-> V1DiagnosticSpeedtestReportPut200Response v1_diagnostic_speedtest_report_put(authorization, v1_diagnostic_speedtest_report_put_request)
+> V1DiagnosticSpeedtestReportPutResponse v1_diagnostic_speedtest_report_put(authorization, v1_diagnostic_speedtest_report_put_request)
+
+Generate a speedtest history report
 
 ### Example
 
@@ -13649,8 +14616,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_diagnostic_speedtest_report_put200_response import V1DiagnosticSpeedtestReportPut200Response
 from graphiant_sdk.models.v1_diagnostic_speedtest_report_put_request import V1DiagnosticSpeedtestReportPutRequest
+from graphiant_sdk.models.v1_diagnostic_speedtest_report_put_response import V1DiagnosticSpeedtestReportPutResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -13698,7 +14665,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticSpeedtestReportPut200Response**](V1DiagnosticSpeedtestReportPut200Response.md)
+[**V1DiagnosticSpeedtestReportPutResponse**](V1DiagnosticSpeedtestReportPutResponse.md)
 
 ### Authorization
 
@@ -13718,7 +14685,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_diagnostic_speedtest_servers_get**
-> V1DiagnosticSpeedtestServersGet200Response v1_diagnostic_speedtest_servers_get(authorization)
+> V1DiagnosticSpeedtestServersGetResponse v1_diagnostic_speedtest_servers_get(authorization)
+
+Get list of servers for a provider
 
 ### Example
 
@@ -13726,7 +14695,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_diagnostic_speedtest_servers_get200_response import V1DiagnosticSpeedtestServersGet200Response
+from graphiant_sdk.models.v1_diagnostic_speedtest_servers_get_response import V1DiagnosticSpeedtestServersGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -13772,7 +14741,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticSpeedtestServersGet200Response**](V1DiagnosticSpeedtestServersGet200Response.md)
+[**V1DiagnosticSpeedtestServersGetResponse**](V1DiagnosticSpeedtestServersGetResponse.md)
 
 ### Authorization
 
@@ -13792,7 +14761,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_diagnostic_traceroute_post**
-> V1DiagnosticPingPauseResumePost204Response v1_diagnostic_traceroute_post(authorization, v1_diagnostic_ping_pause_resume_post_request)
+> V1DiagnosticTraceroutePostResponse v1_diagnostic_traceroute_post(authorization, v1_diagnostic_traceroute_post_request)
+
+Trigger a diagnostic test
 
 ### Example
 
@@ -13800,8 +14771,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_diagnostic_ping_pause_resume_post204_response import V1DiagnosticPingPauseResumePost204Response
-from graphiant_sdk.models.v1_diagnostic_ping_pause_resume_post_request import V1DiagnosticPingPauseResumePostRequest
+from graphiant_sdk.models.v1_diagnostic_traceroute_post_request import V1DiagnosticTraceroutePostRequest
+from graphiant_sdk.models.v1_diagnostic_traceroute_post_response import V1DiagnosticTraceroutePostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -13827,10 +14798,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_diagnostic_ping_pause_resume_post_request = graphiant_sdk.V1DiagnosticPingPauseResumePostRequest() # V1DiagnosticPingPauseResumePostRequest | 
+    v1_diagnostic_traceroute_post_request = graphiant_sdk.V1DiagnosticTraceroutePostRequest() # V1DiagnosticTraceroutePostRequest | 
 
     try:
-        api_response = api_instance.v1_diagnostic_traceroute_post(authorization, v1_diagnostic_ping_pause_resume_post_request)
+        api_response = api_instance.v1_diagnostic_traceroute_post(authorization, v1_diagnostic_traceroute_post_request)
         print("The response of DefaultApi->v1_diagnostic_traceroute_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -13845,11 +14816,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_diagnostic_ping_pause_resume_post_request** | [**V1DiagnosticPingPauseResumePostRequest**](V1DiagnosticPingPauseResumePostRequest.md)|  | 
+ **v1_diagnostic_traceroute_post_request** | [**V1DiagnosticTraceroutePostRequest**](V1DiagnosticTraceroutePostRequest.md)|  | 
 
 ### Return type
 
-[**V1DiagnosticPingPauseResumePost204Response**](V1DiagnosticPingPauseResumePost204Response.md)
+[**V1DiagnosticTraceroutePostResponse**](V1DiagnosticTraceroutePostResponse.md)
 
 ### Authorization
 
@@ -13869,7 +14840,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_edges_hardware_assigned_get**
-> V1EdgesHardwareAssignedGet200Response v1_edges_hardware_assigned_get(authorization)
+> V1EdgesHardwareAssignedGetResponse v1_edges_hardware_assigned_get(authorization)
 
 ### Example
 
@@ -13877,7 +14848,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_edges_hardware_assigned_get200_response import V1EdgesHardwareAssignedGet200Response
+from graphiant_sdk.models.v1_edges_hardware_assigned_get_response import V1EdgesHardwareAssignedGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -13923,7 +14894,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EdgesHardwareAssignedGet200Response**](V1EdgesHardwareAssignedGet200Response.md)
+[**V1EdgesHardwareAssignedGetResponse**](V1EdgesHardwareAssignedGetResponse.md)
 
 ### Authorization
 
@@ -13943,7 +14914,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_edges_hardware_unassigned_get**
-> V1EdgesHardwareUnassignedGet200Response v1_edges_hardware_unassigned_get(authorization)
+> V1EdgesHardwareUnassignedGetResponse v1_edges_hardware_unassigned_get(authorization)
 
 ### Example
 
@@ -13951,7 +14922,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_edges_hardware_unassigned_get200_response import V1EdgesHardwareUnassignedGet200Response
+from graphiant_sdk.models.v1_edges_hardware_unassigned_get_response import V1EdgesHardwareUnassignedGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -13997,7 +14968,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EdgesHardwareUnassignedGet200Response**](V1EdgesHardwareUnassignedGet200Response.md)
+[**V1EdgesHardwareUnassignedGetResponse**](V1EdgesHardwareUnassignedGetResponse.md)
 
 ### Authorization
 
@@ -14017,7 +14988,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_edges_summary_get**
-> V1EdgesSummaryGet200Response v1_edges_summary_get(authorization)
+> V1EdgesSummaryGetResponse v1_edges_summary_get(authorization)
 
 ### Example
 
@@ -14025,7 +14996,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_edges_summary_get200_response import V1EdgesSummaryGet200Response
+from graphiant_sdk.models.v1_edges_summary_get_response import V1EdgesSummaryGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -14071,7 +15042,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EdgesSummaryGet200Response**](V1EdgesSummaryGet200Response.md)
+[**V1EdgesSummaryGetResponse**](V1EdgesSummaryGetResponse.md)
 
 ### Authorization
 
@@ -14091,7 +15062,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_enterprise_allocation_get**
-> V1EnterpriseAllocationGet200Response v1_enterprise_allocation_get(authorization)
+> V1EnterpriseAllocationGetResponse v1_enterprise_allocation_get(authorization)
+
+Get all allocation for the given enterprise on a given month
 
 ### Example
 
@@ -14099,7 +15072,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_enterprise_allocation_get200_response import V1EnterpriseAllocationGet200Response
+from graphiant_sdk.models.v1_enterprise_allocation_get_response import V1EnterpriseAllocationGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -14145,7 +15118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EnterpriseAllocationGet200Response**](V1EnterpriseAllocationGet200Response.md)
+[**V1EnterpriseAllocationGetResponse**](V1EnterpriseAllocationGetResponse.md)
 
 ### Authorization
 
@@ -14165,7 +15138,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_enterprise_configuration_get**
-> V1EnterpriseConfigurationGet200Response v1_enterprise_configuration_get(authorization)
+> V1EnterpriseConfigurationGetResponse v1_enterprise_configuration_get(authorization)
+
+Get enterprise-level information relevant to device configuration
 
 ### Example
 
@@ -14173,7 +15148,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_enterprise_configuration_get200_response import V1EnterpriseConfigurationGet200Response
+from graphiant_sdk.models.v1_enterprise_configuration_get_response import V1EnterpriseConfigurationGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -14219,7 +15194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EnterpriseConfigurationGet200Response**](V1EnterpriseConfigurationGet200Response.md)
+[**V1EnterpriseConfigurationGetResponse**](V1EnterpriseConfigurationGetResponse.md)
 
 ### Authorization
 
@@ -14239,7 +15214,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_enterprise_configuration_put**
-> object v1_enterprise_configuration_put(authorization, v1_enterprise_configuration_get200_response)
+> object v1_enterprise_configuration_put(authorization, v1_enterprise_configuration_put_request)
+
+Update enterprise-level information relevant to device configuration
 
 ### Example
 
@@ -14247,7 +15224,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_enterprise_configuration_get200_response import V1EnterpriseConfigurationGet200Response
+from graphiant_sdk.models.v1_enterprise_configuration_put_request import V1EnterpriseConfigurationPutRequest
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -14273,10 +15250,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_enterprise_configuration_get200_response = graphiant_sdk.V1EnterpriseConfigurationGet200Response() # V1EnterpriseConfigurationGet200Response | 
+    v1_enterprise_configuration_put_request = graphiant_sdk.V1EnterpriseConfigurationPutRequest() # V1EnterpriseConfigurationPutRequest | 
 
     try:
-        api_response = api_instance.v1_enterprise_configuration_put(authorization, v1_enterprise_configuration_get200_response)
+        api_response = api_instance.v1_enterprise_configuration_put(authorization, v1_enterprise_configuration_put_request)
         print("The response of DefaultApi->v1_enterprise_configuration_put:\n")
         pprint(api_response)
     except Exception as e:
@@ -14291,7 +15268,7 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_enterprise_configuration_get200_response** | [**V1EnterpriseConfigurationGet200Response**](V1EnterpriseConfigurationGet200Response.md)|  | 
+ **v1_enterprise_configuration_put_request** | [**V1EnterpriseConfigurationPutRequest**](V1EnterpriseConfigurationPutRequest.md)|  | 
 
 ### Return type
 
@@ -14316,6 +15293,8 @@ Name | Type | Description  | Notes
 
 # **v1_enterprise_contract_put**
 > object v1_enterprise_contract_put(authorization, v1_enterprise_contract_put_request)
+
+Update an enterprise to use a new monthly or term-based contract
 
 ### Example
 
@@ -14391,7 +15370,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_enterprise_snapshot_get**
-> V1EnterpriseSnapshotGet200Response v1_enterprise_snapshot_get(authorization)
+> V1EnterpriseSnapshotGetResponse v1_enterprise_snapshot_get(authorization)
+
+Get a all of the device snapshots for every device in an enterprise
 
 ### Example
 
@@ -14399,7 +15380,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_enterprise_snapshot_get200_response import V1EnterpriseSnapshotGet200Response
+from graphiant_sdk.models.v1_enterprise_snapshot_get_response import V1EnterpriseSnapshotGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -14445,7 +15426,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EnterpriseSnapshotGet200Response**](V1EnterpriseSnapshotGet200Response.md)
+[**V1EnterpriseSnapshotGetResponse**](V1EnterpriseSnapshotGetResponse.md)
 
 ### Authorization
 
@@ -14465,7 +15446,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_enterprises_enterprise_id_admin_get**
-> V1EnterprisesEnterpriseIdAdminGet200Response v1_enterprises_enterprise_id_admin_get(authorization, enterprise_id)
+> V1EnterprisesEnterpriseIdAdminGetResponse v1_enterprises_enterprise_id_admin_get(authorization, enterprise_id)
+
+Get the admin account for an enterprise.
 
 ### Example
 
@@ -14473,7 +15456,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_enterprises_enterprise_id_admin_get200_response import V1EnterprisesEnterpriseIdAdminGet200Response
+from graphiant_sdk.models.v1_enterprises_enterprise_id_admin_get_response import V1EnterprisesEnterpriseIdAdminGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -14521,7 +15504,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EnterprisesEnterpriseIdAdminGet200Response**](V1EnterprisesEnterpriseIdAdminGet200Response.md)
+[**V1EnterprisesEnterpriseIdAdminGetResponse**](V1EnterprisesEnterpriseIdAdminGetResponse.md)
 
 ### Authorization
 
@@ -14541,7 +15524,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_enterprises_enterprise_id_delete**
-> V1AuthPut204Response v1_enterprises_enterprise_id_delete(authorization, enterprise_id)
+> V1EnterprisesEnterpriseIdDeleteResponse v1_enterprises_enterprise_id_delete(authorization, enterprise_id)
+
+Delete a specific enterprise by ID (you must manage this tenant).
 
 ### Example
 
@@ -14549,7 +15534,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_auth_put204_response import V1AuthPut204Response
+from graphiant_sdk.models.v1_enterprises_enterprise_id_delete_response import V1EnterprisesEnterpriseIdDeleteResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -14597,7 +15582,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuthPut204Response**](V1AuthPut204Response.md)
+[**V1EnterprisesEnterpriseIdDeleteResponse**](V1EnterprisesEnterpriseIdDeleteResponse.md)
 
 ### Authorization
 
@@ -14617,7 +15602,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_enterprises_enterprise_id_device_status_get**
-> V1DeviceStatusPost200Response v1_enterprises_enterprise_id_device_status_get(authorization, enterprise_id)
+> V1EnterprisesEnterpriseIdDeviceStatusGetResponse v1_enterprises_enterprise_id_device_status_get(authorization, enterprise_id)
 
 ### Example
 
@@ -14625,7 +15610,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_status_post200_response import V1DeviceStatusPost200Response
+from graphiant_sdk.models.v1_enterprises_enterprise_id_device_status_get_response import V1EnterprisesEnterpriseIdDeviceStatusGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -14673,7 +15658,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceStatusPost200Response**](V1DeviceStatusPost200Response.md)
+[**V1EnterprisesEnterpriseIdDeviceStatusGetResponse**](V1EnterprisesEnterpriseIdDeviceStatusGetResponse.md)
 
 ### Authorization
 
@@ -14694,6 +15679,8 @@ Name | Type | Description  | Notes
 
 # **v1_enterprises_eula_post**
 > object v1_enterprises_eula_post(authorization, body)
+
+Accept End User License Agreement for the enterprise.
 
 ### Example
 
@@ -14768,7 +15755,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_enterprises_get**
-> V1EnterprisesGet200Response v1_enterprises_get(authorization, enterprise_ids=enterprise_ids)
+> V1EnterprisesGetResponse v1_enterprises_get(authorization, enterprise_ids=enterprise_ids)
+
+Get specific enterprises by their IDs with detailed information. Query just your own enterprise Id for more detailed info.
 
 ### Example
 
@@ -14776,7 +15765,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_enterprises_get200_response import V1EnterprisesGet200Response
+from graphiant_sdk.models.v1_enterprises_get_response import V1EnterprisesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -14824,7 +15813,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EnterprisesGet200Response**](V1EnterprisesGet200Response.md)
+[**V1EnterprisesGetResponse**](V1EnterprisesGetResponse.md)
 
 ### Authorization
 
@@ -14844,7 +15833,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_enterprises_managed_get**
-> V1EnterprisesManagedGet200Response v1_enterprises_managed_get(authorization, type=type)
+> V1EnterprisesManagedGetResponse v1_enterprises_managed_get(authorization, type)
+
+Get enterprises managed by your tenant, filtered by enterprise type.
 
 ### Example
 
@@ -14852,7 +15843,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_enterprises_managed_get200_response import V1EnterprisesManagedGet200Response
+from graphiant_sdk.models.v1_enterprises_managed_get_response import V1EnterprisesManagedGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -14878,10 +15869,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    type = 'ENUM_VALUE' # str |  (optional)
+    type = 'ENUM_VALUE' # str | 
 
     try:
-        api_response = api_instance.v1_enterprises_managed_get(authorization, type=type)
+        api_response = api_instance.v1_enterprises_managed_get(authorization, type)
         print("The response of DefaultApi->v1_enterprises_managed_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -14896,11 +15887,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **type** | **str**|  | [optional] 
+ **type** | **str**|  | 
 
 ### Return type
 
-[**V1EnterprisesManagedGet200Response**](V1EnterprisesManagedGet200Response.md)
+[**V1EnterprisesManagedGetResponse**](V1EnterprisesManagedGetResponse.md)
 
 ### Authorization
 
@@ -14921,6 +15912,8 @@ Name | Type | Description  | Notes
 
 # **v1_enterprises_patch**
 > object v1_enterprises_patch(authorization, v1_enterprises_patch_request)
+
+Updates all relevent enterprise information.
 
 ### Example
 
@@ -14998,6 +15991,8 @@ Name | Type | Description  | Notes
 # **v1_enterprises_put**
 > object v1_enterprises_put(authorization, v1_enterprises_put_request)
 
+Create a new enterprise with company details, account type, and admin user.
+
 ### Example
 
 * Api Key Authentication (jwtAuth):
@@ -15072,7 +16067,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_enterprises_self_delete**
-> V1AuthPut204Response v1_enterprises_self_delete(authorization)
+> V1EnterprisesSelfDeleteResponse v1_enterprises_self_delete(authorization)
+
+Delete the current user's enterprise (self-deletion).
 
 ### Example
 
@@ -15080,7 +16077,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_auth_put204_response import V1AuthPut204Response
+from graphiant_sdk.models.v1_enterprises_self_delete_response import V1EnterprisesSelfDeleteResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -15126,7 +16123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuthPut204Response**](V1AuthPut204Response.md)
+[**V1EnterprisesSelfDeleteResponse**](V1EnterprisesSelfDeleteResponse.md)
 
 ### Authorization
 
@@ -15146,7 +16143,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_event_device_get**
-> V1EventDeviceGet200Response v1_event_device_get(authorization)
+> V1EventDeviceGetResponse v1_event_device_get(authorization)
+
+Get All events by DeviceID
 
 ### Example
 
@@ -15154,7 +16153,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_event_device_get200_response import V1EventDeviceGet200Response
+from graphiant_sdk.models.v1_event_device_get_response import V1EventDeviceGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -15200,7 +16199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EventDeviceGet200Response**](V1EventDeviceGet200Response.md)
+[**V1EventDeviceGetResponse**](V1EventDeviceGetResponse.md)
 
 ### Authorization
 
@@ -15220,7 +16219,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_event_enterprise_get**
-> V1EventDeviceGet200Response v1_event_enterprise_get(authorization)
+> V1EventEnterpriseGetResponse v1_event_enterprise_get(authorization)
+
+Get All events by EnterpriseID
 
 ### Example
 
@@ -15228,7 +16229,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_event_device_get200_response import V1EventDeviceGet200Response
+from graphiant_sdk.models.v1_event_enterprise_get_response import V1EventEnterpriseGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -15274,7 +16275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EventDeviceGet200Response**](V1EventDeviceGet200Response.md)
+[**V1EventEnterpriseGetResponse**](V1EventEnterpriseGetResponse.md)
 
 ### Authorization
 
@@ -15295,6 +16296,8 @@ Name | Type | Description  | Notes
 
 # **v1_event_system_ack_post**
 > object v1_event_system_ack_post(authorization, v1_event_system_ack_post_request)
+
+Update User Acknowledgement for an event
 
 ### Example
 
@@ -15370,7 +16373,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_event_system_get**
-> V1EventDeviceGet200Response v1_event_system_get(authorization)
+> V1EventSystemGetResponse v1_event_system_get(authorization)
+
+Get All system level events
 
 ### Example
 
@@ -15378,7 +16383,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_event_device_get200_response import V1EventDeviceGet200Response
+from graphiant_sdk.models.v1_event_system_get_response import V1EventSystemGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -15424,7 +16429,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EventDeviceGet200Response**](V1EventDeviceGet200Response.md)
+[**V1EventSystemGetResponse**](V1EventSystemGetResponse.md)
 
 ### Authorization
 
@@ -15444,7 +16449,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post**
-> V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post(authorization, v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post_request)
+> V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostResponse v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post(authorization, v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post_request)
+
+Get b2b extranet peering service sites usage stats
 
 ### Example
 
@@ -15452,8 +16459,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post200_response import V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response
 from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post_request import V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest
+from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post_response import V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -15501,7 +16508,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response**](V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response.md)
+[**V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostResponse**](V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostResponse.md)
 
 ### Authorization
 
@@ -15521,7 +16528,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post**
-> V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post(authorization, v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request)
+> V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostResponse v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post(authorization, v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request)
+
+Get b2b extranet peering service top consumers usage stats
 
 ### Example
 
@@ -15529,8 +16538,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post200_response import V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response
 from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request import V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest
+from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_response import V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -15578,7 +16587,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response**](V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response.md)
+[**V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostResponse**](V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostResponse.md)
 
 ### Authorization
 
@@ -15598,7 +16607,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranet_b2b_monitoring_peering_service_consumption_overview_post**
-> V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200Response v1_extranet_b2b_monitoring_peering_service_consumption_overview_post(authorization, v1_extranet_b2b_monitoring_peering_service_consumption_overview_post_request)
+> V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostResponse v1_extranet_b2b_monitoring_peering_service_consumption_overview_post(authorization, v1_extranet_b2b_monitoring_peering_service_consumption_overview_post_request)
+
+Get b2b extranet peering consumption overview
 
 ### Example
 
@@ -15606,8 +16617,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_consumption_overview_post200_response import V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200Response
 from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_consumption_overview_post_request import V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest
+from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_consumption_overview_post_response import V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -15655,7 +16666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200Response**](V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200Response.md)
+[**V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostResponse**](V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostResponse.md)
 
 ### Authorization
 
@@ -15675,7 +16686,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranet_b2b_monitoring_peering_service_service_customer_list_post**
-> V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost200Response v1_extranet_b2b_monitoring_peering_service_service_customer_list_post(authorization, v1_extranet_b2b_monitoring_peering_service_service_customer_list_post_request)
+> V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostResponse v1_extranet_b2b_monitoring_peering_service_service_customer_list_post(authorization, v1_extranet_b2b_monitoring_peering_service_service_customer_list_post_request)
+
+Get b2b extranet peering service customer list within a time window
 
 ### Example
 
@@ -15683,8 +16696,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_service_customer_list_post200_response import V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost200Response
 from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_service_customer_list_post_request import V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostRequest
+from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_service_customer_list_post_response import V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -15732,7 +16745,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost200Response**](V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost200Response.md)
+[**V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostResponse**](V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostResponse.md)
 
 ### Authorization
 
@@ -15752,7 +16765,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranet_b2b_monitoring_peering_service_service_health_post**
-> V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost200Response v1_extranet_b2b_monitoring_peering_service_service_health_post(authorization, v1_extranets_monitoring_traffic_security_policy_post_request)
+> V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostResponse v1_extranet_b2b_monitoring_peering_service_service_health_post(authorization, v1_extranet_b2b_monitoring_peering_service_service_health_post_request)
 
 ### Example
 
@@ -15760,8 +16773,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_service_health_post200_response import V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost200Response
-from graphiant_sdk.models.v1_extranets_monitoring_traffic_security_policy_post_request import V1ExtranetsMonitoringTrafficSecurityPolicyPostRequest
+from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_service_health_post_request import V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest
+from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_service_health_post_response import V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -15787,10 +16800,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_extranets_monitoring_traffic_security_policy_post_request = graphiant_sdk.V1ExtranetsMonitoringTrafficSecurityPolicyPostRequest() # V1ExtranetsMonitoringTrafficSecurityPolicyPostRequest | 
+    v1_extranet_b2b_monitoring_peering_service_service_health_post_request = graphiant_sdk.V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest() # V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest | 
 
     try:
-        api_response = api_instance.v1_extranet_b2b_monitoring_peering_service_service_health_post(authorization, v1_extranets_monitoring_traffic_security_policy_post_request)
+        api_response = api_instance.v1_extranet_b2b_monitoring_peering_service_service_health_post(authorization, v1_extranet_b2b_monitoring_peering_service_service_health_post_request)
         print("The response of DefaultApi->v1_extranet_b2b_monitoring_peering_service_service_health_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -15805,11 +16818,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_extranets_monitoring_traffic_security_policy_post_request** | [**V1ExtranetsMonitoringTrafficSecurityPolicyPostRequest**](V1ExtranetsMonitoringTrafficSecurityPolicyPostRequest.md)|  | 
+ **v1_extranet_b2b_monitoring_peering_service_service_health_post_request** | [**V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest**](V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest.md)|  | 
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost200Response**](V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost200Response.md)
+[**V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostResponse**](V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostResponse.md)
 
 ### Authorization
 
@@ -15829,7 +16842,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranet_b2b_monitoring_peering_service_service_overtime_consumption_post**
-> V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response v1_extranet_b2b_monitoring_peering_service_service_overtime_consumption_post(authorization, v1_extranet_b2b_monitoring_peering_service_service_overtime_consumption_post_request)
+> V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostResponse v1_extranet_b2b_monitoring_peering_service_service_overtime_consumption_post(authorization, v1_extranet_b2b_monitoring_peering_service_service_overtime_consumption_post_request)
+
+Get b2b extranet peering service overtime consumption
 
 ### Example
 
@@ -15837,8 +16852,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_service_overtime_consumption_post200_response import V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response
 from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_service_overtime_consumption_post_request import V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest
+from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_service_overtime_consumption_post_response import V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -15886,7 +16901,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response**](V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response.md)
+[**V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostResponse**](V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostResponse.md)
 
 ### Authorization
 
@@ -15906,7 +16921,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranet_sites_usage_post**
-> V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response v1_extranet_sites_usage_post(authorization, v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post_request)
+> V1ExtranetSitesUsagePostResponse v1_extranet_sites_usage_post(authorization, v1_extranet_sites_usage_post_request)
+
+Get extranet service sites usage stats
 
 ### Example
 
@@ -15914,8 +16931,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post200_response import V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response
-from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post_request import V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest
+from graphiant_sdk.models.v1_extranet_sites_usage_post_request import V1ExtranetSitesUsagePostRequest
+from graphiant_sdk.models.v1_extranet_sites_usage_post_response import V1ExtranetSitesUsagePostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -15941,10 +16958,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post_request = graphiant_sdk.V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest() # V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest | 
+    v1_extranet_sites_usage_post_request = graphiant_sdk.V1ExtranetSitesUsagePostRequest() # V1ExtranetSitesUsagePostRequest | 
 
     try:
-        api_response = api_instance.v1_extranet_sites_usage_post(authorization, v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post_request)
+        api_response = api_instance.v1_extranet_sites_usage_post(authorization, v1_extranet_sites_usage_post_request)
         print("The response of DefaultApi->v1_extranet_sites_usage_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -15959,11 +16976,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post_request** | [**V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest**](V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest.md)|  | 
+ **v1_extranet_sites_usage_post_request** | [**V1ExtranetSitesUsagePostRequest**](V1ExtranetSitesUsagePostRequest.md)|  | 
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response**](V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response.md)
+[**V1ExtranetSitesUsagePostResponse**](V1ExtranetSitesUsagePostResponse.md)
 
 ### Authorization
 
@@ -15983,7 +17000,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranet_sites_usage_top_post**
-> V1ExtranetSitesUsageTopPost200Response v1_extranet_sites_usage_top_post(authorization, v1_extranet_sites_usage_top_post_request)
+> V1ExtranetSitesUsageTopPostResponse v1_extranet_sites_usage_top_post(authorization, v1_extranet_sites_usage_top_post_request)
+
+Get extranet service top sites usage stats
 
 ### Example
 
@@ -15991,8 +17010,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranet_sites_usage_top_post200_response import V1ExtranetSitesUsageTopPost200Response
 from graphiant_sdk.models.v1_extranet_sites_usage_top_post_request import V1ExtranetSitesUsageTopPostRequest
+from graphiant_sdk.models.v1_extranet_sites_usage_top_post_response import V1ExtranetSitesUsageTopPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -16040,7 +17059,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetSitesUsageTopPost200Response**](V1ExtranetSitesUsageTopPost200Response.md)
+[**V1ExtranetSitesUsageTopPostResponse**](V1ExtranetSitesUsageTopPostResponse.md)
 
 ### Authorization
 
@@ -16060,7 +17079,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_consumer_device_status_id_get**
-> V1ExtranetsB2bConsumerDeviceStatusIdGet200Response v1_extranets_b2b_consumer_device_status_id_get(authorization, id)
+> V1ExtranetsB2bConsumerDeviceStatusIdGetResponse v1_extranets_b2b_consumer_device_status_id_get(authorization, id)
 
 ### Example
 
@@ -16068,7 +17087,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_consumer_device_status_id_get200_response import V1ExtranetsB2bConsumerDeviceStatusIdGet200Response
+from graphiant_sdk.models.v1_extranets_b2b_consumer_device_status_id_get_response import V1ExtranetsB2bConsumerDeviceStatusIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -16116,7 +17135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bConsumerDeviceStatusIdGet200Response**](V1ExtranetsB2bConsumerDeviceStatusIdGet200Response.md)
+[**V1ExtranetsB2bConsumerDeviceStatusIdGetResponse**](V1ExtranetsB2bConsumerDeviceStatusIdGetResponse.md)
 
 ### Authorization
 
@@ -16211,7 +17230,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_consumer_id_get**
-> V1ExtranetsB2bConsumerIdGet200Response v1_extranets_b2b_consumer_id_get(authorization, id)
+> V1ExtranetsB2bConsumerIdGetResponse v1_extranets_b2b_consumer_id_get(authorization, id)
 
 ### Example
 
@@ -16219,7 +17238,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_consumer_id_get200_response import V1ExtranetsB2bConsumerIdGet200Response
+from graphiant_sdk.models.v1_extranets_b2b_consumer_id_get_response import V1ExtranetsB2bConsumerIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -16267,7 +17286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bConsumerIdGet200Response**](V1ExtranetsB2bConsumerIdGet200Response.md)
+[**V1ExtranetsB2bConsumerIdGetResponse**](V1ExtranetsB2bConsumerIdGetResponse.md)
 
 ### Authorization
 
@@ -16287,7 +17306,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_consumer_post**
-> V1ExtranetsB2bConsumerPost200Response v1_extranets_b2b_consumer_post(authorization, v1_extranets_b2b_consumer_post_request)
+> V1ExtranetsB2bConsumerPostResponse v1_extranets_b2b_consumer_post(authorization, v1_extranets_b2b_consumer_post_request)
 
 ### Example
 
@@ -16295,8 +17314,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_consumer_post200_response import V1ExtranetsB2bConsumerPost200Response
 from graphiant_sdk.models.v1_extranets_b2b_consumer_post_request import V1ExtranetsB2bConsumerPostRequest
+from graphiant_sdk.models.v1_extranets_b2b_consumer_post_response import V1ExtranetsB2bConsumerPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -16344,7 +17363,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bConsumerPost200Response**](V1ExtranetsB2bConsumerPost200Response.md)
+[**V1ExtranetsB2bConsumerPostResponse**](V1ExtranetsB2bConsumerPostResponse.md)
 
 ### Authorization
 
@@ -16364,7 +17383,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_consumer_summary_get**
-> V1ExtranetsB2bConsumerSummaryGet200Response v1_extranets_b2b_consumer_summary_get(authorization)
+> V1ExtranetsB2bConsumerSummaryGetResponse v1_extranets_b2b_consumer_summary_get(authorization)
 
 ### Example
 
@@ -16372,7 +17391,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_consumer_summary_get200_response import V1ExtranetsB2bConsumerSummaryGet200Response
+from graphiant_sdk.models.v1_extranets_b2b_consumer_summary_get_response import V1ExtranetsB2bConsumerSummaryGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -16418,7 +17437,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bConsumerSummaryGet200Response**](V1ExtranetsB2bConsumerSummaryGet200Response.md)
+[**V1ExtranetsB2bConsumerSummaryGetResponse**](V1ExtranetsB2bConsumerSummaryGetResponse.md)
 
 ### Authorization
 
@@ -16513,7 +17532,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_customer_info_id_get**
-> V1ExtranetsB2bCustomerInfoIdGet200Response v1_extranets_b2b_customer_info_id_get(authorization, id)
+> V1ExtranetsB2bCustomerInfoIdGetResponse v1_extranets_b2b_customer_info_id_get(authorization, id)
 
 ### Example
 
@@ -16521,7 +17540,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_customer_info_id_get200_response import V1ExtranetsB2bCustomerInfoIdGet200Response
+from graphiant_sdk.models.v1_extranets_b2b_customer_info_id_get_response import V1ExtranetsB2bCustomerInfoIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -16569,7 +17588,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bCustomerInfoIdGet200Response**](V1ExtranetsB2bCustomerInfoIdGet200Response.md)
+[**V1ExtranetsB2bCustomerInfoIdGetResponse**](V1ExtranetsB2bCustomerInfoIdGetResponse.md)
 
 ### Authorization
 
@@ -16589,7 +17608,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_general_customers_summary_get**
-> V1ExtranetsB2bGeneralCustomersSummaryGet200Response v1_extranets_b2b_general_customers_summary_get(authorization)
+> V1ExtranetsB2bGeneralCustomersSummaryGetResponse v1_extranets_b2b_general_customers_summary_get(authorization)
 
 ### Example
 
@@ -16597,7 +17616,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_general_customers_summary_get200_response import V1ExtranetsB2bGeneralCustomersSummaryGet200Response
+from graphiant_sdk.models.v1_extranets_b2b_general_customers_summary_get_response import V1ExtranetsB2bGeneralCustomersSummaryGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -16643,7 +17662,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bGeneralCustomersSummaryGet200Response**](V1ExtranetsB2bGeneralCustomersSummaryGet200Response.md)
+[**V1ExtranetsB2bGeneralCustomersSummaryGetResponse**](V1ExtranetsB2bGeneralCustomersSummaryGetResponse.md)
 
 ### Authorization
 
@@ -16663,7 +17682,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_general_services_summary_get**
-> V1ExtranetsB2bProducersSummaryGet200Response v1_extranets_b2b_general_services_summary_get(authorization)
+> V1ExtranetsB2bGeneralServicesSummaryGetResponse v1_extranets_b2b_general_services_summary_get(authorization)
 
 ### Example
 
@@ -16671,7 +17690,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_producers_summary_get200_response import V1ExtranetsB2bProducersSummaryGet200Response
+from graphiant_sdk.models.v1_extranets_b2b_general_services_summary_get_response import V1ExtranetsB2bGeneralServicesSummaryGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -16717,7 +17736,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bProducersSummaryGet200Response**](V1ExtranetsB2bProducersSummaryGet200Response.md)
+[**V1ExtranetsB2bGeneralServicesSummaryGetResponse**](V1ExtranetsB2bGeneralServicesSummaryGetResponse.md)
 
 ### Authorization
 
@@ -16737,7 +17756,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_id_customer_post**
-> V1ExtranetsB2bIdCustomerPost200Response v1_extranets_b2b_id_customer_post(authorization, id, v1_extranets_b2b_id_customer_post_request)
+> V1ExtranetsB2bIdCustomerPostResponse v1_extranets_b2b_id_customer_post(authorization, id, v1_extranets_b2b_id_customer_post_request)
 
 ### Example
 
@@ -16745,8 +17764,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_id_customer_post200_response import V1ExtranetsB2bIdCustomerPost200Response
 from graphiant_sdk.models.v1_extranets_b2b_id_customer_post_request import V1ExtranetsB2bIdCustomerPostRequest
+from graphiant_sdk.models.v1_extranets_b2b_id_customer_post_response import V1ExtranetsB2bIdCustomerPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -16796,7 +17815,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bIdCustomerPost200Response**](V1ExtranetsB2bIdCustomerPost200Response.md)
+[**V1ExtranetsB2bIdCustomerPostResponse**](V1ExtranetsB2bIdCustomerPostResponse.md)
 
 ### Authorization
 
@@ -16816,7 +17835,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_id_customer_summary_get**
-> V1ExtranetsB2bIdCustomerSummaryGet200Response v1_extranets_b2b_id_customer_summary_get(authorization, id)
+> V1ExtranetsB2bIdCustomerSummaryGetResponse v1_extranets_b2b_id_customer_summary_get(authorization, id)
 
 ### Example
 
@@ -16824,7 +17843,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_id_customer_summary_get200_response import V1ExtranetsB2bIdCustomerSummaryGet200Response
+from graphiant_sdk.models.v1_extranets_b2b_id_customer_summary_get_response import V1ExtranetsB2bIdCustomerSummaryGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -16872,7 +17891,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bIdCustomerSummaryGet200Response**](V1ExtranetsB2bIdCustomerSummaryGet200Response.md)
+[**V1ExtranetsB2bIdCustomerSummaryGetResponse**](V1ExtranetsB2bIdCustomerSummaryGetResponse.md)
 
 ### Authorization
 
@@ -16967,7 +17986,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_id_producer_get**
-> V1ExtranetsB2bPost200Response v1_extranets_b2b_id_producer_get(authorization, id, type=type)
+> V1ExtranetsB2bIdProducerGetResponse v1_extranets_b2b_id_producer_get(authorization, id, type=type)
 
 ### Example
 
@@ -16975,7 +17994,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_post200_response import V1ExtranetsB2bPost200Response
+from graphiant_sdk.models.v1_extranets_b2b_id_producer_get_response import V1ExtranetsB2bIdProducerGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -17025,7 +18044,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPost200Response**](V1ExtranetsB2bPost200Response.md)
+[**V1ExtranetsB2bIdProducerGetResponse**](V1ExtranetsB2bIdProducerGetResponse.md)
 
 ### Authorization
 
@@ -17045,7 +18064,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_id_put**
-> V1ExtranetsB2bPost200Response v1_extranets_b2b_id_put(authorization, id, v1_extranets_b2b_id_put_request)
+> V1ExtranetsB2bIdPutResponse v1_extranets_b2b_id_put(authorization, id, v1_extranets_b2b_id_put_request)
 
 ### Example
 
@@ -17054,7 +18073,7 @@ Name | Type | Description  | Notes
 ```python
 import graphiant_sdk
 from graphiant_sdk.models.v1_extranets_b2b_id_put_request import V1ExtranetsB2bIdPutRequest
-from graphiant_sdk.models.v1_extranets_b2b_post200_response import V1ExtranetsB2bPost200Response
+from graphiant_sdk.models.v1_extranets_b2b_id_put_response import V1ExtranetsB2bIdPutResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -17104,7 +18123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPost200Response**](V1ExtranetsB2bPost200Response.md)
+[**V1ExtranetsB2bIdPutResponse**](V1ExtranetsB2bIdPutResponse.md)
 
 ### Authorization
 
@@ -17124,7 +18143,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_peering_consumer_customer_id_consumer_details_get**
-> V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet200Response v1_extranets_b2b_peering_consumer_customer_id_consumer_details_get(authorization, customer_id)
+> V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetResponse v1_extranets_b2b_peering_consumer_customer_id_consumer_details_get(authorization, customer_id)
 
 ### Example
 
@@ -17132,7 +18151,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_peering_consumer_customer_id_consumer_details_get200_response import V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet200Response
+from graphiant_sdk.models.v1_extranets_b2b_peering_consumer_customer_id_consumer_details_get_response import V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -17180,7 +18199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet200Response**](V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet200Response.md)
+[**V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetResponse**](V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetResponse.md)
 
 ### Authorization
 
@@ -17200,7 +18219,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_peering_consumer_match_id_match_details_get**
-> V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet200Response v1_extranets_b2b_peering_consumer_match_id_match_details_get(authorization, match_id)
+> V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetResponse v1_extranets_b2b_peering_consumer_match_id_match_details_get(authorization, match_id)
 
 ### Example
 
@@ -17208,7 +18227,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_peering_consumer_match_id_match_details_get200_response import V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet200Response
+from graphiant_sdk.models.v1_extranets_b2b_peering_consumer_match_id_match_details_get_response import V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -17256,7 +18275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet200Response**](V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet200Response.md)
+[**V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetResponse**](V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetResponse.md)
 
 ### Authorization
 
@@ -17276,7 +18295,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_peering_consumer_match_id_post**
-> V1ExtranetsB2bPeeringConsumerMatchIdPost200Response v1_extranets_b2b_peering_consumer_match_id_post(authorization, match_id, v1_extranets_b2b_peering_consumer_match_id_post_request)
+> V1ExtranetsB2bPeeringConsumerMatchIdPostResponse v1_extranets_b2b_peering_consumer_match_id_post(authorization, match_id, v1_extranets_b2b_peering_consumer_match_id_post_request)
 
 ### Example
 
@@ -17284,8 +18303,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_peering_consumer_match_id_post200_response import V1ExtranetsB2bPeeringConsumerMatchIdPost200Response
 from graphiant_sdk.models.v1_extranets_b2b_peering_consumer_match_id_post_request import V1ExtranetsB2bPeeringConsumerMatchIdPostRequest
+from graphiant_sdk.models.v1_extranets_b2b_peering_consumer_match_id_post_response import V1ExtranetsB2bPeeringConsumerMatchIdPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -17335,7 +18354,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringConsumerMatchIdPost200Response**](V1ExtranetsB2bPeeringConsumerMatchIdPost200Response.md)
+[**V1ExtranetsB2bPeeringConsumerMatchIdPostResponse**](V1ExtranetsB2bPeeringConsumerMatchIdPostResponse.md)
 
 ### Authorization
 
@@ -17355,7 +18374,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_peering_customer_id_delete**
-> object v1_extranets_b2b_peering_customer_id_delete(authorization, id)
+> V1ExtranetsB2bPeeringCustomerIdDeleteResponse v1_extranets_b2b_peering_customer_id_delete(authorization, id)
 
 ### Example
 
@@ -17363,6 +18382,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
+from graphiant_sdk.models.v1_extranets_b2b_peering_customer_id_delete_response import V1ExtranetsB2bPeeringCustomerIdDeleteResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -17410,7 +18430,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**V1ExtranetsB2bPeeringCustomerIdDeleteResponse**](V1ExtranetsB2bPeeringCustomerIdDeleteResponse.md)
 
 ### Authorization
 
@@ -17430,7 +18450,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_peering_customer_id_get**
-> V1ExtranetsB2bPeeringCustomerIdGet200Response v1_extranets_b2b_peering_customer_id_get(authorization, id)
+> V1ExtranetsB2bPeeringCustomerIdGetResponse v1_extranets_b2b_peering_customer_id_get(authorization, id)
 
 ### Example
 
@@ -17438,7 +18458,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_peering_customer_id_get200_response import V1ExtranetsB2bPeeringCustomerIdGet200Response
+from graphiant_sdk.models.v1_extranets_b2b_peering_customer_id_get_response import V1ExtranetsB2bPeeringCustomerIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -17486,7 +18506,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringCustomerIdGet200Response**](V1ExtranetsB2bPeeringCustomerIdGet200Response.md)
+[**V1ExtranetsB2bPeeringCustomerIdGetResponse**](V1ExtranetsB2bPeeringCustomerIdGetResponse.md)
 
 ### Authorization
 
@@ -17506,7 +18526,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_peering_customer_post**
-> V1ExtranetsB2bPeeringCustomerPost200Response v1_extranets_b2b_peering_customer_post(authorization, v1_extranets_b2b_peering_customer_post_request)
+> V1ExtranetsB2bPeeringCustomerPostResponse v1_extranets_b2b_peering_customer_post(authorization, v1_extranets_b2b_peering_customer_post_request)
 
 ### Example
 
@@ -17514,8 +18534,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_peering_customer_post200_response import V1ExtranetsB2bPeeringCustomerPost200Response
 from graphiant_sdk.models.v1_extranets_b2b_peering_customer_post_request import V1ExtranetsB2bPeeringCustomerPostRequest
+from graphiant_sdk.models.v1_extranets_b2b_peering_customer_post_response import V1ExtranetsB2bPeeringCustomerPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -17563,7 +18583,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringCustomerPost200Response**](V1ExtranetsB2bPeeringCustomerPost200Response.md)
+[**V1ExtranetsB2bPeeringCustomerPostResponse**](V1ExtranetsB2bPeeringCustomerPostResponse.md)
 
 ### Authorization
 
@@ -17582,8 +18602,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_extranets_b2b_peering_match_service_to_customer_post**
-> V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response v1_extranets_b2b_peering_match_service_to_customer_post(authorization, v1_extranets_b2b_peering_match_service_to_customer_post_request)
+# **v1_extranets_b2b_peering_match_service_to_customer_id_delete**
+> object v1_extranets_b2b_peering_match_service_to_customer_id_delete(authorization, id)
+
+Unsubscribe a customer from a service
 
 ### Example
 
@@ -17591,8 +18613,161 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_peering_match_service_to_customer_post200_response import V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
+    id = 1234567891011 # int | id for service to customer match
+
+    try:
+        api_response = api_instance.v1_extranets_b2b_peering_match_service_to_customer_id_delete(authorization, id)
+        print("The response of DefaultApi->v1_extranets_b2b_peering_match_service_to_customer_id_delete:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_extranets_b2b_peering_match_service_to_customer_id_delete: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **id** | **int**| id for service to customer match | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_extranets_b2b_peering_match_service_to_customer_id_get**
+> V1ExtranetsB2bPeeringMatchServiceToCustomerIdGetResponse v1_extranets_b2b_peering_match_service_to_customer_id_get(authorization, id)
+
+Get details for a service to customer subscription
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.models.v1_extranets_b2b_peering_match_service_to_customer_id_get_response import V1ExtranetsB2bPeeringMatchServiceToCustomerIdGetResponse
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
+    id = 1234567891011 # int | service id
+
+    try:
+        api_response = api_instance.v1_extranets_b2b_peering_match_service_to_customer_id_get(authorization, id)
+        print("The response of DefaultApi->v1_extranets_b2b_peering_match_service_to_customer_id_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_extranets_b2b_peering_match_service_to_customer_id_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **id** | **int**| service id | 
+
+### Return type
+
+[**V1ExtranetsB2bPeeringMatchServiceToCustomerIdGetResponse**](V1ExtranetsB2bPeeringMatchServiceToCustomerIdGetResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_extranets_b2b_peering_match_service_to_customer_post**
+> V1ExtranetsB2bPeeringMatchServiceToCustomerPostResponse v1_extranets_b2b_peering_match_service_to_customer_post(authorization, v1_extranets_b2b_peering_match_service_to_customer_post_request)
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
 from graphiant_sdk.models.v1_extranets_b2b_peering_match_service_to_customer_post_request import V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest
+from graphiant_sdk.models.v1_extranets_b2b_peering_match_service_to_customer_post_response import V1ExtranetsB2bPeeringMatchServiceToCustomerPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -17640,7 +18815,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response**](V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response.md)
+[**V1ExtranetsB2bPeeringMatchServiceToCustomerPostResponse**](V1ExtranetsB2bPeeringMatchServiceToCustomerPostResponse.md)
 
 ### Authorization
 
@@ -17659,8 +18834,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_extranets_b2b_peering_match_services_summary_get**
-> V1ExtranetsB2bPeeringMatchServicesSummaryGet200Response v1_extranets_b2b_peering_match_services_summary_get(authorization)
+# **v1_extranets_b2b_peering_match_services_summary_id_get**
+> V1ExtranetsB2bPeeringMatchServicesSummaryIdGetResponse v1_extranets_b2b_peering_match_services_summary_id_get(authorization, id)
 
 ### Example
 
@@ -17668,7 +18843,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_peering_match_services_summary_get200_response import V1ExtranetsB2bPeeringMatchServicesSummaryGet200Response
+from graphiant_sdk.models.v1_extranets_b2b_peering_match_services_summary_id_get_response import V1ExtranetsB2bPeeringMatchServicesSummaryIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -17694,13 +18869,14 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
+    id = 1234567891011 # int | 
 
     try:
-        api_response = api_instance.v1_extranets_b2b_peering_match_services_summary_get(authorization)
-        print("The response of DefaultApi->v1_extranets_b2b_peering_match_services_summary_get:\n")
+        api_response = api_instance.v1_extranets_b2b_peering_match_services_summary_id_get(authorization, id)
+        print("The response of DefaultApi->v1_extranets_b2b_peering_match_services_summary_id_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DefaultApi->v1_extranets_b2b_peering_match_services_summary_get: %s\n" % e)
+        print("Exception when calling DefaultApi->v1_extranets_b2b_peering_match_services_summary_id_get: %s\n" % e)
 ```
 
 
@@ -17711,10 +18887,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **id** | **int**|  | 
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringMatchServicesSummaryGet200Response**](V1ExtranetsB2bPeeringMatchServicesSummaryGet200Response.md)
+[**V1ExtranetsB2bPeeringMatchServicesSummaryIdGetResponse**](V1ExtranetsB2bPeeringMatchServicesSummaryIdGetResponse.md)
 
 ### Authorization
 
@@ -17734,7 +18911,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_peering_producer_id_get**
-> V1ExtranetsB2bPeeringProducerIdGet200Response v1_extranets_b2b_peering_producer_id_get(authorization, id)
+> V1ExtranetsB2bPeeringProducerIdGetResponse v1_extranets_b2b_peering_producer_id_get(authorization, id)
 
 ### Example
 
@@ -17742,7 +18919,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_peering_producer_id_get200_response import V1ExtranetsB2bPeeringProducerIdGet200Response
+from graphiant_sdk.models.v1_extranets_b2b_peering_producer_id_get_response import V1ExtranetsB2bPeeringProducerIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -17790,7 +18967,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringProducerIdGet200Response**](V1ExtranetsB2bPeeringProducerIdGet200Response.md)
+[**V1ExtranetsB2bPeeringProducerIdGetResponse**](V1ExtranetsB2bPeeringProducerIdGetResponse.md)
 
 ### Authorization
 
@@ -17810,7 +18987,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_peering_producer_id_matching_customers_summary_get**
-> V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet200Response v1_extranets_b2b_peering_producer_id_matching_customers_summary_get(authorization, id)
+> V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetResponse v1_extranets_b2b_peering_producer_id_matching_customers_summary_get(authorization, id)
 
 ### Example
 
@@ -17818,7 +18995,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_peering_producer_id_matching_customers_summary_get200_response import V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet200Response
+from graphiant_sdk.models.v1_extranets_b2b_peering_producer_id_matching_customers_summary_get_response import V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -17866,7 +19043,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet200Response**](V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet200Response.md)
+[**V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetResponse**](V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetResponse.md)
 
 ### Authorization
 
@@ -17886,7 +19063,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_peering_producer_post**
-> V1ExtranetsB2bPeeringProducerPost200Response v1_extranets_b2b_peering_producer_post(authorization, v1_extranets_b2b_peering_producer_post_request)
+> V1ExtranetsB2bPeeringProducerPostResponse v1_extranets_b2b_peering_producer_post(authorization, v1_extranets_b2b_peering_producer_post_request)
 
 ### Example
 
@@ -17894,8 +19071,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_peering_producer_post200_response import V1ExtranetsB2bPeeringProducerPost200Response
 from graphiant_sdk.models.v1_extranets_b2b_peering_producer_post_request import V1ExtranetsB2bPeeringProducerPostRequest
+from graphiant_sdk.models.v1_extranets_b2b_peering_producer_post_response import V1ExtranetsB2bPeeringProducerPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -17943,7 +19120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringProducerPost200Response**](V1ExtranetsB2bPeeringProducerPost200Response.md)
+[**V1ExtranetsB2bPeeringProducerPostResponse**](V1ExtranetsB2bPeeringProducerPostResponse.md)
 
 ### Authorization
 
@@ -17963,7 +19140,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_post**
-> V1ExtranetsB2bPost200Response v1_extranets_b2b_post(authorization, v1_extranets_b2b_post_request)
+> V1ExtranetsB2bPostResponse v1_extranets_b2b_post(authorization, v1_extranets_b2b_post_request)
 
 ### Example
 
@@ -17971,8 +19148,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_post200_response import V1ExtranetsB2bPost200Response
 from graphiant_sdk.models.v1_extranets_b2b_post_request import V1ExtranetsB2bPostRequest
+from graphiant_sdk.models.v1_extranets_b2b_post_response import V1ExtranetsB2bPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -18020,7 +19197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPost200Response**](V1ExtranetsB2bPost200Response.md)
+[**V1ExtranetsB2bPostResponse**](V1ExtranetsB2bPostResponse.md)
 
 ### Authorization
 
@@ -18040,7 +19217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_producer_device_status_id_get**
-> V1ExtranetsB2bProducerDeviceStatusIdGet200Response v1_extranets_b2b_producer_device_status_id_get(authorization, id)
+> V1ExtranetsB2bProducerDeviceStatusIdGetResponse v1_extranets_b2b_producer_device_status_id_get(authorization, id)
 
 ### Example
 
@@ -18048,7 +19225,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_producer_device_status_id_get200_response import V1ExtranetsB2bProducerDeviceStatusIdGet200Response
+from graphiant_sdk.models.v1_extranets_b2b_producer_device_status_id_get_response import V1ExtranetsB2bProducerDeviceStatusIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -18096,7 +19273,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bProducerDeviceStatusIdGet200Response**](V1ExtranetsB2bProducerDeviceStatusIdGet200Response.md)
+[**V1ExtranetsB2bProducerDeviceStatusIdGetResponse**](V1ExtranetsB2bProducerDeviceStatusIdGetResponse.md)
 
 ### Authorization
 
@@ -18116,7 +19293,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_b2b_producers_summary_get**
-> V1ExtranetsB2bProducersSummaryGet200Response v1_extranets_b2b_producers_summary_get(authorization)
+> V1ExtranetsB2bProducersSummaryGetResponse v1_extranets_b2b_producers_summary_get(authorization)
 
 ### Example
 
@@ -18124,7 +19301,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_b2b_producers_summary_get200_response import V1ExtranetsB2bProducersSummaryGet200Response
+from graphiant_sdk.models.v1_extranets_b2b_producers_summary_get_response import V1ExtranetsB2bProducersSummaryGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -18170,7 +19347,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bProducersSummaryGet200Response**](V1ExtranetsB2bProducersSummaryGet200Response.md)
+[**V1ExtranetsB2bProducersSummaryGetResponse**](V1ExtranetsB2bProducersSummaryGetResponse.md)
 
 ### Authorization
 
@@ -18190,7 +19367,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_get**
-> V1ExtranetsGet200Response v1_extranets_get(authorization)
+> V1ExtranetsGetResponse v1_extranets_get(authorization)
 
 ### Example
 
@@ -18198,7 +19375,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_get200_response import V1ExtranetsGet200Response
+from graphiant_sdk.models.v1_extranets_get_response import V1ExtranetsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -18244,7 +19421,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsGet200Response**](V1ExtranetsGet200Response.md)
+[**V1ExtranetsGetResponse**](V1ExtranetsGetResponse.md)
 
 ### Authorization
 
@@ -18264,7 +19441,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_id_apply_post**
-> V1ExtranetsIdApplyPost202Response v1_extranets_id_apply_post(authorization, id, v1_extranets_id_apply_post_request)
+> V1ExtranetsIdApplyPostResponse v1_extranets_id_apply_post(authorization, id, v1_extranets_id_apply_post_request)
 
 ### Example
 
@@ -18272,8 +19449,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_id_apply_post202_response import V1ExtranetsIdApplyPost202Response
 from graphiant_sdk.models.v1_extranets_id_apply_post_request import V1ExtranetsIdApplyPostRequest
+from graphiant_sdk.models.v1_extranets_id_apply_post_response import V1ExtranetsIdApplyPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -18323,7 +19500,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsIdApplyPost202Response**](V1ExtranetsIdApplyPost202Response.md)
+[**V1ExtranetsIdApplyPostResponse**](V1ExtranetsIdApplyPostResponse.md)
 
 ### Authorization
 
@@ -18343,7 +19520,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_id_delete**
-> V1ExtranetsIdDelete200Response v1_extranets_id_delete(authorization, id)
+> V1ExtranetsIdDeleteResponse v1_extranets_id_delete(authorization, id)
 
 ### Example
 
@@ -18351,7 +19528,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_id_delete200_response import V1ExtranetsIdDelete200Response
+from graphiant_sdk.models.v1_extranets_id_delete_response import V1ExtranetsIdDeleteResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -18399,7 +19576,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsIdDelete200Response**](V1ExtranetsIdDelete200Response.md)
+[**V1ExtranetsIdDeleteResponse**](V1ExtranetsIdDeleteResponse.md)
 
 ### Authorization
 
@@ -18419,7 +19596,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_id_get**
-> V1ExtranetsPost200Response v1_extranets_id_get(authorization, id)
+> V1ExtranetsIdGetResponse v1_extranets_id_get(authorization, id)
 
 ### Example
 
@@ -18427,7 +19604,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_post200_response import V1ExtranetsPost200Response
+from graphiant_sdk.models.v1_extranets_id_get_response import V1ExtranetsIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -18475,7 +19652,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsPost200Response**](V1ExtranetsPost200Response.md)
+[**V1ExtranetsIdGetResponse**](V1ExtranetsIdGetResponse.md)
 
 ### Authorization
 
@@ -18495,7 +19672,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_id_put**
-> V1ExtranetsPost200Response v1_extranets_id_put(authorization, id, v1_extranets_post_request)
+> V1ExtranetsIdPutResponse v1_extranets_id_put(authorization, id, v1_extranets_id_put_request)
 
 ### Example
 
@@ -18503,8 +19680,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_post200_response import V1ExtranetsPost200Response
-from graphiant_sdk.models.v1_extranets_post_request import V1ExtranetsPostRequest
+from graphiant_sdk.models.v1_extranets_id_put_request import V1ExtranetsIdPutRequest
+from graphiant_sdk.models.v1_extranets_id_put_response import V1ExtranetsIdPutResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -18531,10 +19708,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
     id = 1234567891011 # int | 
-    v1_extranets_post_request = graphiant_sdk.V1ExtranetsPostRequest() # V1ExtranetsPostRequest | 
+    v1_extranets_id_put_request = graphiant_sdk.V1ExtranetsIdPutRequest() # V1ExtranetsIdPutRequest | 
 
     try:
-        api_response = api_instance.v1_extranets_id_put(authorization, id, v1_extranets_post_request)
+        api_response = api_instance.v1_extranets_id_put(authorization, id, v1_extranets_id_put_request)
         print("The response of DefaultApi->v1_extranets_id_put:\n")
         pprint(api_response)
     except Exception as e:
@@ -18550,11 +19727,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **id** | **int**|  | 
- **v1_extranets_post_request** | [**V1ExtranetsPostRequest**](V1ExtranetsPostRequest.md)|  | 
+ **v1_extranets_id_put_request** | [**V1ExtranetsIdPutRequest**](V1ExtranetsIdPutRequest.md)|  | 
 
 ### Return type
 
-[**V1ExtranetsPost200Response**](V1ExtranetsPost200Response.md)
+[**V1ExtranetsIdPutResponse**](V1ExtranetsIdPutResponse.md)
 
 ### Authorization
 
@@ -18574,7 +19751,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_id_status_get**
-> V1ExtranetsIdDelete200Response v1_extranets_id_status_get(authorization, id)
+> V1ExtranetsIdStatusGetResponse v1_extranets_id_status_get(authorization, id)
 
 ### Example
 
@@ -18582,7 +19759,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_id_delete200_response import V1ExtranetsIdDelete200Response
+from graphiant_sdk.models.v1_extranets_id_status_get_response import V1ExtranetsIdStatusGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -18630,7 +19807,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsIdDelete200Response**](V1ExtranetsIdDelete200Response.md)
+[**V1ExtranetsIdStatusGetResponse**](V1ExtranetsIdStatusGetResponse.md)
 
 ### Authorization
 
@@ -18650,7 +19827,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_monitoring_lan_segments_get**
-> V1ExtranetsMonitoringLanSegmentsGet200Response v1_extranets_monitoring_lan_segments_get(authorization)
+> V1ExtranetsMonitoringLanSegmentsGetResponse v1_extranets_monitoring_lan_segments_get(authorization)
 
 ### Example
 
@@ -18658,7 +19835,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_monitoring_lan_segments_get200_response import V1ExtranetsMonitoringLanSegmentsGet200Response
+from graphiant_sdk.models.v1_extranets_monitoring_lan_segments_get_response import V1ExtranetsMonitoringLanSegmentsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -18704,7 +19881,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsMonitoringLanSegmentsGet200Response**](V1ExtranetsMonitoringLanSegmentsGet200Response.md)
+[**V1ExtranetsMonitoringLanSegmentsGetResponse**](V1ExtranetsMonitoringLanSegmentsGetResponse.md)
 
 ### Authorization
 
@@ -18724,7 +19901,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_monitoring_nat_usage_get**
-> V1ExtranetsMonitoringNatUsageGet200Response v1_extranets_monitoring_nat_usage_get(authorization)
+> V1ExtranetsMonitoringNatUsageGetResponse v1_extranets_monitoring_nat_usage_get(authorization)
 
 ### Example
 
@@ -18732,7 +19909,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_monitoring_nat_usage_get200_response import V1ExtranetsMonitoringNatUsageGet200Response
+from graphiant_sdk.models.v1_extranets_monitoring_nat_usage_get_response import V1ExtranetsMonitoringNatUsageGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -18778,7 +19955,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsMonitoringNatUsageGet200Response**](V1ExtranetsMonitoringNatUsageGet200Response.md)
+[**V1ExtranetsMonitoringNatUsageGetResponse**](V1ExtranetsMonitoringNatUsageGetResponse.md)
 
 ### Authorization
 
@@ -18798,7 +19975,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_monitoring_traffic_security_policy_post**
-> V1ExtranetsMonitoringTrafficSecurityPolicyPost200Response v1_extranets_monitoring_traffic_security_policy_post(authorization, v1_extranets_monitoring_traffic_security_policy_post_request)
+> V1ExtranetsMonitoringTrafficSecurityPolicyPostResponse v1_extranets_monitoring_traffic_security_policy_post(authorization, v1_extranets_monitoring_traffic_security_policy_post_request)
+
+Get lists of traffic and security policies
 
 ### Example
 
@@ -18806,8 +19985,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_monitoring_traffic_security_policy_post200_response import V1ExtranetsMonitoringTrafficSecurityPolicyPost200Response
 from graphiant_sdk.models.v1_extranets_monitoring_traffic_security_policy_post_request import V1ExtranetsMonitoringTrafficSecurityPolicyPostRequest
+from graphiant_sdk.models.v1_extranets_monitoring_traffic_security_policy_post_response import V1ExtranetsMonitoringTrafficSecurityPolicyPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -18855,7 +20034,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsMonitoringTrafficSecurityPolicyPost200Response**](V1ExtranetsMonitoringTrafficSecurityPolicyPost200Response.md)
+[**V1ExtranetsMonitoringTrafficSecurityPolicyPostResponse**](V1ExtranetsMonitoringTrafficSecurityPolicyPostResponse.md)
 
 ### Authorization
 
@@ -18875,7 +20054,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_post**
-> V1ExtranetsPost200Response v1_extranets_post(authorization, v1_extranets_post_request)
+> V1ExtranetsPostResponse v1_extranets_post(authorization, v1_extranets_post_request)
 
 ### Example
 
@@ -18883,8 +20062,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_post200_response import V1ExtranetsPost200Response
 from graphiant_sdk.models.v1_extranets_post_request import V1ExtranetsPostRequest
+from graphiant_sdk.models.v1_extranets_post_response import V1ExtranetsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -18932,7 +20111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsPost200Response**](V1ExtranetsPost200Response.md)
+[**V1ExtranetsPostResponse**](V1ExtranetsPostResponse.md)
 
 ### Authorization
 
@@ -18952,7 +20131,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_resolve_policy_target_post**
-> V1ExtranetsResolvePolicyTargetPost200Response v1_extranets_resolve_policy_target_post(authorization, v1_extranets_resolve_policy_target_post_request)
+> V1ExtranetsResolvePolicyTargetPostResponse v1_extranets_resolve_policy_target_post(authorization, v1_extranets_resolve_policy_target_post_request)
 
 ### Example
 
@@ -18960,8 +20139,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_resolve_policy_target_post200_response import V1ExtranetsResolvePolicyTargetPost200Response
 from graphiant_sdk.models.v1_extranets_resolve_policy_target_post_request import V1ExtranetsResolvePolicyTargetPostRequest
+from graphiant_sdk.models.v1_extranets_resolve_policy_target_post_response import V1ExtranetsResolvePolicyTargetPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -19009,7 +20188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsResolvePolicyTargetPost200Response**](V1ExtranetsResolvePolicyTargetPost200Response.md)
+[**V1ExtranetsResolvePolicyTargetPostResponse**](V1ExtranetsResolvePolicyTargetPostResponse.md)
 
 ### Authorization
 
@@ -19029,7 +20208,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_extranets_source_segments_post**
-> V1ExtranetsSourceSegmentsPost200Response v1_extranets_source_segments_post(authorization, v1_extranets_source_segments_post_request)
+> V1ExtranetsSourceSegmentsPostResponse v1_extranets_source_segments_post(authorization, v1_extranets_source_segments_post_request)
 
 ### Example
 
@@ -19037,8 +20216,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranets_source_segments_post200_response import V1ExtranetsSourceSegmentsPost200Response
 from graphiant_sdk.models.v1_extranets_source_segments_post_request import V1ExtranetsSourceSegmentsPostRequest
+from graphiant_sdk.models.v1_extranets_source_segments_post_response import V1ExtranetsSourceSegmentsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -19086,7 +20265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsSourceSegmentsPost200Response**](V1ExtranetsSourceSegmentsPost200Response.md)
+[**V1ExtranetsSourceSegmentsPostResponse**](V1ExtranetsSourceSegmentsPostResponse.md)
 
 ### Authorization
 
@@ -19106,7 +20285,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_flows_flow_table_post**
-> V1FlowsFlowTablePost200Response v1_flows_flow_table_post(authorization, v1_flows_flow_table_post_request)
+> V1FlowsFlowTablePostResponse v1_flows_flow_table_post(authorization, v1_flows_flow_table_post_request)
+
+Get flow table for the app on the device
 
 ### Example
 
@@ -19114,8 +20295,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_flows_flow_table_post200_response import V1FlowsFlowTablePost200Response
 from graphiant_sdk.models.v1_flows_flow_table_post_request import V1FlowsFlowTablePostRequest
+from graphiant_sdk.models.v1_flows_flow_table_post_response import V1FlowsFlowTablePostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -19163,7 +20344,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1FlowsFlowTablePost200Response**](V1FlowsFlowTablePost200Response.md)
+[**V1FlowsFlowTablePostResponse**](V1FlowsFlowTablePostResponse.md)
 
 ### Authorization
 
@@ -19183,7 +20364,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_flows_topology_post**
-> V1FlowsTopologyPost200Response v1_flows_topology_post(authorization, v1_flows_topology_post_request)
+> V1FlowsTopologyPostResponse v1_flows_topology_post(authorization, v1_flows_topology_post_request)
+
+Get flow based node and circuit topology for the device
 
 ### Example
 
@@ -19191,8 +20374,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_flows_topology_post200_response import V1FlowsTopologyPost200Response
 from graphiant_sdk.models.v1_flows_topology_post_request import V1FlowsTopologyPostRequest
+from graphiant_sdk.models.v1_flows_topology_post_response import V1FlowsTopologyPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -19240,7 +20423,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1FlowsTopologyPost200Response**](V1FlowsTopologyPost200Response.md)
+[**V1FlowsTopologyPostResponse**](V1FlowsTopologyPostResponse.md)
 
 ### Authorization
 
@@ -19335,7 +20518,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_gateways_guest_consumer_match_id_get**
-> V1GatewaysGuestConsumerMatchIdGet200Response v1_gateways_guest_consumer_match_id_get(authorization, match_id, email=email)
+> V1GatewaysGuestConsumerMatchIdGetResponse v1_gateways_guest_consumer_match_id_get(authorization, match_id, email=email)
+
+Get Site to Site VPN information for a non-Graphiant guest consumer by their email
 
 ### Example
 
@@ -19343,7 +20528,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_gateways_guest_consumer_match_id_get200_response import V1GatewaysGuestConsumerMatchIdGet200Response
+from graphiant_sdk.models.v1_gateways_guest_consumer_match_id_get_response import V1GatewaysGuestConsumerMatchIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -19393,7 +20578,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GatewaysGuestConsumerMatchIdGet200Response**](V1GatewaysGuestConsumerMatchIdGet200Response.md)
+[**V1GatewaysGuestConsumerMatchIdGetResponse**](V1GatewaysGuestConsumerMatchIdGetResponse.md)
 
 ### Authorization
 
@@ -19413,7 +20598,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_gateways_id_details_get**
-> V1GatewaysPostRequest v1_gateways_id_details_get(authorization, id)
+> V1GatewaysIdDetailsGetResponse v1_gateways_id_details_get(authorization, id)
 
 ### Example
 
@@ -19421,7 +20606,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_gateways_post_request import V1GatewaysPostRequest
+from graphiant_sdk.models.v1_gateways_id_details_get_response import V1GatewaysIdDetailsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -19469,7 +20654,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GatewaysPostRequest**](V1GatewaysPostRequest.md)
+[**V1GatewaysIdDetailsGetResponse**](V1GatewaysIdDetailsGetResponse.md)
 
 ### Authorization
 
@@ -19489,7 +20674,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_gateways_ipsec_regions_region_id_vrfs_vrf_id_inside_subnet_get**
-> V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet200Response v1_gateways_ipsec_regions_region_id_vrfs_vrf_id_inside_subnet_get(authorization, region_id, vrf_id, address_family=address_family)
+> V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetResponse v1_gateways_ipsec_regions_region_id_vrfs_vrf_id_inside_subnet_get(authorization, region_id, vrf_id, address_family=address_family)
+
+Get the IPv4/Ipv6 Overlay Subnet for an ipsec gateway
 
 ### Example
 
@@ -19497,7 +20684,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_gateways_ipsec_regions_region_id_vrfs_vrf_id_inside_subnet_get200_response import V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet200Response
+from graphiant_sdk.models.v1_gateways_ipsec_regions_region_id_vrfs_vrf_id_inside_subnet_get_response import V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -19549,7 +20736,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet200Response**](V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet200Response.md)
+[**V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetResponse**](V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetResponse.md)
 
 ### Authorization
 
@@ -19569,7 +20756,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_gateways_post**
-> V1GatewaysPost200Response v1_gateways_post(authorization, v1_gateways_post_request)
+> V1GatewaysPostResponse v1_gateways_post(authorization, v1_gateways_post_request)
 
 ### Example
 
@@ -19577,8 +20764,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_gateways_post200_response import V1GatewaysPost200Response
 from graphiant_sdk.models.v1_gateways_post_request import V1GatewaysPostRequest
+from graphiant_sdk.models.v1_gateways_post_response import V1GatewaysPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -19626,7 +20813,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GatewaysPost200Response**](V1GatewaysPost200Response.md)
+[**V1GatewaysPostResponse**](V1GatewaysPostResponse.md)
 
 ### Authorization
 
@@ -19721,8 +20908,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_gateways_regions_get**
-> V1GatewaysRegionsGet200Response v1_gateways_regions_get(authorization)
+# **v1_gateways_reference_consumer_get**
+> V1GatewaysReferenceConsumerGetResponse v1_gateways_reference_consumer_get(authorization)
+
+Get the priorly-configured IPSec gateway details for a customer, lan segment, region combination to be re-used for any new service matches for that customer with the given lan segment and region
 
 ### Example
 
@@ -19730,7 +20919,81 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_gateways_regions_get200_response import V1GatewaysRegionsGet200Response
+from graphiant_sdk.models.v1_gateways_reference_consumer_get_response import V1GatewaysReferenceConsumerGetResponse
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
+
+    try:
+        api_response = api_instance.v1_gateways_reference_consumer_get(authorization)
+        print("The response of DefaultApi->v1_gateways_reference_consumer_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_gateways_reference_consumer_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+
+### Return type
+
+[**V1GatewaysReferenceConsumerGetResponse**](V1GatewaysReferenceConsumerGetResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_gateways_regions_get**
+> V1GatewaysRegionsGetResponse v1_gateways_regions_get(authorization)
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.models.v1_gateways_regions_get_response import V1GatewaysRegionsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -19776,7 +21039,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GatewaysRegionsGet200Response**](V1GatewaysRegionsGet200Response.md)
+[**V1GatewaysRegionsGetResponse**](V1GatewaysRegionsGetResponse.md)
 
 ### Authorization
 
@@ -19872,7 +21135,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_gateways_summary_get**
-> V1GatewaysSummaryGet200Response v1_gateways_summary_get(authorization)
+> V1GatewaysSummaryGetResponse v1_gateways_summary_get(authorization)
 
 ### Example
 
@@ -19880,7 +21143,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_gateways_summary_get200_response import V1GatewaysSummaryGet200Response
+from graphiant_sdk.models.v1_gateways_summary_get_response import V1GatewaysSummaryGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -19926,7 +21189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GatewaysSummaryGet200Response**](V1GatewaysSummaryGet200Response.md)
+[**V1GatewaysSummaryGetResponse**](V1GatewaysSummaryGetResponse.md)
 
 ### Authorization
 
@@ -19946,7 +21209,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_apps_app_list_options_get**
-> V1GlobalAppsAppListOptionsGet200Response v1_global_apps_app_list_options_get(authorization)
+> V1GlobalAppsAppListOptionsGetResponse v1_global_apps_app_list_options_get(authorization)
+
+Gets all apps and categories assignable to an app list for the the current enterprise
 
 ### Example
 
@@ -19954,7 +21219,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_apps_app_list_options_get200_response import V1GlobalAppsAppListOptionsGet200Response
+from graphiant_sdk.models.v1_global_apps_app_list_options_get_response import V1GlobalAppsAppListOptionsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -20000,7 +21265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsAppListOptionsGet200Response**](V1GlobalAppsAppListOptionsGet200Response.md)
+[**V1GlobalAppsAppListOptionsGetResponse**](V1GlobalAppsAppListOptionsGetResponse.md)
 
 ### Authorization
 
@@ -20021,6 +21286,8 @@ Name | Type | Description  | Notes
 
 # **v1_global_apps_app_lists_app_list_id_delete**
 > object v1_global_apps_app_lists_app_list_id_delete(authorization, app_list_id)
+
+Delete an app list under the current enterprise
 
 ### Example
 
@@ -20095,7 +21362,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_apps_app_lists_app_list_id_details_apps_get**
-> V1GlobalAppsAppListOptionsGet200Response v1_global_apps_app_lists_app_list_id_details_apps_get(authorization, app_list_id)
+> V1GlobalAppsAppListsAppListIdDetailsAppsGetResponse v1_global_apps_app_lists_app_list_id_details_apps_get(authorization, app_list_id)
+
+Get all apps that are members of the provided app list
 
 ### Example
 
@@ -20103,7 +21372,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_apps_app_list_options_get200_response import V1GlobalAppsAppListOptionsGet200Response
+from graphiant_sdk.models.v1_global_apps_app_lists_app_list_id_details_apps_get_response import V1GlobalAppsAppListsAppListIdDetailsAppsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -20151,7 +21420,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsAppListOptionsGet200Response**](V1GlobalAppsAppListOptionsGet200Response.md)
+[**V1GlobalAppsAppListsAppListIdDetailsAppsGetResponse**](V1GlobalAppsAppListsAppListIdDetailsAppsGetResponse.md)
 
 ### Authorization
 
@@ -20171,7 +21440,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_apps_app_lists_app_list_id_get**
-> V1GlobalAppsAppListsPostRequest v1_global_apps_app_lists_app_list_id_get(authorization, app_list_id)
+> V1GlobalAppsAppListsAppListIdGetResponse v1_global_apps_app_lists_app_list_id_get(authorization, app_list_id)
+
+Get the configuration for an app list under the current enterprise
 
 ### Example
 
@@ -20179,7 +21450,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_apps_app_lists_post_request import V1GlobalAppsAppListsPostRequest
+from graphiant_sdk.models.v1_global_apps_app_lists_app_list_id_get_response import V1GlobalAppsAppListsAppListIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -20227,7 +21498,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsAppListsPostRequest**](V1GlobalAppsAppListsPostRequest.md)
+[**V1GlobalAppsAppListsAppListIdGetResponse**](V1GlobalAppsAppListsAppListIdGetResponse.md)
 
 ### Authorization
 
@@ -20247,7 +21518,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_apps_app_lists_app_list_id_put**
-> object v1_global_apps_app_lists_app_list_id_put(authorization, app_list_id, v1_global_apps_app_lists_post_request)
+> object v1_global_apps_app_lists_app_list_id_put(authorization, app_list_id, v1_global_apps_app_lists_app_list_id_put_request)
+
+Overwrite the configuration for an app list under the current enterprise
 
 ### Example
 
@@ -20255,7 +21528,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_apps_app_lists_post_request import V1GlobalAppsAppListsPostRequest
+from graphiant_sdk.models.v1_global_apps_app_lists_app_list_id_put_request import V1GlobalAppsAppListsAppListIdPutRequest
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -20282,10 +21555,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
     app_list_id = 1234567891011 # int | 
-    v1_global_apps_app_lists_post_request = graphiant_sdk.V1GlobalAppsAppListsPostRequest() # V1GlobalAppsAppListsPostRequest | 
+    v1_global_apps_app_lists_app_list_id_put_request = graphiant_sdk.V1GlobalAppsAppListsAppListIdPutRequest() # V1GlobalAppsAppListsAppListIdPutRequest | 
 
     try:
-        api_response = api_instance.v1_global_apps_app_lists_app_list_id_put(authorization, app_list_id, v1_global_apps_app_lists_post_request)
+        api_response = api_instance.v1_global_apps_app_lists_app_list_id_put(authorization, app_list_id, v1_global_apps_app_lists_app_list_id_put_request)
         print("The response of DefaultApi->v1_global_apps_app_lists_app_list_id_put:\n")
         pprint(api_response)
     except Exception as e:
@@ -20301,7 +21574,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **app_list_id** | **int**|  | 
- **v1_global_apps_app_lists_post_request** | [**V1GlobalAppsAppListsPostRequest**](V1GlobalAppsAppListsPostRequest.md)|  | 
+ **v1_global_apps_app_lists_app_list_id_put_request** | [**V1GlobalAppsAppListsAppListIdPutRequest**](V1GlobalAppsAppListsAppListIdPutRequest.md)|  | 
 
 ### Return type
 
@@ -20325,7 +21598,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_apps_app_lists_get**
-> V1GlobalAppsAppListsGet200Response v1_global_apps_app_lists_get(authorization)
+> V1GlobalAppsAppListsGetResponse v1_global_apps_app_lists_get(authorization)
+
+Get all app lists for the current enterprise
 
 ### Example
 
@@ -20333,7 +21608,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_apps_app_lists_get200_response import V1GlobalAppsAppListsGet200Response
+from graphiant_sdk.models.v1_global_apps_app_lists_get_response import V1GlobalAppsAppListsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -20379,7 +21654,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsAppListsGet200Response**](V1GlobalAppsAppListsGet200Response.md)
+[**V1GlobalAppsAppListsGetResponse**](V1GlobalAppsAppListsGetResponse.md)
 
 ### Authorization
 
@@ -20399,7 +21674,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_apps_app_lists_post**
-> V1GlobalAppsAppListsPost200Response v1_global_apps_app_lists_post(authorization, v1_global_apps_app_lists_post_request)
+> V1GlobalAppsAppListsPostResponse v1_global_apps_app_lists_post(authorization, v1_global_apps_app_lists_post_request)
+
+Create an app list under the current enterprise
 
 ### Example
 
@@ -20407,8 +21684,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_apps_app_lists_post200_response import V1GlobalAppsAppListsPost200Response
 from graphiant_sdk.models.v1_global_apps_app_lists_post_request import V1GlobalAppsAppListsPostRequest
+from graphiant_sdk.models.v1_global_apps_app_lists_post_response import V1GlobalAppsAppListsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -20456,7 +21733,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsAppListsPost200Response**](V1GlobalAppsAppListsPost200Response.md)
+[**V1GlobalAppsAppListsPostResponse**](V1GlobalAppsAppListsPostResponse.md)
 
 ### Authorization
 
@@ -20476,7 +21753,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_apps_categories_category_id_apps_get**
-> V1GlobalAppsAppListOptionsGet200Response v1_global_apps_categories_category_id_apps_get(authorization, category_id)
+> V1GlobalAppsCategoriesCategoryIdAppsGetResponse v1_global_apps_categories_category_id_apps_get(authorization, category_id)
+
+Get all Graphiant apps in an app category
 
 ### Example
 
@@ -20484,7 +21763,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_apps_app_list_options_get200_response import V1GlobalAppsAppListOptionsGet200Response
+from graphiant_sdk.models.v1_global_apps_categories_category_id_apps_get_response import V1GlobalAppsCategoriesCategoryIdAppsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -20532,7 +21811,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsAppListOptionsGet200Response**](V1GlobalAppsAppListOptionsGet200Response.md)
+[**V1GlobalAppsCategoriesCategoryIdAppsGetResponse**](V1GlobalAppsCategoriesCategoryIdAppsGetResponse.md)
 
 ### Authorization
 
@@ -20552,7 +21831,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_apps_categories_get**
-> V1GlobalAppsCategoriesGet200Response v1_global_apps_categories_get(authorization)
+> V1GlobalAppsCategoriesGetResponse v1_global_apps_categories_get(authorization)
+
+Get all app categories holding Graphiant apps
 
 ### Example
 
@@ -20560,7 +21841,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_apps_categories_get200_response import V1GlobalAppsCategoriesGet200Response
+from graphiant_sdk.models.v1_global_apps_categories_get_response import V1GlobalAppsCategoriesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -20606,7 +21887,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsCategoriesGet200Response**](V1GlobalAppsCategoriesGet200Response.md)
+[**V1GlobalAppsCategoriesGetResponse**](V1GlobalAppsCategoriesGetResponse.md)
 
 ### Authorization
 
@@ -20627,6 +21908,8 @@ Name | Type | Description  | Notes
 
 # **v1_global_apps_custom_app_id_delete**
 > object v1_global_apps_custom_app_id_delete(authorization, app_id)
+
+Delete a global app under the current enterprise
 
 ### Example
 
@@ -20701,7 +21984,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_apps_custom_app_id_details_app_lists_get**
-> V1GlobalAppsCustomAppIdDetailsAppListsGet200Response v1_global_apps_custom_app_id_details_app_lists_get(authorization, app_id)
+> V1GlobalAppsCustomAppIdDetailsAppListsGetResponse v1_global_apps_custom_app_id_details_app_lists_get(authorization, app_id)
+
+Get all app lists that contain the relevant global app
 
 ### Example
 
@@ -20709,7 +21994,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_apps_custom_app_id_details_app_lists_get200_response import V1GlobalAppsCustomAppIdDetailsAppListsGet200Response
+from graphiant_sdk.models.v1_global_apps_custom_app_id_details_app_lists_get_response import V1GlobalAppsCustomAppIdDetailsAppListsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -20757,7 +22042,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsCustomAppIdDetailsAppListsGet200Response**](V1GlobalAppsCustomAppIdDetailsAppListsGet200Response.md)
+[**V1GlobalAppsCustomAppIdDetailsAppListsGetResponse**](V1GlobalAppsCustomAppIdDetailsAppListsGetResponse.md)
 
 ### Authorization
 
@@ -20777,7 +22062,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_apps_custom_app_id_get**
-> V1GlobalAppsCustomPostRequest v1_global_apps_custom_app_id_get(authorization, app_id)
+> V1GlobalAppsCustomAppIdGetResponse v1_global_apps_custom_app_id_get(authorization, app_id)
+
+Get the configuration for a global app under the current enterprise
 
 ### Example
 
@@ -20785,7 +22072,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_apps_custom_post_request import V1GlobalAppsCustomPostRequest
+from graphiant_sdk.models.v1_global_apps_custom_app_id_get_response import V1GlobalAppsCustomAppIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -20833,7 +22120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsCustomPostRequest**](V1GlobalAppsCustomPostRequest.md)
+[**V1GlobalAppsCustomAppIdGetResponse**](V1GlobalAppsCustomAppIdGetResponse.md)
 
 ### Authorization
 
@@ -20853,7 +22140,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_apps_custom_app_id_put**
-> object v1_global_apps_custom_app_id_put(authorization, app_id, v1_global_apps_custom_post_request)
+> object v1_global_apps_custom_app_id_put(authorization, app_id, v1_global_apps_custom_app_id_put_request)
+
+Overwrite the configuration for a global app under the current enterprise
 
 ### Example
 
@@ -20861,7 +22150,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_apps_custom_post_request import V1GlobalAppsCustomPostRequest
+from graphiant_sdk.models.v1_global_apps_custom_app_id_put_request import V1GlobalAppsCustomAppIdPutRequest
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -20888,10 +22177,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
     app_id = 1234567891011 # int | 
-    v1_global_apps_custom_post_request = graphiant_sdk.V1GlobalAppsCustomPostRequest() # V1GlobalAppsCustomPostRequest | 
+    v1_global_apps_custom_app_id_put_request = graphiant_sdk.V1GlobalAppsCustomAppIdPutRequest() # V1GlobalAppsCustomAppIdPutRequest | 
 
     try:
-        api_response = api_instance.v1_global_apps_custom_app_id_put(authorization, app_id, v1_global_apps_custom_post_request)
+        api_response = api_instance.v1_global_apps_custom_app_id_put(authorization, app_id, v1_global_apps_custom_app_id_put_request)
         print("The response of DefaultApi->v1_global_apps_custom_app_id_put:\n")
         pprint(api_response)
     except Exception as e:
@@ -20907,7 +22196,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **app_id** | **int**|  | 
- **v1_global_apps_custom_post_request** | [**V1GlobalAppsCustomPostRequest**](V1GlobalAppsCustomPostRequest.md)|  | 
+ **v1_global_apps_custom_app_id_put_request** | [**V1GlobalAppsCustomAppIdPutRequest**](V1GlobalAppsCustomAppIdPutRequest.md)|  | 
 
 ### Return type
 
@@ -20931,7 +22220,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_apps_custom_get**
-> V1GlobalAppsCustomGet200Response v1_global_apps_custom_get(authorization)
+> V1GlobalAppsCustomGetResponse v1_global_apps_custom_get(authorization)
+
+Get all global apps mapped by the current enterprise
 
 ### Example
 
@@ -20939,7 +22230,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_apps_custom_get200_response import V1GlobalAppsCustomGet200Response
+from graphiant_sdk.models.v1_global_apps_custom_get_response import V1GlobalAppsCustomGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -20985,7 +22276,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsCustomGet200Response**](V1GlobalAppsCustomGet200Response.md)
+[**V1GlobalAppsCustomGetResponse**](V1GlobalAppsCustomGetResponse.md)
 
 ### Authorization
 
@@ -21005,7 +22296,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_apps_custom_post**
-> V1GlobalAppsAppListsPost200Response v1_global_apps_custom_post(authorization, v1_global_apps_custom_post_request)
+> V1GlobalAppsCustomPostResponse v1_global_apps_custom_post(authorization, v1_global_apps_custom_post_request)
+
+Create a new global app under the current enterprise
 
 ### Example
 
@@ -21013,8 +22306,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_apps_app_lists_post200_response import V1GlobalAppsAppListsPost200Response
 from graphiant_sdk.models.v1_global_apps_custom_post_request import V1GlobalAppsCustomPostRequest
+from graphiant_sdk.models.v1_global_apps_custom_post_response import V1GlobalAppsCustomPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -21062,7 +22355,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsAppListsPost200Response**](V1GlobalAppsAppListsPost200Response.md)
+[**V1GlobalAppsCustomPostResponse**](V1GlobalAppsCustomPostResponse.md)
 
 ### Authorization
 
@@ -21082,7 +22375,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_apps_graphiant_get**
-> V1GlobalAppsGraphiantGet200Response v1_global_apps_graphiant_get(authorization)
+> V1GlobalAppsGraphiantGetResponse v1_global_apps_graphiant_get(authorization)
+
+Get all apps mapped by Graphiant
 
 ### Example
 
@@ -21090,7 +22385,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_apps_graphiant_get200_response import V1GlobalAppsGraphiantGet200Response
+from graphiant_sdk.models.v1_global_apps_graphiant_get_response import V1GlobalAppsGraphiantGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -21136,7 +22431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsGraphiantGet200Response**](V1GlobalAppsGraphiantGet200Response.md)
+[**V1GlobalAppsGraphiantGetResponse**](V1GlobalAppsGraphiantGetResponse.md)
 
 ### Authorization
 
@@ -21156,7 +22451,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_attached_edges_post**
-> V1GlobalAttachedEdgesPost200Response v1_global_attached_edges_post(authorization, v1_global_attached_edges_post_request)
+> V1GlobalAttachedEdgesPostResponse v1_global_attached_edges_post(authorization, v1_global_attached_edges_post_request)
+
+Returns attached edges for global object
 
 ### Example
 
@@ -21164,8 +22461,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_attached_edges_post200_response import V1GlobalAttachedEdgesPost200Response
 from graphiant_sdk.models.v1_global_attached_edges_post_request import V1GlobalAttachedEdgesPostRequest
+from graphiant_sdk.models.v1_global_attached_edges_post_response import V1GlobalAttachedEdgesPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -21213,7 +22510,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAttachedEdgesPost200Response**](V1GlobalAttachedEdgesPost200Response.md)
+[**V1GlobalAttachedEdgesPostResponse**](V1GlobalAttachedEdgesPostResponse.md)
 
 ### Authorization
 
@@ -21233,7 +22530,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_config_patch**
-> V1GlobalConfigPatch200Response v1_global_config_patch(authorization, v1_global_config_patch_request)
+> V1GlobalConfigPatchResponse v1_global_config_patch(authorization, v1_global_config_patch_request)
+
+Update global objects for an enterprise
 
 ### Example
 
@@ -21241,8 +22540,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_config_patch200_response import V1GlobalConfigPatch200Response
 from graphiant_sdk.models.v1_global_config_patch_request import V1GlobalConfigPatchRequest
+from graphiant_sdk.models.v1_global_config_patch_response import V1GlobalConfigPatchResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -21290,7 +22589,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalConfigPatch200Response**](V1GlobalConfigPatch200Response.md)
+[**V1GlobalConfigPatchResponse**](V1GlobalConfigPatchResponse.md)
 
 ### Authorization
 
@@ -21311,6 +22610,8 @@ Name | Type | Description  | Notes
 
 # **v1_global_config_site_post**
 > object v1_global_config_site_post(authorization, v1_global_config_site_post_request)
+
+Attach or detach global objects from a site
 
 ### Example
 
@@ -21386,7 +22687,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_device_status_get**
-> V1GlobalAttachedEdgesPost200Response v1_global_device_status_get(authorization)
+> V1GlobalDeviceStatusGetResponse v1_global_device_status_get(authorization)
+
+Get status on global collector attached to devices
 
 ### Example
 
@@ -21394,7 +22697,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_attached_edges_post200_response import V1GlobalAttachedEdgesPost200Response
+from graphiant_sdk.models.v1_global_device_status_get_response import V1GlobalDeviceStatusGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -21440,7 +22743,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAttachedEdgesPost200Response**](V1GlobalAttachedEdgesPost200Response.md)
+[**V1GlobalDeviceStatusGetResponse**](V1GlobalDeviceStatusGetResponse.md)
 
 ### Authorization
 
@@ -21460,7 +22763,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_ipfix_device_get**
-> V1GlobalIpfixDeviceGet200Response v1_global_ipfix_device_get(authorization)
+> V1GlobalIpfixDeviceGetResponse v1_global_ipfix_device_get(authorization)
+
+Get global ipfix exporters objects that failed to attach for a device
 
 ### Example
 
@@ -21468,7 +22773,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_ipfix_device_get200_response import V1GlobalIpfixDeviceGet200Response
+from graphiant_sdk.models.v1_global_ipfix_device_get_response import V1GlobalIpfixDeviceGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -21514,7 +22819,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalIpfixDeviceGet200Response**](V1GlobalIpfixDeviceGet200Response.md)
+[**V1GlobalIpfixDeviceGetResponse**](V1GlobalIpfixDeviceGetResponse.md)
 
 ### Authorization
 
@@ -21534,7 +22839,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_ipfix_post**
-> V1GlobalIpfixDeviceGet200Response v1_global_ipfix_post(authorization, v1_global_ipfix_post_request)
+> V1GlobalIpfixPostResponse v1_global_ipfix_post(authorization, v1_global_ipfix_post_request)
+
+Get configured global ipfix exporters
 
 ### Example
 
@@ -21542,8 +22849,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_ipfix_device_get200_response import V1GlobalIpfixDeviceGet200Response
 from graphiant_sdk.models.v1_global_ipfix_post_request import V1GlobalIpfixPostRequest
+from graphiant_sdk.models.v1_global_ipfix_post_response import V1GlobalIpfixPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -21591,7 +22898,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalIpfixDeviceGet200Response**](V1GlobalIpfixDeviceGet200Response.md)
+[**V1GlobalIpfixPostResponse**](V1GlobalIpfixPostResponse.md)
 
 ### Authorization
 
@@ -21611,7 +22918,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_ipfix_site_get**
-> V1GlobalIpfixDeviceGet200Response v1_global_ipfix_site_get(authorization)
+> V1GlobalIpfixSiteGetResponse v1_global_ipfix_site_get(authorization)
+
+Get configured global ipfix exporters for a site
 
 ### Example
 
@@ -21619,7 +22928,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_ipfix_device_get200_response import V1GlobalIpfixDeviceGet200Response
+from graphiant_sdk.models.v1_global_ipfix_site_get_response import V1GlobalIpfixSiteGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -21665,7 +22974,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalIpfixDeviceGet200Response**](V1GlobalIpfixDeviceGet200Response.md)
+[**V1GlobalIpfixSiteGetResponse**](V1GlobalIpfixSiteGetResponse.md)
 
 ### Authorization
 
@@ -21685,7 +22994,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_ipsec_profile_get**
-> V1GlobalIpsecProfileGet200Response v1_global_ipsec_profile_get(authorization)
+> V1GlobalIpsecProfileGetResponse v1_global_ipsec_profile_get(authorization)
+
+Get all the configured global IPsec Profiles for the current enterprise
 
 ### Example
 
@@ -21693,7 +23004,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_ipsec_profile_get200_response import V1GlobalIpsecProfileGet200Response
+from graphiant_sdk.models.v1_global_ipsec_profile_get_response import V1GlobalIpsecProfileGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -21739,7 +23050,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalIpsecProfileGet200Response**](V1GlobalIpsecProfileGet200Response.md)
+[**V1GlobalIpsecProfileGetResponse**](V1GlobalIpsecProfileGetResponse.md)
 
 ### Authorization
 
@@ -21759,7 +23070,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_ipsec_profile_id_get**
-> V1GlobalIpsecProfileIdGet200Response v1_global_ipsec_profile_id_get(authorization, id)
+> V1GlobalIpsecProfileIdGetResponse v1_global_ipsec_profile_id_get(authorization, id)
+
+Get details of the configured global IPsec Profiles
 
 ### Example
 
@@ -21767,7 +23080,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_ipsec_profile_id_get200_response import V1GlobalIpsecProfileIdGet200Response
+from graphiant_sdk.models.v1_global_ipsec_profile_id_get_response import V1GlobalIpsecProfileIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -21815,7 +23128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalIpsecProfileIdGet200Response**](V1GlobalIpsecProfileIdGet200Response.md)
+[**V1GlobalIpsecProfileIdGetResponse**](V1GlobalIpsecProfileIdGetResponse.md)
 
 ### Authorization
 
@@ -21835,7 +23148,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_ipsec_profile_vpn_profile_id_site_to_site_get**
-> V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet200Response v1_global_ipsec_profile_vpn_profile_id_site_to_site_get(authorization, vpn_profile_id)
+> V1GlobalIpsecProfileVpnProfileIdSiteToSiteGetResponse v1_global_ipsec_profile_vpn_profile_id_site_to_site_get(authorization, vpn_profile_id)
+
+Get Site-to-site VPNs that are using the given global IPsec Profile
 
 ### Example
 
@@ -21843,7 +23158,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_ipsec_profile_vpn_profile_id_site_to_site_get200_response import V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet200Response
+from graphiant_sdk.models.v1_global_ipsec_profile_vpn_profile_id_site_to_site_get_response import V1GlobalIpsecProfileVpnProfileIdSiteToSiteGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -21891,7 +23206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet200Response**](V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet200Response.md)
+[**V1GlobalIpsecProfileVpnProfileIdSiteToSiteGetResponse**](V1GlobalIpsecProfileVpnProfileIdSiteToSiteGetResponse.md)
 
 ### Authorization
 
@@ -21911,7 +23226,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_lan_segments_get**
-> V1GlobalLanSegmentsGet200Response v1_global_lan_segments_get(authorization)
+> V1GlobalLanSegmentsGetResponse v1_global_lan_segments_get(authorization)
+
+Get a list of lan-segments under the currently logged in enterprise
 
 ### Example
 
@@ -21919,7 +23236,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_lan_segments_get200_response import V1GlobalLanSegmentsGet200Response
+from graphiant_sdk.models.v1_global_lan_segments_get_response import V1GlobalLanSegmentsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -21965,7 +23282,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalLanSegmentsGet200Response**](V1GlobalLanSegmentsGet200Response.md)
+[**V1GlobalLanSegmentsGetResponse**](V1GlobalLanSegmentsGetResponse.md)
 
 ### Authorization
 
@@ -21985,7 +23302,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_lan_segments_id_delete**
-> V1GlobalLanSegmentsPost200Response v1_global_lan_segments_id_delete(authorization, id)
+> V1GlobalLanSegmentsIdDeleteResponse v1_global_lan_segments_id_delete(authorization, id)
+
+Delete a lan-segment
 
 ### Example
 
@@ -21993,7 +23312,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_lan_segments_post200_response import V1GlobalLanSegmentsPost200Response
+from graphiant_sdk.models.v1_global_lan_segments_id_delete_response import V1GlobalLanSegmentsIdDeleteResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -22041,7 +23360,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalLanSegmentsPost200Response**](V1GlobalLanSegmentsPost200Response.md)
+[**V1GlobalLanSegmentsIdDeleteResponse**](V1GlobalLanSegmentsIdDeleteResponse.md)
 
 ### Authorization
 
@@ -22061,7 +23380,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_lan_segments_post**
-> V1GlobalLanSegmentsPost200Response v1_global_lan_segments_post(authorization, v1_global_lan_segments_post_request)
+> V1GlobalLanSegmentsPostResponse v1_global_lan_segments_post(authorization, v1_global_lan_segments_post_request)
+
+Create a new lan-segment scoped to the enterprise
 
 ### Example
 
@@ -22069,8 +23390,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_lan_segments_post200_response import V1GlobalLanSegmentsPost200Response
 from graphiant_sdk.models.v1_global_lan_segments_post_request import V1GlobalLanSegmentsPostRequest
+from graphiant_sdk.models.v1_global_lan_segments_post_response import V1GlobalLanSegmentsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -22118,7 +23439,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalLanSegmentsPost200Response**](V1GlobalLanSegmentsPost200Response.md)
+[**V1GlobalLanSegmentsPostResponse**](V1GlobalLanSegmentsPostResponse.md)
 
 ### Authorization
 
@@ -22138,7 +23459,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_lan_segments_vrf_id_devices_get**
-> V1GlobalLanSegmentsVrfIdDevicesGet200Response v1_global_lan_segments_vrf_id_devices_get(authorization, vrf_id)
+> V1GlobalLanSegmentsVrfIdDevicesGetResponse v1_global_lan_segments_vrf_id_devices_get(authorization, vrf_id)
+
+Get a list of lan-segment devices under the currently logged in enterprise
 
 ### Example
 
@@ -22146,7 +23469,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_lan_segments_vrf_id_devices_get200_response import V1GlobalLanSegmentsVrfIdDevicesGet200Response
+from graphiant_sdk.models.v1_global_lan_segments_vrf_id_devices_get_response import V1GlobalLanSegmentsVrfIdDevicesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -22194,7 +23517,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalLanSegmentsVrfIdDevicesGet200Response**](V1GlobalLanSegmentsVrfIdDevicesGet200Response.md)
+[**V1GlobalLanSegmentsVrfIdDevicesGetResponse**](V1GlobalLanSegmentsVrfIdDevicesGetResponse.md)
 
 ### Authorization
 
@@ -22214,7 +23537,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_prefix_sets_device_get**
-> V1GlobalPrefixSetsDeviceGet200Response v1_global_prefix_sets_device_get(authorization)
+> V1GlobalPrefixSetsDeviceGetResponse v1_global_prefix_sets_device_get(authorization)
+
+Get global prefix-set objects that failed to attach for a device
 
 ### Example
 
@@ -22222,7 +23547,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_prefix_sets_device_get200_response import V1GlobalPrefixSetsDeviceGet200Response
+from graphiant_sdk.models.v1_global_prefix_sets_device_get_response import V1GlobalPrefixSetsDeviceGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -22268,7 +23593,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalPrefixSetsDeviceGet200Response**](V1GlobalPrefixSetsDeviceGet200Response.md)
+[**V1GlobalPrefixSetsDeviceGetResponse**](V1GlobalPrefixSetsDeviceGetResponse.md)
 
 ### Authorization
 
@@ -22288,7 +23613,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_prefix_sets_post**
-> V1GlobalPrefixSetsDeviceGet200Response v1_global_prefix_sets_post(authorization, v1_global_ipfix_post_request)
+> V1GlobalPrefixSetsPostResponse v1_global_prefix_sets_post(authorization, v1_global_prefix_sets_post_request)
+
+Get configured global prefix-sets
 
 ### Example
 
@@ -22296,8 +23623,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_ipfix_post_request import V1GlobalIpfixPostRequest
-from graphiant_sdk.models.v1_global_prefix_sets_device_get200_response import V1GlobalPrefixSetsDeviceGet200Response
+from graphiant_sdk.models.v1_global_prefix_sets_post_request import V1GlobalPrefixSetsPostRequest
+from graphiant_sdk.models.v1_global_prefix_sets_post_response import V1GlobalPrefixSetsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -22323,10 +23650,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_global_ipfix_post_request = graphiant_sdk.V1GlobalIpfixPostRequest() # V1GlobalIpfixPostRequest | 
+    v1_global_prefix_sets_post_request = graphiant_sdk.V1GlobalPrefixSetsPostRequest() # V1GlobalPrefixSetsPostRequest | 
 
     try:
-        api_response = api_instance.v1_global_prefix_sets_post(authorization, v1_global_ipfix_post_request)
+        api_response = api_instance.v1_global_prefix_sets_post(authorization, v1_global_prefix_sets_post_request)
         print("The response of DefaultApi->v1_global_prefix_sets_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -22341,11 +23668,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_global_ipfix_post_request** | [**V1GlobalIpfixPostRequest**](V1GlobalIpfixPostRequest.md)|  | 
+ **v1_global_prefix_sets_post_request** | [**V1GlobalPrefixSetsPostRequest**](V1GlobalPrefixSetsPostRequest.md)|  | 
 
 ### Return type
 
-[**V1GlobalPrefixSetsDeviceGet200Response**](V1GlobalPrefixSetsDeviceGet200Response.md)
+[**V1GlobalPrefixSetsPostResponse**](V1GlobalPrefixSetsPostResponse.md)
 
 ### Authorization
 
@@ -22365,7 +23692,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_prefix_sets_site_get**
-> V1GlobalPrefixSetsDeviceGet200Response v1_global_prefix_sets_site_get(authorization)
+> V1GlobalPrefixSetsSiteGetResponse v1_global_prefix_sets_site_get(authorization)
+
+Get configured global prefix-sets
 
 ### Example
 
@@ -22373,7 +23702,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_prefix_sets_device_get200_response import V1GlobalPrefixSetsDeviceGet200Response
+from graphiant_sdk.models.v1_global_prefix_sets_site_get_response import V1GlobalPrefixSetsSiteGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -22419,7 +23748,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalPrefixSetsDeviceGet200Response**](V1GlobalPrefixSetsDeviceGet200Response.md)
+[**V1GlobalPrefixSetsSiteGetResponse**](V1GlobalPrefixSetsSiteGetResponse.md)
 
 ### Authorization
 
@@ -22439,7 +23768,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_routing_policies_device_get**
-> V1GlobalRoutingPoliciesDeviceGet200Response v1_global_routing_policies_device_get(authorization)
+> V1GlobalRoutingPoliciesDeviceGetResponse v1_global_routing_policies_device_get(authorization)
+
+Get global routing-policy objects that failed to attach for a device
 
 ### Example
 
@@ -22447,7 +23778,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_routing_policies_device_get200_response import V1GlobalRoutingPoliciesDeviceGet200Response
+from graphiant_sdk.models.v1_global_routing_policies_device_get_response import V1GlobalRoutingPoliciesDeviceGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -22493,7 +23824,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalRoutingPoliciesDeviceGet200Response**](V1GlobalRoutingPoliciesDeviceGet200Response.md)
+[**V1GlobalRoutingPoliciesDeviceGetResponse**](V1GlobalRoutingPoliciesDeviceGetResponse.md)
 
 ### Authorization
 
@@ -22513,7 +23844,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_routing_policies_post**
-> V1GlobalRoutingPoliciesDeviceGet200Response v1_global_routing_policies_post(authorization, v1_global_ipfix_post_request)
+> V1GlobalRoutingPoliciesPostResponse v1_global_routing_policies_post(authorization, v1_global_routing_policies_post_request)
+
+Get configured global routing-policies
 
 ### Example
 
@@ -22521,8 +23854,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_ipfix_post_request import V1GlobalIpfixPostRequest
-from graphiant_sdk.models.v1_global_routing_policies_device_get200_response import V1GlobalRoutingPoliciesDeviceGet200Response
+from graphiant_sdk.models.v1_global_routing_policies_post_request import V1GlobalRoutingPoliciesPostRequest
+from graphiant_sdk.models.v1_global_routing_policies_post_response import V1GlobalRoutingPoliciesPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -22548,10 +23881,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_global_ipfix_post_request = graphiant_sdk.V1GlobalIpfixPostRequest() # V1GlobalIpfixPostRequest | 
+    v1_global_routing_policies_post_request = graphiant_sdk.V1GlobalRoutingPoliciesPostRequest() # V1GlobalRoutingPoliciesPostRequest | 
 
     try:
-        api_response = api_instance.v1_global_routing_policies_post(authorization, v1_global_ipfix_post_request)
+        api_response = api_instance.v1_global_routing_policies_post(authorization, v1_global_routing_policies_post_request)
         print("The response of DefaultApi->v1_global_routing_policies_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -22566,11 +23899,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_global_ipfix_post_request** | [**V1GlobalIpfixPostRequest**](V1GlobalIpfixPostRequest.md)|  | 
+ **v1_global_routing_policies_post_request** | [**V1GlobalRoutingPoliciesPostRequest**](V1GlobalRoutingPoliciesPostRequest.md)|  | 
 
 ### Return type
 
-[**V1GlobalRoutingPoliciesDeviceGet200Response**](V1GlobalRoutingPoliciesDeviceGet200Response.md)
+[**V1GlobalRoutingPoliciesPostResponse**](V1GlobalRoutingPoliciesPostResponse.md)
 
 ### Authorization
 
@@ -22590,7 +23923,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_routing_policies_site_get**
-> V1GlobalRoutingPoliciesDeviceGet200Response v1_global_routing_policies_site_get(authorization)
+> V1GlobalRoutingPoliciesSiteGetResponse v1_global_routing_policies_site_get(authorization)
+
+Get configured global routing-policies
 
 ### Example
 
@@ -22598,7 +23933,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_routing_policies_device_get200_response import V1GlobalRoutingPoliciesDeviceGet200Response
+from graphiant_sdk.models.v1_global_routing_policies_site_get_response import V1GlobalRoutingPoliciesSiteGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -22644,7 +23979,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalRoutingPoliciesDeviceGet200Response**](V1GlobalRoutingPoliciesDeviceGet200Response.md)
+[**V1GlobalRoutingPoliciesSiteGetResponse**](V1GlobalRoutingPoliciesSiteGetResponse.md)
 
 ### Authorization
 
@@ -22664,7 +23999,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_site_lists_get**
-> V1GlobalSiteListsGet200Response v1_global_site_lists_get(authorization)
+> V1GlobalSiteListsGetResponse v1_global_site_lists_get(authorization)
+
+Get a list of site lists under the currently logged in enterprise
 
 ### Example
 
@@ -22672,7 +24009,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_site_lists_get200_response import V1GlobalSiteListsGet200Response
+from graphiant_sdk.models.v1_global_site_lists_get_response import V1GlobalSiteListsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -22718,7 +24055,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalSiteListsGet200Response**](V1GlobalSiteListsGet200Response.md)
+[**V1GlobalSiteListsGetResponse**](V1GlobalSiteListsGetResponse.md)
 
 ### Authorization
 
@@ -22738,7 +24075,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_site_lists_id_delete**
-> V1GlobalLanSegmentsPost200Response v1_global_site_lists_id_delete(authorization, id)
+> V1GlobalSiteListsIdDeleteResponse v1_global_site_lists_id_delete(authorization, id)
+
+Delete a site list
 
 ### Example
 
@@ -22746,7 +24085,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_lan_segments_post200_response import V1GlobalLanSegmentsPost200Response
+from graphiant_sdk.models.v1_global_site_lists_id_delete_response import V1GlobalSiteListsIdDeleteResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -22794,7 +24133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalLanSegmentsPost200Response**](V1GlobalLanSegmentsPost200Response.md)
+[**V1GlobalSiteListsIdDeleteResponse**](V1GlobalSiteListsIdDeleteResponse.md)
 
 ### Authorization
 
@@ -22814,7 +24153,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_site_lists_id_get**
-> V1GlobalSiteListsIdGet200Response v1_global_site_lists_id_get(authorization, id)
+> V1GlobalSiteListsIdGetResponse v1_global_site_lists_id_get(authorization, id)
+
+Get a details of a site list
 
 ### Example
 
@@ -22822,7 +24163,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_site_lists_id_get200_response import V1GlobalSiteListsIdGet200Response
+from graphiant_sdk.models.v1_global_site_lists_id_get_response import V1GlobalSiteListsIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -22870,7 +24211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalSiteListsIdGet200Response**](V1GlobalSiteListsIdGet200Response.md)
+[**V1GlobalSiteListsIdGetResponse**](V1GlobalSiteListsIdGetResponse.md)
 
 ### Authorization
 
@@ -22890,7 +24231,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_site_lists_id_put**
-> V1GlobalLanSegmentsPost200Response v1_global_site_lists_id_put(authorization, id, v1_global_site_lists_id_get200_response)
+> V1GlobalSiteListsIdPutResponse v1_global_site_lists_id_put(authorization, id, v1_global_site_lists_id_put_request)
+
+Update a new site list scoped to the enterprise
 
 ### Example
 
@@ -22898,8 +24241,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_lan_segments_post200_response import V1GlobalLanSegmentsPost200Response
-from graphiant_sdk.models.v1_global_site_lists_id_get200_response import V1GlobalSiteListsIdGet200Response
+from graphiant_sdk.models.v1_global_site_lists_id_put_request import V1GlobalSiteListsIdPutRequest
+from graphiant_sdk.models.v1_global_site_lists_id_put_response import V1GlobalSiteListsIdPutResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -22926,10 +24269,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
     id = 1234567891011 # int | 
-    v1_global_site_lists_id_get200_response = graphiant_sdk.V1GlobalSiteListsIdGet200Response() # V1GlobalSiteListsIdGet200Response | 
+    v1_global_site_lists_id_put_request = graphiant_sdk.V1GlobalSiteListsIdPutRequest() # V1GlobalSiteListsIdPutRequest | 
 
     try:
-        api_response = api_instance.v1_global_site_lists_id_put(authorization, id, v1_global_site_lists_id_get200_response)
+        api_response = api_instance.v1_global_site_lists_id_put(authorization, id, v1_global_site_lists_id_put_request)
         print("The response of DefaultApi->v1_global_site_lists_id_put:\n")
         pprint(api_response)
     except Exception as e:
@@ -22945,11 +24288,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **id** | **int**|  | 
- **v1_global_site_lists_id_get200_response** | [**V1GlobalSiteListsIdGet200Response**](V1GlobalSiteListsIdGet200Response.md)|  | 
+ **v1_global_site_lists_id_put_request** | [**V1GlobalSiteListsIdPutRequest**](V1GlobalSiteListsIdPutRequest.md)|  | 
 
 ### Return type
 
-[**V1GlobalLanSegmentsPost200Response**](V1GlobalLanSegmentsPost200Response.md)
+[**V1GlobalSiteListsIdPutResponse**](V1GlobalSiteListsIdPutResponse.md)
 
 ### Authorization
 
@@ -22969,7 +24312,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_site_lists_id_sites_get**
-> V1GlobalSiteListsIdSitesGet200Response v1_global_site_lists_id_sites_get(authorization, id)
+> V1GlobalSiteListsIdSitesGetResponse v1_global_site_lists_id_sites_get(authorization, id)
+
+Get a details of a site list sites
 
 ### Example
 
@@ -22977,7 +24322,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_site_lists_id_sites_get200_response import V1GlobalSiteListsIdSitesGet200Response
+from graphiant_sdk.models.v1_global_site_lists_id_sites_get_response import V1GlobalSiteListsIdSitesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -23025,7 +24370,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalSiteListsIdSitesGet200Response**](V1GlobalSiteListsIdSitesGet200Response.md)
+[**V1GlobalSiteListsIdSitesGetResponse**](V1GlobalSiteListsIdSitesGetResponse.md)
 
 ### Authorization
 
@@ -23045,7 +24390,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_site_lists_post**
-> V1GlobalLanSegmentsPost200Response v1_global_site_lists_post(authorization, v1_global_site_lists_post_request)
+> V1GlobalSiteListsPostResponse v1_global_site_lists_post(authorization, v1_global_site_lists_post_request)
+
+Create a new site list scoped to the enterprise
 
 ### Example
 
@@ -23053,8 +24400,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_lan_segments_post200_response import V1GlobalLanSegmentsPost200Response
 from graphiant_sdk.models.v1_global_site_lists_post_request import V1GlobalSiteListsPostRequest
+from graphiant_sdk.models.v1_global_site_lists_post_response import V1GlobalSiteListsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -23102,7 +24449,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalLanSegmentsPost200Response**](V1GlobalLanSegmentsPost200Response.md)
+[**V1GlobalSiteListsPostResponse**](V1GlobalSiteListsPostResponse.md)
 
 ### Authorization
 
@@ -23122,7 +24469,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_site_status_get**
-> V1GlobalAttachedEdgesPost200Response v1_global_site_status_get(authorization)
+> V1GlobalSiteStatusGetResponse v1_global_site_status_get(authorization)
+
+Get status on global objects attached to a site
 
 ### Example
 
@@ -23130,7 +24479,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_attached_edges_post200_response import V1GlobalAttachedEdgesPost200Response
+from graphiant_sdk.models.v1_global_site_status_get_response import V1GlobalSiteStatusGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -23176,7 +24525,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAttachedEdgesPost200Response**](V1GlobalAttachedEdgesPost200Response.md)
+[**V1GlobalSiteStatusGetResponse**](V1GlobalSiteStatusGetResponse.md)
 
 ### Authorization
 
@@ -23196,7 +24545,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_snmps_device_get**
-> V1GlobalSnmpsDeviceGet200Response v1_global_snmps_device_get(authorization)
+> V1GlobalSnmpsDeviceGetResponse v1_global_snmps_device_get(authorization)
+
+Get global snmp objects that failed to attach for a device
 
 ### Example
 
@@ -23204,7 +24555,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_snmps_device_get200_response import V1GlobalSnmpsDeviceGet200Response
+from graphiant_sdk.models.v1_global_snmps_device_get_response import V1GlobalSnmpsDeviceGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -23250,7 +24601,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalSnmpsDeviceGet200Response**](V1GlobalSnmpsDeviceGet200Response.md)
+[**V1GlobalSnmpsDeviceGetResponse**](V1GlobalSnmpsDeviceGetResponse.md)
 
 ### Authorization
 
@@ -23270,7 +24621,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_snmps_post**
-> V1GlobalSnmpsDeviceGet200Response v1_global_snmps_post(authorization, v1_global_ipfix_post_request)
+> V1GlobalSnmpsPostResponse v1_global_snmps_post(authorization, v1_global_snmps_post_request)
+
+Get configured global snmps
 
 ### Example
 
@@ -23278,8 +24631,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_ipfix_post_request import V1GlobalIpfixPostRequest
-from graphiant_sdk.models.v1_global_snmps_device_get200_response import V1GlobalSnmpsDeviceGet200Response
+from graphiant_sdk.models.v1_global_snmps_post_request import V1GlobalSnmpsPostRequest
+from graphiant_sdk.models.v1_global_snmps_post_response import V1GlobalSnmpsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -23305,10 +24658,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_global_ipfix_post_request = graphiant_sdk.V1GlobalIpfixPostRequest() # V1GlobalIpfixPostRequest | 
+    v1_global_snmps_post_request = graphiant_sdk.V1GlobalSnmpsPostRequest() # V1GlobalSnmpsPostRequest | 
 
     try:
-        api_response = api_instance.v1_global_snmps_post(authorization, v1_global_ipfix_post_request)
+        api_response = api_instance.v1_global_snmps_post(authorization, v1_global_snmps_post_request)
         print("The response of DefaultApi->v1_global_snmps_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -23323,11 +24676,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_global_ipfix_post_request** | [**V1GlobalIpfixPostRequest**](V1GlobalIpfixPostRequest.md)|  | 
+ **v1_global_snmps_post_request** | [**V1GlobalSnmpsPostRequest**](V1GlobalSnmpsPostRequest.md)|  | 
 
 ### Return type
 
-[**V1GlobalSnmpsDeviceGet200Response**](V1GlobalSnmpsDeviceGet200Response.md)
+[**V1GlobalSnmpsPostResponse**](V1GlobalSnmpsPostResponse.md)
 
 ### Authorization
 
@@ -23347,7 +24700,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_snmps_site_get**
-> V1GlobalSnmpsDeviceGet200Response v1_global_snmps_site_get(authorization)
+> V1GlobalSnmpsSiteGetResponse v1_global_snmps_site_get(authorization)
+
+Get configured global snmps
 
 ### Example
 
@@ -23355,7 +24710,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_snmps_device_get200_response import V1GlobalSnmpsDeviceGet200Response
+from graphiant_sdk.models.v1_global_snmps_site_get_response import V1GlobalSnmpsSiteGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -23401,7 +24756,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalSnmpsDeviceGet200Response**](V1GlobalSnmpsDeviceGet200Response.md)
+[**V1GlobalSnmpsSiteGetResponse**](V1GlobalSnmpsSiteGetResponse.md)
 
 ### Authorization
 
@@ -23421,7 +24776,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_summary_post**
-> V1GlobalSummaryPost200Response v1_global_summary_post(authorization, v1_global_summary_post_request)
+> V1GlobalSummaryPostResponse v1_global_summary_post(authorization, v1_global_summary_post_request)
+
+Get summary on global objects
 
 ### Example
 
@@ -23429,8 +24786,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_summary_post200_response import V1GlobalSummaryPost200Response
 from graphiant_sdk.models.v1_global_summary_post_request import V1GlobalSummaryPostRequest
+from graphiant_sdk.models.v1_global_summary_post_response import V1GlobalSummaryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -23478,7 +24835,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalSummaryPost200Response**](V1GlobalSummaryPost200Response.md)
+[**V1GlobalSummaryPostResponse**](V1GlobalSummaryPostResponse.md)
 
 ### Authorization
 
@@ -23499,6 +24856,8 @@ Name | Type | Description  | Notes
 
 # **v1_global_sync_post**
 > object v1_global_sync_post(authorization, v1_global_sync_post_request)
+
+Tries synching device with the global objects
 
 ### Example
 
@@ -23574,7 +24933,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_syslogs_device_get**
-> V1GlobalSyslogsDeviceGet200Response v1_global_syslogs_device_get(authorization)
+> V1GlobalSyslogsDeviceGetResponse v1_global_syslogs_device_get(authorization)
+
+Get global syslog objects that failed to attach for a device
 
 ### Example
 
@@ -23582,7 +24943,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_syslogs_device_get200_response import V1GlobalSyslogsDeviceGet200Response
+from graphiant_sdk.models.v1_global_syslogs_device_get_response import V1GlobalSyslogsDeviceGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -23628,7 +24989,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalSyslogsDeviceGet200Response**](V1GlobalSyslogsDeviceGet200Response.md)
+[**V1GlobalSyslogsDeviceGetResponse**](V1GlobalSyslogsDeviceGetResponse.md)
 
 ### Authorization
 
@@ -23648,7 +25009,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_syslogs_post**
-> V1GlobalSyslogsDeviceGet200Response v1_global_syslogs_post(authorization, v1_global_ipfix_post_request)
+> V1GlobalSyslogsPostResponse v1_global_syslogs_post(authorization, v1_global_syslogs_post_request)
+
+Get configured global syslog collectors
 
 ### Example
 
@@ -23656,8 +25019,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_ipfix_post_request import V1GlobalIpfixPostRequest
-from graphiant_sdk.models.v1_global_syslogs_device_get200_response import V1GlobalSyslogsDeviceGet200Response
+from graphiant_sdk.models.v1_global_syslogs_post_request import V1GlobalSyslogsPostRequest
+from graphiant_sdk.models.v1_global_syslogs_post_response import V1GlobalSyslogsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -23683,10 +25046,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_global_ipfix_post_request = graphiant_sdk.V1GlobalIpfixPostRequest() # V1GlobalIpfixPostRequest | 
+    v1_global_syslogs_post_request = graphiant_sdk.V1GlobalSyslogsPostRequest() # V1GlobalSyslogsPostRequest | 
 
     try:
-        api_response = api_instance.v1_global_syslogs_post(authorization, v1_global_ipfix_post_request)
+        api_response = api_instance.v1_global_syslogs_post(authorization, v1_global_syslogs_post_request)
         print("The response of DefaultApi->v1_global_syslogs_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -23701,11 +25064,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_global_ipfix_post_request** | [**V1GlobalIpfixPostRequest**](V1GlobalIpfixPostRequest.md)|  | 
+ **v1_global_syslogs_post_request** | [**V1GlobalSyslogsPostRequest**](V1GlobalSyslogsPostRequest.md)|  | 
 
 ### Return type
 
-[**V1GlobalSyslogsDeviceGet200Response**](V1GlobalSyslogsDeviceGet200Response.md)
+[**V1GlobalSyslogsPostResponse**](V1GlobalSyslogsPostResponse.md)
 
 ### Authorization
 
@@ -23725,7 +25088,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_syslogs_site_get**
-> V1GlobalSyslogsDeviceGet200Response v1_global_syslogs_site_get(authorization)
+> V1GlobalSyslogsSiteGetResponse v1_global_syslogs_site_get(authorization)
+
+Get configured global syslog collectors
 
 ### Example
 
@@ -23733,7 +25098,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_syslogs_device_get200_response import V1GlobalSyslogsDeviceGet200Response
+from graphiant_sdk.models.v1_global_syslogs_site_get_response import V1GlobalSyslogsSiteGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -23779,7 +25144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalSyslogsDeviceGet200Response**](V1GlobalSyslogsDeviceGet200Response.md)
+[**V1GlobalSyslogsSiteGetResponse**](V1GlobalSyslogsSiteGetResponse.md)
 
 ### Authorization
 
@@ -23799,7 +25164,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_traffic_policies_device_get**
-> V1GlobalTrafficPoliciesDeviceGet200Response v1_global_traffic_policies_device_get(authorization)
+> V1GlobalTrafficPoliciesDeviceGetResponse v1_global_traffic_policies_device_get(authorization)
+
+Get global traffic-policy objects that failed to attach for a device
 
 ### Example
 
@@ -23807,7 +25174,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_traffic_policies_device_get200_response import V1GlobalTrafficPoliciesDeviceGet200Response
+from graphiant_sdk.models.v1_global_traffic_policies_device_get_response import V1GlobalTrafficPoliciesDeviceGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -23853,7 +25220,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalTrafficPoliciesDeviceGet200Response**](V1GlobalTrafficPoliciesDeviceGet200Response.md)
+[**V1GlobalTrafficPoliciesDeviceGetResponse**](V1GlobalTrafficPoliciesDeviceGetResponse.md)
 
 ### Authorization
 
@@ -23873,7 +25240,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_traffic_policies_post**
-> V1GlobalTrafficPoliciesDeviceGet200Response v1_global_traffic_policies_post(authorization, v1_global_ipfix_post_request)
+> V1GlobalTrafficPoliciesPostResponse v1_global_traffic_policies_post(authorization, v1_global_traffic_policies_post_request)
+
+Get configured global traffic-policies
 
 ### Example
 
@@ -23881,8 +25250,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_ipfix_post_request import V1GlobalIpfixPostRequest
-from graphiant_sdk.models.v1_global_traffic_policies_device_get200_response import V1GlobalTrafficPoliciesDeviceGet200Response
+from graphiant_sdk.models.v1_global_traffic_policies_post_request import V1GlobalTrafficPoliciesPostRequest
+from graphiant_sdk.models.v1_global_traffic_policies_post_response import V1GlobalTrafficPoliciesPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -23908,10 +25277,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_global_ipfix_post_request = graphiant_sdk.V1GlobalIpfixPostRequest() # V1GlobalIpfixPostRequest | 
+    v1_global_traffic_policies_post_request = graphiant_sdk.V1GlobalTrafficPoliciesPostRequest() # V1GlobalTrafficPoliciesPostRequest | 
 
     try:
-        api_response = api_instance.v1_global_traffic_policies_post(authorization, v1_global_ipfix_post_request)
+        api_response = api_instance.v1_global_traffic_policies_post(authorization, v1_global_traffic_policies_post_request)
         print("The response of DefaultApi->v1_global_traffic_policies_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -23926,11 +25295,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_global_ipfix_post_request** | [**V1GlobalIpfixPostRequest**](V1GlobalIpfixPostRequest.md)|  | 
+ **v1_global_traffic_policies_post_request** | [**V1GlobalTrafficPoliciesPostRequest**](V1GlobalTrafficPoliciesPostRequest.md)|  | 
 
 ### Return type
 
-[**V1GlobalTrafficPoliciesDeviceGet200Response**](V1GlobalTrafficPoliciesDeviceGet200Response.md)
+[**V1GlobalTrafficPoliciesPostResponse**](V1GlobalTrafficPoliciesPostResponse.md)
 
 ### Authorization
 
@@ -23950,7 +25319,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_global_traffic_policies_site_get**
-> V1GlobalTrafficPoliciesDeviceGet200Response v1_global_traffic_policies_site_get(authorization)
+> V1GlobalTrafficPoliciesSiteGetResponse v1_global_traffic_policies_site_get(authorization)
+
+Get configured global traffic-policies
 
 ### Example
 
@@ -23958,7 +25329,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_global_traffic_policies_device_get200_response import V1GlobalTrafficPoliciesDeviceGet200Response
+from graphiant_sdk.models.v1_global_traffic_policies_site_get_response import V1GlobalTrafficPoliciesSiteGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -24004,7 +25375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalTrafficPoliciesDeviceGet200Response**](V1GlobalTrafficPoliciesDeviceGet200Response.md)
+[**V1GlobalTrafficPoliciesSiteGetResponse**](V1GlobalTrafficPoliciesSiteGetResponse.md)
 
 ### Authorization
 
@@ -24024,7 +25395,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_groups_enterprises_get**
-> V1GroupsGet200Response v1_groups_enterprises_get(authorization)
+> V1GroupsEnterprisesGetResponse v1_groups_enterprises_get(authorization)
+
+Get all enterprise-level groups.
 
 ### Example
 
@@ -24032,7 +25405,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_groups_get200_response import V1GroupsGet200Response
+from graphiant_sdk.models.v1_groups_enterprises_get_response import V1GroupsEnterprisesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -24078,7 +25451,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsGet200Response**](V1GroupsGet200Response.md)
+[**V1GroupsEnterprisesGetResponse**](V1GroupsEnterprisesGetResponse.md)
 
 ### Authorization
 
@@ -24098,7 +25471,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_groups_get**
-> V1GroupsGet200Response v1_groups_get(authorization)
+> V1GroupsGetResponse v1_groups_get(authorization)
+
+Get all groups in the enterprise.
 
 ### Example
 
@@ -24106,7 +25481,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_groups_get200_response import V1GroupsGet200Response
+from graphiant_sdk.models.v1_groups_get_response import V1GroupsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -24152,7 +25527,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsGet200Response**](V1GroupsGet200Response.md)
+[**V1GroupsGetResponse**](V1GroupsGetResponse.md)
 
 ### Authorization
 
@@ -24172,7 +25547,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_groups_id_delete**
-> V1GroupsIdMembersPost204Response v1_groups_id_delete(authorization, id)
+> V1GroupsIdDeleteResponse v1_groups_id_delete(authorization, id)
+
+Delete a group and remove all member associations and enterprise relationships. Replace with a different group if specified.
 
 ### Example
 
@@ -24180,7 +25557,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_groups_id_members_post204_response import V1GroupsIdMembersPost204Response
+from graphiant_sdk.models.v1_groups_id_delete_response import V1GroupsIdDeleteResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -24228,7 +25605,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdMembersPost204Response**](V1GroupsIdMembersPost204Response.md)
+[**V1GroupsIdDeleteResponse**](V1GroupsIdDeleteResponse.md)
 
 ### Authorization
 
@@ -24248,7 +25625,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_groups_id_enterprises_enterprise_id_delete**
-> V1GroupsIdMembersPost204Response v1_groups_id_enterprises_enterprise_id_delete(authorization, enterprise_id, id)
+> V1GroupsIdEnterprisesEnterpriseIdDeleteResponse v1_groups_id_enterprises_enterprise_id_delete(authorization, enterprise_id, id)
+
+Remove group's association with a specific enterprise, revoking cross-enterprise access.
 
 ### Example
 
@@ -24256,7 +25635,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_groups_id_members_post204_response import V1GroupsIdMembersPost204Response
+from graphiant_sdk.models.v1_groups_id_enterprises_enterprise_id_delete_response import V1GroupsIdEnterprisesEnterpriseIdDeleteResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -24306,7 +25685,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdMembersPost204Response**](V1GroupsIdMembersPost204Response.md)
+[**V1GroupsIdEnterprisesEnterpriseIdDeleteResponse**](V1GroupsIdEnterprisesEnterpriseIdDeleteResponse.md)
 
 ### Authorization
 
@@ -24327,6 +25706,8 @@ Name | Type | Description  | Notes
 
 # **v1_groups_id_enterprises_post**
 > object v1_groups_id_enterprises_post(authorization, id, v1_groups_id_enterprises_post_request)
+
+Associate group with additional enterprises to enable cross-enterprise access and management.
 
 ### Example
 
@@ -24404,7 +25785,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_groups_id_get**
-> V1GroupsIdGet200Response v1_groups_id_get(authorization, id)
+> V1GroupsIdGetResponse v1_groups_id_get(authorization, id)
+
+Get group information including permissions and members.
 
 ### Example
 
@@ -24412,7 +25795,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_groups_id_get200_response import V1GroupsIdGet200Response
+from graphiant_sdk.models.v1_groups_id_get_response import V1GroupsIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -24460,7 +25843,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdGet200Response**](V1GroupsIdGet200Response.md)
+[**V1GroupsIdGetResponse**](V1GroupsIdGetResponse.md)
 
 ### Authorization
 
@@ -24480,7 +25863,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_groups_id_members_delete_post**
-> V1GroupsIdMembersPost204Response v1_groups_id_members_delete_post(authorization, id, v1_groups_id_members_delete_post_request)
+> V1GroupsIdMembersDeletePostResponse v1_groups_id_members_delete_post(authorization, id, v1_groups_id_members_delete_post_request)
+
+Remove multiple users from a group by their member IDs.
 
 ### Example
 
@@ -24489,7 +25874,7 @@ Name | Type | Description  | Notes
 ```python
 import graphiant_sdk
 from graphiant_sdk.models.v1_groups_id_members_delete_post_request import V1GroupsIdMembersDeletePostRequest
-from graphiant_sdk.models.v1_groups_id_members_post204_response import V1GroupsIdMembersPost204Response
+from graphiant_sdk.models.v1_groups_id_members_delete_post_response import V1GroupsIdMembersDeletePostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -24539,7 +25924,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdMembersPost204Response**](V1GroupsIdMembersPost204Response.md)
+[**V1GroupsIdMembersDeletePostResponse**](V1GroupsIdMembersDeletePostResponse.md)
 
 ### Authorization
 
@@ -24559,7 +25944,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_groups_id_members_get**
-> V1GroupsIdMembersGet200Response v1_groups_id_members_get(authorization, id)
+> V1GroupsIdMembersGetResponse v1_groups_id_members_get(authorization, id)
+
+Get all members of a specific group.
 
 ### Example
 
@@ -24567,7 +25954,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_groups_id_members_get200_response import V1GroupsIdMembersGet200Response
+from graphiant_sdk.models.v1_groups_id_members_get_response import V1GroupsIdMembersGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -24615,7 +26002,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdMembersGet200Response**](V1GroupsIdMembersGet200Response.md)
+[**V1GroupsIdMembersGetResponse**](V1GroupsIdMembersGetResponse.md)
 
 ### Authorization
 
@@ -24635,7 +26022,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_groups_id_members_member_id_delete**
-> V1GroupsIdMembersPost204Response v1_groups_id_members_member_id_delete(authorization, id, member_id)
+> V1GroupsIdMembersMemberIdDeleteResponse v1_groups_id_members_member_id_delete(authorization, id, member_id)
+
+Remove a specific user from a group by member ID.
 
 ### Example
 
@@ -24643,7 +26032,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_groups_id_members_post204_response import V1GroupsIdMembersPost204Response
+from graphiant_sdk.models.v1_groups_id_members_member_id_delete_response import V1GroupsIdMembersMemberIdDeleteResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -24693,7 +26082,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdMembersPost204Response**](V1GroupsIdMembersPost204Response.md)
+[**V1GroupsIdMembersMemberIdDeleteResponse**](V1GroupsIdMembersMemberIdDeleteResponse.md)
 
 ### Authorization
 
@@ -24713,7 +26102,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_groups_id_members_post**
-> V1GroupsIdMembersPost204Response v1_groups_id_members_post(authorization, id, v1_groups_id_members_post_request)
+> V1GroupsIdMembersPostResponse v1_groups_id_members_post(authorization, id, v1_groups_id_members_post_request)
+
+Add multiple users to a group by their global IDs.
 
 ### Example
 
@@ -24721,8 +26112,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_groups_id_members_post204_response import V1GroupsIdMembersPost204Response
 from graphiant_sdk.models.v1_groups_id_members_post_request import V1GroupsIdMembersPostRequest
+from graphiant_sdk.models.v1_groups_id_members_post_response import V1GroupsIdMembersPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -24772,7 +26163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdMembersPost204Response**](V1GroupsIdMembersPost204Response.md)
+[**V1GroupsIdMembersPostResponse**](V1GroupsIdMembersPostResponse.md)
 
 ### Authorization
 
@@ -24792,7 +26183,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_groups_id_patch**
-> V1GroupsIdMembersPost204Response v1_groups_id_patch(authorization, id, v1_groups_id_patch_request)
+> V1GroupsIdPatchResponse v1_groups_id_patch(authorization, id, v1_groups_id_patch_request)
+
+Update group information.
 
 ### Example
 
@@ -24800,8 +26193,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_groups_id_members_post204_response import V1GroupsIdMembersPost204Response
 from graphiant_sdk.models.v1_groups_id_patch_request import V1GroupsIdPatchRequest
+from graphiant_sdk.models.v1_groups_id_patch_response import V1GroupsIdPatchResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -24851,7 +26244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdMembersPost204Response**](V1GroupsIdMembersPost204Response.md)
+[**V1GroupsIdPatchResponse**](V1GroupsIdPatchResponse.md)
 
 ### Authorization
 
@@ -24872,6 +26265,8 @@ Name | Type | Description  | Notes
 
 # **v1_groups_put**
 > object v1_groups_put(authorization, v1_groups_put_request)
+
+Create a new group with and set permissions. Set group's enterprise management capabilities (msp only).
 
 ### Example
 
@@ -24947,7 +26342,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_groups_root_get**
-> V1GroupsGet200Response v1_groups_root_get(authorization)
+> V1GroupsRootGetResponse v1_groups_root_get(authorization)
+
+Get all root-level groups.
 
 ### Example
 
@@ -24955,7 +26352,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_groups_get200_response import V1GroupsGet200Response
+from graphiant_sdk.models.v1_groups_root_get_response import V1GroupsRootGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -25001,7 +26398,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsGet200Response**](V1GroupsGet200Response.md)
+[**V1GroupsRootGetResponse**](V1GroupsRootGetResponse.md)
 
 ### Authorization
 
@@ -25022,6 +26419,8 @@ Name | Type | Description  | Notes
 
 # **v1_id_password_recover_patch**
 > object v1_id_password_recover_patch(authorization, id, body)
+
+Initiate password recovery for specific user (Graphiant cloud only).
 
 ### Example
 
@@ -25100,6 +26499,8 @@ Name | Type | Description  | Notes
 # **v1_invitation_email_post**
 > object v1_invitation_email_post(authorization, v1_invitation_email_post_request)
 
+Send invitation emails for B2B data exchange service connections. For non-Graphiant enterprises, sends invite to all admin users in the proxy tenant desiganted by your msp. For Graphiant, sends to specified admin email.
+
 ### Example
 
 * Api Key Authentication (jwtAuth):
@@ -25174,7 +26575,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_lan_segments_get**
-> V1LanSegmentsGet200Response v1_lan_segments_get(authorization)
+> V1LanSegmentsGetResponse v1_lan_segments_get(authorization)
+
+Get LAN Segments for the current enterprise
 
 ### Example
 
@@ -25182,7 +26585,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_lan_segments_get200_response import V1LanSegmentsGet200Response
+from graphiant_sdk.models.v1_lan_segments_get_response import V1LanSegmentsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -25228,7 +26631,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1LanSegmentsGet200Response**](V1LanSegmentsGet200Response.md)
+[**V1LanSegmentsGetResponse**](V1LanSegmentsGetResponse.md)
 
 ### Authorization
 
@@ -25248,7 +26651,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_lldp_interface_id_neighbors_get**
-> V1LldpInterfaceIdNeighborsGet200Response v1_lldp_interface_id_neighbors_get(authorization, interface_id)
+> V1LldpInterfaceIdNeighborsGetResponse v1_lldp_interface_id_neighbors_get(authorization, interface_id)
+
+Get the LLDP neighbors for an interface and optionally for a specific vendor
 
 ### Example
 
@@ -25256,7 +26661,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_lldp_interface_id_neighbors_get200_response import V1LldpInterfaceIdNeighborsGet200Response
+from graphiant_sdk.models.v1_lldp_interface_id_neighbors_get_response import V1LldpInterfaceIdNeighborsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -25304,7 +26709,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1LldpInterfaceIdNeighborsGet200Response**](V1LldpInterfaceIdNeighborsGet200Response.md)
+[**V1LldpInterfaceIdNeighborsGetResponse**](V1LldpInterfaceIdNeighborsGetResponse.md)
 
 ### Authorization
 
@@ -25324,7 +26729,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_lldp_interface_id_summary_get**
-> V1LldpInterfaceIdSummaryGet200Response v1_lldp_interface_id_summary_get(authorization, interface_id)
+> V1LldpInterfaceIdSummaryGetResponse v1_lldp_interface_id_summary_get(authorization, interface_id)
+
+Get the summary of LLDP neighbors for an interface
 
 ### Example
 
@@ -25332,7 +26739,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_lldp_interface_id_summary_get200_response import V1LldpInterfaceIdSummaryGet200Response
+from graphiant_sdk.models.v1_lldp_interface_id_summary_get_response import V1LldpInterfaceIdSummaryGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -25380,7 +26787,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1LldpInterfaceIdSummaryGet200Response**](V1LldpInterfaceIdSummaryGet200Response.md)
+[**V1LldpInterfaceIdSummaryGetResponse**](V1LldpInterfaceIdSummaryGetResponse.md)
 
 ### Authorization
 
@@ -25400,7 +26807,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_lldp_interface_id_vendors_get**
-> V1LldpInterfaceIdVendorsGet200Response v1_lldp_interface_id_vendors_get(authorization, interface_id)
+> V1LldpInterfaceIdVendorsGetResponse v1_lldp_interface_id_vendors_get(authorization, interface_id)
+
+Get the list LLDP vendors for an interface
 
 ### Example
 
@@ -25408,7 +26817,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_lldp_interface_id_vendors_get200_response import V1LldpInterfaceIdVendorsGet200Response
+from graphiant_sdk.models.v1_lldp_interface_id_vendors_get_response import V1LldpInterfaceIdVendorsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -25456,7 +26865,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1LldpInterfaceIdVendorsGet200Response**](V1LldpInterfaceIdVendorsGet200Response.md)
+[**V1LldpInterfaceIdVendorsGetResponse**](V1LldpInterfaceIdVendorsGetResponse.md)
 
 ### Authorization
 
@@ -25476,7 +26885,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_logs_post**
-> V1LogsPost200Response v1_logs_post(authorization, v1_logs_post_request)
+> V1LogsPostResponse v1_logs_post(authorization, v1_logs_post_request)
 
 ### Example
 
@@ -25484,8 +26893,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_logs_post200_response import V1LogsPost200Response
 from graphiant_sdk.models.v1_logs_post_request import V1LogsPostRequest
+from graphiant_sdk.models.v1_logs_post_response import V1LogsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -25533,7 +26942,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1LogsPost200Response**](V1LogsPost200Response.md)
+[**V1LogsPostResponse**](V1LogsPostResponse.md)
 
 ### Authorization
 
@@ -25553,7 +26962,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_monitoring_circuits_bandwidth_post**
-> V1MonitoringCircuitsBandwidthPost200Response v1_monitoring_circuits_bandwidth_post(authorization, v1_monitoring_circuits_bandwidth_post_request)
+> V1MonitoringCircuitsBandwidthPostResponse v1_monitoring_circuits_bandwidth_post(authorization, v1_monitoring_circuits_bandwidth_post_request)
 
 ### Example
 
@@ -25561,8 +26970,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_monitoring_circuits_bandwidth_post200_response import V1MonitoringCircuitsBandwidthPost200Response
 from graphiant_sdk.models.v1_monitoring_circuits_bandwidth_post_request import V1MonitoringCircuitsBandwidthPostRequest
+from graphiant_sdk.models.v1_monitoring_circuits_bandwidth_post_response import V1MonitoringCircuitsBandwidthPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -25610,7 +27019,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1MonitoringCircuitsBandwidthPost200Response**](V1MonitoringCircuitsBandwidthPost200Response.md)
+[**V1MonitoringCircuitsBandwidthPostResponse**](V1MonitoringCircuitsBandwidthPostResponse.md)
 
 ### Authorization
 
@@ -25630,7 +27039,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_monitoring_circuits_incidents_post**
-> V1MonitoringCircuitsIncidentsPost200Response v1_monitoring_circuits_incidents_post(authorization, v2_monitoring_circuits_utilization_post_request)
+> V1MonitoringCircuitsIncidentsPostResponse v1_monitoring_circuits_incidents_post(authorization, v1_monitoring_circuits_incidents_post_request)
 
 ### Example
 
@@ -25638,8 +27047,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_monitoring_circuits_incidents_post200_response import V1MonitoringCircuitsIncidentsPost200Response
-from graphiant_sdk.models.v2_monitoring_circuits_utilization_post_request import V2MonitoringCircuitsUtilizationPostRequest
+from graphiant_sdk.models.v1_monitoring_circuits_incidents_post_request import V1MonitoringCircuitsIncidentsPostRequest
+from graphiant_sdk.models.v1_monitoring_circuits_incidents_post_response import V1MonitoringCircuitsIncidentsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -25665,10 +27074,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v2_monitoring_circuits_utilization_post_request = graphiant_sdk.V2MonitoringCircuitsUtilizationPostRequest() # V2MonitoringCircuitsUtilizationPostRequest | 
+    v1_monitoring_circuits_incidents_post_request = graphiant_sdk.V1MonitoringCircuitsIncidentsPostRequest() # V1MonitoringCircuitsIncidentsPostRequest | 
 
     try:
-        api_response = api_instance.v1_monitoring_circuits_incidents_post(authorization, v2_monitoring_circuits_utilization_post_request)
+        api_response = api_instance.v1_monitoring_circuits_incidents_post(authorization, v1_monitoring_circuits_incidents_post_request)
         print("The response of DefaultApi->v1_monitoring_circuits_incidents_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -25683,11 +27092,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2_monitoring_circuits_utilization_post_request** | [**V2MonitoringCircuitsUtilizationPostRequest**](V2MonitoringCircuitsUtilizationPostRequest.md)|  | 
+ **v1_monitoring_circuits_incidents_post_request** | [**V1MonitoringCircuitsIncidentsPostRequest**](V1MonitoringCircuitsIncidentsPostRequest.md)|  | 
 
 ### Return type
 
-[**V1MonitoringCircuitsIncidentsPost200Response**](V1MonitoringCircuitsIncidentsPost200Response.md)
+[**V1MonitoringCircuitsIncidentsPostResponse**](V1MonitoringCircuitsIncidentsPostResponse.md)
 
 ### Authorization
 
@@ -25707,7 +27116,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_monitoring_circuits_summary_post**
-> V1MonitoringCircuitsSummaryPost200Response v1_monitoring_circuits_summary_post(authorization, v2_monitoring_circuits_summary_post_request)
+> V1MonitoringCircuitsSummaryPostResponse v1_monitoring_circuits_summary_post(authorization, v1_monitoring_circuits_summary_post_request)
 
 ### Example
 
@@ -25715,8 +27124,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_monitoring_circuits_summary_post200_response import V1MonitoringCircuitsSummaryPost200Response
-from graphiant_sdk.models.v2_monitoring_circuits_summary_post_request import V2MonitoringCircuitsSummaryPostRequest
+from graphiant_sdk.models.v1_monitoring_circuits_summary_post_request import V1MonitoringCircuitsSummaryPostRequest
+from graphiant_sdk.models.v1_monitoring_circuits_summary_post_response import V1MonitoringCircuitsSummaryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -25742,10 +27151,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v2_monitoring_circuits_summary_post_request = graphiant_sdk.V2MonitoringCircuitsSummaryPostRequest() # V2MonitoringCircuitsSummaryPostRequest | 
+    v1_monitoring_circuits_summary_post_request = graphiant_sdk.V1MonitoringCircuitsSummaryPostRequest() # V1MonitoringCircuitsSummaryPostRequest | 
 
     try:
-        api_response = api_instance.v1_monitoring_circuits_summary_post(authorization, v2_monitoring_circuits_summary_post_request)
+        api_response = api_instance.v1_monitoring_circuits_summary_post(authorization, v1_monitoring_circuits_summary_post_request)
         print("The response of DefaultApi->v1_monitoring_circuits_summary_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -25760,11 +27169,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2_monitoring_circuits_summary_post_request** | [**V2MonitoringCircuitsSummaryPostRequest**](V2MonitoringCircuitsSummaryPostRequest.md)|  | 
+ **v1_monitoring_circuits_summary_post_request** | [**V1MonitoringCircuitsSummaryPostRequest**](V1MonitoringCircuitsSummaryPostRequest.md)|  | 
 
 ### Return type
 
-[**V1MonitoringCircuitsSummaryPost200Response**](V1MonitoringCircuitsSummaryPost200Response.md)
+[**V1MonitoringCircuitsSummaryPostResponse**](V1MonitoringCircuitsSummaryPostResponse.md)
 
 ### Authorization
 
@@ -25784,7 +27193,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_monitoring_circuits_utilization_post**
-> V1MonitoringCircuitsUtilizationPost200Response v1_monitoring_circuits_utilization_post(authorization, v2_monitoring_circuits_utilization_post_request)
+> V1MonitoringCircuitsUtilizationPostResponse v1_monitoring_circuits_utilization_post(authorization, v1_monitoring_circuits_utilization_post_request)
 
 ### Example
 
@@ -25792,8 +27201,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_monitoring_circuits_utilization_post200_response import V1MonitoringCircuitsUtilizationPost200Response
-from graphiant_sdk.models.v2_monitoring_circuits_utilization_post_request import V2MonitoringCircuitsUtilizationPostRequest
+from graphiant_sdk.models.v1_monitoring_circuits_utilization_post_request import V1MonitoringCircuitsUtilizationPostRequest
+from graphiant_sdk.models.v1_monitoring_circuits_utilization_post_response import V1MonitoringCircuitsUtilizationPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -25819,10 +27228,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v2_monitoring_circuits_utilization_post_request = graphiant_sdk.V2MonitoringCircuitsUtilizationPostRequest() # V2MonitoringCircuitsUtilizationPostRequest | 
+    v1_monitoring_circuits_utilization_post_request = graphiant_sdk.V1MonitoringCircuitsUtilizationPostRequest() # V1MonitoringCircuitsUtilizationPostRequest | 
 
     try:
-        api_response = api_instance.v1_monitoring_circuits_utilization_post(authorization, v2_monitoring_circuits_utilization_post_request)
+        api_response = api_instance.v1_monitoring_circuits_utilization_post(authorization, v1_monitoring_circuits_utilization_post_request)
         print("The response of DefaultApi->v1_monitoring_circuits_utilization_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -25837,11 +27246,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2_monitoring_circuits_utilization_post_request** | [**V2MonitoringCircuitsUtilizationPostRequest**](V2MonitoringCircuitsUtilizationPostRequest.md)|  | 
+ **v1_monitoring_circuits_utilization_post_request** | [**V1MonitoringCircuitsUtilizationPostRequest**](V1MonitoringCircuitsUtilizationPostRequest.md)|  | 
 
 ### Return type
 
-[**V1MonitoringCircuitsUtilizationPost200Response**](V1MonitoringCircuitsUtilizationPost200Response.md)
+[**V1MonitoringCircuitsUtilizationPostResponse**](V1MonitoringCircuitsUtilizationPostResponse.md)
 
 ### Authorization
 
@@ -25861,7 +27270,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_monitoring_circuits_visualization_post**
-> V1MonitoringCircuitsVisualizationPost200Response v1_monitoring_circuits_visualization_post(authorization, v1_monitoring_circuits_visualization_post_request)
+> V1MonitoringCircuitsVisualizationPostResponse v1_monitoring_circuits_visualization_post(authorization, v1_monitoring_circuits_visualization_post_request)
 
 ### Example
 
@@ -25869,8 +27278,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_monitoring_circuits_visualization_post200_response import V1MonitoringCircuitsVisualizationPost200Response
 from graphiant_sdk.models.v1_monitoring_circuits_visualization_post_request import V1MonitoringCircuitsVisualizationPostRequest
+from graphiant_sdk.models.v1_monitoring_circuits_visualization_post_response import V1MonitoringCircuitsVisualizationPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -25918,7 +27327,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1MonitoringCircuitsVisualizationPost200Response**](V1MonitoringCircuitsVisualizationPost200Response.md)
+[**V1MonitoringCircuitsVisualizationPostResponse**](V1MonitoringCircuitsVisualizationPostResponse.md)
 
 ### Authorization
 
@@ -25938,7 +27347,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_nat_entries_device_id_get**
-> V1NatEntriesDeviceIdGet200Response v1_nat_entries_device_id_get(authorization, device_id)
+> V1NatEntriesDeviceIdGetResponse v1_nat_entries_device_id_get(authorization, device_id)
+
+Get the NAT entries for the device
 
 ### Example
 
@@ -25946,7 +27357,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_nat_entries_device_id_get200_response import V1NatEntriesDeviceIdGet200Response
+from graphiant_sdk.models.v1_nat_entries_device_id_get_response import V1NatEntriesDeviceIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -25994,7 +27405,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1NatEntriesDeviceIdGet200Response**](V1NatEntriesDeviceIdGet200Response.md)
+[**V1NatEntriesDeviceIdGetResponse**](V1NatEntriesDeviceIdGetResponse.md)
 
 ### Authorization
 
@@ -26014,7 +27425,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_nat_utilization_device_id_get**
-> V1NatUtilizationDeviceIdGet200Response v1_nat_utilization_device_id_get(authorization, device_id)
+> V1NatUtilizationDeviceIdGetResponse v1_nat_utilization_device_id_get(authorization, device_id)
+
+Get the NAT usage for the device
 
 ### Example
 
@@ -26022,7 +27435,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_nat_utilization_device_id_get200_response import V1NatUtilizationDeviceIdGet200Response
+from graphiant_sdk.models.v1_nat_utilization_device_id_get_response import V1NatUtilizationDeviceIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -26070,7 +27483,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1NatUtilizationDeviceIdGet200Response**](V1NatUtilizationDeviceIdGet200Response.md)
+[**V1NatUtilizationDeviceIdGetResponse**](V1NatUtilizationDeviceIdGetResponse.md)
 
 ### Authorization
 
@@ -26091,6 +27504,8 @@ Name | Type | Description  | Notes
 
 # **v1_onboarding_cloudinit_delete**
 > object v1_onboarding_cloudinit_delete(authorization)
+
+Delete the onboarding token
 
 ### Example
 
@@ -26163,7 +27578,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_onboarding_cloudinit_get**
-> V1OnboardingCloudinitGet200Response v1_onboarding_cloudinit_get(authorization)
+> V1OnboardingCloudinitGetResponse v1_onboarding_cloudinit_get(authorization)
+
+Get all the onboarding tokens
 
 ### Example
 
@@ -26171,7 +27588,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_onboarding_cloudinit_get200_response import V1OnboardingCloudinitGet200Response
+from graphiant_sdk.models.v1_onboarding_cloudinit_get_response import V1OnboardingCloudinitGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -26217,7 +27634,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1OnboardingCloudinitGet200Response**](V1OnboardingCloudinitGet200Response.md)
+[**V1OnboardingCloudinitGetResponse**](V1OnboardingCloudinitGetResponse.md)
 
 ### Authorization
 
@@ -26237,7 +27654,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_onboarding_cloudinit_post**
-> object v1_onboarding_cloudinit_post(authorization, v1_onboarding_cloudinit_get200_response)
+> object v1_onboarding_cloudinit_post(authorization, v1_onboarding_cloudinit_post_request)
+
+Create a onboarding token
 
 ### Example
 
@@ -26245,7 +27664,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_onboarding_cloudinit_get200_response import V1OnboardingCloudinitGet200Response
+from graphiant_sdk.models.v1_onboarding_cloudinit_post_request import V1OnboardingCloudinitPostRequest
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -26271,10 +27690,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_onboarding_cloudinit_get200_response = graphiant_sdk.V1OnboardingCloudinitGet200Response() # V1OnboardingCloudinitGet200Response | 
+    v1_onboarding_cloudinit_post_request = graphiant_sdk.V1OnboardingCloudinitPostRequest() # V1OnboardingCloudinitPostRequest | 
 
     try:
-        api_response = api_instance.v1_onboarding_cloudinit_post(authorization, v1_onboarding_cloudinit_get200_response)
+        api_response = api_instance.v1_onboarding_cloudinit_post(authorization, v1_onboarding_cloudinit_post_request)
         print("The response of DefaultApi->v1_onboarding_cloudinit_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -26289,7 +27708,7 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_onboarding_cloudinit_get200_response** | [**V1OnboardingCloudinitGet200Response**](V1OnboardingCloudinitGet200Response.md)|  | 
+ **v1_onboarding_cloudinit_post_request** | [**V1OnboardingCloudinitPostRequest**](V1OnboardingCloudinitPostRequest.md)|  | 
 
 ### Return type
 
@@ -26313,7 +27732,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_policy_applications_get**
-> V1PolicyApplicationsGet200Response v1_policy_applications_get(authorization)
+> V1PolicyApplicationsGetResponse v1_policy_applications_get(authorization)
+
+Get a list of builtin DPI applications
 
 ### Example
 
@@ -26321,7 +27742,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_policy_applications_get200_response import V1PolicyApplicationsGet200Response
+from graphiant_sdk.models.v1_policy_applications_get_response import V1PolicyApplicationsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -26367,7 +27788,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyApplicationsGet200Response**](V1PolicyApplicationsGet200Response.md)
+[**V1PolicyApplicationsGetResponse**](V1PolicyApplicationsGetResponse.md)
 
 ### Authorization
 
@@ -26388,6 +27809,8 @@ Name | Type | Description  | Notes
 
 # **v1_policy_prefix_sets_id_delete**
 > object v1_policy_prefix_sets_id_delete(authorization, id)
+
+Delete a prefix-set
 
 ### Example
 
@@ -26462,7 +27885,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_policy_prefix_sets_id_put**
-> V1PolicyPrefixSetsPost200Response v1_policy_prefix_sets_id_put(authorization, id, v1_policy_prefix_sets_id_put_request)
+> V1PolicyPrefixSetsIdPutResponse v1_policy_prefix_sets_id_put(authorization, id, v1_policy_prefix_sets_id_put_request)
+
+Update a prefix-set
 
 ### Example
 
@@ -26471,7 +27896,7 @@ Name | Type | Description  | Notes
 ```python
 import graphiant_sdk
 from graphiant_sdk.models.v1_policy_prefix_sets_id_put_request import V1PolicyPrefixSetsIdPutRequest
-from graphiant_sdk.models.v1_policy_prefix_sets_post200_response import V1PolicyPrefixSetsPost200Response
+from graphiant_sdk.models.v1_policy_prefix_sets_id_put_response import V1PolicyPrefixSetsIdPutResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -26521,7 +27946,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyPrefixSetsPost200Response**](V1PolicyPrefixSetsPost200Response.md)
+[**V1PolicyPrefixSetsIdPutResponse**](V1PolicyPrefixSetsIdPutResponse.md)
 
 ### Authorization
 
@@ -26541,7 +27966,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_policy_prefix_sets_post**
-> V1PolicyPrefixSetsPost200Response v1_policy_prefix_sets_post(authorization, v1_policy_prefix_sets_post_request)
+> V1PolicyPrefixSetsPostResponse v1_policy_prefix_sets_post(authorization, v1_policy_prefix_sets_post_request)
+
+Create a new prefix-set scoped to the enterprise
 
 ### Example
 
@@ -26549,8 +27976,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_policy_prefix_sets_post200_response import V1PolicyPrefixSetsPost200Response
 from graphiant_sdk.models.v1_policy_prefix_sets_post_request import V1PolicyPrefixSetsPostRequest
+from graphiant_sdk.models.v1_policy_prefix_sets_post_response import V1PolicyPrefixSetsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -26598,7 +28025,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyPrefixSetsPost200Response**](V1PolicyPrefixSetsPost200Response.md)
+[**V1PolicyPrefixSetsPostResponse**](V1PolicyPrefixSetsPostResponse.md)
 
 ### Authorization
 
@@ -26618,7 +28045,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_policy_route_tag_sets_id_delete**
-> V1PolicyRouteTagSetsPost200Response v1_policy_route_tag_sets_id_delete(authorization, id, level=level)
+> V1PolicyRouteTagSetsIdDeleteResponse v1_policy_route_tag_sets_id_delete(authorization, id, level=level)
+
+Create a new route-tag scoped to the enterprise
 
 ### Example
 
@@ -26626,7 +28055,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_policy_route_tag_sets_post200_response import V1PolicyRouteTagSetsPost200Response
+from graphiant_sdk.models.v1_policy_route_tag_sets_id_delete_response import V1PolicyRouteTagSetsIdDeleteResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -26676,7 +28105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyRouteTagSetsPost200Response**](V1PolicyRouteTagSetsPost200Response.md)
+[**V1PolicyRouteTagSetsIdDeleteResponse**](V1PolicyRouteTagSetsIdDeleteResponse.md)
 
 ### Authorization
 
@@ -26696,7 +28125,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_policy_route_tag_sets_post**
-> V1PolicyRouteTagSetsPost200Response v1_policy_route_tag_sets_post(authorization, v1_policy_route_tag_sets_post_request)
+> V1PolicyRouteTagSetsPostResponse v1_policy_route_tag_sets_post(authorization, v1_policy_route_tag_sets_post_request)
+
+Create a new route tag scoped to the enterprise
 
 ### Example
 
@@ -26704,8 +28135,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_policy_route_tag_sets_post200_response import V1PolicyRouteTagSetsPost200Response
 from graphiant_sdk.models.v1_policy_route_tag_sets_post_request import V1PolicyRouteTagSetsPostRequest
+from graphiant_sdk.models.v1_policy_route_tag_sets_post_response import V1PolicyRouteTagSetsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -26753,7 +28184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyRouteTagSetsPost200Response**](V1PolicyRouteTagSetsPost200Response.md)
+[**V1PolicyRouteTagSetsPostResponse**](V1PolicyRouteTagSetsPostResponse.md)
 
 ### Authorization
 
@@ -26773,7 +28204,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_policy_route_tag_sets_tag_detail_get**
-> V1PolicyRouteTagSetsTagDetailGet200Response v1_policy_route_tag_sets_tag_detail_get(authorization)
+> V1PolicyRouteTagSetsTagDetailGetResponse v1_policy_route_tag_sets_tag_detail_get(authorization)
+
+Get all the route tags summary for the the enterprise
 
 ### Example
 
@@ -26781,7 +28214,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_policy_route_tag_sets_tag_detail_get200_response import V1PolicyRouteTagSetsTagDetailGet200Response
+from graphiant_sdk.models.v1_policy_route_tag_sets_tag_detail_get_response import V1PolicyRouteTagSetsTagDetailGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -26827,7 +28260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyRouteTagSetsTagDetailGet200Response**](V1PolicyRouteTagSetsTagDetailGet200Response.md)
+[**V1PolicyRouteTagSetsTagDetailGetResponse**](V1PolicyRouteTagSetsTagDetailGetResponse.md)
 
 ### Authorization
 
@@ -26847,7 +28280,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_policy_route_tag_sets_tags_get**
-> V1PolicyRouteTagSetsTagsGet200Response v1_policy_route_tag_sets_tags_get(authorization)
+> V1PolicyRouteTagSetsTagsGetResponse v1_policy_route_tag_sets_tags_get(authorization)
+
+Get all the route tags for the enterprise
 
 ### Example
 
@@ -26855,7 +28290,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_policy_route_tag_sets_tags_get200_response import V1PolicyRouteTagSetsTagsGet200Response
+from graphiant_sdk.models.v1_policy_route_tag_sets_tags_get_response import V1PolicyRouteTagSetsTagsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -26901,7 +28336,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyRouteTagSetsTagsGet200Response**](V1PolicyRouteTagSetsTagsGet200Response.md)
+[**V1PolicyRouteTagSetsTagsGetResponse**](V1PolicyRouteTagSetsTagsGetResponse.md)
 
 ### Authorization
 
@@ -26921,7 +28356,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_policy_route_tag_sets_tags_summary_get**
-> V1PolicyRouteTagSetsTagsSummaryGet200Response v1_policy_route_tag_sets_tags_summary_get(authorization)
+> V1PolicyRouteTagSetsTagsSummaryGetResponse v1_policy_route_tag_sets_tags_summary_get(authorization)
+
+Get all the route tags summary for the the enterprise
 
 ### Example
 
@@ -26929,7 +28366,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_policy_route_tag_sets_tags_summary_get200_response import V1PolicyRouteTagSetsTagsSummaryGet200Response
+from graphiant_sdk.models.v1_policy_route_tag_sets_tags_summary_get_response import V1PolicyRouteTagSetsTagsSummaryGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -26975,7 +28412,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyRouteTagSetsTagsSummaryGet200Response**](V1PolicyRouteTagSetsTagsSummaryGet200Response.md)
+[**V1PolicyRouteTagSetsTagsSummaryGetResponse**](V1PolicyRouteTagSetsTagsSummaryGetResponse.md)
 
 ### Authorization
 
@@ -26995,7 +28432,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_portal_apikeys_delete**
-> object v1_portal_apikeys_delete(authorization, gcs_name=gcs_name)
+> object v1_portal_apikeys_delete(authorization, gcs_name)
+
+Remove private GCS API key by GCS name to revoke portal access.
 
 ### Example
 
@@ -27028,10 +28467,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    gcs_name = 'example string' # str |  (optional)
+    gcs_name = 'example string' # str | 
 
     try:
-        api_response = api_instance.v1_portal_apikeys_delete(authorization, gcs_name=gcs_name)
+        api_response = api_instance.v1_portal_apikeys_delete(authorization, gcs_name)
         print("The response of DefaultApi->v1_portal_apikeys_delete:\n")
         pprint(api_response)
     except Exception as e:
@@ -27046,7 +28485,7 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **gcs_name** | **str**|  | [optional] 
+ **gcs_name** | **str**|  | 
 
 ### Return type
 
@@ -27070,7 +28509,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_portal_apikeys_get**
-> V1PortalApikeysGet200Response v1_portal_apikeys_get(authorization)
+> V1PortalApikeysGetResponse v1_portal_apikeys_get(authorization)
+
+Get private GCS API key information and status for portal access.
 
 ### Example
 
@@ -27078,7 +28519,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_portal_apikeys_get200_response import V1PortalApikeysGet200Response
+from graphiant_sdk.models.v1_portal_apikeys_get_response import V1PortalApikeysGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -27124,7 +28565,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PortalApikeysGet200Response**](V1PortalApikeysGet200Response.md)
+[**V1PortalApikeysGetResponse**](V1PortalApikeysGetResponse.md)
 
 ### Authorization
 
@@ -27144,7 +28585,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_portal_apikeys_post**
-> V1PortalApikeysPost200Response v1_portal_apikeys_post(authorization, v1_portal_apikeys_post_request)
+> V1PortalApikeysPostResponse v1_portal_apikeys_post(authorization, v1_portal_apikeys_post_request)
+
+Generate private GCS API key for portal access and authentication.
 
 ### Example
 
@@ -27152,8 +28595,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_portal_apikeys_post200_response import V1PortalApikeysPost200Response
 from graphiant_sdk.models.v1_portal_apikeys_post_request import V1PortalApikeysPostRequest
+from graphiant_sdk.models.v1_portal_apikeys_post_response import V1PortalApikeysPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -27201,7 +28644,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PortalApikeysPost200Response**](V1PortalApikeysPost200Response.md)
+[**V1PortalApikeysPostResponse**](V1PortalApikeysPostResponse.md)
 
 ### Authorization
 
@@ -27221,7 +28664,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_portal_private_details_get**
-> V1PortalPrivateDetailsGet200Response v1_portal_private_details_get(authorization)
+> V1PortalPrivateDetailsGetResponse v1_portal_private_details_get(authorization)
 
 ### Example
 
@@ -27229,7 +28672,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_portal_private_details_get200_response import V1PortalPrivateDetailsGet200Response
+from graphiant_sdk.models.v1_portal_private_details_get_response import V1PortalPrivateDetailsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -27275,7 +28718,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PortalPrivateDetailsGet200Response**](V1PortalPrivateDetailsGet200Response.md)
+[**V1PortalPrivateDetailsGetResponse**](V1PortalPrivateDetailsGetResponse.md)
 
 ### Authorization
 
@@ -27295,7 +28738,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_portal_private_inventory_details_get**
-> V1PortalPrivateInventoryDetailsGet200Response v1_portal_private_inventory_details_get(authorization)
+> V1PortalPrivateInventoryDetailsGetResponse v1_portal_private_inventory_details_get(authorization)
 
 ### Example
 
@@ -27303,7 +28746,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_portal_private_inventory_details_get200_response import V1PortalPrivateInventoryDetailsGet200Response
+from graphiant_sdk.models.v1_portal_private_inventory_details_get_response import V1PortalPrivateInventoryDetailsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -27349,7 +28792,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PortalPrivateInventoryDetailsGet200Response**](V1PortalPrivateInventoryDetailsGet200Response.md)
+[**V1PortalPrivateInventoryDetailsGetResponse**](V1PortalPrivateInventoryDetailsGetResponse.md)
 
 ### Authorization
 
@@ -27445,7 +28888,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_portal_private_register_post**
-> object v1_portal_private_register_post(authorization, v1_portal_private_post_request)
+> object v1_portal_private_register_post(authorization, v1_portal_private_register_post_request)
 
 ### Example
 
@@ -27453,7 +28896,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_portal_private_post_request import V1PortalPrivatePostRequest
+from graphiant_sdk.models.v1_portal_private_register_post_request import V1PortalPrivateRegisterPostRequest
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -27479,10 +28922,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_portal_private_post_request = graphiant_sdk.V1PortalPrivatePostRequest() # V1PortalPrivatePostRequest | 
+    v1_portal_private_register_post_request = graphiant_sdk.V1PortalPrivateRegisterPostRequest() # V1PortalPrivateRegisterPostRequest | 
 
     try:
-        api_response = api_instance.v1_portal_private_register_post(authorization, v1_portal_private_post_request)
+        api_response = api_instance.v1_portal_private_register_post(authorization, v1_portal_private_register_post_request)
         print("The response of DefaultApi->v1_portal_private_register_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -27497,7 +28940,7 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_portal_private_post_request** | [**V1PortalPrivatePostRequest**](V1PortalPrivatePostRequest.md)|  | 
+ **v1_portal_private_register_post_request** | [**V1PortalPrivateRegisterPostRequest**](V1PortalPrivateRegisterPostRequest.md)|  | 
 
 ### Return type
 
@@ -27597,7 +29040,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_presharedkey_get**
-> V1PresharedkeyGet200Response v1_presharedkey_get(authorization)
+> V1PresharedkeyGetResponse v1_presharedkey_get(authorization)
+
+Get all domain categories from the DPI engine
 
 ### Example
 
@@ -27605,7 +29050,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_presharedkey_get200_response import V1PresharedkeyGet200Response
+from graphiant_sdk.models.v1_presharedkey_get_response import V1PresharedkeyGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -27651,7 +29096,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PresharedkeyGet200Response**](V1PresharedkeyGet200Response.md)
+[**V1PresharedkeyGetResponse**](V1PresharedkeyGetResponse.md)
 
 ### Authorization
 
@@ -27671,7 +29116,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_qos_circuit_profiles_get**
-> V1QosCircuitProfilesGet200Response v1_qos_circuit_profiles_get(authorization)
+> V1QosCircuitProfilesGetResponse v1_qos_circuit_profiles_get(authorization)
+
+Returns a list of QoS profiles for circuits with associated queues & attributes
 
 ### Example
 
@@ -27679,7 +29126,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_qos_circuit_profiles_get200_response import V1QosCircuitProfilesGet200Response
+from graphiant_sdk.models.v1_qos_circuit_profiles_get_response import V1QosCircuitProfilesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -27725,7 +29172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1QosCircuitProfilesGet200Response**](V1QosCircuitProfilesGet200Response.md)
+[**V1QosCircuitProfilesGetResponse**](V1QosCircuitProfilesGetResponse.md)
 
 ### Authorization
 
@@ -27745,7 +29192,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_regions_get**
-> V1GatewaysRegionsGet200Response v1_regions_get(authorization)
+> V1RegionsGetResponse v1_regions_get(authorization)
+
+Get regions used for the current enterprise
 
 ### Example
 
@@ -27753,7 +29202,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_gateways_regions_get200_response import V1GatewaysRegionsGet200Response
+from graphiant_sdk.models.v1_regions_get_response import V1RegionsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -27799,7 +29248,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GatewaysRegionsGet200Response**](V1GatewaysRegionsGet200Response.md)
+[**V1RegionsGetResponse**](V1RegionsGetResponse.md)
 
 ### Authorization
 
@@ -27819,7 +29268,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_search_get**
-> V1SearchGet200Response v1_search_get(authorization, max_results=max_results, search=search)
+> V1SearchGetResponse v1_search_get(authorization, max_results=max_results, search=search)
 
 ### Example
 
@@ -27827,7 +29276,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_search_get200_response import V1SearchGet200Response
+from graphiant_sdk.models.v1_search_get_response import V1SearchGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -27877,7 +29326,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SearchGet200Response**](V1SearchGet200Response.md)
+[**V1SearchGetResponse**](V1SearchGetResponse.md)
 
 ### Authorization
 
@@ -27897,7 +29346,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_site_details_sitelists_post**
-> V1SiteDetailsSitelistsPost200Response v1_site_details_sitelists_post(authorization, v1_site_details_sitelists_post_request)
+> V1SiteDetailsSitelistsPostResponse v1_site_details_sitelists_post(authorization, v1_site_details_sitelists_post_request)
+
+Get a list of site list references for a site
 
 ### Example
 
@@ -27905,8 +29356,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_site_details_sitelists_post200_response import V1SiteDetailsSitelistsPost200Response
 from graphiant_sdk.models.v1_site_details_sitelists_post_request import V1SiteDetailsSitelistsPostRequest
+from graphiant_sdk.models.v1_site_details_sitelists_post_response import V1SiteDetailsSitelistsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -27954,7 +29405,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SiteDetailsSitelistsPost200Response**](V1SiteDetailsSitelistsPost200Response.md)
+[**V1SiteDetailsSitelistsPostResponse**](V1SiteDetailsSitelistsPostResponse.md)
 
 ### Authorization
 
@@ -27974,7 +29425,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_site_id_details_interfaces_get**
-> V1SiteIdDetailsInterfacesGet200Response v1_site_id_details_interfaces_get(authorization, id)
+> V1SiteIdDetailsInterfacesGetResponse v1_site_id_details_interfaces_get(authorization, id)
+
+Get a list of a site's interfaces, loopback listed first
 
 ### Example
 
@@ -27982,7 +29435,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_site_id_details_interfaces_get200_response import V1SiteIdDetailsInterfacesGet200Response
+from graphiant_sdk.models.v1_site_id_details_interfaces_get_response import V1SiteIdDetailsInterfacesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -28030,7 +29483,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SiteIdDetailsInterfacesGet200Response**](V1SiteIdDetailsInterfacesGet200Response.md)
+[**V1SiteIdDetailsInterfacesGetResponse**](V1SiteIdDetailsInterfacesGetResponse.md)
 
 ### Authorization
 
@@ -28050,7 +29503,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_sites_details_get**
-> V1SitesDetailsGet200Response v1_sites_details_get(authorization)
+> V1SitesDetailsGetResponse v1_sites_details_get(authorization)
+
+Get a list of sites with aggregated values and site wide status
 
 ### Example
 
@@ -28058,7 +29513,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_sites_details_get200_response import V1SitesDetailsGet200Response
+from graphiant_sdk.models.v1_sites_details_get_response import V1SitesDetailsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -28104,7 +29559,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SitesDetailsGet200Response**](V1SitesDetailsGet200Response.md)
+[**V1SitesDetailsGetResponse**](V1SitesDetailsGetResponse.md)
 
 ### Authorization
 
@@ -28124,7 +29579,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_sites_get**
-> V1SitesGet200Response v1_sites_get(authorization)
+> V1SitesGetResponse v1_sites_get(authorization)
+
+Get sites for the current enterprise
 
 ### Example
 
@@ -28132,7 +29589,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_sites_get200_response import V1SitesGet200Response
+from graphiant_sdk.models.v1_sites_get_response import V1SitesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -28178,7 +29635,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SitesGet200Response**](V1SitesGet200Response.md)
+[**V1SitesGetResponse**](V1SitesGetResponse.md)
 
 ### Authorization
 
@@ -28198,7 +29655,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_sites_post**
-> V1SitesPost200Response v1_sites_post(authorization, v1_sites_post_request)
+> V1SitesPostResponse v1_sites_post(authorization, v1_sites_post_request)
+
+Create an enterprise site
 
 ### Example
 
@@ -28206,8 +29665,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_sites_post200_response import V1SitesPost200Response
 from graphiant_sdk.models.v1_sites_post_request import V1SitesPostRequest
+from graphiant_sdk.models.v1_sites_post_response import V1SitesPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -28255,7 +29714,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SitesPost200Response**](V1SitesPost200Response.md)
+[**V1SitesPostResponse**](V1SitesPostResponse.md)
 
 ### Authorization
 
@@ -28275,7 +29734,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_sites_site_id_circuits_get**
-> V1SitesSiteIdCircuitsGet200Response v1_sites_site_id_circuits_get(authorization, site_id)
+> V1SitesSiteIdCircuitsGetResponse v1_sites_site_id_circuits_get(authorization, site_id)
+
+Get Circuits for the site
 
 ### Example
 
@@ -28283,7 +29744,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_sites_site_id_circuits_get200_response import V1SitesSiteIdCircuitsGet200Response
+from graphiant_sdk.models.v1_sites_site_id_circuits_get_response import V1SitesSiteIdCircuitsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -28331,7 +29792,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SitesSiteIdCircuitsGet200Response**](V1SitesSiteIdCircuitsGet200Response.md)
+[**V1SitesSiteIdCircuitsGetResponse**](V1SitesSiteIdCircuitsGetResponse.md)
 
 ### Authorization
 
@@ -28352,6 +29813,8 @@ Name | Type | Description  | Notes
 
 # **v1_sites_site_id_delete**
 > object v1_sites_site_id_delete(authorization, site_id)
+
+Delete a site
 
 ### Example
 
@@ -28426,7 +29889,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_sites_site_id_devices_get**
-> V1SitesSiteIdDevicesGet200Response v1_sites_site_id_devices_get(authorization, site_id)
+> V1SitesSiteIdDevicesGetResponse v1_sites_site_id_devices_get(authorization, site_id)
+
+Get Devices for the site
 
 ### Example
 
@@ -28434,7 +29899,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_sites_site_id_devices_get200_response import V1SitesSiteIdDevicesGet200Response
+from graphiant_sdk.models.v1_sites_site_id_devices_get_response import V1SitesSiteIdDevicesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -28482,7 +29947,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SitesSiteIdDevicesGet200Response**](V1SitesSiteIdDevicesGet200Response.md)
+[**V1SitesSiteIdDevicesGetResponse**](V1SitesSiteIdDevicesGetResponse.md)
 
 ### Authorization
 
@@ -28502,7 +29967,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_sites_site_id_post**
-> V1SitesPost200Response v1_sites_site_id_post(authorization, site_id, v1_sites_site_id_post_request)
+> V1SitesSiteIdPostResponse v1_sites_site_id_post(authorization, site_id, v1_sites_site_id_post_request)
+
+Update a site
 
 ### Example
 
@@ -28510,8 +29977,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_sites_post200_response import V1SitesPost200Response
 from graphiant_sdk.models.v1_sites_site_id_post_request import V1SitesSiteIdPostRequest
+from graphiant_sdk.models.v1_sites_site_id_post_response import V1SitesSiteIdPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -28561,7 +30028,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SitesPost200Response**](V1SitesPost200Response.md)
+[**V1SitesSiteIdPostResponse**](V1SitesSiteIdPostResponse.md)
 
 ### Authorization
 
@@ -28581,7 +30048,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_software_auto_upgrade_default_get**
-> V1SoftwareAutoUpgradeDefaultGet200Response v1_software_auto_upgrade_default_get(authorization)
+> V1SoftwareAutoUpgradeDefaultGetResponse v1_software_auto_upgrade_default_get(authorization)
 
 ### Example
 
@@ -28589,7 +30056,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_software_auto_upgrade_default_get200_response import V1SoftwareAutoUpgradeDefaultGet200Response
+from graphiant_sdk.models.v1_software_auto_upgrade_default_get_response import V1SoftwareAutoUpgradeDefaultGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -28635,7 +30102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SoftwareAutoUpgradeDefaultGet200Response**](V1SoftwareAutoUpgradeDefaultGet200Response.md)
+[**V1SoftwareAutoUpgradeDefaultGetResponse**](V1SoftwareAutoUpgradeDefaultGetResponse.md)
 
 ### Authorization
 
@@ -28655,7 +30122,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_software_auto_upgrade_default_put**
-> object v1_software_auto_upgrade_default_put(authorization, v1_software_auto_upgrade_default_get200_response)
+> object v1_software_auto_upgrade_default_put(authorization, v1_software_auto_upgrade_default_put_request)
 
 ### Example
 
@@ -28663,7 +30130,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_software_auto_upgrade_default_get200_response import V1SoftwareAutoUpgradeDefaultGet200Response
+from graphiant_sdk.models.v1_software_auto_upgrade_default_put_request import V1SoftwareAutoUpgradeDefaultPutRequest
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -28689,10 +30156,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_software_auto_upgrade_default_get200_response = graphiant_sdk.V1SoftwareAutoUpgradeDefaultGet200Response() # V1SoftwareAutoUpgradeDefaultGet200Response | 
+    v1_software_auto_upgrade_default_put_request = graphiant_sdk.V1SoftwareAutoUpgradeDefaultPutRequest() # V1SoftwareAutoUpgradeDefaultPutRequest | 
 
     try:
-        api_response = api_instance.v1_software_auto_upgrade_default_put(authorization, v1_software_auto_upgrade_default_get200_response)
+        api_response = api_instance.v1_software_auto_upgrade_default_put(authorization, v1_software_auto_upgrade_default_put_request)
         print("The response of DefaultApi->v1_software_auto_upgrade_default_put:\n")
         pprint(api_response)
     except Exception as e:
@@ -28707,7 +30174,7 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_software_auto_upgrade_default_get200_response** | [**V1SoftwareAutoUpgradeDefaultGet200Response**](V1SoftwareAutoUpgradeDefaultGet200Response.md)|  | 
+ **v1_software_auto_upgrade_default_put_request** | [**V1SoftwareAutoUpgradeDefaultPutRequest**](V1SoftwareAutoUpgradeDefaultPutRequest.md)|  | 
 
 ### Return type
 
@@ -28807,7 +30274,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_software_release_notes_get**
-> V1SoftwareReleaseNotesGet200Response v1_software_release_notes_get(authorization)
+> V1SoftwareReleaseNotesGetResponse v1_software_release_notes_get(authorization)
 
 ### Example
 
@@ -28815,7 +30282,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_software_release_notes_get200_response import V1SoftwareReleaseNotesGet200Response
+from graphiant_sdk.models.v1_software_release_notes_get_response import V1SoftwareReleaseNotesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -28861,7 +30328,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SoftwareReleaseNotesGet200Response**](V1SoftwareReleaseNotesGet200Response.md)
+[**V1SoftwareReleaseNotesGetResponse**](V1SoftwareReleaseNotesGetResponse.md)
 
 ### Authorization
 
@@ -28881,7 +30348,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_software_releases_download_get**
-> V1SoftwareReleasesDownloadGet200Response v1_software_releases_download_get(authorization)
+> V1SoftwareReleasesDownloadGetResponse v1_software_releases_download_get(authorization)
 
 ### Example
 
@@ -28889,7 +30356,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_software_releases_download_get200_response import V1SoftwareReleasesDownloadGet200Response
+from graphiant_sdk.models.v1_software_releases_download_get_response import V1SoftwareReleasesDownloadGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -28935,7 +30402,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SoftwareReleasesDownloadGet200Response**](V1SoftwareReleasesDownloadGet200Response.md)
+[**V1SoftwareReleasesDownloadGetResponse**](V1SoftwareReleasesDownloadGetResponse.md)
 
 ### Authorization
 
@@ -28955,7 +30422,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_software_releases_summary_get**
-> V1SoftwareReleasesSummaryGet200Response v1_software_releases_summary_get(authorization)
+> V1SoftwareReleasesSummaryGetResponse v1_software_releases_summary_get(authorization)
 
 ### Example
 
@@ -28963,7 +30430,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_software_releases_summary_get200_response import V1SoftwareReleasesSummaryGet200Response
+from graphiant_sdk.models.v1_software_releases_summary_get_response import V1SoftwareReleasesSummaryGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -29009,7 +30476,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SoftwareReleasesSummaryGet200Response**](V1SoftwareReleasesSummaryGet200Response.md)
+[**V1SoftwareReleasesSummaryGetResponse**](V1SoftwareReleasesSummaryGetResponse.md)
 
 ### Authorization
 
@@ -29029,7 +30496,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_software_running_details_get**
-> V1SoftwareRunningDetailsGet200Response v1_software_running_details_get(authorization)
+> V1SoftwareRunningDetailsGetResponse v1_software_running_details_get(authorization)
 
 ### Example
 
@@ -29037,7 +30504,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_software_running_details_get200_response import V1SoftwareRunningDetailsGet200Response
+from graphiant_sdk.models.v1_software_running_details_get_response import V1SoftwareRunningDetailsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -29083,7 +30550,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SoftwareRunningDetailsGet200Response**](V1SoftwareRunningDetailsGet200Response.md)
+[**V1SoftwareRunningDetailsGetResponse**](V1SoftwareRunningDetailsGetResponse.md)
 
 ### Authorization
 
@@ -29103,7 +30570,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_software_running_summary_get**
-> V1SoftwareRunningSummaryGet200Response v1_software_running_summary_get(authorization)
+> V1SoftwareRunningSummaryGetResponse v1_software_running_summary_get(authorization)
 
 ### Example
 
@@ -29111,7 +30578,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_software_running_summary_get200_response import V1SoftwareRunningSummaryGet200Response
+from graphiant_sdk.models.v1_software_running_summary_get_response import V1SoftwareRunningSummaryGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -29157,7 +30624,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SoftwareRunningSummaryGet200Response**](V1SoftwareRunningSummaryGet200Response.md)
+[**V1SoftwareRunningSummaryGetResponse**](V1SoftwareRunningSummaryGetResponse.md)
 
 ### Authorization
 
@@ -29177,7 +30644,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_talkers_device_device_id_top_post**
-> V1TalkersDeviceDeviceIdTopPost200Response v1_talkers_device_device_id_top_post(authorization, device_id, v1_talkers_device_device_id_top_post_request)
+> V1TalkersDeviceDeviceIdTopPostResponse v1_talkers_device_device_id_top_post(authorization, device_id, v1_talkers_device_device_id_top_post_request)
+
+Get top talkers for a device
 
 ### Example
 
@@ -29185,8 +30654,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_talkers_device_device_id_top_post200_response import V1TalkersDeviceDeviceIdTopPost200Response
 from graphiant_sdk.models.v1_talkers_device_device_id_top_post_request import V1TalkersDeviceDeviceIdTopPostRequest
+from graphiant_sdk.models.v1_talkers_device_device_id_top_post_response import V1TalkersDeviceDeviceIdTopPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -29236,7 +30705,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1TalkersDeviceDeviceIdTopPost200Response**](V1TalkersDeviceDeviceIdTopPost200Response.md)
+[**V1TalkersDeviceDeviceIdTopPostResponse**](V1TalkersDeviceDeviceIdTopPostResponse.md)
 
 ### Authorization
 
@@ -29256,7 +30725,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_talkers_site_site_id_top_post**
-> V1TalkersDeviceDeviceIdTopPost200Response v1_talkers_site_site_id_top_post(authorization, site_id, v1_talkers_device_device_id_top_post_request)
+> V1TalkersSiteSiteIdTopPostResponse v1_talkers_site_site_id_top_post(authorization, site_id, v1_talkers_site_site_id_top_post_request)
+
+Get top talkers for a site
 
 ### Example
 
@@ -29264,8 +30735,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_talkers_device_device_id_top_post200_response import V1TalkersDeviceDeviceIdTopPost200Response
-from graphiant_sdk.models.v1_talkers_device_device_id_top_post_request import V1TalkersDeviceDeviceIdTopPostRequest
+from graphiant_sdk.models.v1_talkers_site_site_id_top_post_request import V1TalkersSiteSiteIdTopPostRequest
+from graphiant_sdk.models.v1_talkers_site_site_id_top_post_response import V1TalkersSiteSiteIdTopPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -29292,10 +30763,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
     site_id = 1234567891011 # int | 
-    v1_talkers_device_device_id_top_post_request = graphiant_sdk.V1TalkersDeviceDeviceIdTopPostRequest() # V1TalkersDeviceDeviceIdTopPostRequest | 
+    v1_talkers_site_site_id_top_post_request = graphiant_sdk.V1TalkersSiteSiteIdTopPostRequest() # V1TalkersSiteSiteIdTopPostRequest | 
 
     try:
-        api_response = api_instance.v1_talkers_site_site_id_top_post(authorization, site_id, v1_talkers_device_device_id_top_post_request)
+        api_response = api_instance.v1_talkers_site_site_id_top_post(authorization, site_id, v1_talkers_site_site_id_top_post_request)
         print("The response of DefaultApi->v1_talkers_site_site_id_top_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -29311,11 +30782,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **site_id** | **int**|  | 
- **v1_talkers_device_device_id_top_post_request** | [**V1TalkersDeviceDeviceIdTopPostRequest**](V1TalkersDeviceDeviceIdTopPostRequest.md)|  | 
+ **v1_talkers_site_site_id_top_post_request** | [**V1TalkersSiteSiteIdTopPostRequest**](V1TalkersSiteSiteIdTopPostRequest.md)|  | 
 
 ### Return type
 
-[**V1TalkersDeviceDeviceIdTopPost200Response**](V1TalkersDeviceDeviceIdTopPost200Response.md)
+[**V1TalkersSiteSiteIdTopPostResponse**](V1TalkersSiteSiteIdTopPostResponse.md)
 
 ### Authorization
 
@@ -29336,6 +30807,8 @@ Name | Type | Description  | Notes
 
 # **v1_temp_password_put**
 > object v1_temp_password_put(authorization, v1_temp_password_put_request)
+
+Generate and send temporary passwords to multiple emails for B2B service access.
 
 ### Example
 
@@ -29411,7 +30884,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_troubleshooting_device_device_id_post**
-> V1TroubleshootingDeviceDeviceIdPost200Response v1_troubleshooting_device_device_id_post(authorization, device_id, v2_notificationlist_post_request)
+> V1TroubleshootingDeviceDeviceIdPostResponse v1_troubleshooting_device_device_id_post(authorization, device_id, v1_troubleshooting_device_device_id_post_request)
 
 ### Example
 
@@ -29419,8 +30892,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_troubleshooting_device_device_id_post200_response import V1TroubleshootingDeviceDeviceIdPost200Response
-from graphiant_sdk.models.v2_notificationlist_post_request import V2NotificationlistPostRequest
+from graphiant_sdk.models.v1_troubleshooting_device_device_id_post_request import V1TroubleshootingDeviceDeviceIdPostRequest
+from graphiant_sdk.models.v1_troubleshooting_device_device_id_post_response import V1TroubleshootingDeviceDeviceIdPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -29447,10 +30920,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
     device_id = 1234567891011 # int | 
-    v2_notificationlist_post_request = graphiant_sdk.V2NotificationlistPostRequest() # V2NotificationlistPostRequest | 
+    v1_troubleshooting_device_device_id_post_request = graphiant_sdk.V1TroubleshootingDeviceDeviceIdPostRequest() # V1TroubleshootingDeviceDeviceIdPostRequest | 
 
     try:
-        api_response = api_instance.v1_troubleshooting_device_device_id_post(authorization, device_id, v2_notificationlist_post_request)
+        api_response = api_instance.v1_troubleshooting_device_device_id_post(authorization, device_id, v1_troubleshooting_device_device_id_post_request)
         print("The response of DefaultApi->v1_troubleshooting_device_device_id_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -29466,11 +30939,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **device_id** | **int**|  | 
- **v2_notificationlist_post_request** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md)|  | 
+ **v1_troubleshooting_device_device_id_post_request** | [**V1TroubleshootingDeviceDeviceIdPostRequest**](V1TroubleshootingDeviceDeviceIdPostRequest.md)|  | 
 
 ### Return type
 
-[**V1TroubleshootingDeviceDeviceIdPost200Response**](V1TroubleshootingDeviceDeviceIdPost200Response.md)
+[**V1TroubleshootingDeviceDeviceIdPostResponse**](V1TroubleshootingDeviceDeviceIdPostResponse.md)
 
 ### Authorization
 
@@ -29490,7 +30963,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_troubleshooting_enterprise_post**
-> V1TroubleshootingEnterprisePost200Response v1_troubleshooting_enterprise_post(authorization, v1_troubleshooting_enterprise_post_request)
+> V1TroubleshootingEnterprisePostResponse v1_troubleshooting_enterprise_post(authorization, v1_troubleshooting_enterprise_post_request)
 
 ### Example
 
@@ -29498,8 +30971,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_troubleshooting_enterprise_post200_response import V1TroubleshootingEnterprisePost200Response
 from graphiant_sdk.models.v1_troubleshooting_enterprise_post_request import V1TroubleshootingEnterprisePostRequest
+from graphiant_sdk.models.v1_troubleshooting_enterprise_post_response import V1TroubleshootingEnterprisePostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -29547,7 +31020,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1TroubleshootingEnterprisePost200Response**](V1TroubleshootingEnterprisePost200Response.md)
+[**V1TroubleshootingEnterprisePostResponse**](V1TroubleshootingEnterprisePostResponse.md)
 
 ### Authorization
 
@@ -29567,7 +31040,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_troubleshooting_filter_get**
-> V1BackboneHealthFilterGet200Response v1_troubleshooting_filter_get(authorization)
+> V1TroubleshootingFilterGetResponse v1_troubleshooting_filter_get(authorization)
 
 ### Example
 
@@ -29575,7 +31048,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_backbone_health_filter_get200_response import V1BackboneHealthFilterGet200Response
+from graphiant_sdk.models.v1_troubleshooting_filter_get_response import V1TroubleshootingFilterGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -29621,7 +31094,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1BackboneHealthFilterGet200Response**](V1BackboneHealthFilterGet200Response.md)
+[**V1TroubleshootingFilterGetResponse**](V1TroubleshootingFilterGetResponse.md)
 
 ### Authorization
 
@@ -29641,7 +31114,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_troubleshooting_site_connectivity_status_get**
-> V1TroubleshootingSiteConnectivityStatusGet200Response v1_troubleshooting_site_connectivity_status_get(authorization)
+> V1TroubleshootingSiteConnectivityStatusGetResponse v1_troubleshooting_site_connectivity_status_get(authorization)
 
 ### Example
 
@@ -29649,7 +31122,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_troubleshooting_site_connectivity_status_get200_response import V1TroubleshootingSiteConnectivityStatusGet200Response
+from graphiant_sdk.models.v1_troubleshooting_site_connectivity_status_get_response import V1TroubleshootingSiteConnectivityStatusGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -29695,7 +31168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1TroubleshootingSiteConnectivityStatusGet200Response**](V1TroubleshootingSiteConnectivityStatusGet200Response.md)
+[**V1TroubleshootingSiteConnectivityStatusGetResponse**](V1TroubleshootingSiteConnectivityStatusGetResponse.md)
 
 ### Authorization
 
@@ -29715,7 +31188,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_troubleshooting_site_site_id_get**
-> V1TroubleshootingSiteSiteIdGet200Response v1_troubleshooting_site_site_id_get(authorization, site_id)
+> V1TroubleshootingSiteSiteIdGetResponse v1_troubleshooting_site_site_id_get(authorization, site_id)
 
 ### Example
 
@@ -29723,7 +31196,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_troubleshooting_site_site_id_get200_response import V1TroubleshootingSiteSiteIdGet200Response
+from graphiant_sdk.models.v1_troubleshooting_site_site_id_get_response import V1TroubleshootingSiteSiteIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -29771,7 +31244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1TroubleshootingSiteSiteIdGet200Response**](V1TroubleshootingSiteSiteIdGet200Response.md)
+[**V1TroubleshootingSiteSiteIdGetResponse**](V1TroubleshootingSiteSiteIdGetResponse.md)
 
 ### Authorization
 
@@ -29791,7 +31264,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_troubleshooting_top_sites_by_alerts_post**
-> V1TroubleshootingTopSitesByAlertsPost200Response v1_troubleshooting_top_sites_by_alerts_post(authorization, v1_backbone_health_top_devices_by_alerts_post_request)
+> V1TroubleshootingTopSitesByAlertsPostResponse v1_troubleshooting_top_sites_by_alerts_post(authorization, v1_troubleshooting_top_sites_by_alerts_post_request)
 
 ### Example
 
@@ -29799,8 +31272,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_backbone_health_top_devices_by_alerts_post_request import V1BackboneHealthTopDevicesByAlertsPostRequest
-from graphiant_sdk.models.v1_troubleshooting_top_sites_by_alerts_post200_response import V1TroubleshootingTopSitesByAlertsPost200Response
+from graphiant_sdk.models.v1_troubleshooting_top_sites_by_alerts_post_request import V1TroubleshootingTopSitesByAlertsPostRequest
+from graphiant_sdk.models.v1_troubleshooting_top_sites_by_alerts_post_response import V1TroubleshootingTopSitesByAlertsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -29826,10 +31299,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_backbone_health_top_devices_by_alerts_post_request = graphiant_sdk.V1BackboneHealthTopDevicesByAlertsPostRequest() # V1BackboneHealthTopDevicesByAlertsPostRequest | 
+    v1_troubleshooting_top_sites_by_alerts_post_request = graphiant_sdk.V1TroubleshootingTopSitesByAlertsPostRequest() # V1TroubleshootingTopSitesByAlertsPostRequest | 
 
     try:
-        api_response = api_instance.v1_troubleshooting_top_sites_by_alerts_post(authorization, v1_backbone_health_top_devices_by_alerts_post_request)
+        api_response = api_instance.v1_troubleshooting_top_sites_by_alerts_post(authorization, v1_troubleshooting_top_sites_by_alerts_post_request)
         print("The response of DefaultApi->v1_troubleshooting_top_sites_by_alerts_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -29844,11 +31317,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_backbone_health_top_devices_by_alerts_post_request** | [**V1BackboneHealthTopDevicesByAlertsPostRequest**](V1BackboneHealthTopDevicesByAlertsPostRequest.md)|  | 
+ **v1_troubleshooting_top_sites_by_alerts_post_request** | [**V1TroubleshootingTopSitesByAlertsPostRequest**](V1TroubleshootingTopSitesByAlertsPostRequest.md)|  | 
 
 ### Return type
 
-[**V1TroubleshootingTopSitesByAlertsPost200Response**](V1TroubleshootingTopSitesByAlertsPost200Response.md)
+[**V1TroubleshootingTopSitesByAlertsPostResponse**](V1TroubleshootingTopSitesByAlertsPostResponse.md)
 
 ### Authorization
 
@@ -29868,7 +31341,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_tt_tt_identity_device_status_get**
-> V1DeviceStatusPost200Response v1_tt_tt_identity_device_status_get(authorization, tt_identity)
+> V1TtTtIdentityDeviceStatusGetResponse v1_tt_tt_identity_device_status_get(authorization, tt_identity)
 
 ### Example
 
@@ -29876,7 +31349,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_device_status_post200_response import V1DeviceStatusPost200Response
+from graphiant_sdk.models.v1_tt_tt_identity_device_status_get_response import V1TtTtIdentityDeviceStatusGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -29924,7 +31397,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceStatusPost200Response**](V1DeviceStatusPost200Response.md)
+[**V1TtTtIdentityDeviceStatusGetResponse**](V1TtTtIdentityDeviceStatusGetResponse.md)
 
 ### Authorization
 
@@ -29943,8 +31416,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_users_get**
-> V1GroupsIdMembersGet200Response v1_users_get(authorization, id=id)
+# **v1_users_email_password_patch**
+> v1_users_email_password_patch(email, token, v1_users_email_password_patch_request)
+
+Change password for a user using email and token
 
 ### Example
 
@@ -29952,7 +31427,241 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_groups_id_members_get200_response import V1GroupsIdMembersGet200Response
+from graphiant_sdk.models.v1_users_email_password_patch_request import V1UsersEmailPasswordPatchRequest
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    email = 'user@example.com' # str | User email address
+    token = 'verification-token-12345' # str | Password reset token
+    v1_users_email_password_patch_request = graphiant_sdk.V1UsersEmailPasswordPatchRequest() # V1UsersEmailPasswordPatchRequest | 
+
+    try:
+        api_instance.v1_users_email_password_patch(email, token, v1_users_email_password_patch_request)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_users_email_password_patch: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **str**| User email address | 
+ **token** | **str**| Password reset token | 
+ **v1_users_email_password_patch_request** | [**V1UsersEmailPasswordPatchRequest**](V1UsersEmailPasswordPatchRequest.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | Password changed successfully |  -  |
+**400** | Bad request - Invalid input |  -  |
+**403** | Forbidden - Invalid token |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_users_email_recovery_get**
+> v1_users_email_recovery_get(email)
+
+Send password recovery email to user
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    email = 'user@example.com' # str | User email address
+
+    try:
+        api_instance.v1_users_email_recovery_get(email)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_users_email_recovery_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **str**| User email address | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Recovery email sent successfully |  -  |
+**400** | Bad request - Invalid email |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_users_email_verified_patch**
+> v1_users_email_verified_patch(email, token)
+
+Verify user email using verification token
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    email = 'user@example.com' # str | User email address
+    token = 'verification-token-12345' # str | Email verification token
+
+    try:
+        api_instance.v1_users_email_verified_patch(email, token)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_users_email_verified_patch: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **str**| User email address | 
+ **token** | **str**| Email verification token | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | User email verified successfully |  -  |
+**400** | Bad request - Invalid input |  -  |
+**403** | Forbidden - Invalid token |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_users_get**
+> V1UsersGetResponse v1_users_get(authorization, id=id)
+
+Get user information by user IDs with detailed profile data.
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.models.v1_users_get_response import V1UsersGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -30000,7 +31709,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdMembersGet200Response**](V1GroupsIdMembersGet200Response.md)
+[**V1UsersGetResponse**](V1UsersGetResponse.md)
 
 ### Authorization
 
@@ -30021,6 +31730,8 @@ Name | Type | Description  | Notes
 
 # **v1_users_id_delete**
 > object v1_users_id_delete(authorization, id)
+
+Delete user account.
 
 ### Example
 
@@ -30095,7 +31806,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_users_id_enterprises_get**
-> V1EnterprisesGet200Response v1_users_id_enterprises_get(authorization, id)
+> V1UsersIdEnterprisesGetResponse v1_users_id_enterprises_get(authorization, id)
+
+Get all enterprises a specific user can access.
 
 ### Example
 
@@ -30103,7 +31816,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_enterprises_get200_response import V1EnterprisesGet200Response
+from graphiant_sdk.models.v1_users_id_enterprises_get_response import V1UsersIdEnterprisesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -30151,7 +31864,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EnterprisesGet200Response**](V1EnterprisesGet200Response.md)
+[**V1UsersIdEnterprisesGetResponse**](V1UsersIdEnterprisesGetResponse.md)
 
 ### Authorization
 
@@ -30171,7 +31884,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_users_id_groups_enterprises_get**
-> V1GroupsGet200Response v1_users_id_groups_enterprises_get(authorization, id)
+> V1UsersIdGroupsEnterprisesGetResponse v1_users_id_groups_enterprises_get(authorization, id)
+
+Get enterprise-specific groups for a user.
 
 ### Example
 
@@ -30179,7 +31894,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_groups_get200_response import V1GroupsGet200Response
+from graphiant_sdk.models.v1_users_id_groups_enterprises_get_response import V1UsersIdGroupsEnterprisesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -30227,7 +31942,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsGet200Response**](V1GroupsGet200Response.md)
+[**V1UsersIdGroupsEnterprisesGetResponse**](V1UsersIdGroupsEnterprisesGetResponse.md)
 
 ### Authorization
 
@@ -30247,7 +31962,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_users_id_groups_get**
-> V1GroupsGet200Response v1_users_id_groups_get(authorization, id)
+> V1UsersIdGroupsGetResponse v1_users_id_groups_get(authorization, id)
+
+Get all groups that a specific user belongs to.
 
 ### Example
 
@@ -30255,7 +31972,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_groups_get200_response import V1GroupsGet200Response
+from graphiant_sdk.models.v1_users_id_groups_get_response import V1UsersIdGroupsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -30303,7 +32020,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsGet200Response**](V1GroupsGet200Response.md)
+[**V1UsersIdGroupsGetResponse**](V1UsersIdGroupsGetResponse.md)
 
 ### Authorization
 
@@ -30323,7 +32040,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_users_id_groups_root_get**
-> V1GroupsGet200Response v1_users_id_groups_root_get(authorization, id)
+> V1UsersIdGroupsRootGetResponse v1_users_id_groups_root_get(authorization, id)
+
+Get root-level groups for a user.
 
 ### Example
 
@@ -30331,7 +32050,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_groups_get200_response import V1GroupsGet200Response
+from graphiant_sdk.models.v1_users_id_groups_root_get_response import V1UsersIdGroupsRootGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -30379,7 +32098,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsGet200Response**](V1GroupsGet200Response.md)
+[**V1UsersIdGroupsRootGetResponse**](V1UsersIdGroupsRootGetResponse.md)
 
 ### Authorization
 
@@ -30400,6 +32119,8 @@ Name | Type | Description  | Notes
 
 # **v1_users_id_verify_patch**
 > object v1_users_id_verify_patch(authorization, id, body)
+
+Resend account verification email to user.
 
 ### Example
 
@@ -30478,6 +32199,8 @@ Name | Type | Description  | Notes
 # **v1_users_put**
 > object v1_users_put(authorization, v1_users_put_request)
 
+Create a new user account with profile information. Assigns to specified group or default read-only group. Handles both IDP and non-IDP configured enterprises.
+
 ### Example
 
 * Api Key Authentication (jwtAuth):
@@ -30552,7 +32275,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_version_post**
-> V1VersionPost200Response v1_version_post(authorization, v1_version_post_request)
+> V1VersionPostResponse v1_version_post(authorization, v1_version_post_request)
+
+Update device config version
 
 ### Example
 
@@ -30560,8 +32285,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_version_post200_response import V1VersionPost200Response
 from graphiant_sdk.models.v1_version_post_request import V1VersionPostRequest
+from graphiant_sdk.models.v1_version_post_response import V1VersionPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -30609,7 +32334,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1VersionPost200Response**](V1VersionPost200Response.md)
+[**V1VersionPostResponse**](V1VersionPostResponse.md)
 
 ### Authorization
 
@@ -30629,7 +32354,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_zones_get**
-> V1ZonesGet200Response v1_zones_get(authorization)
+> V1ZonesGetResponse v1_zones_get(authorization)
+
+Get Zones for the current enterprise
 
 ### Example
 
@@ -30637,7 +32364,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_zones_get200_response import V1ZonesGet200Response
+from graphiant_sdk.models.v1_zones_get_response import V1ZonesGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -30683,7 +32410,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ZonesGet200Response**](V1ZonesGet200Response.md)
+[**V1ZonesGetResponse**](V1ZonesGetResponse.md)
 
 ### Authorization
 
@@ -30855,7 +32582,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_aggregated_notification_get_state_get**
-> V2AggregatedNotificationGetStateGet200Response v2_aggregated_notification_get_state_get(authorization)
+> V2AggregatedNotificationGetStateGetResponse v2_aggregated_notification_get_state_get(authorization)
 
 ### Example
 
@@ -30863,7 +32590,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_aggregated_notification_get_state_get200_response import V2AggregatedNotificationGetStateGet200Response
+from graphiant_sdk.models.v2_aggregated_notification_get_state_get_response import V2AggregatedNotificationGetStateGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -30909,7 +32636,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AggregatedNotificationGetStateGet200Response**](V2AggregatedNotificationGetStateGet200Response.md)
+[**V2AggregatedNotificationGetStateGetResponse**](V2AggregatedNotificationGetStateGetResponse.md)
 
 ### Authorization
 
@@ -30929,7 +32656,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_allowlist_by_enterprise_get**
-> V2AllowlistRuleIdGet200Response v2_allowlist_by_enterprise_get(authorization)
+> V2AllowlistByEnterpriseGetResponse v2_allowlist_by_enterprise_get(authorization)
 
 ### Example
 
@@ -30937,7 +32664,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_allowlist_rule_id_get200_response import V2AllowlistRuleIdGet200Response
+from graphiant_sdk.models.v2_allowlist_by_enterprise_get_response import V2AllowlistByEnterpriseGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -30983,7 +32710,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AllowlistRuleIdGet200Response**](V2AllowlistRuleIdGet200Response.md)
+[**V2AllowlistByEnterpriseGetResponse**](V2AllowlistByEnterpriseGetResponse.md)
 
 ### Authorization
 
@@ -31229,7 +32956,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_allowlist_rule_id_get**
-> V2AllowlistRuleIdGet200Response v2_allowlist_rule_id_get(authorization, rule_id)
+> V2AllowlistRuleIdGetResponse v2_allowlist_rule_id_get(authorization, rule_id)
 
 ### Example
 
@@ -31237,7 +32964,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_allowlist_rule_id_get200_response import V2AllowlistRuleIdGet200Response
+from graphiant_sdk.models.v2_allowlist_rule_id_get_response import V2AllowlistRuleIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -31285,7 +33012,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AllowlistRuleIdGet200Response**](V2AllowlistRuleIdGet200Response.md)
+[**V2AllowlistRuleIdGetResponse**](V2AllowlistRuleIdGetResponse.md)
 
 ### Authorization
 
@@ -31305,7 +33032,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assistant_add_to_conversation_post**
-> V2AssistantAddToConversationPost200Response v2_assistant_add_to_conversation_post(authorization, v2_assistant_add_to_conversation_post_request)
+> V2AssistantAddToConversationPostResponse v2_assistant_add_to_conversation_post(authorization, v2_assistant_add_to_conversation_post_request)
 
 ### Example
 
@@ -31313,8 +33040,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assistant_add_to_conversation_post200_response import V2AssistantAddToConversationPost200Response
 from graphiant_sdk.models.v2_assistant_add_to_conversation_post_request import V2AssistantAddToConversationPostRequest
+from graphiant_sdk.models.v2_assistant_add_to_conversation_post_response import V2AssistantAddToConversationPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -31362,7 +33089,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssistantAddToConversationPost200Response**](V2AssistantAddToConversationPost200Response.md)
+[**V2AssistantAddToConversationPostResponse**](V2AssistantAddToConversationPostResponse.md)
 
 ### Authorization
 
@@ -31382,7 +33109,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assistant_conversation_context_history_post**
-> object v2_assistant_conversation_context_history_post(authorization, v2_aggregated_notification_enable_disable_post_request)
+> object v2_assistant_conversation_context_history_post(authorization, v2_assistant_conversation_context_history_post_request)
 
 ### Example
 
@@ -31390,7 +33117,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_aggregated_notification_enable_disable_post_request import V2AggregatedNotificationEnableDisablePostRequest
+from graphiant_sdk.models.v2_assistant_conversation_context_history_post_request import V2AssistantConversationContextHistoryPostRequest
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -31416,10 +33143,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v2_aggregated_notification_enable_disable_post_request = graphiant_sdk.V2AggregatedNotificationEnableDisablePostRequest() # V2AggregatedNotificationEnableDisablePostRequest | 
+    v2_assistant_conversation_context_history_post_request = graphiant_sdk.V2AssistantConversationContextHistoryPostRequest() # V2AssistantConversationContextHistoryPostRequest | 
 
     try:
-        api_response = api_instance.v2_assistant_conversation_context_history_post(authorization, v2_aggregated_notification_enable_disable_post_request)
+        api_response = api_instance.v2_assistant_conversation_context_history_post(authorization, v2_assistant_conversation_context_history_post_request)
         print("The response of DefaultApi->v2_assistant_conversation_context_history_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -31434,7 +33161,7 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2_aggregated_notification_enable_disable_post_request** | [**V2AggregatedNotificationEnableDisablePostRequest**](V2AggregatedNotificationEnableDisablePostRequest.md)|  | 
+ **v2_assistant_conversation_context_history_post_request** | [**V2AssistantConversationContextHistoryPostRequest**](V2AssistantConversationContextHistoryPostRequest.md)|  | 
 
 ### Return type
 
@@ -31533,7 +33260,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assistant_conversation_interface_enable_disable_post**
-> object v2_assistant_conversation_interface_enable_disable_post(authorization, v2_aggregated_notification_enable_disable_post_request)
+> object v2_assistant_conversation_interface_enable_disable_post(authorization, v2_assistant_conversation_interface_enable_disable_post_request)
 
 ### Example
 
@@ -31541,7 +33268,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_aggregated_notification_enable_disable_post_request import V2AggregatedNotificationEnableDisablePostRequest
+from graphiant_sdk.models.v2_assistant_conversation_interface_enable_disable_post_request import V2AssistantConversationInterfaceEnableDisablePostRequest
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -31567,10 +33294,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v2_aggregated_notification_enable_disable_post_request = graphiant_sdk.V2AggregatedNotificationEnableDisablePostRequest() # V2AggregatedNotificationEnableDisablePostRequest | 
+    v2_assistant_conversation_interface_enable_disable_post_request = graphiant_sdk.V2AssistantConversationInterfaceEnableDisablePostRequest() # V2AssistantConversationInterfaceEnableDisablePostRequest | 
 
     try:
-        api_response = api_instance.v2_assistant_conversation_interface_enable_disable_post(authorization, v2_aggregated_notification_enable_disable_post_request)
+        api_response = api_instance.v2_assistant_conversation_interface_enable_disable_post(authorization, v2_assistant_conversation_interface_enable_disable_post_request)
         print("The response of DefaultApi->v2_assistant_conversation_interface_enable_disable_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -31585,7 +33312,7 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2_aggregated_notification_enable_disable_post_request** | [**V2AggregatedNotificationEnableDisablePostRequest**](V2AggregatedNotificationEnableDisablePostRequest.md)|  | 
+ **v2_assistant_conversation_interface_enable_disable_post_request** | [**V2AssistantConversationInterfaceEnableDisablePostRequest**](V2AssistantConversationInterfaceEnableDisablePostRequest.md)|  | 
 
 ### Return type
 
@@ -31609,7 +33336,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assistant_conversation_interface_state_get**
-> V2AssistantConversationInterfaceStateGet200Response v2_assistant_conversation_interface_state_get(authorization)
+> V2AssistantConversationInterfaceStateGetResponse v2_assistant_conversation_interface_state_get(authorization)
 
 ### Example
 
@@ -31617,7 +33344,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assistant_conversation_interface_state_get200_response import V2AssistantConversationInterfaceStateGet200Response
+from graphiant_sdk.models.v2_assistant_conversation_interface_state_get_response import V2AssistantConversationInterfaceStateGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -31663,7 +33390,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssistantConversationInterfaceStateGet200Response**](V2AssistantConversationInterfaceStateGet200Response.md)
+[**V2AssistantConversationInterfaceStateGetResponse**](V2AssistantConversationInterfaceStateGetResponse.md)
 
 ### Authorization
 
@@ -31833,7 +33560,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assistant_get_conversation_details_post**
-> V2AssistantGetConversationDetailsPost200Response v2_assistant_get_conversation_details_post(authorization, v2_assistant_get_conversation_details_post_request)
+> V2AssistantGetConversationDetailsPostResponse v2_assistant_get_conversation_details_post(authorization, v2_assistant_get_conversation_details_post_request)
 
 ### Example
 
@@ -31841,8 +33568,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assistant_get_conversation_details_post200_response import V2AssistantGetConversationDetailsPost200Response
 from graphiant_sdk.models.v2_assistant_get_conversation_details_post_request import V2AssistantGetConversationDetailsPostRequest
+from graphiant_sdk.models.v2_assistant_get_conversation_details_post_response import V2AssistantGetConversationDetailsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -31890,7 +33617,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssistantGetConversationDetailsPost200Response**](V2AssistantGetConversationDetailsPost200Response.md)
+[**V2AssistantGetConversationDetailsPostResponse**](V2AssistantGetConversationDetailsPostResponse.md)
 
 ### Authorization
 
@@ -31910,7 +33637,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assistant_get_conversations_post**
-> V2AssistantGetConversationsPost200Response v2_assistant_get_conversations_post(authorization, v2_assistant_get_conversations_post_request)
+> V2AssistantGetConversationsPostResponse v2_assistant_get_conversations_post(authorization, v2_assistant_get_conversations_post_request)
 
 ### Example
 
@@ -31918,8 +33645,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assistant_get_conversations_post200_response import V2AssistantGetConversationsPost200Response
 from graphiant_sdk.models.v2_assistant_get_conversations_post_request import V2AssistantGetConversationsPostRequest
+from graphiant_sdk.models.v2_assistant_get_conversations_post_response import V2AssistantGetConversationsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -31967,7 +33694,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssistantGetConversationsPost200Response**](V2AssistantGetConversationsPost200Response.md)
+[**V2AssistantGetConversationsPostResponse**](V2AssistantGetConversationsPostResponse.md)
 
 ### Authorization
 
@@ -32063,7 +33790,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assistant_version_post**
-> V2VersionPost200Response v2_assistant_version_post(authorization, body)
+> V2AssistantVersionPostResponse v2_assistant_version_post(authorization, body)
 
 ### Example
 
@@ -32071,7 +33798,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_version_post200_response import V2VersionPost200Response
+from graphiant_sdk.models.v2_assistant_version_post_response import V2AssistantVersionPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -32119,7 +33846,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2VersionPost200Response**](V2VersionPost200Response.md)
+[**V2AssistantVersionPostResponse**](V2AssistantVersionPostResponse.md)
 
 ### Authorization
 
@@ -32139,7 +33866,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_applicationdetailsbyname_post**
-> V2AssuranceApplicationdetailsbynamePost200Response v2_assurance_applicationdetailsbyname_post(authorization, v2_assurance_applicationdetailsbyname_post_request)
+> V2AssuranceApplicationdetailsbynamePostResponse v2_assurance_applicationdetailsbyname_post(authorization, v2_assurance_applicationdetailsbyname_post_request)
 
 ### Example
 
@@ -32147,8 +33874,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_applicationdetailsbyname_post200_response import V2AssuranceApplicationdetailsbynamePost200Response
 from graphiant_sdk.models.v2_assurance_applicationdetailsbyname_post_request import V2AssuranceApplicationdetailsbynamePostRequest
+from graphiant_sdk.models.v2_assurance_applicationdetailsbyname_post_response import V2AssuranceApplicationdetailsbynamePostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -32196,7 +33923,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceApplicationdetailsbynamePost200Response**](V2AssuranceApplicationdetailsbynamePost200Response.md)
+[**V2AssuranceApplicationdetailsbynamePostResponse**](V2AssuranceApplicationdetailsbynamePostResponse.md)
 
 ### Authorization
 
@@ -32216,7 +33943,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_applicationprofilesummary_post**
-> V2AssuranceApplicationprofilesummaryPost200Response v2_assurance_applicationprofilesummary_post(authorization, v2_notificationlist_post_request)
+> V2AssuranceApplicationprofilesummaryPostResponse v2_assurance_applicationprofilesummary_post(authorization, v2_assurance_applicationprofilesummary_post_request)
 
 ### Example
 
@@ -32224,8 +33951,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_applicationprofilesummary_post200_response import V2AssuranceApplicationprofilesummaryPost200Response
-from graphiant_sdk.models.v2_notificationlist_post_request import V2NotificationlistPostRequest
+from graphiant_sdk.models.v2_assurance_applicationprofilesummary_post_request import V2AssuranceApplicationprofilesummaryPostRequest
+from graphiant_sdk.models.v2_assurance_applicationprofilesummary_post_response import V2AssuranceApplicationprofilesummaryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -32251,10 +33978,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v2_notificationlist_post_request = graphiant_sdk.V2NotificationlistPostRequest() # V2NotificationlistPostRequest | 
+    v2_assurance_applicationprofilesummary_post_request = graphiant_sdk.V2AssuranceApplicationprofilesummaryPostRequest() # V2AssuranceApplicationprofilesummaryPostRequest | 
 
     try:
-        api_response = api_instance.v2_assurance_applicationprofilesummary_post(authorization, v2_notificationlist_post_request)
+        api_response = api_instance.v2_assurance_applicationprofilesummary_post(authorization, v2_assurance_applicationprofilesummary_post_request)
         print("The response of DefaultApi->v2_assurance_applicationprofilesummary_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -32269,11 +33996,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2_notificationlist_post_request** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md)|  | 
+ **v2_assurance_applicationprofilesummary_post_request** | [**V2AssuranceApplicationprofilesummaryPostRequest**](V2AssuranceApplicationprofilesummaryPostRequest.md)|  | 
 
 ### Return type
 
-[**V2AssuranceApplicationprofilesummaryPost200Response**](V2AssuranceApplicationprofilesummaryPost200Response.md)
+[**V2AssuranceApplicationprofilesummaryPostResponse**](V2AssuranceApplicationprofilesummaryPostResponse.md)
 
 ### Authorization
 
@@ -32293,7 +34020,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_bucket_app_servers_all_get**
-> V2AssuranceBucketAppServersAllGet200Response v2_assurance_bucket_app_servers_all_get(authorization)
+> V2AssuranceBucketAppServersAllGetResponse v2_assurance_bucket_app_servers_all_get(authorization)
+
+Get all servers associated with each item in a list of bucket apps
 
 ### Example
 
@@ -32301,7 +34030,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_bucket_app_servers_all_get200_response import V2AssuranceBucketAppServersAllGet200Response
+from graphiant_sdk.models.v2_assurance_bucket_app_servers_all_get_response import V2AssuranceBucketAppServersAllGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -32347,7 +34076,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceBucketAppServersAllGet200Response**](V2AssuranceBucketAppServersAllGet200Response.md)
+[**V2AssuranceBucketAppServersAllGetResponse**](V2AssuranceBucketAppServersAllGetResponse.md)
 
 ### Authorization
 
@@ -32367,7 +34096,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_bucket_app_servers_post**
-> V2AssuranceBucketAppServersPost200Response v2_assurance_bucket_app_servers_post(authorization, v2_assurance_bucket_app_servers_post_request)
+> V2AssuranceBucketAppServersPostResponse v2_assurance_bucket_app_servers_post(authorization, v2_assurance_bucket_app_servers_post_request)
 
 ### Example
 
@@ -32375,8 +34104,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_bucket_app_servers_post200_response import V2AssuranceBucketAppServersPost200Response
 from graphiant_sdk.models.v2_assurance_bucket_app_servers_post_request import V2AssuranceBucketAppServersPostRequest
+from graphiant_sdk.models.v2_assurance_bucket_app_servers_post_response import V2AssuranceBucketAppServersPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -32424,7 +34153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceBucketAppServersPost200Response**](V2AssuranceBucketAppServersPost200Response.md)
+[**V2AssuranceBucketAppServersPostResponse**](V2AssuranceBucketAppServersPostResponse.md)
 
 ### Authorization
 
@@ -32444,7 +34173,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_bucket_apps_post**
-> V2AssuranceBucketAppsPost200Response v2_assurance_bucket_apps_post(authorization, v2_assurance_bucket_apps_post_request)
+> V2AssuranceBucketAppsPostResponse v2_assurance_bucket_apps_post(authorization, v2_assurance_bucket_apps_post_request)
 
 ### Example
 
@@ -32452,8 +34181,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_bucket_apps_post200_response import V2AssuranceBucketAppsPost200Response
 from graphiant_sdk.models.v2_assurance_bucket_apps_post_request import V2AssuranceBucketAppsPostRequest
+from graphiant_sdk.models.v2_assurance_bucket_apps_post_response import V2AssuranceBucketAppsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -32501,7 +34230,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceBucketAppsPost200Response**](V2AssuranceBucketAppsPost200Response.md)
+[**V2AssuranceBucketAppsPostResponse**](V2AssuranceBucketAppsPostResponse.md)
 
 ### Authorization
 
@@ -32521,7 +34250,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_bucket_services_post**
-> V2AssuranceBucketServicesPost200Response v2_assurance_bucket_services_post(authorization, v2_assurance_bucket_services_post_request)
+> V2AssuranceBucketServicesPostResponse v2_assurance_bucket_services_post(authorization, v2_assurance_bucket_services_post_request)
 
 ### Example
 
@@ -32529,8 +34258,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_bucket_services_post200_response import V2AssuranceBucketServicesPost200Response
 from graphiant_sdk.models.v2_assurance_bucket_services_post_request import V2AssuranceBucketServicesPostRequest
+from graphiant_sdk.models.v2_assurance_bucket_services_post_response import V2AssuranceBucketServicesPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -32578,7 +34307,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceBucketServicesPost200Response**](V2AssuranceBucketServicesPost200Response.md)
+[**V2AssuranceBucketServicesPostResponse**](V2AssuranceBucketServicesPostResponse.md)
 
 ### Authorization
 
@@ -32598,7 +34327,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_bucket_topologies_post**
-> V2AssuranceBucketTopologiesPost200Response v2_assurance_bucket_topologies_post(authorization, v2_assurance_bucket_services_post_request)
+> V2AssuranceBucketTopologiesPostResponse v2_assurance_bucket_topologies_post(authorization, v2_assurance_bucket_topologies_post_request)
 
 ### Example
 
@@ -32606,8 +34335,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_bucket_services_post_request import V2AssuranceBucketServicesPostRequest
-from graphiant_sdk.models.v2_assurance_bucket_topologies_post200_response import V2AssuranceBucketTopologiesPost200Response
+from graphiant_sdk.models.v2_assurance_bucket_topologies_post_request import V2AssuranceBucketTopologiesPostRequest
+from graphiant_sdk.models.v2_assurance_bucket_topologies_post_response import V2AssuranceBucketTopologiesPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -32633,10 +34362,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v2_assurance_bucket_services_post_request = graphiant_sdk.V2AssuranceBucketServicesPostRequest() # V2AssuranceBucketServicesPostRequest | 
+    v2_assurance_bucket_topologies_post_request = graphiant_sdk.V2AssuranceBucketTopologiesPostRequest() # V2AssuranceBucketTopologiesPostRequest | 
 
     try:
-        api_response = api_instance.v2_assurance_bucket_topologies_post(authorization, v2_assurance_bucket_services_post_request)
+        api_response = api_instance.v2_assurance_bucket_topologies_post(authorization, v2_assurance_bucket_topologies_post_request)
         print("The response of DefaultApi->v2_assurance_bucket_topologies_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -32651,11 +34380,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2_assurance_bucket_services_post_request** | [**V2AssuranceBucketServicesPostRequest**](V2AssuranceBucketServicesPostRequest.md)|  | 
+ **v2_assurance_bucket_topologies_post_request** | [**V2AssuranceBucketTopologiesPostRequest**](V2AssuranceBucketTopologiesPostRequest.md)|  | 
 
 ### Return type
 
-[**V2AssuranceBucketTopologiesPost200Response**](V2AssuranceBucketTopologiesPost200Response.md)
+[**V2AssuranceBucketTopologiesPostResponse**](V2AssuranceBucketTopologiesPostResponse.md)
 
 ### Authorization
 
@@ -32675,7 +34404,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_bucketdetails_post**
-> V2AssuranceBucketdetailsPost200Response v2_assurance_bucketdetails_post(authorization, v2_assurance_bucketdetails_post_request)
+> V2AssuranceBucketdetailsPostResponse v2_assurance_bucketdetails_post(authorization, v2_assurance_bucketdetails_post_request)
 
 ### Example
 
@@ -32683,8 +34412,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_bucketdetails_post200_response import V2AssuranceBucketdetailsPost200Response
 from graphiant_sdk.models.v2_assurance_bucketdetails_post_request import V2AssuranceBucketdetailsPostRequest
+from graphiant_sdk.models.v2_assurance_bucketdetails_post_response import V2AssuranceBucketdetailsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -32732,7 +34461,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceBucketdetailsPost200Response**](V2AssuranceBucketdetailsPost200Response.md)
+[**V2AssuranceBucketdetailsPostResponse**](V2AssuranceBucketdetailsPostResponse.md)
 
 ### Authorization
 
@@ -32752,7 +34481,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_create_user_report_post**
-> V2AssuranceCreateUserReportPost200Response v2_assurance_create_user_report_post(authorization, v2_assurance_create_user_report_post_request)
+> V2AssuranceCreateUserReportPostResponse v2_assurance_create_user_report_post(authorization, v2_assurance_create_user_report_post_request)
 
 ### Example
 
@@ -32760,8 +34489,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_create_user_report_post200_response import V2AssuranceCreateUserReportPost200Response
 from graphiant_sdk.models.v2_assurance_create_user_report_post_request import V2AssuranceCreateUserReportPostRequest
+from graphiant_sdk.models.v2_assurance_create_user_report_post_response import V2AssuranceCreateUserReportPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -32809,7 +34538,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceCreateUserReportPost200Response**](V2AssuranceCreateUserReportPost200Response.md)
+[**V2AssuranceCreateUserReportPostResponse**](V2AssuranceCreateUserReportPostResponse.md)
 
 ### Authorization
 
@@ -32829,7 +34558,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_createclassifiedapplication_post**
-> V2AssuranceCreateclassifiedapplicationPost200Response v2_assurance_createclassifiedapplication_post(authorization, v2_assurance_createclassifiedapplication_post_request)
+> V2AssuranceCreateclassifiedapplicationPostResponse v2_assurance_createclassifiedapplication_post(authorization, v2_assurance_createclassifiedapplication_post_request)
 
 ### Example
 
@@ -32837,8 +34566,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_createclassifiedapplication_post200_response import V2AssuranceCreateclassifiedapplicationPost200Response
 from graphiant_sdk.models.v2_assurance_createclassifiedapplication_post_request import V2AssuranceCreateclassifiedapplicationPostRequest
+from graphiant_sdk.models.v2_assurance_createclassifiedapplication_post_response import V2AssuranceCreateclassifiedapplicationPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -32886,7 +34615,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceCreateclassifiedapplicationPost200Response**](V2AssuranceCreateclassifiedapplicationPost200Response.md)
+[**V2AssuranceCreateclassifiedapplicationPostResponse**](V2AssuranceCreateclassifiedapplicationPostResponse.md)
 
 ### Authorization
 
@@ -33056,7 +34785,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_download_user_report_get**
-> V2AssuranceDownloadUserReportGet200Response v2_assurance_download_user_report_get(authorization)
+> V2AssuranceDownloadUserReportGetResponse v2_assurance_download_user_report_get(authorization)
 
 ### Example
 
@@ -33064,7 +34793,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_download_user_report_get200_response import V2AssuranceDownloadUserReportGet200Response
+from graphiant_sdk.models.v2_assurance_download_user_report_get_response import V2AssuranceDownloadUserReportGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -33110,7 +34839,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceDownloadUserReportGet200Response**](V2AssuranceDownloadUserReportGet200Response.md)
+[**V2AssuranceDownloadUserReportGetResponse**](V2AssuranceDownloadUserReportGetResponse.md)
 
 ### Authorization
 
@@ -33130,7 +34859,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_endpoint_intel_post**
-> V2AssuranceEndpointIntelPost200Response v2_assurance_endpoint_intel_post(authorization, v2_assurance_endpoint_intel_post_request)
+> V2AssuranceEndpointIntelPostResponse v2_assurance_endpoint_intel_post(authorization, v2_assurance_endpoint_intel_post_request)
 
 ### Example
 
@@ -33138,8 +34867,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_endpoint_intel_post200_response import V2AssuranceEndpointIntelPost200Response
 from graphiant_sdk.models.v2_assurance_endpoint_intel_post_request import V2AssuranceEndpointIntelPostRequest
+from graphiant_sdk.models.v2_assurance_endpoint_intel_post_response import V2AssuranceEndpointIntelPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -33187,7 +34916,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceEndpointIntelPost200Response**](V2AssuranceEndpointIntelPost200Response.md)
+[**V2AssuranceEndpointIntelPostResponse**](V2AssuranceEndpointIntelPostResponse.md)
 
 ### Authorization
 
@@ -33207,7 +34936,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_enterprisesummary_post**
-> V2AssuranceEnterprisesummaryPost200Response v2_assurance_enterprisesummary_post(authorization, v2_notificationlist_post_request)
+> V2AssuranceEnterprisesummaryPostResponse v2_assurance_enterprisesummary_post(authorization, v2_assurance_enterprisesummary_post_request)
 
 ### Example
 
@@ -33215,8 +34944,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_enterprisesummary_post200_response import V2AssuranceEnterprisesummaryPost200Response
-from graphiant_sdk.models.v2_notificationlist_post_request import V2NotificationlistPostRequest
+from graphiant_sdk.models.v2_assurance_enterprisesummary_post_request import V2AssuranceEnterprisesummaryPostRequest
+from graphiant_sdk.models.v2_assurance_enterprisesummary_post_response import V2AssuranceEnterprisesummaryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -33242,10 +34971,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v2_notificationlist_post_request = graphiant_sdk.V2NotificationlistPostRequest() # V2NotificationlistPostRequest | 
+    v2_assurance_enterprisesummary_post_request = graphiant_sdk.V2AssuranceEnterprisesummaryPostRequest() # V2AssuranceEnterprisesummaryPostRequest | 
 
     try:
-        api_response = api_instance.v2_assurance_enterprisesummary_post(authorization, v2_notificationlist_post_request)
+        api_response = api_instance.v2_assurance_enterprisesummary_post(authorization, v2_assurance_enterprisesummary_post_request)
         print("The response of DefaultApi->v2_assurance_enterprisesummary_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -33260,11 +34989,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2_notificationlist_post_request** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md)|  | 
+ **v2_assurance_enterprisesummary_post_request** | [**V2AssuranceEnterprisesummaryPostRequest**](V2AssuranceEnterprisesummaryPostRequest.md)|  | 
 
 ### Return type
 
-[**V2AssuranceEnterprisesummaryPost200Response**](V2AssuranceEnterprisesummaryPost200Response.md)
+[**V2AssuranceEnterprisesummaryPostResponse**](V2AssuranceEnterprisesummaryPostResponse.md)
 
 ### Authorization
 
@@ -33284,7 +35013,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_flow_summary_post**
-> V2AssuranceFlowSummaryPost200Response v2_assurance_flow_summary_post(authorization, v2_assurance_flow_summary_post_request)
+> V2AssuranceFlowSummaryPostResponse v2_assurance_flow_summary_post(authorization, v2_assurance_flow_summary_post_request)
 
 ### Example
 
@@ -33292,8 +35021,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_flow_summary_post200_response import V2AssuranceFlowSummaryPost200Response
 from graphiant_sdk.models.v2_assurance_flow_summary_post_request import V2AssuranceFlowSummaryPostRequest
+from graphiant_sdk.models.v2_assurance_flow_summary_post_response import V2AssuranceFlowSummaryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -33341,7 +35070,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceFlowSummaryPost200Response**](V2AssuranceFlowSummaryPost200Response.md)
+[**V2AssuranceFlowSummaryPostResponse**](V2AssuranceFlowSummaryPostResponse.md)
 
 ### Authorization
 
@@ -33361,7 +35090,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_getclassifiedapplicationlist_get**
-> V2AssuranceGetclassifiedapplicationlistGet200Response v2_assurance_getclassifiedapplicationlist_get(authorization)
+> V2AssuranceGetclassifiedapplicationlistGetResponse v2_assurance_getclassifiedapplicationlist_get(authorization)
 
 ### Example
 
@@ -33369,7 +35098,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_getclassifiedapplicationlist_get200_response import V2AssuranceGetclassifiedapplicationlistGet200Response
+from graphiant_sdk.models.v2_assurance_getclassifiedapplicationlist_get_response import V2AssuranceGetclassifiedapplicationlistGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -33415,7 +35144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceGetclassifiedapplicationlistGet200Response**](V2AssuranceGetclassifiedapplicationlistGet200Response.md)
+[**V2AssuranceGetclassifiedapplicationlistGetResponse**](V2AssuranceGetclassifiedapplicationlistGetResponse.md)
 
 ### Authorization
 
@@ -33435,7 +35164,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_read_user_report_list_get**
-> V2AssuranceReadUserReportListGet200Response v2_assurance_read_user_report_list_get(authorization)
+> V2AssuranceReadUserReportListGetResponse v2_assurance_read_user_report_list_get(authorization)
 
 ### Example
 
@@ -33443,7 +35172,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_read_user_report_list_get200_response import V2AssuranceReadUserReportListGet200Response
+from graphiant_sdk.models.v2_assurance_read_user_report_list_get_response import V2AssuranceReadUserReportListGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -33489,7 +35218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceReadUserReportListGet200Response**](V2AssuranceReadUserReportListGet200Response.md)
+[**V2AssuranceReadUserReportListGetResponse**](V2AssuranceReadUserReportListGetResponse.md)
 
 ### Authorization
 
@@ -33509,7 +35238,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_scoredetails_post**
-> V2AssuranceScoredetailsPost200Response v2_assurance_scoredetails_post(authorization, v2_notificationlist_post_request)
+> V2AssuranceScoredetailsPostResponse v2_assurance_scoredetails_post(authorization, v2_assurance_scoredetails_post_request)
 
 ### Example
 
@@ -33517,8 +35246,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_scoredetails_post200_response import V2AssuranceScoredetailsPost200Response
-from graphiant_sdk.models.v2_notificationlist_post_request import V2NotificationlistPostRequest
+from graphiant_sdk.models.v2_assurance_scoredetails_post_request import V2AssuranceScoredetailsPostRequest
+from graphiant_sdk.models.v2_assurance_scoredetails_post_response import V2AssuranceScoredetailsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -33544,10 +35273,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v2_notificationlist_post_request = graphiant_sdk.V2NotificationlistPostRequest() # V2NotificationlistPostRequest | 
+    v2_assurance_scoredetails_post_request = graphiant_sdk.V2AssuranceScoredetailsPostRequest() # V2AssuranceScoredetailsPostRequest | 
 
     try:
-        api_response = api_instance.v2_assurance_scoredetails_post(authorization, v2_notificationlist_post_request)
+        api_response = api_instance.v2_assurance_scoredetails_post(authorization, v2_assurance_scoredetails_post_request)
         print("The response of DefaultApi->v2_assurance_scoredetails_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -33562,11 +35291,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2_notificationlist_post_request** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md)|  | 
+ **v2_assurance_scoredetails_post_request** | [**V2AssuranceScoredetailsPostRequest**](V2AssuranceScoredetailsPostRequest.md)|  | 
 
 ### Return type
 
-[**V2AssuranceScoredetailsPost200Response**](V2AssuranceScoredetailsPost200Response.md)
+[**V2AssuranceScoredetailsPostResponse**](V2AssuranceScoredetailsPostResponse.md)
 
 ### Authorization
 
@@ -33586,7 +35315,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_topology_client_session_details_post**
-> V2AssuranceTopologyClientSessionDetailsPost200Response v2_assurance_topology_client_session_details_post(authorization, v2_assurance_topology_client_session_details_post_request)
+> V2AssuranceTopologyClientSessionDetailsPostResponse v2_assurance_topology_client_session_details_post(authorization, v2_assurance_topology_client_session_details_post_request)
 
 ### Example
 
@@ -33594,8 +35323,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_topology_client_session_details_post200_response import V2AssuranceTopologyClientSessionDetailsPost200Response
 from graphiant_sdk.models.v2_assurance_topology_client_session_details_post_request import V2AssuranceTopologyClientSessionDetailsPostRequest
+from graphiant_sdk.models.v2_assurance_topology_client_session_details_post_response import V2AssuranceTopologyClientSessionDetailsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -33643,7 +35372,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceTopologyClientSessionDetailsPost200Response**](V2AssuranceTopologyClientSessionDetailsPost200Response.md)
+[**V2AssuranceTopologyClientSessionDetailsPostResponse**](V2AssuranceTopologyClientSessionDetailsPostResponse.md)
 
 ### Authorization
 
@@ -33663,7 +35392,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_topology_client_sessions_post**
-> V2AssuranceTopologyClientSessionsPost200Response v2_assurance_topology_client_sessions_post(authorization, v2_assurance_topology_client_sessions_post_request)
+> V2AssuranceTopologyClientSessionsPostResponse v2_assurance_topology_client_sessions_post(authorization, v2_assurance_topology_client_sessions_post_request)
 
 ### Example
 
@@ -33671,8 +35400,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_topology_client_sessions_post200_response import V2AssuranceTopologyClientSessionsPost200Response
 from graphiant_sdk.models.v2_assurance_topology_client_sessions_post_request import V2AssuranceTopologyClientSessionsPostRequest
+from graphiant_sdk.models.v2_assurance_topology_client_sessions_post_response import V2AssuranceTopologyClientSessionsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -33720,7 +35449,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceTopologyClientSessionsPost200Response**](V2AssuranceTopologyClientSessionsPost200Response.md)
+[**V2AssuranceTopologyClientSessionsPostResponse**](V2AssuranceTopologyClientSessionsPostResponse.md)
 
 ### Authorization
 
@@ -33740,7 +35469,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_topology_client_summaries_post**
-> V2AssuranceTopologyClientSummariesPost200Response v2_assurance_topology_client_summaries_post(authorization, v2_assurance_topology_client_summaries_post_request)
+> V2AssuranceTopologyClientSummariesPostResponse v2_assurance_topology_client_summaries_post(authorization, v2_assurance_topology_client_summaries_post_request)
 
 ### Example
 
@@ -33748,8 +35477,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_topology_client_summaries_post200_response import V2AssuranceTopologyClientSummariesPost200Response
 from graphiant_sdk.models.v2_assurance_topology_client_summaries_post_request import V2AssuranceTopologyClientSummariesPostRequest
+from graphiant_sdk.models.v2_assurance_topology_client_summaries_post_response import V2AssuranceTopologyClientSummariesPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -33797,7 +35526,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceTopologyClientSummariesPost200Response**](V2AssuranceTopologyClientSummariesPost200Response.md)
+[**V2AssuranceTopologyClientSummariesPostResponse**](V2AssuranceTopologyClientSummariesPostResponse.md)
 
 ### Authorization
 
@@ -33817,7 +35546,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_topology_flows_post**
-> V2AssuranceTopologyFlowsPost200Response v2_assurance_topology_flows_post(authorization, v2_assurance_topology_flows_post_request)
+> V2AssuranceTopologyFlowsPostResponse v2_assurance_topology_flows_post(authorization, v2_assurance_topology_flows_post_request)
 
 ### Example
 
@@ -33825,8 +35554,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_topology_flows_post200_response import V2AssuranceTopologyFlowsPost200Response
 from graphiant_sdk.models.v2_assurance_topology_flows_post_request import V2AssuranceTopologyFlowsPostRequest
+from graphiant_sdk.models.v2_assurance_topology_flows_post_response import V2AssuranceTopologyFlowsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -33874,7 +35603,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceTopologyFlowsPost200Response**](V2AssuranceTopologyFlowsPost200Response.md)
+[**V2AssuranceTopologyFlowsPostResponse**](V2AssuranceTopologyFlowsPostResponse.md)
 
 ### Authorization
 
@@ -33894,7 +35623,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_topology_inventory_post**
-> V2AssuranceTopologyInventoryPost200Response v2_assurance_topology_inventory_post(authorization, v2_assurance_topology_inventory_post_request)
+> V2AssuranceTopologyInventoryPostResponse v2_assurance_topology_inventory_post(authorization, v2_assurance_topology_inventory_post_request)
 
 ### Example
 
@@ -33902,8 +35631,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_topology_inventory_post200_response import V2AssuranceTopologyInventoryPost200Response
 from graphiant_sdk.models.v2_assurance_topology_inventory_post_request import V2AssuranceTopologyInventoryPostRequest
+from graphiant_sdk.models.v2_assurance_topology_inventory_post_response import V2AssuranceTopologyInventoryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -33951,7 +35680,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceTopologyInventoryPost200Response**](V2AssuranceTopologyInventoryPost200Response.md)
+[**V2AssuranceTopologyInventoryPostResponse**](V2AssuranceTopologyInventoryPostResponse.md)
 
 ### Authorization
 
@@ -33971,7 +35700,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_topology_overview_post**
-> V2AssuranceTopologyOverviewPost200Response v2_assurance_topology_overview_post(authorization, v2_assurance_topology_overview_post_request)
+> V2AssuranceTopologyOverviewPostResponse v2_assurance_topology_overview_post(authorization, v2_assurance_topology_overview_post_request)
 
 ### Example
 
@@ -33979,8 +35708,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_topology_overview_post200_response import V2AssuranceTopologyOverviewPost200Response
 from graphiant_sdk.models.v2_assurance_topology_overview_post_request import V2AssuranceTopologyOverviewPostRequest
+from graphiant_sdk.models.v2_assurance_topology_overview_post_response import V2AssuranceTopologyOverviewPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -34028,7 +35757,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceTopologyOverviewPost200Response**](V2AssuranceTopologyOverviewPost200Response.md)
+[**V2AssuranceTopologyOverviewPostResponse**](V2AssuranceTopologyOverviewPostResponse.md)
 
 ### Authorization
 
@@ -34048,7 +35777,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_topology_region_summary_post**
-> V2AssuranceTopologyRegionSummaryPost200Response v2_assurance_topology_region_summary_post(authorization, v2_assurance_topology_region_summary_post_request)
+> V2AssuranceTopologyRegionSummaryPostResponse v2_assurance_topology_region_summary_post(authorization, v2_assurance_topology_region_summary_post_request)
 
 ### Example
 
@@ -34056,8 +35785,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_topology_region_summary_post200_response import V2AssuranceTopologyRegionSummaryPost200Response
 from graphiant_sdk.models.v2_assurance_topology_region_summary_post_request import V2AssuranceTopologyRegionSummaryPostRequest
+from graphiant_sdk.models.v2_assurance_topology_region_summary_post_response import V2AssuranceTopologyRegionSummaryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -34105,7 +35834,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceTopologyRegionSummaryPost200Response**](V2AssuranceTopologyRegionSummaryPost200Response.md)
+[**V2AssuranceTopologyRegionSummaryPostResponse**](V2AssuranceTopologyRegionSummaryPostResponse.md)
 
 ### Authorization
 
@@ -34125,7 +35854,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_topology_site_summaries_post**
-> V2AssuranceTopologySiteSummariesPost200Response v2_assurance_topology_site_summaries_post(authorization, v2_assurance_topology_site_summaries_post_request)
+> V2AssuranceTopologySiteSummariesPostResponse v2_assurance_topology_site_summaries_post(authorization, v2_assurance_topology_site_summaries_post_request)
 
 ### Example
 
@@ -34133,8 +35862,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_topology_site_summaries_post200_response import V2AssuranceTopologySiteSummariesPost200Response
 from graphiant_sdk.models.v2_assurance_topology_site_summaries_post_request import V2AssuranceTopologySiteSummariesPostRequest
+from graphiant_sdk.models.v2_assurance_topology_site_summaries_post_response import V2AssuranceTopologySiteSummariesPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -34182,7 +35911,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceTopologySiteSummariesPost200Response**](V2AssuranceTopologySiteSummariesPost200Response.md)
+[**V2AssuranceTopologySiteSummariesPostResponse**](V2AssuranceTopologySiteSummariesPostResponse.md)
 
 ### Authorization
 
@@ -34202,7 +35931,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_unclassifiedapplicationprofilesummary_post**
-> V2AssuranceApplicationprofilesummaryPost200Response v2_assurance_unclassifiedapplicationprofilesummary_post(authorization, v2_notificationlist_post_request)
+> V2AssuranceUnclassifiedapplicationprofilesummaryPostResponse v2_assurance_unclassifiedapplicationprofilesummary_post(authorization, v2_assurance_unclassifiedapplicationprofilesummary_post_request)
 
 ### Example
 
@@ -34210,8 +35939,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_applicationprofilesummary_post200_response import V2AssuranceApplicationprofilesummaryPost200Response
-from graphiant_sdk.models.v2_notificationlist_post_request import V2NotificationlistPostRequest
+from graphiant_sdk.models.v2_assurance_unclassifiedapplicationprofilesummary_post_request import V2AssuranceUnclassifiedapplicationprofilesummaryPostRequest
+from graphiant_sdk.models.v2_assurance_unclassifiedapplicationprofilesummary_post_response import V2AssuranceUnclassifiedapplicationprofilesummaryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -34237,10 +35966,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v2_notificationlist_post_request = graphiant_sdk.V2NotificationlistPostRequest() # V2NotificationlistPostRequest | 
+    v2_assurance_unclassifiedapplicationprofilesummary_post_request = graphiant_sdk.V2AssuranceUnclassifiedapplicationprofilesummaryPostRequest() # V2AssuranceUnclassifiedapplicationprofilesummaryPostRequest | 
 
     try:
-        api_response = api_instance.v2_assurance_unclassifiedapplicationprofilesummary_post(authorization, v2_notificationlist_post_request)
+        api_response = api_instance.v2_assurance_unclassifiedapplicationprofilesummary_post(authorization, v2_assurance_unclassifiedapplicationprofilesummary_post_request)
         print("The response of DefaultApi->v2_assurance_unclassifiedapplicationprofilesummary_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -34255,11 +35984,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2_notificationlist_post_request** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md)|  | 
+ **v2_assurance_unclassifiedapplicationprofilesummary_post_request** | [**V2AssuranceUnclassifiedapplicationprofilesummaryPostRequest**](V2AssuranceUnclassifiedapplicationprofilesummaryPostRequest.md)|  | 
 
 ### Return type
 
-[**V2AssuranceApplicationprofilesummaryPost200Response**](V2AssuranceApplicationprofilesummaryPost200Response.md)
+[**V2AssuranceUnclassifiedapplicationprofilesummaryPostResponse**](V2AssuranceUnclassifiedapplicationprofilesummaryPostResponse.md)
 
 ### Authorization
 
@@ -34279,7 +36008,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_updateclassifiedapplication_post**
-> object v2_assurance_updateclassifiedapplication_post(authorization, v2_assurance_getclassifiedapplicationlist_get200_response)
+> object v2_assurance_updateclassifiedapplication_post(authorization, v2_assurance_updateclassifiedapplication_post_request)
 
 ### Example
 
@@ -34287,7 +36016,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_assurance_getclassifiedapplicationlist_get200_response import V2AssuranceGetclassifiedapplicationlistGet200Response
+from graphiant_sdk.models.v2_assurance_updateclassifiedapplication_post_request import V2AssuranceUpdateclassifiedapplicationPostRequest
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -34313,10 +36042,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v2_assurance_getclassifiedapplicationlist_get200_response = graphiant_sdk.V2AssuranceGetclassifiedapplicationlistGet200Response() # V2AssuranceGetclassifiedapplicationlistGet200Response | 
+    v2_assurance_updateclassifiedapplication_post_request = graphiant_sdk.V2AssuranceUpdateclassifiedapplicationPostRequest() # V2AssuranceUpdateclassifiedapplicationPostRequest | 
 
     try:
-        api_response = api_instance.v2_assurance_updateclassifiedapplication_post(authorization, v2_assurance_getclassifiedapplicationlist_get200_response)
+        api_response = api_instance.v2_assurance_updateclassifiedapplication_post(authorization, v2_assurance_updateclassifiedapplication_post_request)
         print("The response of DefaultApi->v2_assurance_updateclassifiedapplication_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -34331,7 +36060,7 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2_assurance_getclassifiedapplicationlist_get200_response** | [**V2AssuranceGetclassifiedapplicationlistGet200Response**](V2AssuranceGetclassifiedapplicationlistGet200Response.md)|  | 
+ **v2_assurance_updateclassifiedapplication_post_request** | [**V2AssuranceUpdateclassifiedapplicationPostRequest**](V2AssuranceUpdateclassifiedapplicationPostRequest.md)|  | 
 
 ### Return type
 
@@ -34355,7 +36084,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_assurance_version_post**
-> V2VersionPost200Response v2_assurance_version_post(authorization, body)
+> V2AssuranceVersionPostResponse v2_assurance_version_post(authorization, body)
 
 ### Example
 
@@ -34363,7 +36092,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_version_post200_response import V2VersionPost200Response
+from graphiant_sdk.models.v2_assurance_version_post_response import V2AssuranceVersionPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -34411,7 +36140,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2VersionPost200Response**](V2VersionPost200Response.md)
+[**V2AssuranceVersionPostResponse**](V2AssuranceVersionPostResponse.md)
 
 ### Authorization
 
@@ -34431,7 +36160,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_audit_logs_post**
-> V2AuditLogsPost200Response v2_audit_logs_post(authorization, v2_audit_logs_post_request)
+> V2AuditLogsPostResponse v2_audit_logs_post(authorization, v2_audit_logs_post_request)
 
 ### Example
 
@@ -34439,8 +36168,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_audit_logs_post200_response import V2AuditLogsPost200Response
 from graphiant_sdk.models.v2_audit_logs_post_request import V2AuditLogsPostRequest
+from graphiant_sdk.models.v2_audit_logs_post_response import V2AuditLogsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -34488,7 +36217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AuditLogsPost200Response**](V2AuditLogsPost200Response.md)
+[**V2AuditLogsPostResponse**](V2AuditLogsPostResponse.md)
 
 ### Authorization
 
@@ -34508,7 +36237,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_childalertlist_post**
-> V2ChildalertlistPost200Response v2_childalertlist_post(authorization, v2_childalertlist_post_request)
+> V2ChildalertlistPostResponse v2_childalertlist_post(authorization, v2_childalertlist_post_request)
 
 ### Example
 
@@ -34516,8 +36245,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_childalertlist_post200_response import V2ChildalertlistPost200Response
 from graphiant_sdk.models.v2_childalertlist_post_request import V2ChildalertlistPostRequest
+from graphiant_sdk.models.v2_childalertlist_post_response import V2ChildalertlistPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -34565,7 +36294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2ChildalertlistPost200Response**](V2ChildalertlistPost200Response.md)
+[**V2ChildalertlistPostResponse**](V2ChildalertlistPostResponse.md)
 
 ### Authorization
 
@@ -34585,7 +36314,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_device_device_id_lan_segments_post**
-> V2DeviceDeviceIdLanSegmentsPost200Response v2_device_device_id_lan_segments_post(authorization, device_id, v2_notificationlist_post_request)
+> V2DeviceDeviceIdLanSegmentsPostResponse v2_device_device_id_lan_segments_post(authorization, device_id, v2_device_device_id_lan_segments_post_request)
+
+Get route count for all the LAN Segments in a device
 
 ### Example
 
@@ -34593,8 +36324,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_device_device_id_lan_segments_post200_response import V2DeviceDeviceIdLanSegmentsPost200Response
-from graphiant_sdk.models.v2_notificationlist_post_request import V2NotificationlistPostRequest
+from graphiant_sdk.models.v2_device_device_id_lan_segments_post_request import V2DeviceDeviceIdLanSegmentsPostRequest
+from graphiant_sdk.models.v2_device_device_id_lan_segments_post_response import V2DeviceDeviceIdLanSegmentsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -34621,10 +36352,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
     device_id = 1234567891011 # int | 
-    v2_notificationlist_post_request = graphiant_sdk.V2NotificationlistPostRequest() # V2NotificationlistPostRequest | 
+    v2_device_device_id_lan_segments_post_request = graphiant_sdk.V2DeviceDeviceIdLanSegmentsPostRequest() # V2DeviceDeviceIdLanSegmentsPostRequest | 
 
     try:
-        api_response = api_instance.v2_device_device_id_lan_segments_post(authorization, device_id, v2_notificationlist_post_request)
+        api_response = api_instance.v2_device_device_id_lan_segments_post(authorization, device_id, v2_device_device_id_lan_segments_post_request)
         print("The response of DefaultApi->v2_device_device_id_lan_segments_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -34640,11 +36371,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **device_id** | **int**|  | 
- **v2_notificationlist_post_request** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md)|  | 
+ **v2_device_device_id_lan_segments_post_request** | [**V2DeviceDeviceIdLanSegmentsPostRequest**](V2DeviceDeviceIdLanSegmentsPostRequest.md)|  | 
 
 ### Return type
 
-[**V2DeviceDeviceIdLanSegmentsPost200Response**](V2DeviceDeviceIdLanSegmentsPost200Response.md)
+[**V2DeviceDeviceIdLanSegmentsPostResponse**](V2DeviceDeviceIdLanSegmentsPostResponse.md)
 
 ### Authorization
 
@@ -34664,7 +36395,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_device_device_id_topology_post**
-> V2DeviceDeviceIdTopologyPost200Response v2_device_device_id_topology_post(authorization, device_id, v2_device_device_id_topology_post_request)
+> V2DeviceDeviceIdTopologyPostResponse v2_device_device_id_topology_post(authorization, device_id, v2_device_device_id_topology_post_request)
+
+Get the device topology
 
 ### Example
 
@@ -34672,8 +36405,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_device_device_id_topology_post200_response import V2DeviceDeviceIdTopologyPost200Response
 from graphiant_sdk.models.v2_device_device_id_topology_post_request import V2DeviceDeviceIdTopologyPostRequest
+from graphiant_sdk.models.v2_device_device_id_topology_post_response import V2DeviceDeviceIdTopologyPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -34723,7 +36456,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2DeviceDeviceIdTopologyPost200Response**](V2DeviceDeviceIdTopologyPost200Response.md)
+[**V2DeviceDeviceIdTopologyPostResponse**](V2DeviceDeviceIdTopologyPostResponse.md)
 
 ### Authorization
 
@@ -34743,7 +36476,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_extranet_consumers_usage_top_post**
-> V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response v2_extranet_consumers_usage_top_post(authorization, v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request)
+> V2ExtranetConsumersUsageTopPostResponse v2_extranet_consumers_usage_top_post(authorization, v2_extranet_consumers_usage_top_post_request)
+
+Get extranet service top consumer usage stats
 
 ### Example
 
@@ -34751,8 +36486,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post200_response import V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response
-from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request import V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest
+from graphiant_sdk.models.v2_extranet_consumers_usage_top_post_request import V2ExtranetConsumersUsageTopPostRequest
+from graphiant_sdk.models.v2_extranet_consumers_usage_top_post_response import V2ExtranetConsumersUsageTopPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -34778,10 +36513,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request = graphiant_sdk.V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest() # V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest | 
+    v2_extranet_consumers_usage_top_post_request = graphiant_sdk.V2ExtranetConsumersUsageTopPostRequest() # V2ExtranetConsumersUsageTopPostRequest | 
 
     try:
-        api_response = api_instance.v2_extranet_consumers_usage_top_post(authorization, v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request)
+        api_response = api_instance.v2_extranet_consumers_usage_top_post(authorization, v2_extranet_consumers_usage_top_post_request)
         print("The response of DefaultApi->v2_extranet_consumers_usage_top_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -34796,11 +36531,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request** | [**V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest**](V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest.md)|  | 
+ **v2_extranet_consumers_usage_top_post_request** | [**V2ExtranetConsumersUsageTopPostRequest**](V2ExtranetConsumersUsageTopPostRequest.md)|  | 
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response**](V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response.md)
+[**V2ExtranetConsumersUsageTopPostResponse**](V2ExtranetConsumersUsageTopPostResponse.md)
 
 ### Authorization
 
@@ -34820,7 +36555,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_extranet_lan_segments_usage_top_post**
-> V2ExtranetLanSegmentsUsageTopPost200Response v2_extranet_lan_segments_usage_top_post(authorization, v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request)
+> V2ExtranetLanSegmentsUsageTopPostResponse v2_extranet_lan_segments_usage_top_post(authorization, v2_extranet_lan_segments_usage_top_post_request)
+
+Get extranet service top lan segment usage stats
 
 ### Example
 
@@ -34828,8 +36565,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request import V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest
-from graphiant_sdk.models.v2_extranet_lan_segments_usage_top_post200_response import V2ExtranetLanSegmentsUsageTopPost200Response
+from graphiant_sdk.models.v2_extranet_lan_segments_usage_top_post_request import V2ExtranetLanSegmentsUsageTopPostRequest
+from graphiant_sdk.models.v2_extranet_lan_segments_usage_top_post_response import V2ExtranetLanSegmentsUsageTopPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -34855,10 +36592,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request = graphiant_sdk.V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest() # V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest | 
+    v2_extranet_lan_segments_usage_top_post_request = graphiant_sdk.V2ExtranetLanSegmentsUsageTopPostRequest() # V2ExtranetLanSegmentsUsageTopPostRequest | 
 
     try:
-        api_response = api_instance.v2_extranet_lan_segments_usage_top_post(authorization, v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request)
+        api_response = api_instance.v2_extranet_lan_segments_usage_top_post(authorization, v2_extranet_lan_segments_usage_top_post_request)
         print("The response of DefaultApi->v2_extranet_lan_segments_usage_top_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -34873,11 +36610,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request** | [**V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest**](V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest.md)|  | 
+ **v2_extranet_lan_segments_usage_top_post_request** | [**V2ExtranetLanSegmentsUsageTopPostRequest**](V2ExtranetLanSegmentsUsageTopPostRequest.md)|  | 
 
 ### Return type
 
-[**V2ExtranetLanSegmentsUsageTopPost200Response**](V2ExtranetLanSegmentsUsageTopPost200Response.md)
+[**V2ExtranetLanSegmentsUsageTopPostResponse**](V2ExtranetLanSegmentsUsageTopPostResponse.md)
 
 ### Authorization
 
@@ -34897,7 +36634,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_extranet_service_overtime_consumption_post**
-> V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response v2_extranet_service_overtime_consumption_post(authorization, v1_extranet_b2b_monitoring_peering_service_service_overtime_consumption_post_request)
+> V2ExtranetServiceOvertimeConsumptionPostResponse v2_extranet_service_overtime_consumption_post(authorization, v2_extranet_service_overtime_consumption_post_request)
+
+Get extranet service cumulative consumption over timewindow
 
 ### Example
 
@@ -34905,8 +36644,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_service_overtime_consumption_post200_response import V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response
-from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_service_overtime_consumption_post_request import V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest
+from graphiant_sdk.models.v2_extranet_service_overtime_consumption_post_request import V2ExtranetServiceOvertimeConsumptionPostRequest
+from graphiant_sdk.models.v2_extranet_service_overtime_consumption_post_response import V2ExtranetServiceOvertimeConsumptionPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -34932,10 +36671,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_extranet_b2b_monitoring_peering_service_service_overtime_consumption_post_request = graphiant_sdk.V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest() # V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest | 
+    v2_extranet_service_overtime_consumption_post_request = graphiant_sdk.V2ExtranetServiceOvertimeConsumptionPostRequest() # V2ExtranetServiceOvertimeConsumptionPostRequest | 
 
     try:
-        api_response = api_instance.v2_extranet_service_overtime_consumption_post(authorization, v1_extranet_b2b_monitoring_peering_service_service_overtime_consumption_post_request)
+        api_response = api_instance.v2_extranet_service_overtime_consumption_post(authorization, v2_extranet_service_overtime_consumption_post_request)
         print("The response of DefaultApi->v2_extranet_service_overtime_consumption_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -34950,11 +36689,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_extranet_b2b_monitoring_peering_service_service_overtime_consumption_post_request** | [**V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest**](V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest.md)|  | 
+ **v2_extranet_service_overtime_consumption_post_request** | [**V2ExtranetServiceOvertimeConsumptionPostRequest**](V2ExtranetServiceOvertimeConsumptionPostRequest.md)|  | 
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response**](V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response.md)
+[**V2ExtranetServiceOvertimeConsumptionPostResponse**](V2ExtranetServiceOvertimeConsumptionPostResponse.md)
 
 ### Authorization
 
@@ -34974,7 +36713,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_extranet_sites_consumption_overview_post**
-> V2ExtranetSitesConsumptionOverviewPost200Response v2_extranet_sites_consumption_overview_post(authorization, v1_extranet_b2b_monitoring_peering_service_consumption_overview_post_request)
+> V2ExtranetSitesConsumptionOverviewPostResponse v2_extranet_sites_consumption_overview_post(authorization, v2_extranet_sites_consumption_overview_post_request)
+
+Get extranet service consumption overview over timewindow
 
 ### Example
 
@@ -34982,8 +36723,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_consumption_overview_post_request import V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest
-from graphiant_sdk.models.v2_extranet_sites_consumption_overview_post200_response import V2ExtranetSitesConsumptionOverviewPost200Response
+from graphiant_sdk.models.v2_extranet_sites_consumption_overview_post_request import V2ExtranetSitesConsumptionOverviewPostRequest
+from graphiant_sdk.models.v2_extranet_sites_consumption_overview_post_response import V2ExtranetSitesConsumptionOverviewPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -35009,10 +36750,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_extranet_b2b_monitoring_peering_service_consumption_overview_post_request = graphiant_sdk.V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest() # V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest | 
+    v2_extranet_sites_consumption_overview_post_request = graphiant_sdk.V2ExtranetSitesConsumptionOverviewPostRequest() # V2ExtranetSitesConsumptionOverviewPostRequest | 
 
     try:
-        api_response = api_instance.v2_extranet_sites_consumption_overview_post(authorization, v1_extranet_b2b_monitoring_peering_service_consumption_overview_post_request)
+        api_response = api_instance.v2_extranet_sites_consumption_overview_post(authorization, v2_extranet_sites_consumption_overview_post_request)
         print("The response of DefaultApi->v2_extranet_sites_consumption_overview_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -35027,11 +36768,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_extranet_b2b_monitoring_peering_service_consumption_overview_post_request** | [**V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest**](V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest.md)|  | 
+ **v2_extranet_sites_consumption_overview_post_request** | [**V2ExtranetSitesConsumptionOverviewPostRequest**](V2ExtranetSitesConsumptionOverviewPostRequest.md)|  | 
 
 ### Return type
 
-[**V2ExtranetSitesConsumptionOverviewPost200Response**](V2ExtranetSitesConsumptionOverviewPost200Response.md)
+[**V2ExtranetSitesConsumptionOverviewPostResponse**](V2ExtranetSitesConsumptionOverviewPostResponse.md)
 
 ### Authorization
 
@@ -35051,7 +36792,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_extranet_sites_usage_post**
-> V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response v2_extranet_sites_usage_post(authorization, v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post_request)
+> V2ExtranetSitesUsagePostResponse v2_extranet_sites_usage_post(authorization, v2_extranet_sites_usage_post_request)
+
+Get extranet service sites usage stats v2
 
 ### Example
 
@@ -35059,8 +36802,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post200_response import V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response
-from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post_request import V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest
+from graphiant_sdk.models.v2_extranet_sites_usage_post_request import V2ExtranetSitesUsagePostRequest
+from graphiant_sdk.models.v2_extranet_sites_usage_post_response import V2ExtranetSitesUsagePostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -35086,10 +36829,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post_request = graphiant_sdk.V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest() # V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest | 
+    v2_extranet_sites_usage_post_request = graphiant_sdk.V2ExtranetSitesUsagePostRequest() # V2ExtranetSitesUsagePostRequest | 
 
     try:
-        api_response = api_instance.v2_extranet_sites_usage_post(authorization, v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post_request)
+        api_response = api_instance.v2_extranet_sites_usage_post(authorization, v2_extranet_sites_usage_post_request)
         print("The response of DefaultApi->v2_extranet_sites_usage_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -35104,11 +36847,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_extranet_b2b_monitoring_peering_service_bandwidth_usage_post_request** | [**V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest**](V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest.md)|  | 
+ **v2_extranet_sites_usage_post_request** | [**V2ExtranetSitesUsagePostRequest**](V2ExtranetSitesUsagePostRequest.md)|  | 
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response**](V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response.md)
+[**V2ExtranetSitesUsagePostResponse**](V2ExtranetSitesUsagePostResponse.md)
 
 ### Authorization
 
@@ -35128,7 +36871,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_extranet_total_usage_post**
-> V2ExtranetTotalUsagePost200Response v2_extranet_total_usage_post(authorization, v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request)
+> V2ExtranetTotalUsagePostResponse v2_extranet_total_usage_post(authorization, v2_extranet_total_usage_post_request)
+
+Get extranet service total usage stats
 
 ### Example
 
@@ -35136,8 +36881,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request import V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest
-from graphiant_sdk.models.v2_extranet_total_usage_post200_response import V2ExtranetTotalUsagePost200Response
+from graphiant_sdk.models.v2_extranet_total_usage_post_request import V2ExtranetTotalUsagePostRequest
+from graphiant_sdk.models.v2_extranet_total_usage_post_response import V2ExtranetTotalUsagePostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -35163,10 +36908,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request = graphiant_sdk.V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest() # V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest | 
+    v2_extranet_total_usage_post_request = graphiant_sdk.V2ExtranetTotalUsagePostRequest() # V2ExtranetTotalUsagePostRequest | 
 
     try:
-        api_response = api_instance.v2_extranet_total_usage_post(authorization, v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request)
+        api_response = api_instance.v2_extranet_total_usage_post(authorization, v2_extranet_total_usage_post_request)
         print("The response of DefaultApi->v2_extranet_total_usage_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -35181,11 +36926,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_extranet_b2b_monitoring_peering_service_consumers_usage_top_post_request** | [**V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest**](V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest.md)|  | 
+ **v2_extranet_total_usage_post_request** | [**V2ExtranetTotalUsagePostRequest**](V2ExtranetTotalUsagePostRequest.md)|  | 
 
 ### Return type
 
-[**V2ExtranetTotalUsagePost200Response**](V2ExtranetTotalUsagePost200Response.md)
+[**V2ExtranetTotalUsagePostResponse**](V2ExtranetTotalUsagePostResponse.md)
 
 ### Authorization
 
@@ -35205,7 +36950,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_extranets_monitoring_consumers_post**
-> V2ExtranetsMonitoringConsumersPost200Response v2_extranets_monitoring_consumers_post(authorization, v1_policy_route_tag_sets_post200_response)
+> V2ExtranetsMonitoringConsumersPostResponse v2_extranets_monitoring_consumers_post(authorization, v2_extranets_monitoring_consumers_post_request)
+
+Get consumer list for b2b producer service
 
 ### Example
 
@@ -35213,8 +36960,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_policy_route_tag_sets_post200_response import V1PolicyRouteTagSetsPost200Response
-from graphiant_sdk.models.v2_extranets_monitoring_consumers_post200_response import V2ExtranetsMonitoringConsumersPost200Response
+from graphiant_sdk.models.v2_extranets_monitoring_consumers_post_request import V2ExtranetsMonitoringConsumersPostRequest
+from graphiant_sdk.models.v2_extranets_monitoring_consumers_post_response import V2ExtranetsMonitoringConsumersPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -35240,10 +36987,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_policy_route_tag_sets_post200_response = graphiant_sdk.V1PolicyRouteTagSetsPost200Response() # V1PolicyRouteTagSetsPost200Response | 
+    v2_extranets_monitoring_consumers_post_request = graphiant_sdk.V2ExtranetsMonitoringConsumersPostRequest() # V2ExtranetsMonitoringConsumersPostRequest | 
 
     try:
-        api_response = api_instance.v2_extranets_monitoring_consumers_post(authorization, v1_policy_route_tag_sets_post200_response)
+        api_response = api_instance.v2_extranets_monitoring_consumers_post(authorization, v2_extranets_monitoring_consumers_post_request)
         print("The response of DefaultApi->v2_extranets_monitoring_consumers_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -35258,11 +37005,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_policy_route_tag_sets_post200_response** | [**V1PolicyRouteTagSetsPost200Response**](V1PolicyRouteTagSetsPost200Response.md)|  | 
+ **v2_extranets_monitoring_consumers_post_request** | [**V2ExtranetsMonitoringConsumersPostRequest**](V2ExtranetsMonitoringConsumersPostRequest.md)|  | 
 
 ### Return type
 
-[**V2ExtranetsMonitoringConsumersPost200Response**](V2ExtranetsMonitoringConsumersPost200Response.md)
+[**V2ExtranetsMonitoringConsumersPostResponse**](V2ExtranetsMonitoringConsumersPostResponse.md)
 
 ### Authorization
 
@@ -35282,7 +37029,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_integration_getall_enterprise_id_get**
-> V2IntegrationGetallEnterpriseIdGet200Response v2_integration_getall_enterprise_id_get(authorization, enterprise_id)
+> V2IntegrationGetallEnterpriseIdGetResponse v2_integration_getall_enterprise_id_get(authorization, enterprise_id)
 
 ### Example
 
@@ -35290,7 +37037,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_integration_getall_enterprise_id_get200_response import V2IntegrationGetallEnterpriseIdGet200Response
+from graphiant_sdk.models.v2_integration_getall_enterprise_id_get_response import V2IntegrationGetallEnterpriseIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -35338,7 +37085,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2IntegrationGetallEnterpriseIdGet200Response**](V2IntegrationGetallEnterpriseIdGet200Response.md)
+[**V2IntegrationGetallEnterpriseIdGetResponse**](V2IntegrationGetallEnterpriseIdGetResponse.md)
 
 ### Authorization
 
@@ -35511,7 +37258,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_integration_post**
-> V2IntegrationPost200Response v2_integration_post(authorization, v2_integration_post_request)
+> V2IntegrationPostResponse v2_integration_post(authorization, v2_integration_post_request)
 
 ### Example
 
@@ -35519,8 +37266,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_integration_post200_response import V2IntegrationPost200Response
 from graphiant_sdk.models.v2_integration_post_request import V2IntegrationPostRequest
+from graphiant_sdk.models.v2_integration_post_response import V2IntegrationPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -35568,7 +37315,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2IntegrationPost200Response**](V2IntegrationPost200Response.md)
+[**V2IntegrationPostResponse**](V2IntegrationPostResponse.md)
 
 ### Authorization
 
@@ -35665,7 +37412,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_bfd_post**
-> V2MonitoringBfdPost200Response v2_monitoring_bfd_post(authorization, v2_monitoring_bfd_post_request)
+> V2MonitoringBfdPostResponse v2_monitoring_bfd_post(authorization, v2_monitoring_bfd_post_request)
 
 ### Example
 
@@ -35673,8 +37420,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_bfd_post200_response import V2MonitoringBfdPost200Response
 from graphiant_sdk.models.v2_monitoring_bfd_post_request import V2MonitoringBfdPostRequest
+from graphiant_sdk.models.v2_monitoring_bfd_post_response import V2MonitoringBfdPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -35722,7 +37469,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringBfdPost200Response**](V2MonitoringBfdPost200Response.md)
+[**V2MonitoringBfdPostResponse**](V2MonitoringBfdPostResponse.md)
 
 ### Authorization
 
@@ -35742,7 +37489,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_bgp_post**
-> V2MonitoringBgpPost200Response v2_monitoring_bgp_post(authorization, v2_monitoring_bgp_post_request)
+> V2MonitoringBgpPostResponse v2_monitoring_bgp_post(authorization, v2_monitoring_bgp_post_request)
 
 ### Example
 
@@ -35750,8 +37497,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_bgp_post200_response import V2MonitoringBgpPost200Response
 from graphiant_sdk.models.v2_monitoring_bgp_post_request import V2MonitoringBgpPostRequest
+from graphiant_sdk.models.v2_monitoring_bgp_post_response import V2MonitoringBgpPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -35799,7 +37546,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringBgpPost200Response**](V2MonitoringBgpPost200Response.md)
+[**V2MonitoringBgpPostResponse**](V2MonitoringBgpPostResponse.md)
 
 ### Authorization
 
@@ -35819,7 +37566,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_circuits_bandwidth_post**
-> V1MonitoringCircuitsBandwidthPost200Response v2_monitoring_circuits_bandwidth_post(authorization, v1_monitoring_circuits_bandwidth_post_request)
+> V2MonitoringCircuitsBandwidthPostResponse v2_monitoring_circuits_bandwidth_post(authorization, v2_monitoring_circuits_bandwidth_post_request)
 
 ### Example
 
@@ -35827,8 +37574,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_monitoring_circuits_bandwidth_post200_response import V1MonitoringCircuitsBandwidthPost200Response
-from graphiant_sdk.models.v1_monitoring_circuits_bandwidth_post_request import V1MonitoringCircuitsBandwidthPostRequest
+from graphiant_sdk.models.v2_monitoring_circuits_bandwidth_post_request import V2MonitoringCircuitsBandwidthPostRequest
+from graphiant_sdk.models.v2_monitoring_circuits_bandwidth_post_response import V2MonitoringCircuitsBandwidthPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -35854,10 +37601,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_monitoring_circuits_bandwidth_post_request = graphiant_sdk.V1MonitoringCircuitsBandwidthPostRequest() # V1MonitoringCircuitsBandwidthPostRequest | 
+    v2_monitoring_circuits_bandwidth_post_request = graphiant_sdk.V2MonitoringCircuitsBandwidthPostRequest() # V2MonitoringCircuitsBandwidthPostRequest | 
 
     try:
-        api_response = api_instance.v2_monitoring_circuits_bandwidth_post(authorization, v1_monitoring_circuits_bandwidth_post_request)
+        api_response = api_instance.v2_monitoring_circuits_bandwidth_post(authorization, v2_monitoring_circuits_bandwidth_post_request)
         print("The response of DefaultApi->v2_monitoring_circuits_bandwidth_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -35872,11 +37619,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_monitoring_circuits_bandwidth_post_request** | [**V1MonitoringCircuitsBandwidthPostRequest**](V1MonitoringCircuitsBandwidthPostRequest.md)|  | 
+ **v2_monitoring_circuits_bandwidth_post_request** | [**V2MonitoringCircuitsBandwidthPostRequest**](V2MonitoringCircuitsBandwidthPostRequest.md)|  | 
 
 ### Return type
 
-[**V1MonitoringCircuitsBandwidthPost200Response**](V1MonitoringCircuitsBandwidthPost200Response.md)
+[**V2MonitoringCircuitsBandwidthPostResponse**](V2MonitoringCircuitsBandwidthPostResponse.md)
 
 ### Authorization
 
@@ -35896,7 +37643,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_circuits_summary_post**
-> V2MonitoringCircuitsSummaryPost200Response v2_monitoring_circuits_summary_post(authorization, v2_monitoring_circuits_summary_post_request)
+> V2MonitoringCircuitsSummaryPostResponse v2_monitoring_circuits_summary_post(authorization, v2_monitoring_circuits_summary_post_request)
 
 ### Example
 
@@ -35904,8 +37651,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_circuits_summary_post200_response import V2MonitoringCircuitsSummaryPost200Response
 from graphiant_sdk.models.v2_monitoring_circuits_summary_post_request import V2MonitoringCircuitsSummaryPostRequest
+from graphiant_sdk.models.v2_monitoring_circuits_summary_post_response import V2MonitoringCircuitsSummaryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -35953,7 +37700,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringCircuitsSummaryPost200Response**](V2MonitoringCircuitsSummaryPost200Response.md)
+[**V2MonitoringCircuitsSummaryPostResponse**](V2MonitoringCircuitsSummaryPostResponse.md)
 
 ### Authorization
 
@@ -35973,7 +37720,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_circuits_utilization_post**
-> V2MonitoringCircuitsUtilizationPost200Response v2_monitoring_circuits_utilization_post(authorization, v2_monitoring_circuits_utilization_post_request)
+> V2MonitoringCircuitsUtilizationPostResponse v2_monitoring_circuits_utilization_post(authorization, v2_monitoring_circuits_utilization_post_request)
 
 ### Example
 
@@ -35981,8 +37728,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_circuits_utilization_post200_response import V2MonitoringCircuitsUtilizationPost200Response
 from graphiant_sdk.models.v2_monitoring_circuits_utilization_post_request import V2MonitoringCircuitsUtilizationPostRequest
+from graphiant_sdk.models.v2_monitoring_circuits_utilization_post_response import V2MonitoringCircuitsUtilizationPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -36030,7 +37777,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringCircuitsUtilizationPost200Response**](V2MonitoringCircuitsUtilizationPost200Response.md)
+[**V2MonitoringCircuitsUtilizationPostResponse**](V2MonitoringCircuitsUtilizationPostResponse.md)
 
 ### Authorization
 
@@ -36050,7 +37797,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_circuits_visualization_post**
-> V1MonitoringCircuitsVisualizationPost200Response v2_monitoring_circuits_visualization_post(authorization, v1_monitoring_circuits_visualization_post_request)
+> V2MonitoringCircuitsVisualizationPostResponse v2_monitoring_circuits_visualization_post(authorization, v2_monitoring_circuits_visualization_post_request)
 
 ### Example
 
@@ -36058,8 +37805,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_monitoring_circuits_visualization_post200_response import V1MonitoringCircuitsVisualizationPost200Response
-from graphiant_sdk.models.v1_monitoring_circuits_visualization_post_request import V1MonitoringCircuitsVisualizationPostRequest
+from graphiant_sdk.models.v2_monitoring_circuits_visualization_post_request import V2MonitoringCircuitsVisualizationPostRequest
+from graphiant_sdk.models.v2_monitoring_circuits_visualization_post_response import V2MonitoringCircuitsVisualizationPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -36085,10 +37832,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_monitoring_circuits_visualization_post_request = graphiant_sdk.V1MonitoringCircuitsVisualizationPostRequest() # V1MonitoringCircuitsVisualizationPostRequest | 
+    v2_monitoring_circuits_visualization_post_request = graphiant_sdk.V2MonitoringCircuitsVisualizationPostRequest() # V2MonitoringCircuitsVisualizationPostRequest | 
 
     try:
-        api_response = api_instance.v2_monitoring_circuits_visualization_post(authorization, v1_monitoring_circuits_visualization_post_request)
+        api_response = api_instance.v2_monitoring_circuits_visualization_post(authorization, v2_monitoring_circuits_visualization_post_request)
         print("The response of DefaultApi->v2_monitoring_circuits_visualization_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -36103,11 +37850,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_monitoring_circuits_visualization_post_request** | [**V1MonitoringCircuitsVisualizationPostRequest**](V1MonitoringCircuitsVisualizationPostRequest.md)|  | 
+ **v2_monitoring_circuits_visualization_post_request** | [**V2MonitoringCircuitsVisualizationPostRequest**](V2MonitoringCircuitsVisualizationPostRequest.md)|  | 
 
 ### Return type
 
-[**V1MonitoringCircuitsVisualizationPost200Response**](V1MonitoringCircuitsVisualizationPost200Response.md)
+[**V2MonitoringCircuitsVisualizationPostResponse**](V2MonitoringCircuitsVisualizationPostResponse.md)
 
 ### Authorization
 
@@ -36127,7 +37874,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_extranet_edge_status_get**
-> V2MonitoringExtranetEdgeStatusGet200Response v2_monitoring_extranet_edge_status_get(authorization)
+> V2MonitoringExtranetEdgeStatusGetResponse v2_monitoring_extranet_edge_status_get(authorization)
 
 ### Example
 
@@ -36135,7 +37882,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_extranet_edge_status_get200_response import V2MonitoringExtranetEdgeStatusGet200Response
+from graphiant_sdk.models.v2_monitoring_extranet_edge_status_get_response import V2MonitoringExtranetEdgeStatusGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -36181,7 +37928,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringExtranetEdgeStatusGet200Response**](V2MonitoringExtranetEdgeStatusGet200Response.md)
+[**V2MonitoringExtranetEdgeStatusGetResponse**](V2MonitoringExtranetEdgeStatusGetResponse.md)
 
 ### Authorization
 
@@ -36201,7 +37948,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_extranet_log_details_post**
-> V2MonitoringExtranetLogDetailsPost200Response v2_monitoring_extranet_log_details_post(authorization, v1_b2b_extranet_monitoring_filter_post_request)
+> V2MonitoringExtranetLogDetailsPostResponse v2_monitoring_extranet_log_details_post(authorization, v2_monitoring_extranet_log_details_post_request)
 
 ### Example
 
@@ -36209,8 +37956,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_b2b_extranet_monitoring_filter_post_request import V1B2bExtranetMonitoringFilterPostRequest
-from graphiant_sdk.models.v2_monitoring_extranet_log_details_post200_response import V2MonitoringExtranetLogDetailsPost200Response
+from graphiant_sdk.models.v2_monitoring_extranet_log_details_post_request import V2MonitoringExtranetLogDetailsPostRequest
+from graphiant_sdk.models.v2_monitoring_extranet_log_details_post_response import V2MonitoringExtranetLogDetailsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -36236,10 +37983,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_b2b_extranet_monitoring_filter_post_request = graphiant_sdk.V1B2bExtranetMonitoringFilterPostRequest() # V1B2bExtranetMonitoringFilterPostRequest | 
+    v2_monitoring_extranet_log_details_post_request = graphiant_sdk.V2MonitoringExtranetLogDetailsPostRequest() # V2MonitoringExtranetLogDetailsPostRequest | 
 
     try:
-        api_response = api_instance.v2_monitoring_extranet_log_details_post(authorization, v1_b2b_extranet_monitoring_filter_post_request)
+        api_response = api_instance.v2_monitoring_extranet_log_details_post(authorization, v2_monitoring_extranet_log_details_post_request)
         print("The response of DefaultApi->v2_monitoring_extranet_log_details_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -36254,11 +38001,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_b2b_extranet_monitoring_filter_post_request** | [**V1B2bExtranetMonitoringFilterPostRequest**](V1B2bExtranetMonitoringFilterPostRequest.md)|  | 
+ **v2_monitoring_extranet_log_details_post_request** | [**V2MonitoringExtranetLogDetailsPostRequest**](V2MonitoringExtranetLogDetailsPostRequest.md)|  | 
 
 ### Return type
 
-[**V2MonitoringExtranetLogDetailsPost200Response**](V2MonitoringExtranetLogDetailsPost200Response.md)
+[**V2MonitoringExtranetLogDetailsPostResponse**](V2MonitoringExtranetLogDetailsPostResponse.md)
 
 ### Authorization
 
@@ -36278,7 +38025,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_extranet_service_status_details_get**
-> V2MonitoringExtranetServiceStatusDetailsGet200Response v2_monitoring_extranet_service_status_details_get(authorization)
+> V2MonitoringExtranetServiceStatusDetailsGetResponse v2_monitoring_extranet_service_status_details_get(authorization)
 
 ### Example
 
@@ -36286,7 +38033,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_extranet_service_status_details_get200_response import V2MonitoringExtranetServiceStatusDetailsGet200Response
+from graphiant_sdk.models.v2_monitoring_extranet_service_status_details_get_response import V2MonitoringExtranetServiceStatusDetailsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -36332,7 +38079,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringExtranetServiceStatusDetailsGet200Response**](V2MonitoringExtranetServiceStatusDetailsGet200Response.md)
+[**V2MonitoringExtranetServiceStatusDetailsGetResponse**](V2MonitoringExtranetServiceStatusDetailsGetResponse.md)
 
 ### Authorization
 
@@ -36352,7 +38099,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_extranet_service_status_get**
-> V2MonitoringExtranetServiceStatusGet200Response v2_monitoring_extranet_service_status_get(authorization)
+> V2MonitoringExtranetServiceStatusGetResponse v2_monitoring_extranet_service_status_get(authorization)
 
 ### Example
 
@@ -36360,7 +38107,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_extranet_service_status_get200_response import V2MonitoringExtranetServiceStatusGet200Response
+from graphiant_sdk.models.v2_monitoring_extranet_service_status_get_response import V2MonitoringExtranetServiceStatusGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -36406,7 +38153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringExtranetServiceStatusGet200Response**](V2MonitoringExtranetServiceStatusGet200Response.md)
+[**V2MonitoringExtranetServiceStatusGetResponse**](V2MonitoringExtranetServiceStatusGetResponse.md)
 
 ### Authorization
 
@@ -36426,7 +38173,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_extranet_site_status_get**
-> V2MonitoringExtranetServiceStatusDetailsGet200Response v2_monitoring_extranet_site_status_get(authorization)
+> V2MonitoringExtranetSiteStatusGetResponse v2_monitoring_extranet_site_status_get(authorization)
 
 ### Example
 
@@ -36434,7 +38181,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_extranet_service_status_details_get200_response import V2MonitoringExtranetServiceStatusDetailsGet200Response
+from graphiant_sdk.models.v2_monitoring_extranet_site_status_get_response import V2MonitoringExtranetSiteStatusGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -36480,7 +38227,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringExtranetServiceStatusDetailsGet200Response**](V2MonitoringExtranetServiceStatusDetailsGet200Response.md)
+[**V2MonitoringExtranetSiteStatusGetResponse**](V2MonitoringExtranetSiteStatusGetResponse.md)
 
 ### Authorization
 
@@ -36500,7 +38247,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_extranet_status_details_get**
-> V2MonitoringExtranetStatusDetailsGet200Response v2_monitoring_extranet_status_details_get(authorization)
+> V2MonitoringExtranetStatusDetailsGetResponse v2_monitoring_extranet_status_details_get(authorization)
 
 ### Example
 
@@ -36508,7 +38255,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_extranet_status_details_get200_response import V2MonitoringExtranetStatusDetailsGet200Response
+from graphiant_sdk.models.v2_monitoring_extranet_status_details_get_response import V2MonitoringExtranetStatusDetailsGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -36554,7 +38301,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringExtranetStatusDetailsGet200Response**](V2MonitoringExtranetStatusDetailsGet200Response.md)
+[**V2MonitoringExtranetStatusDetailsGetResponse**](V2MonitoringExtranetStatusDetailsGetResponse.md)
 
 ### Authorization
 
@@ -36574,7 +38321,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_ike_error_history_post**
-> V2MonitoringIkeErrorHistoryPost200Response v2_monitoring_ike_error_history_post(authorization, v2_monitoring_ike_error_history_post_request)
+> V2MonitoringIkeErrorHistoryPostResponse v2_monitoring_ike_error_history_post(authorization, v2_monitoring_ike_error_history_post_request)
 
 ### Example
 
@@ -36582,8 +38329,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_ike_error_history_post200_response import V2MonitoringIkeErrorHistoryPost200Response
 from graphiant_sdk.models.v2_monitoring_ike_error_history_post_request import V2MonitoringIkeErrorHistoryPostRequest
+from graphiant_sdk.models.v2_monitoring_ike_error_history_post_response import V2MonitoringIkeErrorHistoryPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -36631,7 +38378,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringIkeErrorHistoryPost200Response**](V2MonitoringIkeErrorHistoryPost200Response.md)
+[**V2MonitoringIkeErrorHistoryPostResponse**](V2MonitoringIkeErrorHistoryPostResponse.md)
 
 ### Authorization
 
@@ -36651,7 +38398,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_interface_post**
-> V2MonitoringInterfacePost200Response v2_monitoring_interface_post(authorization, v2_monitoring_interface_post_request)
+> V2MonitoringInterfacePostResponse v2_monitoring_interface_post(authorization, v2_monitoring_interface_post_request)
 
 ### Example
 
@@ -36659,8 +38406,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_interface_post200_response import V2MonitoringInterfacePost200Response
 from graphiant_sdk.models.v2_monitoring_interface_post_request import V2MonitoringInterfacePostRequest
+from graphiant_sdk.models.v2_monitoring_interface_post_response import V2MonitoringInterfacePostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -36708,7 +38455,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringInterfacePost200Response**](V2MonitoringInterfacePost200Response.md)
+[**V2MonitoringInterfacePostResponse**](V2MonitoringInterfacePostResponse.md)
 
 ### Authorization
 
@@ -36728,7 +38475,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_ipsec_post**
-> V2MonitoringIpsecPost200Response v2_monitoring_ipsec_post(authorization, v2_monitoring_ipsec_post_request)
+> V2MonitoringIpsecPostResponse v2_monitoring_ipsec_post(authorization, v2_monitoring_ipsec_post_request)
 
 ### Example
 
@@ -36736,8 +38483,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_ipsec_post200_response import V2MonitoringIpsecPost200Response
 from graphiant_sdk.models.v2_monitoring_ipsec_post_request import V2MonitoringIpsecPostRequest
+from graphiant_sdk.models.v2_monitoring_ipsec_post_response import V2MonitoringIpsecPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -36785,7 +38532,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringIpsecPost200Response**](V2MonitoringIpsecPost200Response.md)
+[**V2MonitoringIpsecPostResponse**](V2MonitoringIpsecPostResponse.md)
 
 ### Authorization
 
@@ -36805,7 +38552,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_ospf_post**
-> V2MonitoringOspfPost200Response v2_monitoring_ospf_post(authorization, v2_monitoring_ospf_post_request)
+> V2MonitoringOspfPostResponse v2_monitoring_ospf_post(authorization, v2_monitoring_ospf_post_request)
 
 ### Example
 
@@ -36813,8 +38560,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_ospf_post200_response import V2MonitoringOspfPost200Response
 from graphiant_sdk.models.v2_monitoring_ospf_post_request import V2MonitoringOspfPostRequest
+from graphiant_sdk.models.v2_monitoring_ospf_post_response import V2MonitoringOspfPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -36862,7 +38609,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringOspfPost200Response**](V2MonitoringOspfPost200Response.md)
+[**V2MonitoringOspfPostResponse**](V2MonitoringOspfPostResponse.md)
 
 ### Authorization
 
@@ -36882,7 +38629,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_policy_post**
-> V2MonitoringPolicyPost200Response v2_monitoring_policy_post(authorization, v2_monitoring_policy_post_request)
+> V2MonitoringPolicyPostResponse v2_monitoring_policy_post(authorization, v2_monitoring_policy_post_request)
 
 ### Example
 
@@ -36890,8 +38637,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_policy_post200_response import V2MonitoringPolicyPost200Response
 from graphiant_sdk.models.v2_monitoring_policy_post_request import V2MonitoringPolicyPostRequest
+from graphiant_sdk.models.v2_monitoring_policy_post_response import V2MonitoringPolicyPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -36939,7 +38686,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringPolicyPost200Response**](V2MonitoringPolicyPost200Response.md)
+[**V2MonitoringPolicyPostResponse**](V2MonitoringPolicyPostResponse.md)
 
 ### Authorization
 
@@ -36959,7 +38706,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_queue_instant_post**
-> V2MonitoringQueueInstantPost200Response v2_monitoring_queue_instant_post(authorization, v2_monitoring_queue_instant_post_request)
+> V2MonitoringQueueInstantPostResponse v2_monitoring_queue_instant_post(authorization, v2_monitoring_queue_instant_post_request)
 
 ### Example
 
@@ -36967,8 +38714,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_queue_instant_post200_response import V2MonitoringQueueInstantPost200Response
 from graphiant_sdk.models.v2_monitoring_queue_instant_post_request import V2MonitoringQueueInstantPostRequest
+from graphiant_sdk.models.v2_monitoring_queue_instant_post_response import V2MonitoringQueueInstantPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -37016,7 +38763,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringQueueInstantPost200Response**](V2MonitoringQueueInstantPost200Response.md)
+[**V2MonitoringQueueInstantPostResponse**](V2MonitoringQueueInstantPostResponse.md)
 
 ### Authorization
 
@@ -37036,7 +38783,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_queue_post**
-> V2MonitoringQueuePost200Response v2_monitoring_queue_post(authorization, v2_monitoring_queue_post_request)
+> V2MonitoringQueuePostResponse v2_monitoring_queue_post(authorization, v2_monitoring_queue_post_request)
 
 ### Example
 
@@ -37044,8 +38791,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_queue_post200_response import V2MonitoringQueuePost200Response
 from graphiant_sdk.models.v2_monitoring_queue_post_request import V2MonitoringQueuePostRequest
+from graphiant_sdk.models.v2_monitoring_queue_post_response import V2MonitoringQueuePostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -37093,7 +38840,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringQueuePost200Response**](V2MonitoringQueuePost200Response.md)
+[**V2MonitoringQueuePostResponse**](V2MonitoringQueuePostResponse.md)
 
 ### Authorization
 
@@ -37113,7 +38860,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_segment_route_counts_post**
-> V2MonitoringSegmentRouteCountsPost200Response v2_monitoring_segment_route_counts_post(authorization, v1_devices_bringup_post_request)
+> V2MonitoringSegmentRouteCountsPostResponse v2_monitoring_segment_route_counts_post(authorization, v2_monitoring_segment_route_counts_post_request)
 
 ### Example
 
@@ -37121,8 +38868,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v1_devices_bringup_post_request import V1DevicesBringupPostRequest
-from graphiant_sdk.models.v2_monitoring_segment_route_counts_post200_response import V2MonitoringSegmentRouteCountsPost200Response
+from graphiant_sdk.models.v2_monitoring_segment_route_counts_post_request import V2MonitoringSegmentRouteCountsPostRequest
+from graphiant_sdk.models.v2_monitoring_segment_route_counts_post_response import V2MonitoringSegmentRouteCountsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -37148,10 +38895,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v1_devices_bringup_post_request = graphiant_sdk.V1DevicesBringupPostRequest() # V1DevicesBringupPostRequest | 
+    v2_monitoring_segment_route_counts_post_request = graphiant_sdk.V2MonitoringSegmentRouteCountsPostRequest() # V2MonitoringSegmentRouteCountsPostRequest | 
 
     try:
-        api_response = api_instance.v2_monitoring_segment_route_counts_post(authorization, v1_devices_bringup_post_request)
+        api_response = api_instance.v2_monitoring_segment_route_counts_post(authorization, v2_monitoring_segment_route_counts_post_request)
         print("The response of DefaultApi->v2_monitoring_segment_route_counts_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -37166,11 +38913,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1_devices_bringup_post_request** | [**V1DevicesBringupPostRequest**](V1DevicesBringupPostRequest.md)|  | 
+ **v2_monitoring_segment_route_counts_post_request** | [**V2MonitoringSegmentRouteCountsPostRequest**](V2MonitoringSegmentRouteCountsPostRequest.md)|  | 
 
 ### Return type
 
-[**V2MonitoringSegmentRouteCountsPost200Response**](V2MonitoringSegmentRouteCountsPost200Response.md)
+[**V2MonitoringSegmentRouteCountsPostResponse**](V2MonitoringSegmentRouteCountsPostResponse.md)
 
 ### Authorization
 
@@ -37190,7 +38937,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_site_circuits_bandwidth_site_id_post**
-> V2MonitoringSiteCircuitsBandwidthSiteIdPost200Response v2_monitoring_site_circuits_bandwidth_site_id_post(authorization, site_id, v2_monitoring_site_circuits_bandwidth_site_id_post_request)
+> V2MonitoringSiteCircuitsBandwidthSiteIdPostResponse v2_monitoring_site_circuits_bandwidth_site_id_post(authorization, site_id, v2_monitoring_site_circuits_bandwidth_site_id_post_request)
 
 ### Example
 
@@ -37198,8 +38945,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_site_circuits_bandwidth_site_id_post200_response import V2MonitoringSiteCircuitsBandwidthSiteIdPost200Response
 from graphiant_sdk.models.v2_monitoring_site_circuits_bandwidth_site_id_post_request import V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest
+from graphiant_sdk.models.v2_monitoring_site_circuits_bandwidth_site_id_post_response import V2MonitoringSiteCircuitsBandwidthSiteIdPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -37249,7 +38996,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringSiteCircuitsBandwidthSiteIdPost200Response**](V2MonitoringSiteCircuitsBandwidthSiteIdPost200Response.md)
+[**V2MonitoringSiteCircuitsBandwidthSiteIdPostResponse**](V2MonitoringSiteCircuitsBandwidthSiteIdPostResponse.md)
 
 ### Authorization
 
@@ -37269,7 +39016,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_site_twamp_site_id_post**
-> V2MonitoringSiteTwampSiteIdPost200Response v2_monitoring_site_twamp_site_id_post(authorization, site_id, v2_monitoring_site_twamp_site_id_post_request)
+> V2MonitoringSiteTwampSiteIdPostResponse v2_monitoring_site_twamp_site_id_post(authorization, site_id, v2_monitoring_site_twamp_site_id_post_request)
 
 ### Example
 
@@ -37277,8 +39024,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_site_twamp_site_id_post200_response import V2MonitoringSiteTwampSiteIdPost200Response
 from graphiant_sdk.models.v2_monitoring_site_twamp_site_id_post_request import V2MonitoringSiteTwampSiteIdPostRequest
+from graphiant_sdk.models.v2_monitoring_site_twamp_site_id_post_response import V2MonitoringSiteTwampSiteIdPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -37328,7 +39075,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringSiteTwampSiteIdPost200Response**](V2MonitoringSiteTwampSiteIdPost200Response.md)
+[**V2MonitoringSiteTwampSiteIdPostResponse**](V2MonitoringSiteTwampSiteIdPostResponse.md)
 
 ### Authorization
 
@@ -37348,7 +39095,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_system_generic_post**
-> V2MonitoringSystemGenericPost200Response v2_monitoring_system_generic_post(authorization, v2_monitoring_system_generic_post_request)
+> V2MonitoringSystemGenericPostResponse v2_monitoring_system_generic_post(authorization, v2_monitoring_system_generic_post_request)
 
 ### Example
 
@@ -37356,8 +39103,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_system_generic_post200_response import V2MonitoringSystemGenericPost200Response
 from graphiant_sdk.models.v2_monitoring_system_generic_post_request import V2MonitoringSystemGenericPostRequest
+from graphiant_sdk.models.v2_monitoring_system_generic_post_response import V2MonitoringSystemGenericPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -37405,7 +39152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringSystemGenericPost200Response**](V2MonitoringSystemGenericPost200Response.md)
+[**V2MonitoringSystemGenericPostResponse**](V2MonitoringSystemGenericPostResponse.md)
 
 ### Authorization
 
@@ -37425,7 +39172,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_system_post**
-> V2MonitoringSystemGenericPost200Response v2_monitoring_system_post(authorization, v2_monitoring_system_generic_post_request)
+> V2MonitoringSystemPostResponse v2_monitoring_system_post(authorization, v2_monitoring_system_post_request)
 
 ### Example
 
@@ -37433,8 +39180,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_system_generic_post200_response import V2MonitoringSystemGenericPost200Response
-from graphiant_sdk.models.v2_monitoring_system_generic_post_request import V2MonitoringSystemGenericPostRequest
+from graphiant_sdk.models.v2_monitoring_system_post_request import V2MonitoringSystemPostRequest
+from graphiant_sdk.models.v2_monitoring_system_post_response import V2MonitoringSystemPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -37460,10 +39207,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v2_monitoring_system_generic_post_request = graphiant_sdk.V2MonitoringSystemGenericPostRequest() # V2MonitoringSystemGenericPostRequest | 
+    v2_monitoring_system_post_request = graphiant_sdk.V2MonitoringSystemPostRequest() # V2MonitoringSystemPostRequest | 
 
     try:
-        api_response = api_instance.v2_monitoring_system_post(authorization, v2_monitoring_system_generic_post_request)
+        api_response = api_instance.v2_monitoring_system_post(authorization, v2_monitoring_system_post_request)
         print("The response of DefaultApi->v2_monitoring_system_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -37478,11 +39225,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2_monitoring_system_generic_post_request** | [**V2MonitoringSystemGenericPostRequest**](V2MonitoringSystemGenericPostRequest.md)|  | 
+ **v2_monitoring_system_post_request** | [**V2MonitoringSystemPostRequest**](V2MonitoringSystemPostRequest.md)|  | 
 
 ### Return type
 
-[**V2MonitoringSystemGenericPost200Response**](V2MonitoringSystemGenericPost200Response.md)
+[**V2MonitoringSystemPostResponse**](V2MonitoringSystemPostResponse.md)
 
 ### Authorization
 
@@ -37502,7 +39249,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_monitoring_twamp_post**
-> V2MonitoringTwampPost200Response v2_monitoring_twamp_post(authorization, v2_monitoring_twamp_post_request)
+> V2MonitoringTwampPostResponse v2_monitoring_twamp_post(authorization, v2_monitoring_twamp_post_request)
 
 ### Example
 
@@ -37510,8 +39257,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_monitoring_twamp_post200_response import V2MonitoringTwampPost200Response
 from graphiant_sdk.models.v2_monitoring_twamp_post_request import V2MonitoringTwampPostRequest
+from graphiant_sdk.models.v2_monitoring_twamp_post_response import V2MonitoringTwampPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -37559,7 +39306,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringTwampPost200Response**](V2MonitoringTwampPost200Response.md)
+[**V2MonitoringTwampPostResponse**](V2MonitoringTwampPostResponse.md)
 
 ### Authorization
 
@@ -37883,7 +39630,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_notificationlist_post**
-> V2NotificationlistPost200Response v2_notificationlist_post(authorization, v2_notificationlist_post_request)
+> V2NotificationlistPostResponse v2_notificationlist_post(authorization, v2_notificationlist_post_request)
 
 ### Example
 
@@ -37891,8 +39638,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_notificationlist_post200_response import V2NotificationlistPost200Response
 from graphiant_sdk.models.v2_notificationlist_post_request import V2NotificationlistPostRequest
+from graphiant_sdk.models.v2_notificationlist_post_response import V2NotificationlistPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -37940,7 +39687,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2NotificationlistPost200Response**](V2NotificationlistPost200Response.md)
+[**V2NotificationlistPostResponse**](V2NotificationlistPostResponse.md)
 
 ### Authorization
 
@@ -37960,7 +39707,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_notificationmutelist_create_post**
-> object v2_notificationmutelist_create_post(authorization, v2_allowlist_create_post_request)
+> object v2_notificationmutelist_create_post(authorization, v2_notificationmutelist_create_post_request)
 
 ### Example
 
@@ -37968,7 +39715,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_allowlist_create_post_request import V2AllowlistCreatePostRequest
+from graphiant_sdk.models.v2_notificationmutelist_create_post_request import V2NotificationmutelistCreatePostRequest
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -37994,10 +39741,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v2_allowlist_create_post_request = graphiant_sdk.V2AllowlistCreatePostRequest() # V2AllowlistCreatePostRequest | 
+    v2_notificationmutelist_create_post_request = graphiant_sdk.V2NotificationmutelistCreatePostRequest() # V2NotificationmutelistCreatePostRequest | 
 
     try:
-        api_response = api_instance.v2_notificationmutelist_create_post(authorization, v2_allowlist_create_post_request)
+        api_response = api_instance.v2_notificationmutelist_create_post(authorization, v2_notificationmutelist_create_post_request)
         print("The response of DefaultApi->v2_notificationmutelist_create_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -38012,7 +39759,7 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2_allowlist_create_post_request** | [**V2AllowlistCreatePostRequest**](V2AllowlistCreatePostRequest.md)|  | 
+ **v2_notificationmutelist_create_post_request** | [**V2NotificationmutelistCreatePostRequest**](V2NotificationmutelistCreatePostRequest.md)|  | 
 
 ### Return type
 
@@ -38186,7 +39933,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_notificationmutelist_rule_id_get**
-> V2AllowlistRuleIdGet200Response v2_notificationmutelist_rule_id_get(authorization, rule_id)
+> V2NotificationmutelistRuleIdGetResponse v2_notificationmutelist_rule_id_get(authorization, rule_id)
 
 ### Example
 
@@ -38194,7 +39941,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_allowlist_rule_id_get200_response import V2AllowlistRuleIdGet200Response
+from graphiant_sdk.models.v2_notificationmutelist_rule_id_get_response import V2NotificationmutelistRuleIdGetResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -38242,7 +39989,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AllowlistRuleIdGet200Response**](V2AllowlistRuleIdGet200Response.md)
+[**V2NotificationmutelistRuleIdGetResponse**](V2NotificationmutelistRuleIdGetResponse.md)
 
 ### Authorization
 
@@ -38262,7 +40009,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_parentalertlist_post**
-> V2ChildalertlistPost200Response v2_parentalertlist_post(authorization, v2_notificationlist_post_request)
+> V2ParentalertlistPostResponse v2_parentalertlist_post(authorization, v2_parentalertlist_post_request)
 
 ### Example
 
@@ -38270,8 +40017,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_childalertlist_post200_response import V2ChildalertlistPost200Response
-from graphiant_sdk.models.v2_notificationlist_post_request import V2NotificationlistPostRequest
+from graphiant_sdk.models.v2_parentalertlist_post_request import V2ParentalertlistPostRequest
+from graphiant_sdk.models.v2_parentalertlist_post_response import V2ParentalertlistPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -38297,10 +40044,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
-    v2_notificationlist_post_request = graphiant_sdk.V2NotificationlistPostRequest() # V2NotificationlistPostRequest | 
+    v2_parentalertlist_post_request = graphiant_sdk.V2ParentalertlistPostRequest() # V2ParentalertlistPostRequest | 
 
     try:
-        api_response = api_instance.v2_parentalertlist_post(authorization, v2_notificationlist_post_request)
+        api_response = api_instance.v2_parentalertlist_post(authorization, v2_parentalertlist_post_request)
         print("The response of DefaultApi->v2_parentalertlist_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -38315,11 +40062,11 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2_notificationlist_post_request** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md)|  | 
+ **v2_parentalertlist_post_request** | [**V2ParentalertlistPostRequest**](V2ParentalertlistPostRequest.md)|  | 
 
 ### Return type
 
-[**V2ChildalertlistPost200Response**](V2ChildalertlistPost200Response.md)
+[**V2ParentalertlistPostResponse**](V2ParentalertlistPostResponse.md)
 
 ### Authorization
 
@@ -38415,7 +40162,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_rulelist_post**
-> V2RulelistPost200Response v2_rulelist_post(authorization, body)
+> V2RulelistPostResponse v2_rulelist_post(authorization, body)
 
 ### Example
 
@@ -38423,7 +40170,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_rulelist_post200_response import V2RulelistPost200Response
+from graphiant_sdk.models.v2_rulelist_post_response import V2RulelistPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -38471,7 +40218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2RulelistPost200Response**](V2RulelistPost200Response.md)
+[**V2RulelistPostResponse**](V2RulelistPostResponse.md)
 
 ### Authorization
 
@@ -38491,7 +40238,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_site_site_id_detail_post**
-> V2SiteSiteIdDetailPost200Response v2_site_site_id_detail_post(authorization, site_id, v2_device_device_id_topology_post_request)
+> V2SiteSiteIdDetailPostResponse v2_site_site_id_detail_post(authorization, site_id, v2_site_site_id_detail_post_request)
+
+Get site by id
 
 ### Example
 
@@ -38499,8 +40248,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_device_device_id_topology_post_request import V2DeviceDeviceIdTopologyPostRequest
-from graphiant_sdk.models.v2_site_site_id_detail_post200_response import V2SiteSiteIdDetailPost200Response
+from graphiant_sdk.models.v2_site_site_id_detail_post_request import V2SiteSiteIdDetailPostRequest
+from graphiant_sdk.models.v2_site_site_id_detail_post_response import V2SiteSiteIdDetailPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -38527,10 +40276,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
     site_id = 1234567891011 # int | 
-    v2_device_device_id_topology_post_request = graphiant_sdk.V2DeviceDeviceIdTopologyPostRequest() # V2DeviceDeviceIdTopologyPostRequest | 
+    v2_site_site_id_detail_post_request = graphiant_sdk.V2SiteSiteIdDetailPostRequest() # V2SiteSiteIdDetailPostRequest | 
 
     try:
-        api_response = api_instance.v2_site_site_id_detail_post(authorization, site_id, v2_device_device_id_topology_post_request)
+        api_response = api_instance.v2_site_site_id_detail_post(authorization, site_id, v2_site_site_id_detail_post_request)
         print("The response of DefaultApi->v2_site_site_id_detail_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -38546,11 +40295,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **site_id** | **int**|  | 
- **v2_device_device_id_topology_post_request** | [**V2DeviceDeviceIdTopologyPostRequest**](V2DeviceDeviceIdTopologyPostRequest.md)|  | 
+ **v2_site_site_id_detail_post_request** | [**V2SiteSiteIdDetailPostRequest**](V2SiteSiteIdDetailPostRequest.md)|  | 
 
 ### Return type
 
-[**V2SiteSiteIdDetailPost200Response**](V2SiteSiteIdDetailPost200Response.md)
+[**V2SiteSiteIdDetailPostResponse**](V2SiteSiteIdDetailPostResponse.md)
 
 ### Authorization
 
@@ -38570,7 +40319,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_site_site_id_lan_segments_post**
-> V2DeviceDeviceIdLanSegmentsPost200Response v2_site_site_id_lan_segments_post(authorization, site_id, v2_notificationlist_post_request)
+> V2SiteSiteIdLanSegmentsPostResponse v2_site_site_id_lan_segments_post(authorization, site_id, v2_site_site_id_lan_segments_post_request)
+
+Get route count for all the LAN Segments in a site
 
 ### Example
 
@@ -38578,8 +40329,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_device_device_id_lan_segments_post200_response import V2DeviceDeviceIdLanSegmentsPost200Response
-from graphiant_sdk.models.v2_notificationlist_post_request import V2NotificationlistPostRequest
+from graphiant_sdk.models.v2_site_site_id_lan_segments_post_request import V2SiteSiteIdLanSegmentsPostRequest
+from graphiant_sdk.models.v2_site_site_id_lan_segments_post_response import V2SiteSiteIdLanSegmentsPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -38606,10 +40357,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
     site_id = 1234567891011 # int | 
-    v2_notificationlist_post_request = graphiant_sdk.V2NotificationlistPostRequest() # V2NotificationlistPostRequest | 
+    v2_site_site_id_lan_segments_post_request = graphiant_sdk.V2SiteSiteIdLanSegmentsPostRequest() # V2SiteSiteIdLanSegmentsPostRequest | 
 
     try:
-        api_response = api_instance.v2_site_site_id_lan_segments_post(authorization, site_id, v2_notificationlist_post_request)
+        api_response = api_instance.v2_site_site_id_lan_segments_post(authorization, site_id, v2_site_site_id_lan_segments_post_request)
         print("The response of DefaultApi->v2_site_site_id_lan_segments_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -38625,11 +40376,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **site_id** | **int**|  | 
- **v2_notificationlist_post_request** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md)|  | 
+ **v2_site_site_id_lan_segments_post_request** | [**V2SiteSiteIdLanSegmentsPostRequest**](V2SiteSiteIdLanSegmentsPostRequest.md)|  | 
 
 ### Return type
 
-[**V2DeviceDeviceIdLanSegmentsPost200Response**](V2DeviceDeviceIdLanSegmentsPost200Response.md)
+[**V2SiteSiteIdLanSegmentsPostResponse**](V2SiteSiteIdLanSegmentsPostResponse.md)
 
 ### Authorization
 
@@ -38649,7 +40400,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_site_site_id_topology_post**
-> V2DeviceDeviceIdTopologyPost200Response v2_site_site_id_topology_post(authorization, site_id, v2_device_device_id_topology_post_request)
+> V2SiteSiteIdTopologyPostResponse v2_site_site_id_topology_post(authorization, site_id, v2_site_site_id_topology_post_request)
+
+Get the site topology
 
 ### Example
 
@@ -38657,8 +40410,8 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_device_device_id_topology_post200_response import V2DeviceDeviceIdTopologyPost200Response
-from graphiant_sdk.models.v2_device_device_id_topology_post_request import V2DeviceDeviceIdTopologyPostRequest
+from graphiant_sdk.models.v2_site_site_id_topology_post_request import V2SiteSiteIdTopologyPostRequest
+from graphiant_sdk.models.v2_site_site_id_topology_post_response import V2SiteSiteIdTopologyPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -38685,10 +40438,10 @@ with graphiant_sdk.ApiClient(configuration) as api_client:
     api_instance = graphiant_sdk.DefaultApi(api_client)
     authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
     site_id = 1234567891011 # int | 
-    v2_device_device_id_topology_post_request = graphiant_sdk.V2DeviceDeviceIdTopologyPostRequest() # V2DeviceDeviceIdTopologyPostRequest | 
+    v2_site_site_id_topology_post_request = graphiant_sdk.V2SiteSiteIdTopologyPostRequest() # V2SiteSiteIdTopologyPostRequest | 
 
     try:
-        api_response = api_instance.v2_site_site_id_topology_post(authorization, site_id, v2_device_device_id_topology_post_request)
+        api_response = api_instance.v2_site_site_id_topology_post(authorization, site_id, v2_site_site_id_topology_post_request)
         print("The response of DefaultApi->v2_site_site_id_topology_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -38704,11 +40457,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **site_id** | **int**|  | 
- **v2_device_device_id_topology_post_request** | [**V2DeviceDeviceIdTopologyPostRequest**](V2DeviceDeviceIdTopologyPostRequest.md)|  | 
+ **v2_site_site_id_topology_post_request** | [**V2SiteSiteIdTopologyPostRequest**](V2SiteSiteIdTopologyPostRequest.md)|  | 
 
 ### Return type
 
-[**V2DeviceDeviceIdTopologyPost200Response**](V2DeviceDeviceIdTopologyPost200Response.md)
+[**V2SiteSiteIdTopologyPostResponse**](V2SiteSiteIdTopologyPostResponse.md)
 
 ### Authorization
 
@@ -38728,7 +40481,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_version_post**
-> V2VersionPost200Response v2_version_post(authorization, body)
+> V2VersionPostResponse v2_version_post(authorization, body)
 
 ### Example
 
@@ -38736,7 +40489,7 @@ Name | Type | Description  | Notes
 
 ```python
 import graphiant_sdk
-from graphiant_sdk.models.v2_version_post200_response import V2VersionPost200Response
+from graphiant_sdk.models.v2_version_post_response import V2VersionPostResponse
 from graphiant_sdk.rest import ApiException
 from pprint import pprint
 
@@ -38784,7 +40537,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2VersionPost200Response**](V2VersionPost200Response.md)
+[**V2VersionPostResponse**](V2VersionPostResponse.md)
 
 ### Authorization
 

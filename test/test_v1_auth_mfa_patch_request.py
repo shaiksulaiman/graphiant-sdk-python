@@ -41,6 +41,9 @@ class TestV1AuthMfaPatchRequest(unittest.TestCase):
             )
         else:
             return V1AuthMfaPatchRequest(
+                allowed_mfa_types = [
+                    'ENUM_VALUE'
+                    ],
         )
         """
 

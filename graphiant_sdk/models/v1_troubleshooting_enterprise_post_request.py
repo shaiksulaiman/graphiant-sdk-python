@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_backbone_health_overview_post_request_filter import V1BackboneHealthOverviewPostRequestFilter
+from graphiant_sdk.models.statsmon_troubleshooting_filter import StatsmonTroubleshootingFilter
 from graphiant_sdk.models.v1_troubleshooting_enterprise_post_request_dimensions import V1TroubleshootingEnterprisePostRequestDimensions
 from typing import Optional, Set
 from typing_extensions import Self
@@ -29,7 +29,7 @@ class V1TroubleshootingEnterprisePostRequest(BaseModel):
     V1TroubleshootingEnterprisePostRequest
     """ # noqa: E501
     dimensions: Optional[V1TroubleshootingEnterprisePostRequestDimensions] = None
-    filter: Optional[V1BackboneHealthOverviewPostRequestFilter] = None
+    filter: Optional[StatsmonTroubleshootingFilter] = None
     __properties: ClassVar[List[str]] = ["dimensions", "filter"]
 
     model_config = ConfigDict(
@@ -90,7 +90,7 @@ class V1TroubleshootingEnterprisePostRequest(BaseModel):
 
         _obj = cls.model_validate({
             "dimensions": V1TroubleshootingEnterprisePostRequestDimensions.from_dict(obj["dimensions"]) if obj.get("dimensions") is not None else None,
-            "filter": V1BackboneHealthOverviewPostRequestFilter.from_dict(obj["filter"]) if obj.get("filter") is not None else None
+            "filter": StatsmonTroubleshootingFilter.from_dict(obj["filter"]) if obj.get("filter") is not None else None
         })
         return _obj
 

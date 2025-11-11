@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictBool
+from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -26,7 +26,7 @@ class V1AlarmMuteAlarmIdPutRequest(BaseModel):
     """
     V1AlarmMuteAlarmIdPutRequest
     """ # noqa: E501
-    mute: Optional[StrictBool] = None
+    mute: Optional[StrictBool] = Field(default=None, description="Flag to specify if you want to mute/unmute the notifications.")
     __properties: ClassVar[List[str]] = ["mute"]
 
     model_config = ConfigDict(

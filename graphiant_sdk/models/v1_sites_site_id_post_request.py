@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_sites_post_request_site import V1SitesPostRequestSite
+from graphiant_sdk.models.mana_v2_new_site import ManaV2NewSite
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class V1SitesSiteIdPostRequest(BaseModel):
     """
     V1SitesSiteIdPostRequest
     """ # noqa: E501
-    site: Optional[V1SitesPostRequestSite] = None
+    site: Optional[ManaV2NewSite] = None
     __properties: ClassVar[List[str]] = ["site"]
 
     model_config = ConfigDict(
@@ -84,7 +84,7 @@ class V1SitesSiteIdPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "site": V1SitesPostRequestSite.from_dict(obj["site"]) if obj.get("site") is not None else None
+            "site": ManaV2NewSite.from_dict(obj["site"]) if obj.get("site") is not None else None
         })
         return _obj
 

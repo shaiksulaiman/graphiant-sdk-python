@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hardware_inventory_list** | [**List[V1DevicesInventoryGet200ResponseInventoryInner]**](V1DevicesInventoryGet200ResponseInventoryInner.md) |  | [optional] 
+**hardware_inventory_list** | [**List[OnboardingHardwareInventory]**](OnboardingHardwareInventory.md) |  | [optional] 
 
 ## Example
 

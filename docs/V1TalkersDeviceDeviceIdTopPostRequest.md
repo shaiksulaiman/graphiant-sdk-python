@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**num_clients** | **int** |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**num_clients** | **int** | The maximum number of client usage info to be returned (10 if left empty) | [optional] 
+**time_window** | [**IpfixTimeWindow**](IpfixTimeWindow.md) |  | [optional] 
 
 ## Example
 

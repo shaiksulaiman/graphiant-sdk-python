@@ -6,8 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **device_id** | **int** |  | [optional] 
-**selectors** | [**List[V1MonitoringCircuitsVisualizationPostRequestSelectorsInner]**](V1MonitoringCircuitsVisualizationPostRequestSelectorsInner.md) |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**selectors** | [**List[StatsmonTwampVisualSelector]**](StatsmonTwampVisualSelector.md) |  | [optional] 
+**time_window** | [**StatsmonTimeWindow**](StatsmonTimeWindow.md) |  | [optional] 
 
 ## Example
 

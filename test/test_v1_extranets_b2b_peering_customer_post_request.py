@@ -35,7 +35,7 @@ class TestV1ExtranetsB2bPeeringCustomerPostRequest(unittest.TestCase):
         model = V1ExtranetsB2bPeeringCustomerPostRequest()
         if include_optional:
             return V1ExtranetsB2bPeeringCustomerPostRequest(
-                invite = graphiant_sdk.models._v1_extranets_b2b_peering_customer_post_request_invite._v1_extranets_b2b_peering_customer_post_request_invite(
+                invite = graphiant_sdk.models.mana_v2_b2b_extranet_peering_service_customer_invite.manaV2B2bExtranetPeeringServiceCustomerInvite(
                     admin_email = [
                         'example string'
                         ], 

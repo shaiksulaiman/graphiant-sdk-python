@@ -5,9 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** | the id of a producer/service | [optional] 
 **is_b2_b** | **bool** |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**is_provider** | **bool** |  | [optional] 
+**time_window** | [**StatsmonTimeWindow**](StatsmonTimeWindow.md) |  | [optional] 
 
 ## Example
 

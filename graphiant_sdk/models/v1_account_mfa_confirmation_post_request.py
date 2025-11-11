@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictBool, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -26,10 +26,10 @@ class V1AccountMfaConfirmationPostRequest(BaseModel):
     """
     V1AccountMfaConfirmationPostRequest
     """ # noqa: E501
-    code: Optional[StrictStr] = None
-    confirmed: Optional[StrictBool] = None
-    id: Optional[StrictStr] = None
-    type: Optional[StrictStr] = None
+    code: StrictStr = Field(description=" (required)")
+    confirmed: StrictBool = Field(description=" (required)")
+    id: StrictStr = Field(description=" (required)")
+    type: StrictStr = Field(description=" (required)")
     __properties: ClassVar[List[str]] = ["code", "confirmed", "id", "type"]
 
     model_config = ConfigDict(

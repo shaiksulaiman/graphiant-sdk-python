@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**integration_body** | [**V2IntegrationIntegrationIdPutRequestIntegrationBody**](V2IntegrationIntegrationIdPutRequestIntegrationBody.md) |  | [optional] 
+**integration_body** | [**AlertserviceUpdateIntegrationBody**](AlertserviceUpdateIntegrationBody.md) |  | 
 
 ## Example
 

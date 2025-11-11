@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_data_assurance_assurances_global_post_request_config import V1DataAssuranceAssurancesGlobalPostRequestConfig
+from graphiant_sdk.models.mana_v2_assurance_config import ManaV2AssuranceConfig
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class V1DataAssuranceAssurancesGlobalPostRequest(BaseModel):
     """
     V1DataAssuranceAssurancesGlobalPostRequest
     """ # noqa: E501
-    config: Optional[V1DataAssuranceAssurancesGlobalPostRequestConfig] = None
+    config: Optional[ManaV2AssuranceConfig] = None
     __properties: ClassVar[List[str]] = ["config"]
 
     model_config = ConfigDict(
@@ -84,7 +84,7 @@ class V1DataAssuranceAssurancesGlobalPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "config": V1DataAssuranceAssurancesGlobalPostRequestConfig.from_dict(obj["config"]) if obj.get("config") is not None else None
+            "config": ManaV2AssuranceConfig.from_dict(obj["config"]) if obj.get("config") is not None else None
         })
         return _obj
 

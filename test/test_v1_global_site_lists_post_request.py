@@ -37,9 +37,9 @@ class TestV1GlobalSiteListsPostRequest(unittest.TestCase):
             return V1GlobalSiteListsPostRequest(
                 description = 'example string',
                 entries = [
-                    graphiant_sdk.models._v1_global_site_lists_post_request_entries_inner._v1_global_site_lists_post_request_entries_inner(
+                    graphiant_sdk.models.mana_v2_site_list_entry.manaV2SiteListEntry(
                         regular = 1234567891011, 
-                        tag = graphiant_sdk.models._v1_global_site_lists_post_request_entries_inner_tag._v1_global_site_lists_post_request_entries_inner_tag(
+                        tag = graphiant_sdk.models.mana_v2_route_tag_id.manaV2RouteTagId(
                             level_one = 1234567891011, 
                             level_two = 1234567891011, 
                             level_zero = 1234567891011, ), )

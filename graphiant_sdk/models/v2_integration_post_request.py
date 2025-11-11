@@ -18,8 +18,8 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field
-from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v2_integration_post_request_integration_body import V2IntegrationPostRequestIntegrationBody
+from typing import Any, ClassVar, Dict, List
+from graphiant_sdk.models.alertservice_create_integration_body import AlertserviceCreateIntegrationBody
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class V2IntegrationPostRequest(BaseModel):
     """
     V2IntegrationPostRequest
     """ # noqa: E501
-    integration_body: Optional[V2IntegrationPostRequestIntegrationBody] = Field(default=None, alias="integrationBody")
+    integration_body: AlertserviceCreateIntegrationBody = Field(alias="integrationBody")
     __properties: ClassVar[List[str]] = ["integrationBody"]
 
     model_config = ConfigDict(
@@ -84,7 +84,7 @@ class V2IntegrationPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "integrationBody": V2IntegrationPostRequestIntegrationBody.from_dict(obj["integrationBody"]) if obj.get("integrationBody") is not None else None
+            "integrationBody": AlertserviceCreateIntegrationBody.from_dict(obj["integrationBody"]) if obj.get("integrationBody") is not None else None
         })
         return _obj
 

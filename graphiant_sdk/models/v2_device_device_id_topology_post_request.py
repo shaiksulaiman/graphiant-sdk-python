@@ -19,8 +19,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_alarm_history_get200_response_history_inner_time import V1AlarmHistoryGet200ResponseHistoryInnerTime
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.google_protobuf_timestamp import GoogleProtobufTimestamp
+from graphiant_sdk.models.statsmon_v2_time_window import StatsmonV2TimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,8 +28,8 @@ class V2DeviceDeviceIdTopologyPostRequest(BaseModel):
     """
     V2DeviceDeviceIdTopologyPostRequest
     """ # noqa: E501
-    snapshot_time: Optional[V1AlarmHistoryGet200ResponseHistoryInnerTime] = Field(default=None, alias="snapshotTime")
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    snapshot_time: Optional[GoogleProtobufTimestamp] = Field(default=None, alias="snapshotTime")
+    time_window: Optional[StatsmonV2TimeWindow] = Field(default=None, alias="timeWindow")
     __properties: ClassVar[List[str]] = ["snapshotTime", "timeWindow"]
 
     model_config = ConfigDict(
@@ -89,8 +89,8 @@ class V2DeviceDeviceIdTopologyPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "snapshotTime": V1AlarmHistoryGet200ResponseHistoryInnerTime.from_dict(obj["snapshotTime"]) if obj.get("snapshotTime") is not None else None,
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
+            "snapshotTime": GoogleProtobufTimestamp.from_dict(obj["snapshotTime"]) if obj.get("snapshotTime") is not None else None,
+            "timeWindow": StatsmonV2TimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
         })
         return _obj
 

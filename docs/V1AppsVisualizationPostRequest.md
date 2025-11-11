@@ -5,11 +5,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**circuit_name** | **str** |  | [optional] 
+**circuit_name** | **str** | Circuit name is specified if circuit apps utilization data is desired. | [optional] 
 **device_id** | **int** |  | [optional] 
 **is_dia** | **bool** |  | [optional] 
-**sla_class** | **str** |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**sla_class** | **str** | SLA class is specified if queue apps utilization data is desired. Circuit name must be provided. | [optional] 
+**time_window** | [**StatsmonTimeWindow**](StatsmonTimeWindow.md) |  | [optional] 
 
 ## Example
 

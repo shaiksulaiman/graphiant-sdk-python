@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**device_id** | **int** |  | [optional] 
-**params** | [**V1DiagnosticPingPauseResumePostRequestParams**](V1DiagnosticPingPauseResumePostRequestParams.md) |  | [optional] 
-**token** | **str** |  | [optional] 
-**transport_type** | **str** |  | [optional] 
+**device_id** | **int** | Valid Provisioned device ID (required) | 
+**params** | [**DiagnosticToolsDiagnosticParams**](DiagnosticToolsDiagnosticParams.md) |  | [optional] 
+**token** | **str** | Identifier which was received in initial response | [optional] 
+**transport_type** | **str** | ICMP or TCP (required) | 
 
 ## Example
 

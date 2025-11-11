@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**filter** | [**V1BackboneHealthOverviewPostRequestFilter**](V1BackboneHealthOverviewPostRequestFilter.md) |  | [optional] 
+**filter** | [**StatsmonTroubleshootingFilter**](StatsmonTroubleshootingFilter.md) |  | [optional] 
 
 ## Example
 

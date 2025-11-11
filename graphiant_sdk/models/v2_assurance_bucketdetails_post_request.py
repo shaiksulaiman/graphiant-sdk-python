@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.assurance_time_window import AssuranceTimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class V2AssuranceBucketdetailsPostRequest(BaseModel):
     V2AssuranceBucketdetailsPostRequest
     """ # noqa: E501
     bucket_id: Optional[StrictStr] = Field(default=None, alias="bucketId")
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    time_window: Optional[AssuranceTimeWindow] = Field(default=None, alias="timeWindow")
     unclassified_only: Optional[StrictBool] = Field(default=None, alias="unclassifiedOnly")
     __properties: ClassVar[List[str]] = ["bucketId", "timeWindow", "unclassifiedOnly"]
 
@@ -87,7 +87,7 @@ class V2AssuranceBucketdetailsPostRequest(BaseModel):
 
         _obj = cls.model_validate({
             "bucketId": obj.get("bucketId"),
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None,
+            "timeWindow": AssuranceTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None,
             "unclassifiedOnly": obj.get("unclassifiedOnly")
         })
         return _obj

@@ -18,8 +18,8 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v2_notification_create_post_request_notification_body import V2NotificationCreatePostRequestNotificationBody
+from typing import Any, ClassVar, Dict, List
+from graphiant_sdk.models.alertservice_notification_body import AlertserviceNotificationBody
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,8 +27,8 @@ class V2NotificationUpdatePostRequest(BaseModel):
     """
     V2NotificationUpdatePostRequest
     """ # noqa: E501
-    notification_body: Optional[V2NotificationCreatePostRequestNotificationBody] = Field(default=None, alias="notificationBody")
-    notification_id_list: Optional[List[StrictStr]] = Field(default=None, alias="notificationIdList")
+    notification_body: AlertserviceNotificationBody = Field(alias="notificationBody")
+    notification_id_list: List[StrictStr] = Field(alias="notificationIdList")
     __properties: ClassVar[List[str]] = ["notificationBody", "notificationIdList"]
 
     model_config = ConfigDict(
@@ -85,7 +85,7 @@ class V2NotificationUpdatePostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "notificationBody": V2NotificationCreatePostRequestNotificationBody.from_dict(obj["notificationBody"]) if obj.get("notificationBody") is not None else None,
+            "notificationBody": AlertserviceNotificationBody.from_dict(obj["notificationBody"]) if obj.get("notificationBody") is not None else None,
             "notificationIdList": obj.get("notificationIdList")
         })
         return _obj

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **description** | **str** |  | [optional] 
 **display_name** | **str** |  | [optional] 
 **group_type** | **str** |  | [optional] 
-**permissions** | [**V1GroupsGet200ResponseGroupsInnerPermissions**](V1GroupsGet200ResponseGroupsInnerPermissions.md) |  | [optional] 
+**permissions** | [**CommonPermissions**](CommonPermissions.md) |  | [optional] 
 **time_window_end** | **int** |  | [optional] 
 **time_window_start** | **int** |  | [optional] 
 

@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**enable** | **bool** |  | [optional] 
-**notification_id_list** | **List[str]** |  | [optional] 
+**enable** | **bool** | Enable or disable. True means enable (required) | 
+**notification_id_list** | **List[str]** |  | 
 
 ## Example
 

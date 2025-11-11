@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**interface** | **str** |  | [optional] 
+**interface** | **str** | interface name | [optional] 
 
 ## Example
 

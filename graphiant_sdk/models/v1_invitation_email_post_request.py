@@ -28,11 +28,12 @@ class V1InvitationEmailPostRequest(BaseModel):
     """ # noqa: E501
     admin_email: Optional[StrictStr] = Field(default=None, alias="adminEmail")
     customer_id: Optional[StrictInt] = Field(default=None, alias="customerId")
-    customer_name: Optional[StrictStr] = Field(default=None, alias="customerName")
+    customer_name: StrictStr = Field(description=" (required)", alias="customerName")
     is_graphiant: Optional[StrictBool] = Field(default=None, alias="isGraphiant")
-    service_id: Optional[StrictInt] = Field(default=None, alias="serviceId")
-    service_name: Optional[StrictStr] = Field(default=None, alias="serviceName")
-    __properties: ClassVar[List[str]] = ["adminEmail", "customerId", "customerName", "isGraphiant", "serviceId", "serviceName"]
+    match_id: StrictInt = Field(description=" (required)", alias="matchId")
+    service_id: StrictInt = Field(description=" (required)", alias="serviceId")
+    service_name: StrictStr = Field(description=" (required)", alias="serviceName")
+    __properties: ClassVar[List[str]] = ["adminEmail", "customerId", "customerName", "isGraphiant", "matchId", "serviceId", "serviceName"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -89,6 +90,7 @@ class V1InvitationEmailPostRequest(BaseModel):
             "customerId": obj.get("customerId"),
             "customerName": obj.get("customerName"),
             "isGraphiant": obj.get("isGraphiant"),
+            "matchId": obj.get("matchId"),
             "serviceId": obj.get("serviceId"),
             "serviceName": obj.get("serviceName")
         })

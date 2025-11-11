@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.statsmon_time_window import StatsmonTimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,11 +27,11 @@ class V1AppsVisualizationPostRequest(BaseModel):
     """
     V1AppsVisualizationPostRequest
     """ # noqa: E501
-    circuit_name: Optional[StrictStr] = Field(default=None, alias="circuitName")
+    circuit_name: Optional[StrictStr] = Field(default=None, description="Circuit name is specified if circuit apps utilization data is desired.", alias="circuitName")
     device_id: Optional[StrictInt] = Field(default=None, alias="deviceId")
     is_dia: Optional[StrictBool] = Field(default=None, alias="isDia")
-    sla_class: Optional[StrictStr] = Field(default=None, alias="slaClass")
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    sla_class: Optional[StrictStr] = Field(default=None, description="SLA class is specified if queue apps utilization data is desired. Circuit name must be provided.", alias="slaClass")
+    time_window: Optional[StatsmonTimeWindow] = Field(default=None, alias="timeWindow")
     __properties: ClassVar[List[str]] = ["circuitName", "deviceId", "isDia", "slaClass", "timeWindow"]
 
     model_config = ConfigDict(
@@ -92,7 +92,7 @@ class V1AppsVisualizationPostRequest(BaseModel):
             "deviceId": obj.get("deviceId"),
             "isDia": obj.get("isDia"),
             "slaClass": obj.get("slaClass"),
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
+            "timeWindow": StatsmonTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
         })
         return _obj
 
