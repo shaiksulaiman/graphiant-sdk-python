@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **gcs_name** | **str** |  | [optional] 
-**inventory** | [**List[V1PortalPrivateSyncPostRequestInventoryInner]**](V1PortalPrivateSyncPostRequestInventoryInner.md) |  | [optional] 
+**inventory** | [**List[OnboardingInventory]**](OnboardingInventory.md) |  | [optional] 
 **is_full_sync** | **bool** |  | [optional] 
 
 ## Example

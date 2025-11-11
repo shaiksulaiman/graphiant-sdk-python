@@ -27,7 +27,7 @@ class V1TempPasswordPutRequest(BaseModel):
     V1TempPasswordPutRequest
     """ # noqa: E501
     customer_name: Optional[StrictStr] = Field(default=None, alias="customerName")
-    emails: Optional[List[StrictStr]] = None
+    emails: List[StrictStr]
     match_id: Optional[StrictInt] = Field(default=None, alias="matchId")
     service_name: Optional[StrictStr] = Field(default=None, alias="serviceName")
     __properties: ClassVar[List[str]] = ["customerName", "emails", "matchId", "serviceName"]

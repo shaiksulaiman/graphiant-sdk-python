@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.assurance_time_window import AssuranceTimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -31,7 +31,7 @@ class V2AssuranceApplicationdetailsbynamePostRequest(BaseModel):
     app_name: Optional[StrictStr] = Field(default=None, alias="appName")
     bucket_id: Optional[StrictStr] = Field(default=None, alias="bucketId")
     flex_algo_id: Optional[StrictInt] = Field(default=None, alias="flexAlgoId")
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    time_window: Optional[AssuranceTimeWindow] = Field(default=None, alias="timeWindow")
     __properties: ClassVar[List[str]] = ["appIdKey", "appName", "bucketId", "flexAlgoId", "timeWindow"]
 
     model_config = ConfigDict(
@@ -92,7 +92,7 @@ class V2AssuranceApplicationdetailsbynamePostRequest(BaseModel):
             "appName": obj.get("appName"),
             "bucketId": obj.get("bucketId"),
             "flexAlgoId": obj.get("flexAlgoId"),
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
+            "timeWindow": AssuranceTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
         })
         return _obj
 

@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **dimensions** | [**V1BackboneHealthOverviewPostRequestDimensions**](V1BackboneHealthOverviewPostRequestDimensions.md) |  | [optional] 
-**filter** | [**V1BackboneHealthOverviewPostRequestFilter**](V1BackboneHealthOverviewPostRequestFilter.md) |  | [optional] 
+**filter** | [**StatsmonTroubleshootingFilter**](StatsmonTroubleshootingFilter.md) |  | [optional] 
 
 ## Example
 

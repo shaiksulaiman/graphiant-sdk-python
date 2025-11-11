@@ -5,14 +5,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**global_prefix_sets** | [**Dict[str, V1GlobalConfigPatchRequestGlobalPrefixSetsValue]**](V1GlobalConfigPatchRequestGlobalPrefixSetsValue.md) |  | [optional] 
-**ipfix_exporters** | [**Dict[str, V1GlobalConfigPatchRequestIpfixExportersValue]**](V1GlobalConfigPatchRequestIpfixExportersValue.md) |  | [optional] 
-**prefix_sets** | [**Dict[str, V1GlobalConfigPatchRequestPrefixSetsValue]**](V1GlobalConfigPatchRequestPrefixSetsValue.md) |  | [optional] 
-**routing_policies** | [**Dict[str, V1GlobalConfigPatchRequestRoutingPoliciesValue]**](V1GlobalConfigPatchRequestRoutingPoliciesValue.md) |  | [optional] 
-**snmps** | [**Dict[str, V1GlobalConfigPatchRequestSnmpsValue]**](V1GlobalConfigPatchRequestSnmpsValue.md) |  | [optional] 
-**syslog_servers** | [**Dict[str, V1GlobalConfigPatchRequestSyslogServersValue]**](V1GlobalConfigPatchRequestSyslogServersValue.md) |  | [optional] 
-**traffic_policies** | [**V1GlobalConfigPatchRequestTrafficPolicies**](V1GlobalConfigPatchRequestTrafficPolicies.md) |  | [optional] 
-**vpn_profiles** | [**Dict[str, V1GlobalConfigPatchRequestVpnProfilesValue]**](V1GlobalConfigPatchRequestVpnProfilesValue.md) |  | [optional] 
+**global_prefix_sets** | [**Dict[str, ManaV2NullablePrefixSetConfig]**](ManaV2NullablePrefixSetConfig.md) |  | [optional] 
+**ipfix_exporters** | [**Dict[str, ManaV2NullableIpfixExporterConfig]**](ManaV2NullableIpfixExporterConfig.md) |  | [optional] 
+**prefix_sets** | [**Dict[str, ManaV2NullableEnterprisePrefixSetConfig]**](ManaV2NullableEnterprisePrefixSetConfig.md) |  | [optional] 
+**routing_policies** | [**Dict[str, ManaV2NullableRoutingPolicyConfig]**](ManaV2NullableRoutingPolicyConfig.md) |  | [optional] 
+**snmps** | [**Dict[str, ManaV2NullableSnmpConfig]**](ManaV2NullableSnmpConfig.md) |  | [optional] 
+**syslog_servers** | [**Dict[str, ManaV2NullableSyslogCollectorConfig]**](ManaV2NullableSyslogCollectorConfig.md) |  | [optional] 
+**traffic_policies** | [**ManaV2ForwardingPolicyConfig**](ManaV2ForwardingPolicyConfig.md) |  | [optional] 
+**vpn_profiles** | [**Dict[str, ManaV2NullableIPsecVpnProfilesConfig]**](ManaV2NullableIPsecVpnProfilesConfig.md) |  | [optional] 
 
 ## Example
 

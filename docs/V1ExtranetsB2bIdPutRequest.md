@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**policy** | [**V1ExtranetsB2bPostRequestPolicy**](V1ExtranetsB2bPostRequestPolicy.md) |  | [optional] 
+**policy** | [**ManaV2B2bExtranetProducerPolicy**](ManaV2B2bExtranetProducerPolicy.md) |  | [optional] 
 
 ## Example
 

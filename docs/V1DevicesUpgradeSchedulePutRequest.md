@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **action** | **str** |  | [optional] 
 **device_ids** | **List[int]** |  | [optional] 
-**device_versions** | [**List[V1DevicesRunningVersionPost200ResponseVersionsInner]**](V1DevicesRunningVersionPost200ResponseVersionsInner.md) |  | [optional] 
-**ts** | [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
-**version** | [**V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion**](V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion.md) |  | [optional] 
+**device_versions** | [**List[V1DevicesUpgradeSchedulePutRequestDeviceVersion]**](V1DevicesUpgradeSchedulePutRequestDeviceVersion.md) |  | [optional] 
+**ts** | [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 
+**version** | [**UpgradeSwVersion**](UpgradeSwVersion.md) |  | [optional] 
 
 ## Example
 

@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**notification_body** | [**V2NotificationCreatePostRequestNotificationBody**](V2NotificationCreatePostRequestNotificationBody.md) |  | [optional] 
-**rule_id_list** | **List[str]** |  | [optional] 
+**notification_body** | [**AlertserviceNotificationBody**](AlertserviceNotificationBody.md) |  | 
+**rule_id_list** | **List[str]** |  | 
 
 ## Example
 

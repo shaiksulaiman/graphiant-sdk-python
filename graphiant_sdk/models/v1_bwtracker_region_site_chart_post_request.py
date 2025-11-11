@@ -20,7 +20,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.statsmon_bandwidthtracker_time_window import StatsmonBandwidthtrackerTimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -30,7 +30,7 @@ class V1BwtrackerRegionSiteChartPostRequest(BaseModel):
     """ # noqa: E501
     region_id: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="regionId")
     site_id: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="siteId")
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    time_window: Optional[StatsmonBandwidthtrackerTimeWindow] = Field(default=None, alias="timeWindow")
     __properties: ClassVar[List[str]] = ["regionId", "siteId", "timeWindow"]
 
     model_config = ConfigDict(
@@ -89,7 +89,7 @@ class V1BwtrackerRegionSiteChartPostRequest(BaseModel):
         _obj = cls.model_validate({
             "regionId": obj.get("regionId"),
             "siteId": obj.get("siteId"),
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
+            "timeWindow": StatsmonBandwidthtrackerTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
         })
         return _obj
 

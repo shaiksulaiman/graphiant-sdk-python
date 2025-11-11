@@ -19,9 +19,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_alarm_history_get200_response_history_inner_time import V1AlarmHistoryGet200ResponseHistoryInnerTime
-from graphiant_sdk.models.v1_devices_running_version_post200_response_versions_inner import V1DevicesRunningVersionPost200ResponseVersionsInner
-from graphiant_sdk.models.v1_edges_hardware_assigned_get200_response_edges_summary_inner_upgrade_summary_last_running_version import V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion
+from graphiant_sdk.models.google_protobuf_timestamp import GoogleProtobufTimestamp
+from graphiant_sdk.models.upgrade_sw_version import UpgradeSwVersion
+from graphiant_sdk.models.v1_devices_upgrade_schedule_put_request_device_version import V1DevicesUpgradeSchedulePutRequestDeviceVersion
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -31,9 +31,9 @@ class V1DevicesUpgradeSchedulePutRequest(BaseModel):
     """ # noqa: E501
     action: Optional[StrictStr] = None
     device_ids: Optional[List[StrictInt]] = Field(default=None, alias="deviceIds")
-    device_versions: Optional[List[V1DevicesRunningVersionPost200ResponseVersionsInner]] = Field(default=None, alias="deviceVersions")
-    ts: Optional[V1AlarmHistoryGet200ResponseHistoryInnerTime] = None
-    version: Optional[V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion] = None
+    device_versions: Optional[List[V1DevicesUpgradeSchedulePutRequestDeviceVersion]] = Field(default=None, alias="deviceVersions")
+    ts: Optional[GoogleProtobufTimestamp] = None
+    version: Optional[UpgradeSwVersion] = None
     __properties: ClassVar[List[str]] = ["action", "deviceIds", "deviceVersions", "ts", "version"]
 
     model_config = ConfigDict(
@@ -102,9 +102,9 @@ class V1DevicesUpgradeSchedulePutRequest(BaseModel):
         _obj = cls.model_validate({
             "action": obj.get("action"),
             "deviceIds": obj.get("deviceIds"),
-            "deviceVersions": [V1DevicesRunningVersionPost200ResponseVersionsInner.from_dict(_item) for _item in obj["deviceVersions"]] if obj.get("deviceVersions") is not None else None,
-            "ts": V1AlarmHistoryGet200ResponseHistoryInnerTime.from_dict(obj["ts"]) if obj.get("ts") is not None else None,
-            "version": V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion.from_dict(obj["version"]) if obj.get("version") is not None else None
+            "deviceVersions": [V1DevicesUpgradeSchedulePutRequestDeviceVersion.from_dict(_item) for _item in obj["deviceVersions"]] if obj.get("deviceVersions") is not None else None,
+            "ts": GoogleProtobufTimestamp.from_dict(obj["ts"]) if obj.get("ts") is not None else None,
+            "version": UpgradeSwVersion.from_dict(obj["version"]) if obj.get("version") is not None else None
         })
         return _obj
 

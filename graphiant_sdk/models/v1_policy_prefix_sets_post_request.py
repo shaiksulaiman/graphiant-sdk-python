@@ -19,8 +19,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_global_config_patch_request_global_prefix_sets_value_prefix_set_entries_value_entry import V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValueEntry
-from graphiant_sdk.models.v1_policy_prefix_sets_post_request_entries_value import V1PolicyPrefixSetsPostRequestEntriesValue
+from graphiant_sdk.models.v1_policy_prefix_sets_post_request_entry import V1PolicyPrefixSetsPostRequestEntry
+from graphiant_sdk.models.v1_policy_prefix_sets_post_request_prefix_set_entry import V1PolicyPrefixSetsPostRequestPrefixSetEntry
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -29,10 +29,10 @@ class V1PolicyPrefixSetsPostRequest(BaseModel):
     V1PolicyPrefixSetsPostRequest
     """ # noqa: E501
     description: Optional[StrictStr] = None
-    entries: Optional[Dict[str, V1PolicyPrefixSetsPostRequestEntriesValue]] = None
+    entries: Optional[Dict[str, V1PolicyPrefixSetsPostRequestEntry]] = None
     mode: Optional[StrictStr] = None
     name: Optional[StrictStr] = None
-    prefix_set_entries: Optional[Dict[str, V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValueEntry]] = Field(default=None, alias="prefixSetEntries")
+    prefix_set_entries: Optional[Dict[str, V1PolicyPrefixSetsPostRequestPrefixSetEntry]] = Field(default=None, alias="prefixSetEntries")
     __properties: ClassVar[List[str]] = ["description", "entries", "mode", "name", "prefixSetEntries"]
 
     model_config = ConfigDict(
@@ -102,7 +102,7 @@ class V1PolicyPrefixSetsPostRequest(BaseModel):
         _obj = cls.model_validate({
             "description": obj.get("description"),
             "entries": dict(
-                (_k, V1PolicyPrefixSetsPostRequestEntriesValue.from_dict(_v))
+                (_k, V1PolicyPrefixSetsPostRequestEntry.from_dict(_v))
                 for _k, _v in obj["entries"].items()
             )
             if obj.get("entries") is not None
@@ -110,7 +110,7 @@ class V1PolicyPrefixSetsPostRequest(BaseModel):
             "mode": obj.get("mode"),
             "name": obj.get("name"),
             "prefixSetEntries": dict(
-                (_k, V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValueEntry.from_dict(_v))
+                (_k, V1PolicyPrefixSetsPostRequestPrefixSetEntry.from_dict(_v))
                 for _k, _v in obj["prefixSetEntries"].items()
             )
             if obj.get("prefixSetEntries") is not None

@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_version_post_request_configuration_metadata import V1VersionPostRequestConfigurationMetadata
+from graphiant_sdk.models.mana_v2_configuration_metadata import ManaV2ConfigurationMetadata
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class V1VersionPostRequest(BaseModel):
     """
     V1VersionPostRequest
     """ # noqa: E501
-    configuration_metadata: Optional[V1VersionPostRequestConfigurationMetadata] = Field(default=None, alias="configurationMetadata")
+    configuration_metadata: Optional[ManaV2ConfigurationMetadata] = Field(default=None, alias="configurationMetadata")
     device_id: Optional[StrictInt] = Field(default=None, alias="deviceId")
     version: Optional[StrictInt] = None
     __properties: ClassVar[List[str]] = ["configurationMetadata", "deviceId", "version"]
@@ -86,7 +86,7 @@ class V1VersionPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "configurationMetadata": V1VersionPostRequestConfigurationMetadata.from_dict(obj["configurationMetadata"]) if obj.get("configurationMetadata") is not None else None,
+            "configurationMetadata": ManaV2ConfigurationMetadata.from_dict(obj["configurationMetadata"]) if obj.get("configurationMetadata") is not None else None,
             "deviceId": obj.get("deviceId"),
             "version": obj.get("version")
         })

@@ -20,8 +20,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from graphiant_sdk.models.v1_alarm_history_get200_response_history_inner_time import V1AlarmHistoryGet200ResponseHistoryInnerTime
-from graphiant_sdk.models.v1_audit_logs_post_request_selectors_inner import V1AuditLogsPostRequestSelectorsInner
+from graphiant_sdk.models.auditmon_selector import AuditmonSelector
+from graphiant_sdk.models.google_protobuf_timestamp import GoogleProtobufTimestamp
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -32,9 +32,9 @@ class V1AuditLogsPostRequest(BaseModel):
     cursor_ref: Optional[StrictStr] = Field(default=None, alias="cursorRef")
     histogram_bucket_size_sec: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="histogramBucketSizeSec")
     num_logs: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="numLogs")
-    old_ts: Optional[V1AlarmHistoryGet200ResponseHistoryInnerTime] = Field(default=None, alias="oldTs")
-    recent_ts: Optional[V1AlarmHistoryGet200ResponseHistoryInnerTime] = Field(default=None, alias="recentTs")
-    selectors: Optional[List[V1AuditLogsPostRequestSelectorsInner]] = None
+    old_ts: Optional[GoogleProtobufTimestamp] = Field(default=None, alias="oldTs")
+    recent_ts: Optional[GoogleProtobufTimestamp] = Field(default=None, alias="recentTs")
+    selectors: Optional[List[AuditmonSelector]] = None
     __properties: ClassVar[List[str]] = ["cursorRef", "histogramBucketSizeSec", "numLogs", "oldTs", "recentTs", "selectors"]
 
     model_config = ConfigDict(
@@ -104,9 +104,9 @@ class V1AuditLogsPostRequest(BaseModel):
             "cursorRef": obj.get("cursorRef"),
             "histogramBucketSizeSec": obj.get("histogramBucketSizeSec"),
             "numLogs": obj.get("numLogs"),
-            "oldTs": V1AlarmHistoryGet200ResponseHistoryInnerTime.from_dict(obj["oldTs"]) if obj.get("oldTs") is not None else None,
-            "recentTs": V1AlarmHistoryGet200ResponseHistoryInnerTime.from_dict(obj["recentTs"]) if obj.get("recentTs") is not None else None,
-            "selectors": [V1AuditLogsPostRequestSelectorsInner.from_dict(_item) for _item in obj["selectors"]] if obj.get("selectors") is not None else None
+            "oldTs": GoogleProtobufTimestamp.from_dict(obj["oldTs"]) if obj.get("oldTs") is not None else None,
+            "recentTs": GoogleProtobufTimestamp.from_dict(obj["recentTs"]) if obj.get("recentTs") is not None else None,
+            "selectors": [AuditmonSelector.from_dict(_item) for _item in obj["selectors"]] if obj.get("selectors") is not None else None
         })
         return _obj
 

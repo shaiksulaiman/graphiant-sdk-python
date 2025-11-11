@@ -5,14 +5,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**app_id** | **int** |  | [optional] 
+**app_id** | **int** | the app ID in the question from overall visuals view | [optional] 
 **app_name** | **str** |  | [optional] 
-**cursor_ref** | [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
+**cursor_ref** | [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 
 **device_id** | **int** |  | [optional] 
 **is_dia** | **bool** |  | [optional] 
-**num_flow_records** | **int** |  | [optional] 
-**selector** | [**V1FlowsFlowTablePostRequestSelector**](V1FlowsFlowTablePostRequestSelector.md) |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**num_flow_records** | **int** | Number of app flow records requested by UI. | [optional] 
+**selector** | [**IpfixAppFlowTableSelector**](IpfixAppFlowTableSelector.md) |  | [optional] 
+**time_window** | [**StatsmonTimeWindow**](StatsmonTimeWindow.md) |  | [optional] 
 
 ## Example
 

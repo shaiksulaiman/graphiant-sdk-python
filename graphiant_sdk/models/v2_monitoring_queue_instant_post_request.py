@@ -20,8 +20,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from graphiant_sdk.models.v2_monitoring_queue_instant_post_request_selectors_inner import V2MonitoringQueueInstantPostRequestSelectorsInner
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.statsmon_v2_queue_instant_stats_selector import StatsmonV2QueueInstantStatsSelector
+from graphiant_sdk.models.statsmon_v2_time_window import StatsmonV2TimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -32,8 +32,8 @@ class V2MonitoringQueueInstantPostRequest(BaseModel):
     device_id: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="deviceId")
     is_delta: Optional[StrictBool] = Field(default=None, alias="isDelta")
     is_total: Optional[StrictBool] = Field(default=None, alias="isTotal")
-    selectors: Optional[List[V2MonitoringQueueInstantPostRequestSelectorsInner]] = None
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    selectors: Optional[List[StatsmonV2QueueInstantStatsSelector]] = None
+    time_window: Optional[StatsmonV2TimeWindow] = Field(default=None, alias="timeWindow")
     __properties: ClassVar[List[str]] = ["deviceId", "isDelta", "isTotal", "selectors", "timeWindow"]
 
     model_config = ConfigDict(
@@ -100,8 +100,8 @@ class V2MonitoringQueueInstantPostRequest(BaseModel):
             "deviceId": obj.get("deviceId"),
             "isDelta": obj.get("isDelta"),
             "isTotal": obj.get("isTotal"),
-            "selectors": [V2MonitoringQueueInstantPostRequestSelectorsInner.from_dict(_item) for _item in obj["selectors"]] if obj.get("selectors") is not None else None,
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
+            "selectors": [StatsmonV2QueueInstantStatsSelector.from_dict(_item) for _item in obj["selectors"]] if obj.get("selectors") is not None else None,
+            "timeWindow": StatsmonV2TimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
         })
         return _obj
 

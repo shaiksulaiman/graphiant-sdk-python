@@ -19,8 +19,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_extranets_b2b_consumer_post_request_policy_inner import V1ExtranetsB2bConsumerPostRequestPolicyInner
-from graphiant_sdk.models.v1_extranets_b2b_consumer_post_request_site_information_inner import V1ExtranetsB2bConsumerPostRequestSiteInformationInner
+from graphiant_sdk.models.mana_v2_b2b_site_information import ManaV2B2bSiteInformation
+from graphiant_sdk.models.mana_v2_extranet_consumer_lan_segment_policy import ManaV2ExtranetConsumerLanSegmentPolicy
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,10 +28,10 @@ class V1ExtranetsB2bConsumerPostRequest(BaseModel):
     """
     V1ExtranetsB2bConsumerPostRequest
     """ # noqa: E501
-    policy: Optional[List[V1ExtranetsB2bConsumerPostRequestPolicyInner]] = None
+    policy: Optional[List[ManaV2ExtranetConsumerLanSegmentPolicy]] = None
     provider_enterprise_id: Optional[StrictInt] = Field(default=None, alias="providerEnterpriseId")
     service_name: Optional[StrictStr] = Field(default=None, alias="serviceName")
-    site_information: Optional[List[V1ExtranetsB2bConsumerPostRequestSiteInformationInner]] = Field(default=None, alias="siteInformation")
+    site_information: Optional[List[ManaV2B2bSiteInformation]] = Field(default=None, alias="siteInformation")
     __properties: ClassVar[List[str]] = ["policy", "providerEnterpriseId", "serviceName", "siteInformation"]
 
     model_config = ConfigDict(
@@ -99,10 +99,10 @@ class V1ExtranetsB2bConsumerPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "policy": [V1ExtranetsB2bConsumerPostRequestPolicyInner.from_dict(_item) for _item in obj["policy"]] if obj.get("policy") is not None else None,
+            "policy": [ManaV2ExtranetConsumerLanSegmentPolicy.from_dict(_item) for _item in obj["policy"]] if obj.get("policy") is not None else None,
             "providerEnterpriseId": obj.get("providerEnterpriseId"),
             "serviceName": obj.get("serviceName"),
-            "siteInformation": [V1ExtranetsB2bConsumerPostRequestSiteInformationInner.from_dict(_item) for _item in obj["siteInformation"]] if obj.get("siteInformation") is not None else None
+            "siteInformation": [ManaV2B2bSiteInformation.from_dict(_item) for _item in obj["siteInformation"]] if obj.get("siteInformation") is not None else None
         })
         return _obj
 

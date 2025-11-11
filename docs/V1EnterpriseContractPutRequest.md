@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**contracted_credits** | **float** |  | [optional] 
-**expiration_date** | [**V1EnterpriseAllocationGet200ResponseConsumptionSummaryContractualSummaryExpirationDate**](V1EnterpriseAllocationGet200ResponseConsumptionSummaryContractualSummaryExpirationDate.md) |  | [optional] 
+**contracted_credits** | **float** | Amount of credits billed for a contract term or monthly if no expiration date is provided | [optional] 
+**expiration_date** | [**ManaV2TimePeriod**](ManaV2TimePeriod.md) |  | [optional] 
 
 ## Example
 

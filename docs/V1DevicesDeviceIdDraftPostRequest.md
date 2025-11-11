@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **base_version** | **int** |  | [optional] 
 **description** | **str** |  | [optional] 
-**draft** | [**V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInner**](V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInner.md) |  | [optional] 
+**draft** | [**ManaV2Device**](ManaV2Device.md) |  | [optional] 
 
 ## Example
 

@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**device_id** | **int** |  | [optional] 
-**params** | [**V1DiagnosticSpeedtestPostRequestParams**](V1DiagnosticSpeedtestPostRequestParams.md) |  | [optional] 
+**device_id** | **int** | Unique identifier for a specific device (required) | 
+**params** | [**DiagnosticToolsSpeedtestParams**](DiagnosticToolsSpeedtestParams.md) |  | [optional] 
 
 ## Example
 

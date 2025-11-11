@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**allowed_mfa_types** | **List[str]** |  | [optional] 
+**allowed_mfa_types** | **List[str]** |  | 
 
 ## Example
 

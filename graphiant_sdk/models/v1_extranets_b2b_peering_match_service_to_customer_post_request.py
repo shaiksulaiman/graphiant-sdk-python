@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_extranets_b2b_peering_match_service_to_customer_post_request_service import V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestService
+from graphiant_sdk.models.mana_v2_b2b_extranet_match_service_to_customer import ManaV2B2bExtranetMatchServiceToCustomer
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest(BaseModel):
     V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest
     """ # noqa: E501
     id: Optional[StrictInt] = None
-    service: Optional[V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestService] = None
+    service: Optional[ManaV2B2bExtranetMatchServiceToCustomer] = None
     __properties: ClassVar[List[str]] = ["id", "service"]
 
     model_config = ConfigDict(
@@ -86,7 +86,7 @@ class V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest(BaseModel):
 
         _obj = cls.model_validate({
             "id": obj.get("id"),
-            "service": V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestService.from_dict(obj["service"]) if obj.get("service") is not None else None
+            "service": ManaV2B2bExtranetMatchServiceToCustomer.from_dict(obj["service"]) if obj.get("service") is not None else None
         })
         return _obj
 

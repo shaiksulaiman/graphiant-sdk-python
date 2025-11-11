@@ -5,9 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**app_selector** | [**V1FlowsTopologyPostRequestAppSelector**](V1FlowsTopologyPostRequestAppSelector.md) |  | [optional] 
+**app_selector** | [**IpfixAppTopologySelector**](IpfixAppTopologySelector.md) |  | [optional] 
 **device_id** | **int** |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**time_window** | [**StatsmonTimeWindow**](StatsmonTimeWindow.md) |  | [optional] 
 
 ## Example
 

@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**alert_id_list** | **List[str]** |  | [optional] 
-**reason** | **str** |  | [optional] 
+**alert_id_list** | **List[str]** |  | 
+**reason** | **str** | Optional triage message in acknowledgement | [optional] 
 
 ## Example
 

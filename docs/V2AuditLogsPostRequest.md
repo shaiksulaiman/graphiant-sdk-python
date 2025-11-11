@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cursor_ref** | **str** |  | [optional] 
 **num_logs** | **int** |  | [optional] 
-**old_ts** | [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
-**recent_ts** | [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
-**selector** | [**V2AuditLogsPostRequestSelector**](V2AuditLogsPostRequestSelector.md) |  | [optional] 
+**old_ts** | [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 
+**recent_ts** | [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 
+**selector** | [**AuditmonAuditLogsV2Selector**](AuditmonAuditLogsV2Selector.md) |  | [optional] 
 
 ## Example
 

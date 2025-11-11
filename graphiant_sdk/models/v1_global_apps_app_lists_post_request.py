@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_global_apps_app_lists_post_request_app_list_config import V1GlobalAppsAppListsPostRequestAppListConfig
+from graphiant_sdk.models.mana_v2_app_list_config import ManaV2AppListConfig
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class V1GlobalAppsAppListsPostRequest(BaseModel):
     """
     V1GlobalAppsAppListsPostRequest
     """ # noqa: E501
-    app_list_config: Optional[V1GlobalAppsAppListsPostRequestAppListConfig] = Field(default=None, alias="appListConfig")
+    app_list_config: Optional[ManaV2AppListConfig] = Field(default=None, alias="appListConfig")
     __properties: ClassVar[List[str]] = ["appListConfig"]
 
     model_config = ConfigDict(
@@ -84,7 +84,7 @@ class V1GlobalAppsAppListsPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "appListConfig": V1GlobalAppsAppListsPostRequestAppListConfig.from_dict(obj["appListConfig"]) if obj.get("appListConfig") is not None else None
+            "appListConfig": ManaV2AppListConfig.from_dict(obj["appListConfig"]) if obj.get("appListConfig") is not None else None
         })
         return _obj
 

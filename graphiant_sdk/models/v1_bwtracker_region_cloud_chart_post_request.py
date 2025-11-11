@@ -20,7 +20,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.statsmon_bandwidthtracker_time_window import StatsmonBandwidthtrackerTimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -29,7 +29,7 @@ class V1BwtrackerRegionCloudChartPostRequest(BaseModel):
     V1BwtrackerRegionCloudChartPostRequest
     """ # noqa: E501
     region_id: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="regionId")
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    time_window: Optional[StatsmonBandwidthtrackerTimeWindow] = Field(default=None, alias="timeWindow")
     __properties: ClassVar[List[str]] = ["regionId", "timeWindow"]
 
     model_config = ConfigDict(
@@ -87,7 +87,7 @@ class V1BwtrackerRegionCloudChartPostRequest(BaseModel):
 
         _obj = cls.model_validate({
             "regionId": obj.get("regionId"),
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
+            "timeWindow": StatsmonBandwidthtrackerTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
         })
         return _obj
 

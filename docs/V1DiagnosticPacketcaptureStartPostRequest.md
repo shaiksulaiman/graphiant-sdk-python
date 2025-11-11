@@ -5,11 +5,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**device_id** | **int** |  | [optional] 
-**duration** | **int** |  | [optional] 
-**filter** | [**V1DiagnosticPacketcaptureStartPostRequestFilter**](V1DiagnosticPacketcaptureStartPostRequestFilter.md) |  | [optional] 
-**max_packet_counter** | **int** |  | [optional] 
-**target** | [**V1DiagnosticPacketcaptureStartPostRequestTarget**](V1DiagnosticPacketcaptureStartPostRequestTarget.md) |  | [optional] 
+**device_id** | **int** | Unique identifier for a specific device (required) | 
+**duration** | **int** | Packet capture duration. Accepted values are 30, 60, 180 (required) | 
+**filter** | [**DiagnosticToolsPCapFilter**](DiagnosticToolsPCapFilter.md) |  | [optional] 
+**max_packet_counter** | **int** | Packet capture limit. | [optional] 
+**target** | [**DiagnosticToolsTargetType**](DiagnosticToolsTargetType.md) |  | 
 
 ## Example
 

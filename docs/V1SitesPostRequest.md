@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **enterprise_id** | **int** |  | [optional] 
-**site** | [**V1SitesPostRequestSite**](V1SitesPostRequestSite.md) |  | [optional] 
+**site** | [**ManaV2NewSite**](ManaV2NewSite.md) |  | [optional] 
 
 ## Example
 

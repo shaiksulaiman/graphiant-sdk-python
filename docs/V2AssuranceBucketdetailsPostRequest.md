@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bucket_id** | **str** |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**time_window** | [**AssuranceTimeWindow**](AssuranceTimeWindow.md) |  | [optional] 
 **unclassified_only** | **bool** |  | [optional] 
 
 ## Example

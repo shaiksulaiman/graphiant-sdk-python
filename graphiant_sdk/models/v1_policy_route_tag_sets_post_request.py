@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_global_config_patch_request_routing_policies_value_policy_statements_value_statement_matches_value_match_route_tag_entry import V1GlobalConfigPatchRequestRoutingPoliciesValuePolicyStatementsValueStatementMatchesValueMatchRouteTagEntry
+from graphiant_sdk.models.mana_v2_route_tag import ManaV2RouteTag
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class V1PolicyRouteTagSetsPostRequest(BaseModel):
     """
     V1PolicyRouteTagSetsPostRequest
     """ # noqa: E501
-    tag: Optional[V1GlobalConfigPatchRequestRoutingPoliciesValuePolicyStatementsValueStatementMatchesValueMatchRouteTagEntry] = None
+    tag: Optional[ManaV2RouteTag] = None
     __properties: ClassVar[List[str]] = ["tag"]
 
     model_config = ConfigDict(
@@ -84,7 +84,7 @@ class V1PolicyRouteTagSetsPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "tag": V1GlobalConfigPatchRequestRoutingPoliciesValuePolicyStatementsValueStatementMatchesValueMatchRouteTagEntry.from_dict(obj["tag"]) if obj.get("tag") is not None else None
+            "tag": ManaV2RouteTag.from_dict(obj["tag"]) if obj.get("tag") is not None else None
         })
         return _obj
 

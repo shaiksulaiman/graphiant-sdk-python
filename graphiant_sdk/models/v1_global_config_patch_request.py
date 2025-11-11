@@ -19,14 +19,14 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_global_config_patch_request_global_prefix_sets_value import V1GlobalConfigPatchRequestGlobalPrefixSetsValue
-from graphiant_sdk.models.v1_global_config_patch_request_ipfix_exporters_value import V1GlobalConfigPatchRequestIpfixExportersValue
-from graphiant_sdk.models.v1_global_config_patch_request_prefix_sets_value import V1GlobalConfigPatchRequestPrefixSetsValue
-from graphiant_sdk.models.v1_global_config_patch_request_routing_policies_value import V1GlobalConfigPatchRequestRoutingPoliciesValue
-from graphiant_sdk.models.v1_global_config_patch_request_snmps_value import V1GlobalConfigPatchRequestSnmpsValue
-from graphiant_sdk.models.v1_global_config_patch_request_syslog_servers_value import V1GlobalConfigPatchRequestSyslogServersValue
-from graphiant_sdk.models.v1_global_config_patch_request_traffic_policies import V1GlobalConfigPatchRequestTrafficPolicies
-from graphiant_sdk.models.v1_global_config_patch_request_vpn_profiles_value import V1GlobalConfigPatchRequestVpnProfilesValue
+from graphiant_sdk.models.mana_v2_forwarding_policy_config import ManaV2ForwardingPolicyConfig
+from graphiant_sdk.models.mana_v2_nullable_enterprise_prefix_set_config import ManaV2NullableEnterprisePrefixSetConfig
+from graphiant_sdk.models.mana_v2_nullable_i_psec_vpn_profiles_config import ManaV2NullableIPsecVpnProfilesConfig
+from graphiant_sdk.models.mana_v2_nullable_ipfix_exporter_config import ManaV2NullableIpfixExporterConfig
+from graphiant_sdk.models.mana_v2_nullable_prefix_set_config import ManaV2NullablePrefixSetConfig
+from graphiant_sdk.models.mana_v2_nullable_routing_policy_config import ManaV2NullableRoutingPolicyConfig
+from graphiant_sdk.models.mana_v2_nullable_snmp_config import ManaV2NullableSnmpConfig
+from graphiant_sdk.models.mana_v2_nullable_syslog_collector_config import ManaV2NullableSyslogCollectorConfig
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -34,14 +34,14 @@ class V1GlobalConfigPatchRequest(BaseModel):
     """
     V1GlobalConfigPatchRequest
     """ # noqa: E501
-    global_prefix_sets: Optional[Dict[str, V1GlobalConfigPatchRequestGlobalPrefixSetsValue]] = Field(default=None, alias="globalPrefixSets")
-    ipfix_exporters: Optional[Dict[str, V1GlobalConfigPatchRequestIpfixExportersValue]] = Field(default=None, alias="ipfixExporters")
-    prefix_sets: Optional[Dict[str, V1GlobalConfigPatchRequestPrefixSetsValue]] = Field(default=None, alias="prefixSets")
-    routing_policies: Optional[Dict[str, V1GlobalConfigPatchRequestRoutingPoliciesValue]] = Field(default=None, alias="routingPolicies")
-    snmps: Optional[Dict[str, V1GlobalConfigPatchRequestSnmpsValue]] = None
-    syslog_servers: Optional[Dict[str, V1GlobalConfigPatchRequestSyslogServersValue]] = Field(default=None, alias="syslogServers")
-    traffic_policies: Optional[V1GlobalConfigPatchRequestTrafficPolicies] = Field(default=None, alias="trafficPolicies")
-    vpn_profiles: Optional[Dict[str, V1GlobalConfigPatchRequestVpnProfilesValue]] = Field(default=None, alias="vpnProfiles")
+    global_prefix_sets: Optional[Dict[str, ManaV2NullablePrefixSetConfig]] = Field(default=None, alias="globalPrefixSets")
+    ipfix_exporters: Optional[Dict[str, ManaV2NullableIpfixExporterConfig]] = Field(default=None, alias="ipfixExporters")
+    prefix_sets: Optional[Dict[str, ManaV2NullableEnterprisePrefixSetConfig]] = Field(default=None, alias="prefixSets")
+    routing_policies: Optional[Dict[str, ManaV2NullableRoutingPolicyConfig]] = Field(default=None, alias="routingPolicies")
+    snmps: Optional[Dict[str, ManaV2NullableSnmpConfig]] = None
+    syslog_servers: Optional[Dict[str, ManaV2NullableSyslogCollectorConfig]] = Field(default=None, alias="syslogServers")
+    traffic_policies: Optional[ManaV2ForwardingPolicyConfig] = Field(default=None, alias="trafficPolicies")
+    vpn_profiles: Optional[Dict[str, ManaV2NullableIPsecVpnProfilesConfig]] = Field(default=None, alias="vpnProfiles")
     __properties: ClassVar[List[str]] = ["globalPrefixSets", "ipfixExporters", "prefixSets", "routingPolicies", "snmps", "syslogServers", "trafficPolicies", "vpnProfiles"]
 
     model_config = ConfigDict(
@@ -148,44 +148,44 @@ class V1GlobalConfigPatchRequest(BaseModel):
 
         _obj = cls.model_validate({
             "globalPrefixSets": dict(
-                (_k, V1GlobalConfigPatchRequestGlobalPrefixSetsValue.from_dict(_v))
+                (_k, ManaV2NullablePrefixSetConfig.from_dict(_v))
                 for _k, _v in obj["globalPrefixSets"].items()
             )
             if obj.get("globalPrefixSets") is not None
             else None,
             "ipfixExporters": dict(
-                (_k, V1GlobalConfigPatchRequestIpfixExportersValue.from_dict(_v))
+                (_k, ManaV2NullableIpfixExporterConfig.from_dict(_v))
                 for _k, _v in obj["ipfixExporters"].items()
             )
             if obj.get("ipfixExporters") is not None
             else None,
             "prefixSets": dict(
-                (_k, V1GlobalConfigPatchRequestPrefixSetsValue.from_dict(_v))
+                (_k, ManaV2NullableEnterprisePrefixSetConfig.from_dict(_v))
                 for _k, _v in obj["prefixSets"].items()
             )
             if obj.get("prefixSets") is not None
             else None,
             "routingPolicies": dict(
-                (_k, V1GlobalConfigPatchRequestRoutingPoliciesValue.from_dict(_v))
+                (_k, ManaV2NullableRoutingPolicyConfig.from_dict(_v))
                 for _k, _v in obj["routingPolicies"].items()
             )
             if obj.get("routingPolicies") is not None
             else None,
             "snmps": dict(
-                (_k, V1GlobalConfigPatchRequestSnmpsValue.from_dict(_v))
+                (_k, ManaV2NullableSnmpConfig.from_dict(_v))
                 for _k, _v in obj["snmps"].items()
             )
             if obj.get("snmps") is not None
             else None,
             "syslogServers": dict(
-                (_k, V1GlobalConfigPatchRequestSyslogServersValue.from_dict(_v))
+                (_k, ManaV2NullableSyslogCollectorConfig.from_dict(_v))
                 for _k, _v in obj["syslogServers"].items()
             )
             if obj.get("syslogServers") is not None
             else None,
-            "trafficPolicies": V1GlobalConfigPatchRequestTrafficPolicies.from_dict(obj["trafficPolicies"]) if obj.get("trafficPolicies") is not None else None,
+            "trafficPolicies": ManaV2ForwardingPolicyConfig.from_dict(obj["trafficPolicies"]) if obj.get("trafficPolicies") is not None else None,
             "vpnProfiles": dict(
-                (_k, V1GlobalConfigPatchRequestVpnProfilesValue.from_dict(_v))
+                (_k, ManaV2NullableIPsecVpnProfilesConfig.from_dict(_v))
                 for _k, _v in obj["vpnProfiles"].items()
             )
             if obj.get("vpnProfiles") is not None

@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_groups_get200_response_groups_inner_permissions import V1GroupsGet200ResponseGroupsInnerPermissions
+from graphiant_sdk.models.common_permissions import CommonPermissions
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -30,7 +30,7 @@ class V1GroupsIdPatchRequest(BaseModel):
     description: Optional[StrictStr] = None
     display_name: Optional[StrictStr] = Field(default=None, alias="displayName")
     group_type: Optional[StrictStr] = Field(default=None, alias="groupType")
-    permissions: Optional[V1GroupsGet200ResponseGroupsInnerPermissions] = None
+    permissions: Optional[CommonPermissions] = None
     time_window_end: Optional[StrictInt] = Field(default=None, alias="timeWindowEnd")
     time_window_start: Optional[StrictInt] = Field(default=None, alias="timeWindowStart")
     __properties: ClassVar[List[str]] = ["description", "displayName", "groupType", "permissions", "timeWindowEnd", "timeWindowStart"]
@@ -92,7 +92,7 @@ class V1GroupsIdPatchRequest(BaseModel):
             "description": obj.get("description"),
             "displayName": obj.get("displayName"),
             "groupType": obj.get("groupType"),
-            "permissions": V1GroupsGet200ResponseGroupsInnerPermissions.from_dict(obj["permissions"]) if obj.get("permissions") is not None else None,
+            "permissions": CommonPermissions.from_dict(obj["permissions"]) if obj.get("permissions") is not None else None,
             "timeWindowEnd": obj.get("timeWindowEnd"),
             "timeWindowStart": obj.get("timeWindowStart")
         })

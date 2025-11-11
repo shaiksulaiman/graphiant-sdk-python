@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**num_apps** | **int** |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**num_apps** | **int** | The maximum number of apps to return (100 if left empty) | [optional] 
+**time_window** | [**IpfixTimeWindow**](IpfixTimeWindow.md) |  | [optional] 
 
 ## Example
 

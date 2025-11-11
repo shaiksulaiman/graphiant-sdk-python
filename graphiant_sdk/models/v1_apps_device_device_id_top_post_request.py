@@ -20,7 +20,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.ipfix_time_window import IpfixTimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,8 +28,8 @@ class V1AppsDeviceDeviceIdTopPostRequest(BaseModel):
     """
     V1AppsDeviceDeviceIdTopPostRequest
     """ # noqa: E501
-    num_apps: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="numApps")
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    num_apps: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, description="The maximum number of apps to return (100 if left empty)", alias="numApps")
+    time_window: Optional[IpfixTimeWindow] = Field(default=None, alias="timeWindow")
     __properties: ClassVar[List[str]] = ["numApps", "timeWindow"]
 
     model_config = ConfigDict(
@@ -87,7 +87,7 @@ class V1AppsDeviceDeviceIdTopPostRequest(BaseModel):
 
         _obj = cls.model_validate({
             "numApps": obj.get("numApps"),
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
+            "timeWindow": IpfixTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
         })
         return _obj
 

@@ -6,8 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **device_id** | **int** |  | [optional] 
-**selectors** | [**List[V2MonitoringOspfPostRequestSelectorsInner]**](V2MonitoringOspfPostRequestSelectorsInner.md) |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**selectors** | [**List[StatsmonV2OspfStatsSelector]**](StatsmonV2OspfStatsSelector.md) |  | [optional] 
+**time_window** | [**StatsmonV2TimeWindow**](StatsmonV2TimeWindow.md) |  | [optional] 
 
 ## Example
 

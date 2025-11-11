@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**details** | [**V1PortalPrivatePostRequestDetails**](V1PortalPrivatePostRequestDetails.md) |  | [optional] 
+**details** | [**OnboardingPrivateGcsDetails**](OnboardingPrivateGcsDetails.md) |  | [optional] 
 
 ## Example
 

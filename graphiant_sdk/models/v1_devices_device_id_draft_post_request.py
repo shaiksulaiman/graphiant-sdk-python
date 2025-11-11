@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_extranets_get200_response_policies_inner_branches_excluded_devices_inner import V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInner
+from graphiant_sdk.models.mana_v2_device import ManaV2Device
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -29,7 +29,7 @@ class V1DevicesDeviceIdDraftPostRequest(BaseModel):
     """ # noqa: E501
     base_version: Optional[StrictInt] = Field(default=None, alias="baseVersion")
     description: Optional[StrictStr] = None
-    draft: Optional[V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInner] = None
+    draft: Optional[ManaV2Device] = None
     __properties: ClassVar[List[str]] = ["baseVersion", "description", "draft"]
 
     model_config = ConfigDict(
@@ -88,7 +88,7 @@ class V1DevicesDeviceIdDraftPostRequest(BaseModel):
         _obj = cls.model_validate({
             "baseVersion": obj.get("baseVersion"),
             "description": obj.get("description"),
-            "draft": V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInner.from_dict(obj["draft"]) if obj.get("draft") is not None else None
+            "draft": ManaV2Device.from_dict(obj["draft"]) if obj.get("draft") is not None else None
         })
         return _obj
 

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**app_list_config** | [**V1GlobalAppsAppListsPostRequestAppListConfig**](V1GlobalAppsAppListsPostRequestAppListConfig.md) |  | [optional] 
+**app_list_config** | [**ManaV2AppListConfig**](ManaV2AppListConfig.md) |  | [optional] 
 
 ## Example
 

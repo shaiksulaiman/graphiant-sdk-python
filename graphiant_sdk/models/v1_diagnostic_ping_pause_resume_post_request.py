@@ -20,7 +20,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from graphiant_sdk.models.v1_diagnostic_ping_pause_resume_post_request_params import V1DiagnosticPingPauseResumePostRequestParams
+from graphiant_sdk.models.diagnostic_tools_diagnostic_params import DiagnosticToolsDiagnosticParams
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,10 +28,10 @@ class V1DiagnosticPingPauseResumePostRequest(BaseModel):
     """
     V1DiagnosticPingPauseResumePostRequest
     """ # noqa: E501
-    device_id: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="deviceId")
-    params: Optional[V1DiagnosticPingPauseResumePostRequestParams] = None
-    token: Optional[StrictStr] = None
-    transport_type: Optional[StrictStr] = Field(default=None, alias="transportType")
+    device_id: Annotated[int, Field(strict=True, ge=0)] = Field(description="Valid Provisioned device ID (required)", alias="deviceId")
+    params: Optional[DiagnosticToolsDiagnosticParams] = None
+    token: Optional[StrictStr] = Field(default=None, description="Identifier which was received in initial response")
+    transport_type: StrictStr = Field(description="ICMP or TCP (required)", alias="transportType")
     __properties: ClassVar[List[str]] = ["deviceId", "params", "token", "transportType"]
 
     model_config = ConfigDict(
@@ -89,7 +89,7 @@ class V1DiagnosticPingPauseResumePostRequest(BaseModel):
 
         _obj = cls.model_validate({
             "deviceId": obj.get("deviceId"),
-            "params": V1DiagnosticPingPauseResumePostRequestParams.from_dict(obj["params"]) if obj.get("params") is not None else None,
+            "params": DiagnosticToolsDiagnosticParams.from_dict(obj["params"]) if obj.get("params") is not None else None,
             "token": obj.get("token"),
             "transportType": obj.get("transportType")
         })

@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_extranets_post_request_policy_branches import V1ExtranetsPostRequestPolicyBranches
+from graphiant_sdk.models.mana_v2_policy_target_input import ManaV2PolicyTargetInput
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class V1ExtranetsSourceSegmentsPostRequest(BaseModel):
     V1ExtranetsSourceSegmentsPostRequest
     """ # noqa: E501
     filter: Optional[StrictStr] = None
-    target: Optional[V1ExtranetsPostRequestPolicyBranches] = None
+    target: Optional[ManaV2PolicyTargetInput] = None
     __properties: ClassVar[List[str]] = ["filter", "target"]
 
     model_config = ConfigDict(
@@ -86,7 +86,7 @@ class V1ExtranetsSourceSegmentsPostRequest(BaseModel):
 
         _obj = cls.model_validate({
             "filter": obj.get("filter"),
-            "target": V1ExtranetsPostRequestPolicyBranches.from_dict(obj["target"]) if obj.get("target") is not None else None
+            "target": ManaV2PolicyTargetInput.from_dict(obj["target"]) if obj.get("target") is not None else None
         })
         return _obj
 

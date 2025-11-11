@@ -7,13 +7,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **global_prefix_set_ops** | **Dict[str, str]** |  | [optional] 
 **ipfix_exporter_ops** | **Dict[str, str]** |  | [optional] 
-**ipfix_exporter_ops_v2** | [**Dict[str, V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value]**](V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value.md) |  | [optional] 
+**ipfix_exporter_ops_v2** | [**Dict[str, ManaV2GlobalObjectOperationConfig]**](ManaV2GlobalObjectOperationConfig.md) |  | [optional] 
 **prefix_set_ops** | **Dict[str, str]** |  | [optional] 
 **routing_policy_ops** | **Dict[str, str]** |  | [optional] 
 **site_id** | **int** |  | [optional] 
 **snmp_ops** | **Dict[str, str]** |  | [optional] 
 **syslog_server_ops** | **Dict[str, str]** |  | [optional] 
-**syslog_server_ops_v2** | [**Dict[str, V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value]**](V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value.md) |  | [optional] 
+**syslog_server_ops_v2** | [**Dict[str, ManaV2GlobalObjectOperationConfig]**](ManaV2GlobalObjectOperationConfig.md) |  | [optional] 
 **traffic_policy_ops** | **Dict[str, str]** |  | [optional] 
 
 ## Example

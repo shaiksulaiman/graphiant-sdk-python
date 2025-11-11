@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -26,7 +26,7 @@ class V2ChildalertlistPostRequest(BaseModel):
     """
     V2ChildalertlistPostRequest
     """ # noqa: E501
-    alert_id: Optional[StrictStr] = Field(default=None, alias="alertId")
+    alert_id: StrictStr = Field(description="Alert id of the parent alert (required)", alias="alertId")
     __properties: ClassVar[List[str]] = ["alertId"]
 
     model_config = ConfigDict(

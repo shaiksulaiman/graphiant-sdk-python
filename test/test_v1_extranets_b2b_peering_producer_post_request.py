@@ -35,22 +35,28 @@ class TestV1ExtranetsB2bPeeringProducerPostRequest(unittest.TestCase):
         model = V1ExtranetsB2bPeeringProducerPostRequest()
         if include_optional:
             return V1ExtranetsB2bPeeringProducerPostRequest(
-                policy = graphiant_sdk.models._v1_extranets_b2b_peering_producer_post_request_policy._v1_extranets_b2b_peering_producer_post_request_policy(
+                policy = graphiant_sdk.models.mana_v2_b2b_extranet_peering_service_producer_policy.manaV2B2bExtranetPeeringServiceProducerPolicy(
                     description = 'example string', 
+                    global_object_ops = {
+                        'key' : graphiant_sdk.models.mana_v2_global_object_service_ops.manaV2GlobalObjectServiceOps(
+                            routing_policy_ops = {
+                                'key' : 'ENUM_VALUE'
+                                }, )
+                        }, 
                     prefix_tags = [
-                        graphiant_sdk.models._v1_extranets_b2b_peering_match_service_to_customer_put_request_service_service_prefixes_inner._v1_extranets_b2b_peering_match_service_to_customer_put_request_service_servicePrefixes_inner(
+                        graphiant_sdk.models.mana_v2_b2b_extranet_prefix_tag.manaV2B2bExtranetPrefixTag(
                             prefix = 'example string', 
                             tag = 'example string', )
                         ], 
                     service_lan_segment = 1234567891011, 
                     site = [
-                        graphiant_sdk.models._v1_extranets_b2b_consumer_post_request_site_information_inner._v1_extranets_b2b_consumer_post_request_siteInformation_inner(
+                        graphiant_sdk.models.mana_v2_b2b_site_information.manaV2B2bSiteInformation(
                             bw_allocation_site_lists = 123, 
                             bw_allocation_sites = 123, 
-                            policer_site_lists = graphiant_sdk.models._v1_extranets_b2b_consumer_post_request_site_information_inner_policer_site_lists._v1_extranets_b2b_consumer_post_request_siteInformation_inner_policerSiteLists(
+                            policer_site_lists = graphiant_sdk.models.mana_v2_policer.manaV2Policer(
                                 burst_size = 123, 
                                 bw = 123, ), 
-                            policer_sites = graphiant_sdk.models._v1_extranets_b2b_consumer_post_request_site_information_inner_policer_site_lists._v1_extranets_b2b_consumer_post_request_siteInformation_inner_policerSiteLists(
+                            policer_sites = graphiant_sdk.models.mana_v2_policer.manaV2Policer(
                                 burst_size = 123, 
                                 bw = 123, ), 
                             site_lists = [

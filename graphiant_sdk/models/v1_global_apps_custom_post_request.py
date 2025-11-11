@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_global_apps_custom_get200_response_entries_inner_app_config import V1GlobalAppsCustomGet200ResponseEntriesInnerAppConfig
+from graphiant_sdk.models.mana_v2_global_app_config import ManaV2GlobalAppConfig
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class V1GlobalAppsCustomPostRequest(BaseModel):
     """
     V1GlobalAppsCustomPostRequest
     """ # noqa: E501
-    app_config: Optional[V1GlobalAppsCustomGet200ResponseEntriesInnerAppConfig] = Field(default=None, alias="appConfig")
+    app_config: Optional[ManaV2GlobalAppConfig] = Field(default=None, alias="appConfig")
     __properties: ClassVar[List[str]] = ["appConfig"]
 
     model_config = ConfigDict(
@@ -84,7 +84,7 @@ class V1GlobalAppsCustomPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "appConfig": V1GlobalAppsCustomGet200ResponseEntriesInnerAppConfig.from_dict(obj["appConfig"]) if obj.get("appConfig") is not None else None
+            "appConfig": ManaV2GlobalAppConfig.from_dict(obj["appConfig"]) if obj.get("appConfig") is not None else None
         })
         return _obj
 

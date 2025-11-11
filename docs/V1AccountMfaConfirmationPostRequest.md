@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**code** | **str** |  | [optional] 
-**confirmed** | **bool** |  | [optional] 
-**id** | **str** |  | [optional] 
-**type** | **str** |  | [optional] 
+**code** | **str** |  (required) | 
+**confirmed** | **bool** |  (required) | 
+**id** | **str** |  (required) | 
+**type** | **str** |  (required) | 
 
 ## Example
 

@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_extranets_b2b_peering_producer_post_request_policy import V1ExtranetsB2bPeeringProducerPostRequestPolicy
+from graphiant_sdk.models.mana_v2_b2b_extranet_peering_service_producer_policy import ManaV2B2bExtranetPeeringServiceProducerPolicy
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class V1ExtranetsB2bPeeringProducerPostRequest(BaseModel):
     """
     V1ExtranetsB2bPeeringProducerPostRequest
     """ # noqa: E501
-    policy: Optional[V1ExtranetsB2bPeeringProducerPostRequestPolicy] = None
+    policy: Optional[ManaV2B2bExtranetPeeringServiceProducerPolicy] = None
     service_name: Optional[StrictStr] = Field(default=None, alias="serviceName")
     type: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["policy", "serviceName", "type"]
@@ -86,7 +86,7 @@ class V1ExtranetsB2bPeeringProducerPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "policy": V1ExtranetsB2bPeeringProducerPostRequestPolicy.from_dict(obj["policy"]) if obj.get("policy") is not None else None,
+            "policy": ManaV2B2bExtranetPeeringServiceProducerPolicy.from_dict(obj["policy"]) if obj.get("policy") is not None else None,
             "serviceName": obj.get("serviceName"),
             "type": obj.get("type")
         })

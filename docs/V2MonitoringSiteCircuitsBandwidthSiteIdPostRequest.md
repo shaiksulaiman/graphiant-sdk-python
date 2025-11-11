@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**selectors** | [**List[V1MonitoringCircuitsBandwidthPostRequestSelectorsInner]**](V1MonitoringCircuitsBandwidthPostRequestSelectorsInner.md) |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**selectors** | [**List[StatsmonV2CircuitBandwidthStatsSelector]**](StatsmonV2CircuitBandwidthStatsSelector.md) |  | [optional] 
+**time_window** | [**StatsmonV2TimeWindow**](StatsmonV2TimeWindow.md) |  | [optional] 
 
 ## Example
 

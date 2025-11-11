@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **device_id** | **int** |  | [optional] 
 **is_delta** | **bool** |  | [optional] 
 **is_total** | **bool** |  | [optional] 
-**selectors** | [**List[V2MonitoringQueueInstantPostRequestSelectorsInner]**](V2MonitoringQueueInstantPostRequestSelectorsInner.md) |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**selectors** | [**List[StatsmonV2QueueInstantStatsSelector]**](StatsmonV2QueueInstantStatsSelector.md) |  | [optional] 
+**time_window** | [**StatsmonV2TimeWindow**](StatsmonV2TimeWindow.md) |  | [optional] 
 
 ## Example
 

@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**policy** | [**List[V1ExtranetsB2bConsumerPostRequestPolicyInner]**](V1ExtranetsB2bConsumerPostRequestPolicyInner.md) |  | [optional] 
+**policy** | [**List[ManaV2ExtranetConsumerLanSegmentPolicy]**](ManaV2ExtranetConsumerLanSegmentPolicy.md) |  | [optional] 
 **provider_enterprise_id** | **int** |  | [optional] 
 **service_name** | **str** |  | [optional] 
-**site_information** | [**List[V1ExtranetsB2bConsumerPostRequestSiteInformationInner]**](V1ExtranetsB2bConsumerPostRequestSiteInformationInner.md) |  | [optional] 
+**site_information** | [**List[ManaV2B2bSiteInformation]**](ManaV2B2bSiteInformation.md) |  | [optional] 
 
 ## Example
 

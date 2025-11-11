@@ -7,10 +7,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **admin_email** | **str** |  | [optional] 
 **customer_id** | **int** |  | [optional] 
-**customer_name** | **str** |  | [optional] 
+**customer_name** | **str** |  (required) | 
 **is_graphiant** | **bool** |  | [optional] 
-**service_id** | **int** |  | [optional] 
-**service_name** | **str** |  | [optional] 
+**match_id** | **int** |  (required) | 
+**service_id** | **int** |  (required) | 
+**service_name** | **str** |  (required) | 
 
 ## Example
 

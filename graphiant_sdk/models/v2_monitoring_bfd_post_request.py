@@ -20,8 +20,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from graphiant_sdk.models.v2_monitoring_bfd_post_request_selectors_inner import V2MonitoringBfdPostRequestSelectorsInner
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.statsmon_v2_bfd_stats_selector import StatsmonV2BfdStatsSelector
+from graphiant_sdk.models.statsmon_v2_time_window import StatsmonV2TimeWindow
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -30,8 +30,8 @@ class V2MonitoringBfdPostRequest(BaseModel):
     V2MonitoringBfdPostRequest
     """ # noqa: E501
     device_id: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="deviceId")
-    selectors: Optional[List[V2MonitoringBfdPostRequestSelectorsInner]] = None
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    selectors: Optional[List[StatsmonV2BfdStatsSelector]] = None
+    time_window: Optional[StatsmonV2TimeWindow] = Field(default=None, alias="timeWindow")
     __properties: ClassVar[List[str]] = ["deviceId", "selectors", "timeWindow"]
 
     model_config = ConfigDict(
@@ -96,8 +96,8 @@ class V2MonitoringBfdPostRequest(BaseModel):
 
         _obj = cls.model_validate({
             "deviceId": obj.get("deviceId"),
-            "selectors": [V2MonitoringBfdPostRequestSelectorsInner.from_dict(_item) for _item in obj["selectors"]] if obj.get("selectors") is not None else None,
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
+            "selectors": [StatsmonV2BfdStatsSelector.from_dict(_item) for _item in obj["selectors"]] if obj.get("selectors") is not None else None,
+            "timeWindow": StatsmonV2TimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
         })
         return _obj
 

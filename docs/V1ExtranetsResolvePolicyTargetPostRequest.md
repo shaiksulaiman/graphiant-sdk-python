@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**policy_target** | [**V1ExtranetsPostRequestPolicyBranches**](V1ExtranetsPostRequestPolicyBranches.md) |  | [optional] 
+**policy_target** | [**ManaV2PolicyTargetInput**](ManaV2PolicyTargetInput.md) |  | [optional] 
 
 ## Example
 

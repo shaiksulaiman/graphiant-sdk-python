@@ -5,13 +5,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**account_type** | **str** |  | [optional] 
+**account_type** | **str** |  (required) | 
 **admin_email** | **str** |  | [optional] 
 **admin_first_name** | **str** |  | [optional] 
 **admin_last_name** | **str** |  | [optional] 
 **admin_time_zone** | **str** |  | [optional] 
 **cloud_provider** | **str** |  | [optional] 
-**company_name** | **str** |  | [optional] 
+**company_name** | **str** |  (required) | 
 **credit_limit** | **int** |  | [optional] 
 **logo** | **str** |  | [optional] 
 **small_logo** | **str** |  | [optional] 

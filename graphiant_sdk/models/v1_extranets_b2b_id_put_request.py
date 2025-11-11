@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_extranets_b2b_post_request_policy import V1ExtranetsB2bPostRequestPolicy
+from graphiant_sdk.models.mana_v2_b2b_extranet_producer_policy import ManaV2B2bExtranetProducerPolicy
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class V1ExtranetsB2bIdPutRequest(BaseModel):
     """
     V1ExtranetsB2bIdPutRequest
     """ # noqa: E501
-    policy: Optional[V1ExtranetsB2bPostRequestPolicy] = None
+    policy: Optional[ManaV2B2bExtranetProducerPolicy] = None
     __properties: ClassVar[List[str]] = ["policy"]
 
     model_config = ConfigDict(
@@ -84,7 +84,7 @@ class V1ExtranetsB2bIdPutRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "policy": V1ExtranetsB2bPostRequestPolicy.from_dict(obj["policy"]) if obj.get("policy") is not None else None
+            "policy": ManaV2B2bExtranetProducerPolicy.from_dict(obj["policy"]) if obj.get("policy") is not None else None
         })
         return _obj
 

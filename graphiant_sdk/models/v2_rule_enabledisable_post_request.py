@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -26,8 +26,8 @@ class V2RuleEnabledisablePostRequest(BaseModel):
     """
     V2RuleEnabledisablePostRequest
     """ # noqa: E501
-    enable: Optional[StrictBool] = None
-    rule_id_list: Optional[List[StrictStr]] = Field(default=None, alias="ruleIdList")
+    enable: StrictBool = Field(description="Enable or disable. True means enable (required)")
+    rule_id_list: List[StrictStr] = Field(alias="ruleIdList")
     __properties: ClassVar[List[str]] = ["enable", "ruleIdList"]
 
     model_config = ConfigDict(

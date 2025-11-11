@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **is_b2_b** | **bool** |  | [optional] 
 **is_provider** | **bool** |  | [optional] 
 **service_id** | **int** |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**time_window** | [**StatsmonTimeWindow**](StatsmonTimeWindow.md) |  | [optional] 
 
 ## Example
 

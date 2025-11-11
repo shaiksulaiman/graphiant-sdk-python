@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_data_assurance_assurances_global_post_request_config import V1DataAssuranceAssurancesGlobalPostRequestConfig
+from graphiant_sdk.models.mana_v2_assurance_config import ManaV2AssuranceConfig
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class V1DataAssuranceAssurancesGlobalIdPutRequest(BaseModel):
     V1DataAssuranceAssurancesGlobalIdPutRequest
     """ # noqa: E501
     app_removal_reason: Optional[StrictStr] = Field(default=None, alias="appRemovalReason")
-    config: Optional[V1DataAssuranceAssurancesGlobalPostRequestConfig] = None
+    config: Optional[ManaV2AssuranceConfig] = None
     __properties: ClassVar[List[str]] = ["appRemovalReason", "config"]
 
     model_config = ConfigDict(
@@ -86,7 +86,7 @@ class V1DataAssuranceAssurancesGlobalIdPutRequest(BaseModel):
 
         _obj = cls.model_validate({
             "appRemovalReason": obj.get("appRemovalReason"),
-            "config": V1DataAssuranceAssurancesGlobalPostRequestConfig.from_dict(obj["config"]) if obj.get("config") is not None else None
+            "config": ManaV2AssuranceConfig.from_dict(obj["config"]) if obj.get("config") is not None else None
         })
         return _obj
 

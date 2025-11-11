@@ -35,14 +35,20 @@ class TestV1InvitationEmailPostRequest(unittest.TestCase):
         model = V1InvitationEmailPostRequest()
         if include_optional:
             return V1InvitationEmailPostRequest(
+                admin_email = 'example string',
                 customer_id = 1234567891011,
                 customer_name = 'example string',
                 is_graphiant = True,
+                match_id = 1234567891011,
                 service_id = 1234567891011,
                 service_name = 'example string'
             )
         else:
             return V1InvitationEmailPostRequest(
+                customer_name = 'example string',
+                match_id = 1234567891011,
+                service_id = 1234567891011,
+                service_name = 'example string',
         )
         """
 

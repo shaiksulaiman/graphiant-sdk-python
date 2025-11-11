@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**device_info** | [**List[V1GatewaysStatusPostRequestDeviceInfoInner]**](V1GatewaysStatusPostRequestDeviceInfoInner.md) |  | [optional] 
+**device_info** | [**List[V1GatewaysStatusPostRequestDeviceInfo]**](V1GatewaysStatusPostRequestDeviceInfo.md) |  | [optional] 
 **id** | **int** |  | [optional] 
 **status** | **str** |  | [optional] 
 **support_status** | **str** |  | [optional] 

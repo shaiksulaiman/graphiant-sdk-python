@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -26,8 +26,8 @@ class V1DeviceRoutingVrfBgpRouteCountPostRequest(BaseModel):
     """
     V1DeviceRoutingVrfBgpRouteCountPostRequest
     """ # noqa: E501
-    device_id: Optional[StrictInt] = Field(default=None, alias="deviceId")
-    vrf_name: Optional[List[StrictStr]] = Field(default=None, alias="vrfName")
+    device_id: StrictInt = Field(description="Valid configured device ID > 0 (required)", alias="deviceId")
+    vrf_name: List[StrictStr] = Field(alias="vrfName")
     __properties: ClassVar[List[str]] = ["deviceId", "vrfName"]
 
     model_config = ConfigDict(

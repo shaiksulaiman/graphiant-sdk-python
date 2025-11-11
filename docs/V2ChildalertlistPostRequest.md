@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**alert_id** | **str** |  | [optional] 
+**alert_id** | **str** | Alert id of the parent alert (required) | 
 
 ## Example
 

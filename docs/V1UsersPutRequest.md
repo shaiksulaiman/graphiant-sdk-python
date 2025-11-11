@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**email** | **str** |  | [optional] 
-**first_name** | **str** |  | [optional] 
+**email** | **str** |  (required) | 
+**first_name** | **str** |  (required) | 
 **group_id** | **str** |  | [optional] 
-**last_name** | **str** |  | [optional] 
+**last_name** | **str** |  (required) | 
 **time_zone** | **str** |  | [optional] 
 
 ## Example

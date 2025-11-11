@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**enable** | **bool** |  | [optional] 
-**rule_id_list** | **List[str]** |  | [optional] 
+**enable** | **bool** | Enable or disable. True means enable (required) | 
+**rule_id_list** | **List[str]** |  | 
 
 ## Example
 

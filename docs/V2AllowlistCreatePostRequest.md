@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**alert_id** | **str** |  | [optional] 
-**note_text** | **str** |  | [optional] 
+**alert_id** | **str** | Alert id of the alert to create allowlist/mutelist for (required) | 
+**note_text** | **str** | Optional note | [optional] 
 
 ## Example
 

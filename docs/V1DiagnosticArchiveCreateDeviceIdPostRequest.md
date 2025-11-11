@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**description** | **str** |  | [optional] 
+**description** | **str** | Description of the requested archive | [optional] 
 
 ## Example
 

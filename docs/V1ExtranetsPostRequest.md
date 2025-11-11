@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**policy** | [**V1ExtranetsPostRequestPolicy**](V1ExtranetsPostRequestPolicy.md) |  | [optional] 
+**policy** | [**ManaV2ExtranetPolicyInput**](ManaV2ExtranetPolicyInput.md) |  | [optional] 
 
 ## Example
 

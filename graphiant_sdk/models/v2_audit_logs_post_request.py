@@ -20,8 +20,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from graphiant_sdk.models.v1_alarm_history_get200_response_history_inner_time import V1AlarmHistoryGet200ResponseHistoryInnerTime
-from graphiant_sdk.models.v2_audit_logs_post_request_selector import V2AuditLogsPostRequestSelector
+from graphiant_sdk.models.auditmon_audit_logs_v2_selector import AuditmonAuditLogsV2Selector
+from graphiant_sdk.models.google_protobuf_timestamp import GoogleProtobufTimestamp
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -31,9 +31,9 @@ class V2AuditLogsPostRequest(BaseModel):
     """ # noqa: E501
     cursor_ref: Optional[StrictStr] = Field(default=None, alias="cursorRef")
     num_logs: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="numLogs")
-    old_ts: Optional[V1AlarmHistoryGet200ResponseHistoryInnerTime] = Field(default=None, alias="oldTs")
-    recent_ts: Optional[V1AlarmHistoryGet200ResponseHistoryInnerTime] = Field(default=None, alias="recentTs")
-    selector: Optional[V2AuditLogsPostRequestSelector] = None
+    old_ts: Optional[GoogleProtobufTimestamp] = Field(default=None, alias="oldTs")
+    recent_ts: Optional[GoogleProtobufTimestamp] = Field(default=None, alias="recentTs")
+    selector: Optional[AuditmonAuditLogsV2Selector] = None
     __properties: ClassVar[List[str]] = ["cursorRef", "numLogs", "oldTs", "recentTs", "selector"]
 
     model_config = ConfigDict(
@@ -98,9 +98,9 @@ class V2AuditLogsPostRequest(BaseModel):
         _obj = cls.model_validate({
             "cursorRef": obj.get("cursorRef"),
             "numLogs": obj.get("numLogs"),
-            "oldTs": V1AlarmHistoryGet200ResponseHistoryInnerTime.from_dict(obj["oldTs"]) if obj.get("oldTs") is not None else None,
-            "recentTs": V1AlarmHistoryGet200ResponseHistoryInnerTime.from_dict(obj["recentTs"]) if obj.get("recentTs") is not None else None,
-            "selector": V2AuditLogsPostRequestSelector.from_dict(obj["selector"]) if obj.get("selector") is not None else None
+            "oldTs": GoogleProtobufTimestamp.from_dict(obj["oldTs"]) if obj.get("oldTs") is not None else None,
+            "recentTs": GoogleProtobufTimestamp.from_dict(obj["recentTs"]) if obj.get("recentTs") is not None else None,
+            "selector": AuditmonAuditLogsV2Selector.from_dict(obj["selector"]) if obj.get("selector") is not None else None
         })
         return _obj
 

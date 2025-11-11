@@ -5,12 +5,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** | the id associated with an entity - consumer_id for consumer, and service_id for the producer/service | [optional] 
 **is_b2_b** | **bool** |  | [optional] 
 **is_provider** | **bool** |  | [optional] 
 **service_id** | **int** |  | [optional] 
 **site_id** | **int** |  | [optional] 
-**time_window** | [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**subscription_name** | **str** | Optional subscription name for filter | [optional] 
+**time_window** | [**StatsmonTimeWindow**](StatsmonTimeWindow.md) |  | [optional] 
 **vrf_id** | **int** |  | [optional] 
 
 ## Example

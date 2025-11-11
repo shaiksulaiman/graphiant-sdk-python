@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictBool
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, ConfigDict, Field, StrictBool
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -26,7 +26,7 @@ class V2AggregatedNotificationEnableDisablePostRequest(BaseModel):
     """
     V2AggregatedNotificationEnableDisablePostRequest
     """ # noqa: E501
-    enable: Optional[StrictBool] = None
+    enable: StrictBool = Field(description="Enable or disable aggregated notifications. True means enabled (required)")
     __properties: ClassVar[List[str]] = ["enable"]
 
     model_config = ConfigDict(

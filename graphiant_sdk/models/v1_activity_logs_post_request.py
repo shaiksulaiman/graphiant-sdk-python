@@ -20,9 +20,9 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from graphiant_sdk.models.v1_activity_logs_post_request_selector import V1ActivityLogsPostRequestSelector
-from graphiant_sdk.models.v1_activity_logs_post_request_selector_v2 import V1ActivityLogsPostRequestSelectorV2
-from graphiant_sdk.models.v1_alarm_history_get200_response_history_inner_time import V1AlarmHistoryGet200ResponseHistoryInnerTime
+from graphiant_sdk.models.auditmon_activity_logs_selector import AuditmonActivityLogsSelector
+from graphiant_sdk.models.auditmon_activity_logs_selector_v2 import AuditmonActivityLogsSelectorV2
+from graphiant_sdk.models.google_protobuf_timestamp import GoogleProtobufTimestamp
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -32,10 +32,10 @@ class V1ActivityLogsPostRequest(BaseModel):
     """ # noqa: E501
     cursor_ref: Optional[StrictStr] = Field(default=None, alias="cursorRef")
     num_logs: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="numLogs")
-    old_ts: Optional[V1AlarmHistoryGet200ResponseHistoryInnerTime] = Field(default=None, alias="oldTs")
-    recent_ts: Optional[V1AlarmHistoryGet200ResponseHistoryInnerTime] = Field(default=None, alias="recentTs")
-    selector: Optional[V1ActivityLogsPostRequestSelector] = None
-    selector_v2: Optional[V1ActivityLogsPostRequestSelectorV2] = Field(default=None, alias="selectorV2")
+    old_ts: Optional[GoogleProtobufTimestamp] = Field(default=None, alias="oldTs")
+    recent_ts: Optional[GoogleProtobufTimestamp] = Field(default=None, alias="recentTs")
+    selector: Optional[AuditmonActivityLogsSelector] = None
+    selector_v2: Optional[AuditmonActivityLogsSelectorV2] = Field(default=None, alias="selectorV2")
     __properties: ClassVar[List[str]] = ["cursorRef", "numLogs", "oldTs", "recentTs", "selector", "selectorV2"]
 
     model_config = ConfigDict(
@@ -103,10 +103,10 @@ class V1ActivityLogsPostRequest(BaseModel):
         _obj = cls.model_validate({
             "cursorRef": obj.get("cursorRef"),
             "numLogs": obj.get("numLogs"),
-            "oldTs": V1AlarmHistoryGet200ResponseHistoryInnerTime.from_dict(obj["oldTs"]) if obj.get("oldTs") is not None else None,
-            "recentTs": V1AlarmHistoryGet200ResponseHistoryInnerTime.from_dict(obj["recentTs"]) if obj.get("recentTs") is not None else None,
-            "selector": V1ActivityLogsPostRequestSelector.from_dict(obj["selector"]) if obj.get("selector") is not None else None,
-            "selectorV2": V1ActivityLogsPostRequestSelectorV2.from_dict(obj["selectorV2"]) if obj.get("selectorV2") is not None else None
+            "oldTs": GoogleProtobufTimestamp.from_dict(obj["oldTs"]) if obj.get("oldTs") is not None else None,
+            "recentTs": GoogleProtobufTimestamp.from_dict(obj["recentTs"]) if obj.get("recentTs") is not None else None,
+            "selector": AuditmonActivityLogsSelector.from_dict(obj["selector"]) if obj.get("selector") is not None else None,
+            "selectorV2": AuditmonActivityLogsSelectorV2.from_dict(obj["selectorV2"]) if obj.get("selectorV2") is not None else None
         })
         return _obj
 

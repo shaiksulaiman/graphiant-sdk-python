@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mute** | **bool** |  | [optional] 
+**mute** | **bool** | Flag to specify if you want to mute/unmute the notifications. | [optional] 
 
 ## Example
 

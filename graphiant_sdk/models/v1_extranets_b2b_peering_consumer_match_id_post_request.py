@@ -19,11 +19,11 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_extranets_b2b_consumer_post_request_site_information_inner import V1ExtranetsB2bConsumerPostRequestSiteInformationInner
-from graphiant_sdk.models.v1_extranets_b2b_peering_consumer_match_id_post_request_global_object_ops_value import V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue
-from graphiant_sdk.models.v1_extranets_b2b_peering_consumer_match_id_post_request_policy_inner import V1ExtranetsB2bPeeringConsumerMatchIdPostRequestPolicyInner
-from graphiant_sdk.models.v1_extranets_b2b_peering_consumer_match_id_post_request_site_to_site_vpn import V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpn
-from graphiant_sdk.models.v1_extranets_b2b_peering_match_service_to_customer_post_request_service_nat_inner import V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceNatInner
+from graphiant_sdk.models.mana_v2_b2b_extranet_peering_service_consumer_lan_segment_policy import ManaV2B2bExtranetPeeringServiceConsumerLanSegmentPolicy
+from graphiant_sdk.models.mana_v2_b2b_nat import ManaV2B2bNat
+from graphiant_sdk.models.mana_v2_b2b_site_information import ManaV2B2bSiteInformation
+from graphiant_sdk.models.mana_v2_global_object_service_ops import ManaV2GlobalObjectServiceOps
+from graphiant_sdk.models.mana_v2_guest_consumer_site_to_site_vpn_config import ManaV2GuestConsumerSiteToSiteVpnConfig
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -32,12 +32,12 @@ class V1ExtranetsB2bPeeringConsumerMatchIdPostRequest(BaseModel):
     V1ExtranetsB2bPeeringConsumerMatchIdPostRequest
     """ # noqa: E501
     customer_id: Optional[StrictInt] = Field(default=None, alias="customerId")
-    global_object_ops: Optional[Dict[str, V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue]] = Field(default=None, alias="globalObjectOps")
-    id: Optional[StrictInt] = None
-    nat: Optional[List[V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceNatInner]] = None
-    policy: Optional[List[V1ExtranetsB2bPeeringConsumerMatchIdPostRequestPolicyInner]] = None
-    site_information: Optional[List[V1ExtranetsB2bConsumerPostRequestSiteInformationInner]] = Field(default=None, alias="siteInformation")
-    site_to_site_vpn: Optional[V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpn] = Field(default=None, alias="siteToSiteVpn")
+    global_object_ops: Optional[Dict[str, ManaV2GlobalObjectServiceOps]] = Field(default=None, alias="globalObjectOps")
+    id: Optional[StrictInt] = Field(default=None, description="ID of the service.")
+    nat: Optional[List[ManaV2B2bNat]] = None
+    policy: Optional[List[ManaV2B2bExtranetPeeringServiceConsumerLanSegmentPolicy]] = None
+    site_information: Optional[List[ManaV2B2bSiteInformation]] = Field(default=None, alias="siteInformation")
+    site_to_site_vpn: Optional[ManaV2GuestConsumerSiteToSiteVpnConfig] = Field(default=None, alias="siteToSiteVpn")
     __properties: ClassVar[List[str]] = ["customerId", "globalObjectOps", "id", "nat", "policy", "siteInformation", "siteToSiteVpn"]
 
     model_config = ConfigDict(
@@ -124,16 +124,16 @@ class V1ExtranetsB2bPeeringConsumerMatchIdPostRequest(BaseModel):
         _obj = cls.model_validate({
             "customerId": obj.get("customerId"),
             "globalObjectOps": dict(
-                (_k, V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue.from_dict(_v))
+                (_k, ManaV2GlobalObjectServiceOps.from_dict(_v))
                 for _k, _v in obj["globalObjectOps"].items()
             )
             if obj.get("globalObjectOps") is not None
             else None,
             "id": obj.get("id"),
-            "nat": [V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceNatInner.from_dict(_item) for _item in obj["nat"]] if obj.get("nat") is not None else None,
-            "policy": [V1ExtranetsB2bPeeringConsumerMatchIdPostRequestPolicyInner.from_dict(_item) for _item in obj["policy"]] if obj.get("policy") is not None else None,
-            "siteInformation": [V1ExtranetsB2bConsumerPostRequestSiteInformationInner.from_dict(_item) for _item in obj["siteInformation"]] if obj.get("siteInformation") is not None else None,
-            "siteToSiteVpn": V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpn.from_dict(obj["siteToSiteVpn"]) if obj.get("siteToSiteVpn") is not None else None
+            "nat": [ManaV2B2bNat.from_dict(_item) for _item in obj["nat"]] if obj.get("nat") is not None else None,
+            "policy": [ManaV2B2bExtranetPeeringServiceConsumerLanSegmentPolicy.from_dict(_item) for _item in obj["policy"]] if obj.get("policy") is not None else None,
+            "siteInformation": [ManaV2B2bSiteInformation.from_dict(_item) for _item in obj["siteInformation"]] if obj.get("siteInformation") is not None else None,
+            "siteToSiteVpn": ManaV2GuestConsumerSiteToSiteVpnConfig.from_dict(obj["siteToSiteVpn"]) if obj.get("siteToSiteVpn") is not None else None
         })
         return _obj
 

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**invites** | [**List[V1ExtranetsB2bIdCustomerPostRequestInvitesInner]**](V1ExtranetsB2bIdCustomerPostRequestInvitesInner.md) |  | [optional] 
+**invites** | [**List[ManaV2B2bExtranetApplicationInvite]**](ManaV2B2bExtranetApplicationInvite.md) |  | [optional] 
 
 ## Example
 

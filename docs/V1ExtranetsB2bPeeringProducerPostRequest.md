@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**policy** | [**V1ExtranetsB2bPeeringProducerPostRequestPolicy**](V1ExtranetsB2bPeeringProducerPostRequestPolicy.md) |  | [optional] 
+**policy** | [**ManaV2B2bExtranetPeeringServiceProducerPolicy**](ManaV2B2bExtranetPeeringServiceProducerPolicy.md) |  | [optional] 
 **service_name** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
 

@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_global_site_lists_post_request_entries_inner import V1GlobalSiteListsPostRequestEntriesInner
+from graphiant_sdk.models.mana_v2_site_list_entry import ManaV2SiteListEntry
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class V1GlobalSiteListsPostRequest(BaseModel):
     V1GlobalSiteListsPostRequest
     """ # noqa: E501
     description: Optional[StrictStr] = None
-    entries: Optional[List[V1GlobalSiteListsPostRequestEntriesInner]] = None
+    entries: Optional[List[ManaV2SiteListEntry]] = None
     name: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["description", "entries", "name"]
 
@@ -91,7 +91,7 @@ class V1GlobalSiteListsPostRequest(BaseModel):
 
         _obj = cls.model_validate({
             "description": obj.get("description"),
-            "entries": [V1GlobalSiteListsPostRequestEntriesInner.from_dict(_item) for _item in obj["entries"]] if obj.get("entries") is not None else None,
+            "entries": [ManaV2SiteListEntry.from_dict(_item) for _item in obj["entries"]] if obj.get("entries") is not None else None,
             "name": obj.get("name")
         })
         return _obj

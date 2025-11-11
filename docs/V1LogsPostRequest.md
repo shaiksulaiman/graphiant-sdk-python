@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 **device_ids** | **List[int]** |  | [optional] 
 **histogram_bucket_size_sec** | **int** |  | [optional] 
 **num_logs** | **int** |  | [optional] 
-**old_ts** | [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
-**recent_ts** | [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
-**selectors** | [**List[V1LogsPostRequestSelectorsInner]**](V1LogsPostRequestSelectorsInner.md) |  | [optional] 
+**old_ts** | [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 
+**recent_ts** | [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 
+**selectors** | [**List[SyslogmonSyslogsSelector]**](SyslogmonSyslogsSelector.md) |  | [optional] 
 
 ## Example
 

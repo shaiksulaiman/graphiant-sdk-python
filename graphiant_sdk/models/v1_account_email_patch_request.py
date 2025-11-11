@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -26,7 +26,7 @@ class V1AccountEmailPatchRequest(BaseModel):
     """
     V1AccountEmailPatchRequest
     """ # noqa: E501
-    email: Optional[StrictStr] = None
+    email: StrictStr = Field(description=" (required)")
     __properties: ClassVar[List[str]] = ["email"]
 
     model_config = ConfigDict(

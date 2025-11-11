@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hard** | **bool** |  | [optional] 
-**lan_segment** | **str** |  | [optional] 
-**local_interface** | **str** |  | [optional] 
-**neighbor** | **str** |  | [optional] 
+**hard** | **bool** | BGP process restarts if set to true. if false, BGP route is only relearned | [optional] 
+**lan_segment** | **str** | The segment over which this route is learned | [optional] 
+**local_interface** | **str** | The local interface over which this route is learned | [optional] 
+**neighbor** | **str** | The neighbor to reset | [optional] 
 
 ## Example
 

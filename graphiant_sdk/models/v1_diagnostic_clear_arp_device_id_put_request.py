@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_diagnostic_clear_arp_device_id_put_request_entry_inner import V1DiagnosticClearArpDeviceIdPutRequestEntryInner
+from graphiant_sdk.models.diagnostic_tools_arp_entry import DiagnosticToolsArpEntry
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +27,7 @@ class V1DiagnosticClearArpDeviceIdPutRequest(BaseModel):
     """
     V1DiagnosticClearArpDeviceIdPutRequest
     """ # noqa: E501
-    entry: Optional[List[V1DiagnosticClearArpDeviceIdPutRequestEntryInner]] = None
+    entry: Optional[List[DiagnosticToolsArpEntry]] = None
     __properties: ClassVar[List[str]] = ["entry"]
 
     model_config = ConfigDict(
@@ -88,7 +88,7 @@ class V1DiagnosticClearArpDeviceIdPutRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "entry": [V1DiagnosticClearArpDeviceIdPutRequestEntryInner.from_dict(_item) for _item in obj["entry"]] if obj.get("entry") is not None else None
+            "entry": [DiagnosticToolsArpEntry.from_dict(_item) for _item in obj["entry"]] if obj.get("entry") is not None else None
         })
         return _obj
 

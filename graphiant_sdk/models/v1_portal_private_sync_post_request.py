@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v1_portal_private_sync_post_request_inventory_inner import V1PortalPrivateSyncPostRequestInventoryInner
+from graphiant_sdk.models.onboarding_inventory import OnboardingInventory
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class V1PortalPrivateSyncPostRequest(BaseModel):
     V1PortalPrivateSyncPostRequest
     """ # noqa: E501
     gcs_name: Optional[StrictStr] = Field(default=None, alias="gcsName")
-    inventory: Optional[List[V1PortalPrivateSyncPostRequestInventoryInner]] = None
+    inventory: Optional[List[OnboardingInventory]] = None
     is_full_sync: Optional[StrictBool] = Field(default=None, alias="isFullSync")
     __properties: ClassVar[List[str]] = ["gcsName", "inventory", "isFullSync"]
 
@@ -91,7 +91,7 @@ class V1PortalPrivateSyncPostRequest(BaseModel):
 
         _obj = cls.model_validate({
             "gcsName": obj.get("gcsName"),
-            "inventory": [V1PortalPrivateSyncPostRequestInventoryInner.from_dict(_item) for _item in obj["inventory"]] if obj.get("inventory") is not None else None,
+            "inventory": [OnboardingInventory.from_dict(_item) for _item in obj["inventory"]] if obj.get("inventory") is not None else None,
             "isFullSync": obj.get("isFullSync")
         })
         return _obj

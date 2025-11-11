@@ -19,8 +19,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from graphiant_sdk.models.v2_monitoring_site_twamp_site_id_post_request_selectors_inner import V2MonitoringSiteTwampSiteIdPostRequestSelectorsInner
-from graphiant_sdk.models.v2_notificationlist_post_request_time_window import V2NotificationlistPostRequestTimeWindow
+from graphiant_sdk.models.statsmon_v2_time_window import StatsmonV2TimeWindow
+from graphiant_sdk.models.statsmon_v2_twamp_stats_selector import StatsmonV2TwampStatsSelector
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,8 +28,8 @@ class V2MonitoringSiteTwampSiteIdPostRequest(BaseModel):
     """
     V2MonitoringSiteTwampSiteIdPostRequest
     """ # noqa: E501
-    selectors: Optional[List[V2MonitoringSiteTwampSiteIdPostRequestSelectorsInner]] = None
-    time_window: Optional[V2NotificationlistPostRequestTimeWindow] = Field(default=None, alias="timeWindow")
+    selectors: Optional[List[StatsmonV2TwampStatsSelector]] = None
+    time_window: Optional[StatsmonV2TimeWindow] = Field(default=None, alias="timeWindow")
     __properties: ClassVar[List[str]] = ["selectors", "timeWindow"]
 
     model_config = ConfigDict(
@@ -93,8 +93,8 @@ class V2MonitoringSiteTwampSiteIdPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "selectors": [V2MonitoringSiteTwampSiteIdPostRequestSelectorsInner.from_dict(_item) for _item in obj["selectors"]] if obj.get("selectors") is not None else None,
-            "timeWindow": V2NotificationlistPostRequestTimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
+            "selectors": [StatsmonV2TwampStatsSelector.from_dict(_item) for _item in obj["selectors"]] if obj.get("selectors") is not None else None,
+            "timeWindow": StatsmonV2TimeWindow.from_dict(obj["timeWindow"]) if obj.get("timeWindow") is not None else None
         })
         return _obj
 

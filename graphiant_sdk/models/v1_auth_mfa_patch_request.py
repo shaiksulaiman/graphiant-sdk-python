@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -26,7 +26,7 @@ class V1AuthMfaPatchRequest(BaseModel):
     """
     V1AuthMfaPatchRequest
     """ # noqa: E501
-    allowed_mfa_types: Optional[List[StrictStr]] = Field(default=None, alias="allowedMfaTypes")
+    allowed_mfa_types: List[StrictStr] = Field(alias="allowedMfaTypes")
     __properties: ClassVar[List[str]] = ["allowedMfaTypes"]
 
     model_config = ConfigDict(
