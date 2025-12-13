@@ -3,3 +3,5 @@ LICENSE
 setup.py
 README.md
 .gitignore
+.gitlab-ci.yml
+.github/workflows/*
