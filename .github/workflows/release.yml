@@ -1,0 +1,97 @@
+name: Release SDK
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Package version to publish (must match setup.py/pyproject.toml)'
+        required: true
+        type: string
+      publish_to_pypi:
+        description: 'Publish to PyPI'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  publish:
+    name: Publish to PyPI
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - name: Check user permissions
+        run: |
+          PERMISSION=$(curl -s -H "Authorization: Bearer ${{ github.token }}" \
+            "https://api.github.com/repos/${{ github.repository }}/collaborators/${{ github.actor }}/permission" | \
+            jq -r '.permission')
+          
+          if [ "$PERMISSION" != "admin" ] && [ "$PERMISSION" != "maintain" ]; then
+            echo "❌ Error: Only repository admins and maintainers can trigger this workflow."
+            echo "   Current user: ${{ github.actor }}"
+            echo "   Permission level: $PERMISSION"
+            echo "   Required: admin or maintain"
+            exit 1
+          fi
+          
+          echo "✅ User ${{ github.actor }} has permission level: $PERMISSION"
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install build wheel twine
+
+      - name: Verify version
+        run: |
+          EXPECTED_VERSION="${{ inputs.version }}"
+          ACTUAL_VERSION=$(python -c "import setup; print(setup.VERSION)" 2>/dev/null || python -c "import tomli; print(tomli.load(open('pyproject.toml'))['project']['version'])" 2>/dev/null || echo "")
+          
+          if [ -z "$ACTUAL_VERSION" ]; then
+            echo "⚠️  Warning: Could not determine version from setup.py or pyproject.toml"
+          elif [ "$EXPECTED_VERSION" != "$ACTUAL_VERSION" ]; then
+            echo "⚠️  Warning: Input version ($EXPECTED_VERSION) does not match package version ($ACTUAL_VERSION)"
+            echo "   Proceeding with package version: $ACTUAL_VERSION"
+          else
+            echo "✅ Version verified: $ACTUAL_VERSION"
+          fi
+
+      - name: Build package
+        run: |
+          python -m build
+
+      - name: Check package
+        run: |
+          twine check dist/*
+
+      - name: Publish to PyPI
+        if: inputs.publish_to_pypi == true
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: |
+          if [ -z "$TWINE_PASSWORD" ]; then
+            echo "PYPI_API_TOKEN secret is not set. Skipping publish."
+            echo "   To enable publishing, configure PYPI_API_TOKEN as a secret in GitHub:"
+            echo "   - Go to Settings → Secrets and variables → Actions"
+            echo "   - Add PYPI_API_TOKEN (get token from https://pypi.org/manage/account/token/)"
+            exit 0
+          fi
+          twine upload dist/*
+
+      - name: Upload build artifacts
+        if: inputs.publish_to_pypi == false
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-package
+          path: dist/*
+          retention-days: 30

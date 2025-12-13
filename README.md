@@ -1,9 +1,10 @@
 # Graphiant SDK Python
 
 [![PyPI version](https://badge.fury.io/py/graphiant-sdk.svg)](https://badge.fury.io/py/graphiant-sdk)
-[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg)](https://docs.graphiant.com/docs/graphiant-sdk-python)
+[![CI/CD](https://github.com/Graphiant-Inc/graphiant-sdk-python/actions/workflows/test.yml/badge.svg)](https://github.com/Graphiant-Inc/graphiant-sdk-python/actions)
 
 A comprehensive Python SDK for [Graphiant Network-as-a-Service (NaaS)](https://www.graphiant.com) offerings, providing seamless integration with Graphiant's network automation platform.
 
@@ -325,9 +326,20 @@ def get_device_info(api, bearer_token, device_id):
 
 ### Prerequisites
 
-- Python 3.12+
+- Python 3.9+ (3.12+ recommended)
 - Git
 - OpenAPI Generator (for code generation)
+
+### CI/CD Workflows
+
+This repository uses GitHub Actions for continuous integration and deployment:
+
+- **Linting** (`lint.yml`): Runs Flake8 and MyPy type checking on pull requests and pushes
+- **Testing** (`test.yml`): Runs pytest with coverage across Python 3.9, 3.10, 3.11, 3.12, and 3.13
+- **Building** (`build.yml`): Builds wheel and source distributions
+- **Releasing** (`release.yml`): Publishes to PyPI (manual trigger, admin-only)
+
+See [`.github/workflows/README.md`](.github/workflows/README.md) for detailed workflow documentation.
 
 ### Building from Source
 
@@ -433,11 +445,24 @@ host = os.Getenv("GRAPHIANT_HOST")
 
 ## 🤝 Contributing
 
+We welcome contributions! Please follow these steps:
+
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+3. Make your changes and ensure they pass local tests:
+   ```bash
+   # Run linting
+   flake8 graphiant_sdk/
+   mypy graphiant_sdk/
+   
+   # Run tests
+   pytest --cov=graphiant_sdk
+   ```
+4. Commit your changes with a clear message (`git commit -m 'Add amazing feature'`)
+5. Push to the branch (`git push origin feature/amazing-feature`)
+6. Open a Pull Request
+
+**Note**: All pull requests automatically run CI/CD checks (linting, testing across multiple Python versions). Ensure all checks pass before requesting review.
 
 ## 📄 License
 

@@ -175,6 +175,4 @@ cython_debug/
 
 .DS_Store
 .openapi-generator
-.github
-.gitlab-ci.yml
 git_push.sh
