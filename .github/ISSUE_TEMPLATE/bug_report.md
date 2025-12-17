@@ -23,16 +23,18 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+**Environment (please complete the following information):**
+ - OS: [e.g. macOS, Linux, Windows]
+ - Python version: [e.g. 3.9, 3.10, 3.11, 3.12, 3.13]
+ - SDK version: [e.g. 25.12.1] (run `python -c "import graphiant_sdk; print(graphiant_sdk.__version__)"` to check)
+ - Installation method: [e.g. pip, from source]
 
 **Additional context**
 Add any other context about the problem here.
+
+**SDK Information**
+If applicable, please include:
+- API endpoint being used
+- Request/response details (sanitize any sensitive information)
+- Error messages or stack traces
+- Steps to reproduce the issue
