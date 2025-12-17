@@ -15,6 +15,7 @@ Refer [Graphiant Docs](https://docs.graphiant.com) to get started with [Graphian
 - **Official Documentation**: [Graphiant SDK Python Guide](https://docs.graphiant.com/docs/graphiant-sdk-python) <-> [Graphiant Automation Docs](https://docs.graphiant.com/docs/automation)
 - **API Reference**: [Graphiant SDK Python API Docs](docs/DefaultApi.md) <-> [Graphiant Portal REST API Guide](https://docs.graphiant.com/docs/graphiant-portal-rest-api)
 - **Package**: [PyPI package - graphiant-sdk](https://pypi.org/project/graphiant-sdk)
+- **Changelog**: [CHANGELOG.md](CHANGELOG.md) - Detailed release notes and version history
 
 ## ✨ Features
 
@@ -478,6 +479,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Official Documentation**: [Graphiant SDK Python Guide](https://docs.graphiant.com/docs/graphiant-sdk-python) <-> [Graphiant Automation Docs](https://docs.graphiant.com/docs/automation)
 - **API Reference**: [Graphiant SDK Python API Docs](docs/DefaultApi.md) <-> [Graphiant Portal REST API Guide](https://docs.graphiant.com/docs/graphiant-portal-rest-api)
+- **Changelog**: [CHANGELOG.md](CHANGELOG.md) - Detailed release notes and version history
 - **Issues**: [GitHub Issues](https://github.com/Graphiant-Inc/graphiant-sdk-python/issues)
 - **Email**: support@graphiant.com
 
