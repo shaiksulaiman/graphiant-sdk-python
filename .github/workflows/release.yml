@@ -12,13 +12,18 @@ on:
         required: false
         type: boolean
         default: false
+      create_tag:
+        description: 'Create git tag and GitHub release'
+        required: false
+        type: boolean
+        default: true
 
 jobs:
   publish:
     name: Publish to PyPI
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       actions: read
     steps:
       - name: Check user permissions
@@ -39,6 +44,8 @@ jobs:
 
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -80,13 +87,83 @@ jobs:
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           if [ -z "$TWINE_PASSWORD" ]; then
-            echo "PYPI_API_TOKEN secret is not set. Skipping publish."
+            echo "❌ PYPI_API_TOKEN secret is not set. Skipping publish."
             echo "   To enable publishing, configure PYPI_API_TOKEN as a secret in GitHub:"
             echo "   - Go to Settings → Secrets and variables → Actions"
             echo "   - Add PYPI_API_TOKEN (get token from https://pypi.org/manage/account/token/)"
-            exit 0
+            echo "   - Token must be a project-scoped API token with 'Upload packages' permission"
+            exit 1
           fi
-          twine upload dist/*
+          
+          # Verify token format (PyPI tokens start with 'pypi-' for legacy tokens or are long alphanumeric strings)
+          TOKEN_LENGTH=${#TWINE_PASSWORD}
+          if [ "$TOKEN_LENGTH" -lt 20 ]; then
+            echo "⚠️  Warning: Token appears to be too short (${TOKEN_LENGTH} characters)"
+            echo "   PyPI API tokens are typically 40+ characters"
+          fi
+          
+          echo "📦 Uploading package to PyPI..."
+          echo "   Package files:"
+          ls -lh dist/*
+          
+          # Use verbose mode for better error messages
+          if twine upload --verbose dist/*; then
+            echo "✅ Successfully uploaded package to PyPI"
+          else
+            echo "❌ Failed to upload package to PyPI"
+            echo ""
+            echo "Common issues:"
+            echo "  1. Token is invalid or expired - Generate a new token at https://pypi.org/manage/account/token/"
+            echo "  2. Token doesn't have 'Upload packages' permission - Check token scope"
+            echo "  3. Token is for TestPyPI instead of PyPI - Use correct token for production PyPI"
+            echo "  4. Package version already exists - PyPI doesn't allow overwriting existing versions"
+            echo "  5. Token has extra whitespace - Check secret value in GitHub settings"
+            echo ""
+            echo "To debug:"
+            echo "  - Check token at https://pypi.org/manage/account/token/"
+            echo "  - Verify token has 'Upload packages' scope for this project"
+            echo "  - Ensure package version doesn't already exist on PyPI"
+            exit 1
+          fi
+
+      - name: Create Git tag
+        if: inputs.publish_to_pypi == true && inputs.create_tag == true
+        id: tag
+        run: |
+          VERSION="${{ inputs.version }}"
+          # Ensure version starts with 'v'
+          if [[ ! "$VERSION" =~ ^v ]]; then
+            VERSION="v$VERSION"
+          fi
+          
+          # Check if tag already exists
+          if git rev-parse "$VERSION" >/dev/null 2>&1; then
+            echo "⚠️  Warning: Tag $VERSION already exists"
+            exit 1
+          fi
+          
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git tag -a "$VERSION" -m "Release $VERSION"
+          git push origin "$VERSION"
+          
+          echo "✅ Created and pushed tag: $VERSION"
+          echo "tag=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        if: inputs.publish_to_pypi == true && inputs.create_tag == true
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          release_name: Release ${{ steps.tag.outputs.tag }}
+          body: |
+            ## Release ${{ steps.tag.outputs.tag }}
+            
+            See [CHANGELOG.md](CHANGELOG.md) for details.
+          draft: false
+          prerelease: false
 
       - name: Upload build artifacts
         if: inputs.publish_to_pypi == false
