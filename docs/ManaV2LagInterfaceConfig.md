@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **ipv6** | [**ManaV2InterfaceIpConfig**](ManaV2InterfaceIpConfig.md) |  | [optional] 
 **lacp** | [**ManaV2LacpConfig**](ManaV2LacpConfig.md) |  | [optional] 
 **lag_members** | [**Dict[str, ManaV2NullableLagMemberInterface]**](ManaV2NullableLagMemberInterface.md) |  | [optional] 
+**macsec** | [**ManaV2NullableMaCsecConfiguration**](ManaV2NullableMaCsecConfiguration.md) |  | [optional] 
 **minimum_members** | **int** |  | [optional] 
 **mtu** | **int** |  | [optional] 
 **segment** | **str** |  | [optional] 

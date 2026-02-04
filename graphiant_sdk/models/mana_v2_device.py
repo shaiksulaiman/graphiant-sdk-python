@@ -37,6 +37,7 @@ from graphiant_sdk.models.mana_v2_route_tag import ManaV2RouteTag
 from graphiant_sdk.models.mana_v2_routing_policy import ManaV2RoutingPolicy
 from graphiant_sdk.models.mana_v2_site import ManaV2Site
 from graphiant_sdk.models.mana_v2_site_to_site_i_psec import ManaV2SiteToSiteIPsec
+from graphiant_sdk.models.mana_v2_sla_conformance import ManaV2SlaConformance
 from graphiant_sdk.models.mana_v2_snmp import ManaV2Snmp
 from graphiant_sdk.models.mana_v2_vrf import ManaV2Vrf
 from typing import Optional, Set
@@ -85,6 +86,7 @@ class ManaV2Device(BaseModel):
     segments: Optional[List[ManaV2Vrf]] = None
     serial_number: Optional[StrictStr] = Field(default=None, alias="serialNumber")
     site: Optional[ManaV2Site] = None
+    sla_conformance: Optional[ManaV2SlaConformance] = Field(default=None, alias="slaConformance")
     snmp: Optional[ManaV2Snmp] = None
     software_version: Optional[StrictStr] = Field(default=None, alias="softwareVersion")
     static_routes_enabled: Optional[StrictBool] = Field(default=None, alias="staticRoutesEnabled")
@@ -92,7 +94,7 @@ class ManaV2Device(BaseModel):
     traffic_policy: Optional[ManaV2ForwardingPolicy] = Field(default=None, alias="trafficPolicy")
     uptime: Optional[GoogleProtobufDuration] = None
     vrrp_enabled: Optional[StrictBool] = Field(default=None, alias="vrrpEnabled")
-    __properties: ClassVar[List[str]] = ["bgp", "bgpEnabled", "circuits", "configUpdatedAt", "createdAt", "dhcpServerEnabled", "dns", "gdi", "hostname", "id", "interfaces", "internalState", "ipfixEnabled", "ipfixExporters", "ipsecTunnels", "lastBootedAt", "lldpEnabled", "localRouteTag", "localWebServerPassword", "location", "maintenanceMode", "natPolicy", "notes", "ntp", "operStaled", "operStaledAt", "operUpdatedAt", "ospfv2Enabled", "ospfv3Enabled", "platform", "prefixSets", "rebootReason", "region", "regionOverride", "role", "routingPolicies", "segments", "serialNumber", "site", "snmp", "softwareVersion", "staticRoutesEnabled", "status", "trafficPolicy", "uptime", "vrrpEnabled"]
+    __properties: ClassVar[List[str]] = ["bgp", "bgpEnabled", "circuits", "configUpdatedAt", "createdAt", "dhcpServerEnabled", "dns", "gdi", "hostname", "id", "interfaces", "internalState", "ipfixEnabled", "ipfixExporters", "ipsecTunnels", "lastBootedAt", "lldpEnabled", "localRouteTag", "localWebServerPassword", "location", "maintenanceMode", "natPolicy", "notes", "ntp", "operStaled", "operStaledAt", "operUpdatedAt", "ospfv2Enabled", "ospfv3Enabled", "platform", "prefixSets", "rebootReason", "region", "regionOverride", "role", "routingPolicies", "segments", "serialNumber", "site", "slaConformance", "snmp", "softwareVersion", "staticRoutesEnabled", "status", "trafficPolicy", "uptime", "vrrpEnabled"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -224,6 +226,9 @@ class ManaV2Device(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of site
         if self.site:
             _dict['site'] = self.site.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of sla_conformance
+        if self.sla_conformance:
+            _dict['slaConformance'] = self.sla_conformance.to_dict()
         # override the default output from pydantic by calling `to_dict()` of snmp
         if self.snmp:
             _dict['snmp'] = self.snmp.to_dict()
@@ -284,6 +289,7 @@ class ManaV2Device(BaseModel):
             "segments": [ManaV2Vrf.from_dict(_item) for _item in obj["segments"]] if obj.get("segments") is not None else None,
             "serialNumber": obj.get("serialNumber"),
             "site": ManaV2Site.from_dict(obj["site"]) if obj.get("site") is not None else None,
+            "slaConformance": ManaV2SlaConformance.from_dict(obj["slaConformance"]) if obj.get("slaConformance") is not None else None,
             "snmp": ManaV2Snmp.from_dict(obj["snmp"]) if obj.get("snmp") is not None else None,
             "softwareVersion": obj.get("softwareVersion"),
             "staticRoutesEnabled": obj.get("staticRoutesEnabled"),

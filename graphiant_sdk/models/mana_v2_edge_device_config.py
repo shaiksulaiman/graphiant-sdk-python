@@ -34,6 +34,7 @@ from graphiant_sdk.models.mana_v2_nullable_ntp_config import ManaV2NullableNtpCo
 from graphiant_sdk.models.mana_v2_nullable_prefix_set_config import ManaV2NullablePrefixSetConfig
 from graphiant_sdk.models.mana_v2_nullable_route_tag_set import ManaV2NullableRouteTagSet
 from graphiant_sdk.models.mana_v2_nullable_routing_policy_config import ManaV2NullableRoutingPolicyConfig
+from graphiant_sdk.models.mana_v2_nullable_sla_conformance import ManaV2NullableSlaConformance
 from graphiant_sdk.models.mana_v2_nullable_snmp_config import ManaV2NullableSnmpConfig
 from graphiant_sdk.models.mana_v2_vrf_config import ManaV2VrfConfig
 from typing import Optional, Set
@@ -69,12 +70,13 @@ class ManaV2EdgeDeviceConfig(BaseModel):
     segments: Optional[Dict[str, ManaV2VrfConfig]] = None
     site: Optional[ManaV2NewSite] = None
     site_to_site_vpn: Optional[Dict[str, ManaV2NullableIPsecTunnelConfig]] = Field(default=None, alias="siteToSiteVpn")
+    sla_conformance: Optional[ManaV2NullableSlaConformance] = Field(default=None, alias="slaConformance")
     snmp: Optional[ManaV2NullableSnmpConfig] = None
     snmp_global_object: Optional[Dict[str, ManaV2NullableSnmpConfig]] = Field(default=None, alias="snmpGlobalObject")
     static_routes_enabled: Optional[StrictBool] = Field(default=None, alias="staticRoutesEnabled")
     traffic_policy: Optional[ManaV2ForwardingPolicyConfig] = Field(default=None, alias="trafficPolicy")
     vrrp_enabled: Optional[StrictBool] = Field(default=None, alias="vrrpEnabled")
-    __properties: ClassVar[List[str]] = ["bgpEnabled", "bgpInstance", "circuits", "dhcpServerEnabled", "dns", "interfaces", "ipfixEnabled", "ipfixExporters", "lagInterfaces", "lldpEnabled", "localRouteTag", "localWebServerPassword", "location", "maintenanceMode", "name", "natPolicy", "ntpGlobalObject", "ospfv2Enabled", "ospfv3Enabled", "prefixSets", "region", "regionName", "routePolicies", "segments", "site", "siteToSiteVpn", "snmp", "snmpGlobalObject", "staticRoutesEnabled", "trafficPolicy", "vrrpEnabled"]
+    __properties: ClassVar[List[str]] = ["bgpEnabled", "bgpInstance", "circuits", "dhcpServerEnabled", "dns", "interfaces", "ipfixEnabled", "ipfixExporters", "lagInterfaces", "lldpEnabled", "localRouteTag", "localWebServerPassword", "location", "maintenanceMode", "name", "natPolicy", "ntpGlobalObject", "ospfv2Enabled", "ospfv3Enabled", "prefixSets", "region", "regionName", "routePolicies", "segments", "site", "siteToSiteVpn", "slaConformance", "snmp", "snmpGlobalObject", "staticRoutesEnabled", "trafficPolicy", "vrrpEnabled"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -196,6 +198,9 @@ class ManaV2EdgeDeviceConfig(BaseModel):
                 if self.site_to_site_vpn[_key_site_to_site_vpn]:
                     _field_dict[_key_site_to_site_vpn] = self.site_to_site_vpn[_key_site_to_site_vpn].to_dict()
             _dict['siteToSiteVpn'] = _field_dict
+        # override the default output from pydantic by calling `to_dict()` of sla_conformance
+        if self.sla_conformance:
+            _dict['slaConformance'] = self.sla_conformance.to_dict()
         # override the default output from pydantic by calling `to_dict()` of snmp
         if self.snmp:
             _dict['snmp'] = self.snmp.to_dict()
@@ -292,6 +297,7 @@ class ManaV2EdgeDeviceConfig(BaseModel):
             )
             if obj.get("siteToSiteVpn") is not None
             else None,
+            "slaConformance": ManaV2NullableSlaConformance.from_dict(obj["slaConformance"]) if obj.get("slaConformance") is not None else None,
             "snmp": ManaV2NullableSnmpConfig.from_dict(obj["snmp"]) if obj.get("snmp") is not None else None,
             "snmpGlobalObject": dict(
                 (_k, ManaV2NullableSnmpConfig.from_dict(_v))

@@ -8,6 +8,10 @@ Name | Type | Description | Notes
 **auth** | **bool** |  | [optional] 
 **token** | **str** |  | [optional] 
 **account_type** | **str** |  | [optional] 
+**email** | **str** | User email address (returned for MFA users) | [optional] 
+**mfa_type** | **str** | MFA type (returned for MFA users) | [optional] 
+**state_token** | **str** | State token for MFA verification (returned for MFA users) | [optional] 
+**status** | **str** | Authentication status (returned for MFA users) | [optional] 
 **entry_point** | **str** |  | [optional] 
 
 ## Example

@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **segments** | [**Dict[str, ManaV2VrfConfig]**](ManaV2VrfConfig.md) |  | [optional] 
 **site** | [**ManaV2NewSite**](ManaV2NewSite.md) |  | [optional] 
 **site_to_site_vpn** | [**Dict[str, ManaV2NullableIPsecTunnelConfig]**](ManaV2NullableIPsecTunnelConfig.md) |  | [optional] 
+**sla_conformance** | [**ManaV2NullableSlaConformance**](ManaV2NullableSlaConformance.md) |  | [optional] 
 **snmp** | [**ManaV2NullableSnmpConfig**](ManaV2NullableSnmpConfig.md) |  | [optional] 
 **snmp_global_object** | [**Dict[str, ManaV2NullableSnmpConfig]**](ManaV2NullableSnmpConfig.md) |  | [optional] 
 **static_routes_enabled** | **bool** |  | [optional] 

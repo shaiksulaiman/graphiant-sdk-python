@@ -30,9 +30,11 @@ class IamCustomer(BaseModel):
     admin_email: Optional[StrictStr] = Field(default=None, alias="adminEmail")
     company_name: Optional[StrictStr] = Field(default=None, alias="companyName")
     counts: Optional[IamCounts] = None
+    description: Optional[StrictStr] = None
     enterprise_id: Optional[StrictInt] = Field(default=None, alias="enterpriseId")
     impersonation_enabled: Optional[StrictBool] = Field(default=None, alias="impersonationEnabled")
-    __properties: ClassVar[List[str]] = ["adminEmail", "companyName", "counts", "enterpriseId", "impersonationEnabled"]
+    marketplace_id: Optional[StrictStr] = Field(default=None, alias="marketplaceId")
+    __properties: ClassVar[List[str]] = ["adminEmail", "companyName", "counts", "description", "enterpriseId", "impersonationEnabled", "marketplaceId"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -91,8 +93,10 @@ class IamCustomer(BaseModel):
             "adminEmail": obj.get("adminEmail"),
             "companyName": obj.get("companyName"),
             "counts": IamCounts.from_dict(obj["counts"]) if obj.get("counts") is not None else None,
+            "description": obj.get("description"),
             "enterpriseId": obj.get("enterpriseId"),
-            "impersonationEnabled": obj.get("impersonationEnabled")
+            "impersonationEnabled": obj.get("impersonationEnabled"),
+            "marketplaceId": obj.get("marketplaceId")
         })
         return _obj
 

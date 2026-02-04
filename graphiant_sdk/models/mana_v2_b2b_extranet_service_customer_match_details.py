@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from graphiant_sdk.models.mana_v2_b2_b_extranet_service_customer_match_details_customer import ManaV2B2BExtranetServiceCustomerMatchDetailsCustomer
 from graphiant_sdk.models.mana_v2_b2_b_extranet_service_customer_match_details_producer_prefix import ManaV2B2BExtranetServiceCustomerMatchDetailsProducerPrefix
@@ -29,11 +29,14 @@ class ManaV2B2bExtranetServiceCustomerMatchDetails(BaseModel):
     """
     ManaV2B2bExtranetServiceCustomerMatchDetails
     """ # noqa: E501
+    consumer_id: Optional[StrictInt] = Field(default=None, alias="consumerId")
     consumer_prefixes: Optional[List[StrictStr]] = Field(default=None, alias="consumerPrefixes")
     customer: Optional[ManaV2B2BExtranetServiceCustomerMatchDetailsCustomer] = None
+    old_consumer_prefixes: Optional[List[StrictStr]] = Field(default=None, alias="oldConsumerPrefixes")
+    old_service_prefixes: Optional[List[ManaV2B2BExtranetServiceCustomerMatchDetailsProducerPrefix]] = Field(default=None, alias="oldServicePrefixes")
     service: Optional[ManaV2B2BExtranetServiceCustomerMatchDetailsService] = None
     service_prefixes: Optional[List[ManaV2B2BExtranetServiceCustomerMatchDetailsProducerPrefix]] = Field(default=None, alias="servicePrefixes")
-    __properties: ClassVar[List[str]] = ["consumerPrefixes", "customer", "service", "servicePrefixes"]
+    __properties: ClassVar[List[str]] = ["consumerId", "consumerPrefixes", "customer", "oldConsumerPrefixes", "oldServicePrefixes", "service", "servicePrefixes"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -77,6 +80,13 @@ class ManaV2B2bExtranetServiceCustomerMatchDetails(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of customer
         if self.customer:
             _dict['customer'] = self.customer.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in old_service_prefixes (list)
+        _items = []
+        if self.old_service_prefixes:
+            for _item_old_service_prefixes in self.old_service_prefixes:
+                if _item_old_service_prefixes:
+                    _items.append(_item_old_service_prefixes.to_dict())
+            _dict['oldServicePrefixes'] = _items
         # override the default output from pydantic by calling `to_dict()` of service
         if self.service:
             _dict['service'] = self.service.to_dict()
@@ -99,8 +109,11 @@ class ManaV2B2bExtranetServiceCustomerMatchDetails(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "consumerId": obj.get("consumerId"),
             "consumerPrefixes": obj.get("consumerPrefixes"),
             "customer": ManaV2B2BExtranetServiceCustomerMatchDetailsCustomer.from_dict(obj["customer"]) if obj.get("customer") is not None else None,
+            "oldConsumerPrefixes": obj.get("oldConsumerPrefixes"),
+            "oldServicePrefixes": [ManaV2B2BExtranetServiceCustomerMatchDetailsProducerPrefix.from_dict(_item) for _item in obj["oldServicePrefixes"]] if obj.get("oldServicePrefixes") is not None else None,
             "service": ManaV2B2BExtranetServiceCustomerMatchDetailsService.from_dict(obj["service"]) if obj.get("service") is not None else None,
             "servicePrefixes": [ManaV2B2BExtranetServiceCustomerMatchDetailsProducerPrefix.from_dict(_item) for _item in obj["servicePrefixes"]] if obj.get("servicePrefixes") is not None else None
         })

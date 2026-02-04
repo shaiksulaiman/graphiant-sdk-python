@@ -8,8 +8,10 @@ Name | Type | Description | Notes
 **admin_email** | **str** |  | [optional] 
 **company_name** | **str** |  | [optional] 
 **counts** | [**IamCounts**](IamCounts.md) |  | [optional] 
+**description** | **str** |  | [optional] 
 **enterprise_id** | **int** |  | [optional] 
 **impersonation_enabled** | **bool** |  | [optional] 
+**marketplace_id** | **str** |  | [optional] 
 
 ## Example
 
