@@ -5,8 +5,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**consumer_id** | **int** |  | [optional] 
 **consumer_prefixes** | **List[str]** |  | [optional] 
 **customer** | [**ManaV2B2BExtranetServiceCustomerMatchDetailsCustomer**](ManaV2B2BExtranetServiceCustomerMatchDetailsCustomer.md) |  | [optional] 
+**old_consumer_prefixes** | **List[str]** |  | [optional] 
+**old_service_prefixes** | [**List[ManaV2B2BExtranetServiceCustomerMatchDetailsProducerPrefix]**](ManaV2B2BExtranetServiceCustomerMatchDetailsProducerPrefix.md) |  | [optional] 
 **service** | [**ManaV2B2BExtranetServiceCustomerMatchDetailsService**](ManaV2B2BExtranetServiceCustomerMatchDetailsService.md) |  | [optional] 
 **service_prefixes** | [**List[ManaV2B2BExtranetServiceCustomerMatchDetailsProducerPrefix]**](ManaV2B2BExtranetServiceCustomerMatchDetailsProducerPrefix.md) |  | [optional] 
 

@@ -24,6 +24,7 @@ from graphiant_sdk.models.mana_v2_interface_ip_config import ManaV2InterfaceIpCo
 from graphiant_sdk.models.mana_v2_lacp_config import ManaV2LacpConfig
 from graphiant_sdk.models.mana_v2_nullable_interface_lagvlan_config import ManaV2NullableInterfaceLagvlanConfig
 from graphiant_sdk.models.mana_v2_nullable_lag_member_interface import ManaV2NullableLagMemberInterface
+from graphiant_sdk.models.mana_v2_nullable_ma_csec_configuration import ManaV2NullableMaCsecConfiguration
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -38,11 +39,12 @@ class ManaV2LagInterfaceConfig(BaseModel):
     ipv6: Optional[ManaV2InterfaceIpConfig] = None
     lacp: Optional[ManaV2LacpConfig] = None
     lag_members: Optional[Dict[str, ManaV2NullableLagMemberInterface]] = Field(default=None, alias="lagMembers")
+    macsec: Optional[ManaV2NullableMaCsecConfiguration] = None
     minimum_members: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="minimumMembers")
     mtu: Optional[Annotated[int, Field(strict=True, ge=0)]] = None
     segment: Optional[StrictStr] = None
     subinterfaces: Optional[Dict[str, ManaV2NullableInterfaceLagvlanConfig]] = None
-    __properties: ClassVar[List[str]] = ["adminStatus", "alias", "description", "ipv4", "ipv6", "lacp", "lagMembers", "minimumMembers", "mtu", "segment", "subinterfaces"]
+    __properties: ClassVar[List[str]] = ["adminStatus", "alias", "description", "ipv4", "ipv6", "lacp", "lagMembers", "macsec", "minimumMembers", "mtu", "segment", "subinterfaces"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -99,6 +101,9 @@ class ManaV2LagInterfaceConfig(BaseModel):
                 if self.lag_members[_key_lag_members]:
                     _field_dict[_key_lag_members] = self.lag_members[_key_lag_members].to_dict()
             _dict['lagMembers'] = _field_dict
+        # override the default output from pydantic by calling `to_dict()` of macsec
+        if self.macsec:
+            _dict['macsec'] = self.macsec.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each value in subinterfaces (dict)
         _field_dict = {}
         if self.subinterfaces:
@@ -130,6 +135,7 @@ class ManaV2LagInterfaceConfig(BaseModel):
             )
             if obj.get("lagMembers") is not None
             else None,
+            "macsec": ManaV2NullableMaCsecConfiguration.from_dict(obj["macsec"]) if obj.get("macsec") is not None else None,
             "minimumMembers": obj.get("minimumMembers"),
             "mtu": obj.get("mtu"),
             "segment": obj.get("segment"),

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "graphiant_sdk"
-version = "25.12.1"
+version = "26.1.1"
 description = "Graphiant APIs"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
 license = "NoLicense"

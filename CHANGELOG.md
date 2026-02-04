@@ -5,6 +5,31 @@ All notable changes to the Graphiant SDK Python package will be documented in th
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [26.1.1] - 2026-02-03
+
+### Added
+- **Assurance – DNS proxy:**
+  - New endpoints: create, read list, update, and delete DNS proxy entries
+  - New schemas: `AssuranceDnsProxyEntry`, `V2AssuranceCreateDnsproxyEntryPostRequest`/`PostResponse`, `V2AssuranceUpdateDnsproxyEntryPostRequest`/`PostResponse`, `V2AssuranceReadDnsproxyListGetResponse`, `V2AssuranceDeleteDnsproxyEntryDeleteResponse`
+- **B2B extranet peering:**
+  - New endpoint: `PUT /v1/extranets-b2b-peering/consumer/{id}/prefixes` – update consumer prefixes
+  - New endpoint: `PUT /v1/extranets-b2b-peering/match/service-to-customer/service-status` – set match service-to-customer status (e.g. pause)
+  - New schemas: `V1ExtranetsB2bPeeringConsumerIdPrefixesPutRequest`/`PutResponse`, `V1ExtranetsB2bPeeringMatchServiceToCustomerServiceStatusPutRequest`/`PutResponse`
+- **Device & interface – MACsec:**
+  - New `macsec` support on interfaces and LAG interface config via `ManaV2InterfaceMaCsec`, `ManaV2NullableMaCsecConfiguration`, `ManaV2MaCsecConfiguration`
+  - New schemas: `ManaV2PskConfiguration`, `ManaV2SakConfiguration`, `ManaV2NullablePskConfiguration`, `ManaV2NullableSakConfiguration`
+- **Device – SLA conformance:**
+  - New `slaConformance` on device and edge device config via `ManaV2SlaConformance`, `ManaV2NullableSlaConformance`
+- **Auth – MFA:**
+  - Login response extended for MFA: `email`, `mfaType`, `stateToken`, `status` on `V1AuthLoginPostResponse`
+
+### Changed
+- **Version:**
+  - Updated package version from 25.12.1 to 26.1.1
+  - Updated API documentation reference to `graphiant_api_docs_v26.1.1.json`
+- **IAM Customer:** added `description`, `marketplaceId`
+- **B2B extranet match details:** `ManaV2B2bExtranetServiceCustomerMatchDetails` extended with `consumerId`, `oldConsumerPrefixes`, `oldServicePrefixes`; `ManaV2B2BExtranetServiceCustomerMatchDetailsProducerPrefix` schema defined in components
+
 ## [25.12.1] - 2025-12-17
 
 ### Added

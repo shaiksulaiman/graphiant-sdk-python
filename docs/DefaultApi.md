@@ -232,6 +232,7 @@ Method | HTTP request | Description
 [**v1_extranets_b2b_id_producer_get**](DefaultApi.md#v1_extranets_b2b_id_producer_get) | **GET** /v1/extranets-b2b/{id}/producer | 
 [**v1_extranets_b2b_id_put**](DefaultApi.md#v1_extranets_b2b_id_put) | **PUT** /v1/extranets-b2b/{id} | 
 [**v1_extranets_b2b_peering_consumer_customer_id_consumer_details_get**](DefaultApi.md#v1_extranets_b2b_peering_consumer_customer_id_consumer_details_get) | **GET** /v1/extranets-b2b-peering/consumer/{customerId}/consumer-details | 
+[**v1_extranets_b2b_peering_consumer_id_prefixes_put**](DefaultApi.md#v1_extranets_b2b_peering_consumer_id_prefixes_put) | **PUT** /v1/extranets-b2b-peering/consumer/{id}/prefixes | 
 [**v1_extranets_b2b_peering_consumer_match_id_match_details_get**](DefaultApi.md#v1_extranets_b2b_peering_consumer_match_id_match_details_get) | **GET** /v1/extranets-b2b-peering/consumer/{matchId}/match-details | 
 [**v1_extranets_b2b_peering_consumer_match_id_post**](DefaultApi.md#v1_extranets_b2b_peering_consumer_match_id_post) | **POST** /v1/extranets-b2b-peering/consumer/{matchId} | 
 [**v1_extranets_b2b_peering_customer_id_delete**](DefaultApi.md#v1_extranets_b2b_peering_customer_id_delete) | **DELETE** /v1/extranets-b2b-peering/customer/{id} | 
@@ -240,6 +241,7 @@ Method | HTTP request | Description
 [**v1_extranets_b2b_peering_match_service_to_customer_id_delete**](DefaultApi.md#v1_extranets_b2b_peering_match_service_to_customer_id_delete) | **DELETE** /v1/extranets-b2b-peering/match/service-to-customer/{id} | 
 [**v1_extranets_b2b_peering_match_service_to_customer_id_get**](DefaultApi.md#v1_extranets_b2b_peering_match_service_to_customer_id_get) | **GET** /v1/extranets-b2b-peering/match/service-to-customer/{id} | 
 [**v1_extranets_b2b_peering_match_service_to_customer_post**](DefaultApi.md#v1_extranets_b2b_peering_match_service_to_customer_post) | **POST** /v1/extranets-b2b-peering/match/service-to-customer | 
+[**v1_extranets_b2b_peering_match_service_to_customer_service_status_put**](DefaultApi.md#v1_extranets_b2b_peering_match_service_to_customer_service_status_put) | **PUT** /v1/extranets-b2b-peering/match/service-to-customer/service-status | 
 [**v1_extranets_b2b_peering_match_services_summary_id_get**](DefaultApi.md#v1_extranets_b2b_peering_match_services_summary_id_get) | **GET** /v1/extranets-b2b-peering/match/services/summary/{id} | 
 [**v1_extranets_b2b_peering_producer_id_get**](DefaultApi.md#v1_extranets_b2b_peering_producer_id_get) | **GET** /v1/extranets-b2b-peering/producer/{id} | 
 [**v1_extranets_b2b_peering_producer_id_matching_customers_summary_get**](DefaultApi.md#v1_extranets_b2b_peering_producer_id_matching_customers_summary_get) | **GET** /v1/extranets-b2b-peering/producer/{id}/matching-customers-summary | 
@@ -446,8 +448,10 @@ Method | HTTP request | Description
 [**v2_assurance_bucket_services_post**](DefaultApi.md#v2_assurance_bucket_services_post) | **POST** /v2/assurance/bucket-services | 
 [**v2_assurance_bucket_topologies_post**](DefaultApi.md#v2_assurance_bucket_topologies_post) | **POST** /v2/assurance/bucket-topologies | 
 [**v2_assurance_bucketdetails_post**](DefaultApi.md#v2_assurance_bucketdetails_post) | **POST** /v2/assurance/bucketdetails | 
+[**v2_assurance_create_dnsproxy_entry_post**](DefaultApi.md#v2_assurance_create_dnsproxy_entry_post) | **POST** /v2/assurance/create-dnsproxy-entry | 
 [**v2_assurance_create_user_report_post**](DefaultApi.md#v2_assurance_create_user_report_post) | **POST** /v2/assurance/create-user-report | 
 [**v2_assurance_createclassifiedapplication_post**](DefaultApi.md#v2_assurance_createclassifiedapplication_post) | **POST** /v2/assurance/createclassifiedapplication | 
+[**v2_assurance_delete_dnsproxy_entry_delete**](DefaultApi.md#v2_assurance_delete_dnsproxy_entry_delete) | **DELETE** /v2/assurance/delete-dnsproxy-entry | 
 [**v2_assurance_delete_user_report_delete**](DefaultApi.md#v2_assurance_delete_user_report_delete) | **DELETE** /v2/assurance/delete-user-report | 
 [**v2_assurance_deleteclassifiedapplication_delete**](DefaultApi.md#v2_assurance_deleteclassifiedapplication_delete) | **DELETE** /v2/assurance/deleteclassifiedapplication | 
 [**v2_assurance_download_user_report_get**](DefaultApi.md#v2_assurance_download_user_report_get) | **GET** /v2/assurance/download-user-report | 
@@ -455,6 +459,7 @@ Method | HTTP request | Description
 [**v2_assurance_enterprisesummary_post**](DefaultApi.md#v2_assurance_enterprisesummary_post) | **POST** /v2/assurance/enterprisesummary | 
 [**v2_assurance_flow_summary_post**](DefaultApi.md#v2_assurance_flow_summary_post) | **POST** /v2/assurance/flow-summary | 
 [**v2_assurance_getclassifiedapplicationlist_get**](DefaultApi.md#v2_assurance_getclassifiedapplicationlist_get) | **GET** /v2/assurance/getclassifiedapplicationlist | 
+[**v2_assurance_read_dnsproxy_list_get**](DefaultApi.md#v2_assurance_read_dnsproxy_list_get) | **GET** /v2/assurance/read-dnsproxy-list | 
 [**v2_assurance_read_user_report_list_get**](DefaultApi.md#v2_assurance_read_user_report_list_get) | **GET** /v2/assurance/read-user-report-list | 
 [**v2_assurance_scoredetails_post**](DefaultApi.md#v2_assurance_scoredetails_post) | **POST** /v2/assurance/scoredetails | 
 [**v2_assurance_topology_client_session_details_post**](DefaultApi.md#v2_assurance_topology_client_session_details_post) | **POST** /v2/assurance/topology-client-session-details | 
@@ -466,6 +471,7 @@ Method | HTTP request | Description
 [**v2_assurance_topology_region_summary_post**](DefaultApi.md#v2_assurance_topology_region_summary_post) | **POST** /v2/assurance/topology-region-summary | 
 [**v2_assurance_topology_site_summaries_post**](DefaultApi.md#v2_assurance_topology_site_summaries_post) | **POST** /v2/assurance/topology-site-summaries | 
 [**v2_assurance_unclassifiedapplicationprofilesummary_post**](DefaultApi.md#v2_assurance_unclassifiedapplicationprofilesummary_post) | **POST** /v2/assurance/unclassifiedapplicationprofilesummary | 
+[**v2_assurance_update_dnsproxy_entry_post**](DefaultApi.md#v2_assurance_update_dnsproxy_entry_post) | **POST** /v2/assurance/update-dnsproxy-entry | 
 [**v2_assurance_updateclassifiedapplication_post**](DefaultApi.md#v2_assurance_updateclassifiedapplication_post) | **POST** /v2/assurance/updateclassifiedapplication | 
 [**v2_assurance_version_post**](DefaultApi.md#v2_assurance_version_post) | **POST** /v2/assurance/version | 
 [**v2_audit_logs_post**](DefaultApi.md#v2_audit_logs_post) | **POST** /v2/audit/logs | 
@@ -18259,6 +18265,87 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v1_extranets_b2b_peering_consumer_id_prefixes_put**
+> V1ExtranetsB2bPeeringConsumerIdPrefixesPutResponse v1_extranets_b2b_peering_consumer_id_prefixes_put(authorization, id, v1_extranets_b2b_peering_consumer_id_prefixes_put_request)
+
+Update B2B extranet peering service consumer
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.models.v1_extranets_b2b_peering_consumer_id_prefixes_put_request import V1ExtranetsB2bPeeringConsumerIdPrefixesPutRequest
+from graphiant_sdk.models.v1_extranets_b2b_peering_consumer_id_prefixes_put_response import V1ExtranetsB2bPeeringConsumerIdPrefixesPutResponse
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
+    id = 1234567891011 # int | consumer id
+    v1_extranets_b2b_peering_consumer_id_prefixes_put_request = graphiant_sdk.V1ExtranetsB2bPeeringConsumerIdPrefixesPutRequest() # V1ExtranetsB2bPeeringConsumerIdPrefixesPutRequest | 
+
+    try:
+        api_response = api_instance.v1_extranets_b2b_peering_consumer_id_prefixes_put(authorization, id, v1_extranets_b2b_peering_consumer_id_prefixes_put_request)
+        print("The response of DefaultApi->v1_extranets_b2b_peering_consumer_id_prefixes_put:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_extranets_b2b_peering_consumer_id_prefixes_put: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **id** | **int**| consumer id | 
+ **v1_extranets_b2b_peering_consumer_id_prefixes_put_request** | [**V1ExtranetsB2bPeeringConsumerIdPrefixesPutRequest**](V1ExtranetsB2bPeeringConsumerIdPrefixesPutRequest.md)|  | 
+
+### Return type
+
+[**V1ExtranetsB2bPeeringConsumerIdPrefixesPutResponse**](V1ExtranetsB2bPeeringConsumerIdPrefixesPutResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v1_extranets_b2b_peering_consumer_match_id_match_details_get**
 > V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetResponse v1_extranets_b2b_peering_consumer_match_id_match_details_get(authorization, match_id)
 
@@ -18870,6 +18957,85 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**V1ExtranetsB2bPeeringMatchServiceToCustomerPostResponse**](V1ExtranetsB2bPeeringMatchServiceToCustomerPostResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_extranets_b2b_peering_match_service_to_customer_service_status_put**
+> V1ExtranetsB2bPeeringMatchServiceToCustomerServiceStatusPutResponse v1_extranets_b2b_peering_match_service_to_customer_service_status_put(authorization, v1_extranets_b2b_peering_match_service_to_customer_service_status_put_request)
+
+Pause B2B match service to customer
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.models.v1_extranets_b2b_peering_match_service_to_customer_service_status_put_request import V1ExtranetsB2bPeeringMatchServiceToCustomerServiceStatusPutRequest
+from graphiant_sdk.models.v1_extranets_b2b_peering_match_service_to_customer_service_status_put_response import V1ExtranetsB2bPeeringMatchServiceToCustomerServiceStatusPutResponse
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
+    v1_extranets_b2b_peering_match_service_to_customer_service_status_put_request = graphiant_sdk.V1ExtranetsB2bPeeringMatchServiceToCustomerServiceStatusPutRequest() # V1ExtranetsB2bPeeringMatchServiceToCustomerServiceStatusPutRequest | 
+
+    try:
+        api_response = api_instance.v1_extranets_b2b_peering_match_service_to_customer_service_status_put(authorization, v1_extranets_b2b_peering_match_service_to_customer_service_status_put_request)
+        print("The response of DefaultApi->v1_extranets_b2b_peering_match_service_to_customer_service_status_put:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v1_extranets_b2b_peering_match_service_to_customer_service_status_put: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **v1_extranets_b2b_peering_match_service_to_customer_service_status_put_request** | [**V1ExtranetsB2bPeeringMatchServiceToCustomerServiceStatusPutRequest**](V1ExtranetsB2bPeeringMatchServiceToCustomerServiceStatusPutRequest.md)|  | 
+
+### Return type
+
+[**V1ExtranetsB2bPeeringMatchServiceToCustomerServiceStatusPutResponse**](V1ExtranetsB2bPeeringMatchServiceToCustomerServiceStatusPutResponse.md)
 
 ### Authorization
 
@@ -34729,6 +34895,83 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v2_assurance_create_dnsproxy_entry_post**
+> V2AssuranceCreateDnsproxyEntryPostResponse v2_assurance_create_dnsproxy_entry_post(authorization, v2_assurance_create_dnsproxy_entry_post_request)
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.models.v2_assurance_create_dnsproxy_entry_post_request import V2AssuranceCreateDnsproxyEntryPostRequest
+from graphiant_sdk.models.v2_assurance_create_dnsproxy_entry_post_response import V2AssuranceCreateDnsproxyEntryPostResponse
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
+    v2_assurance_create_dnsproxy_entry_post_request = graphiant_sdk.V2AssuranceCreateDnsproxyEntryPostRequest() # V2AssuranceCreateDnsproxyEntryPostRequest | 
+
+    try:
+        api_response = api_instance.v2_assurance_create_dnsproxy_entry_post(authorization, v2_assurance_create_dnsproxy_entry_post_request)
+        print("The response of DefaultApi->v2_assurance_create_dnsproxy_entry_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v2_assurance_create_dnsproxy_entry_post: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **v2_assurance_create_dnsproxy_entry_post_request** | [**V2AssuranceCreateDnsproxyEntryPostRequest**](V2AssuranceCreateDnsproxyEntryPostRequest.md)|  | 
+
+### Return type
+
+[**V2AssuranceCreateDnsproxyEntryPostResponse**](V2AssuranceCreateDnsproxyEntryPostResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v2_assurance_create_user_report_post**
 > V2AssuranceCreateUserReportPostResponse v2_assurance_create_user_report_post(authorization, v2_assurance_create_user_report_post_request)
 
@@ -34873,6 +35116,79 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v2_assurance_delete_dnsproxy_entry_delete**
+> object v2_assurance_delete_dnsproxy_entry_delete(authorization)
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
+
+    try:
+        api_response = api_instance.v2_assurance_delete_dnsproxy_entry_delete(authorization)
+        print("The response of DefaultApi->v2_assurance_delete_dnsproxy_entry_delete:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v2_assurance_delete_dnsproxy_entry_delete: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details
@@ -35394,6 +35710,80 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**V2AssuranceGetclassifiedapplicationlistGetResponse**](V2AssuranceGetclassifiedapplicationlistGetResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v2_assurance_read_dnsproxy_list_get**
+> V2AssuranceReadDnsproxyListGetResponse v2_assurance_read_dnsproxy_list_get(authorization)
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.models.v2_assurance_read_dnsproxy_list_get_response import V2AssuranceReadDnsproxyListGetResponse
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
+
+    try:
+        api_response = api_instance.v2_assurance_read_dnsproxy_list_get(authorization)
+        print("The response of DefaultApi->v2_assurance_read_dnsproxy_list_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v2_assurance_read_dnsproxy_list_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+
+### Return type
+
+[**V2AssuranceReadDnsproxyListGetResponse**](V2AssuranceReadDnsproxyListGetResponse.md)
 
 ### Authorization
 
@@ -36238,6 +36628,82 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**V2AssuranceUnclassifiedapplicationprofilesummaryPostResponse**](V2AssuranceUnclassifiedapplicationprofilesummaryPostResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v2_assurance_update_dnsproxy_entry_post**
+> object v2_assurance_update_dnsproxy_entry_post(authorization, v2_assurance_update_dnsproxy_entry_post_request)
+
+### Example
+
+* Api Key Authentication (jwtAuth):
+
+```python
+import graphiant_sdk
+from graphiant_sdk.models.v2_assurance_update_dnsproxy_entry_post_request import V2AssuranceUpdateDnsproxyEntryPostRequest
+from graphiant_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.graphiant.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = graphiant_sdk.Configuration(
+    host = "https://api.graphiant.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: jwtAuth
+configuration.api_key['jwtAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['jwtAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with graphiant_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = graphiant_sdk.DefaultApi(api_client)
+    authorization = 'authorization_example' # str | Bearer token. Format: Bearer <your_token_here>
+    v2_assurance_update_dnsproxy_entry_post_request = graphiant_sdk.V2AssuranceUpdateDnsproxyEntryPostRequest() # V2AssuranceUpdateDnsproxyEntryPostRequest | 
+
+    try:
+        api_response = api_instance.v2_assurance_update_dnsproxy_entry_post(authorization, v2_assurance_update_dnsproxy_entry_post_request)
+        print("The response of DefaultApi->v2_assurance_update_dnsproxy_entry_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DefaultApi->v2_assurance_update_dnsproxy_entry_post: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **str**| Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **v2_assurance_update_dnsproxy_entry_post_request** | [**V2AssuranceUpdateDnsproxyEntryPostRequest**](V2AssuranceUpdateDnsproxyEntryPostRequest.md)|  | 
+
+### Return type
+
+**object**
 
 ### Authorization
 

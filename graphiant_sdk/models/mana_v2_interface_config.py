@@ -23,6 +23,7 @@ from typing_extensions import Annotated
 from graphiant_sdk.models.mana_v2_interface_i_psec_config import ManaV2InterfaceIPsecConfig
 from graphiant_sdk.models.mana_v2_interface_ip_config import ManaV2InterfaceIpConfig
 from graphiant_sdk.models.mana_v2_nullable_interface_vlan_config import ManaV2NullableInterfaceVlanConfig
+from graphiant_sdk.models.mana_v2_nullable_ma_csec_configuration import ManaV2NullableMaCsecConfiguration
 from graphiant_sdk.models.mana_v2_nullable_tcp_mss_v4 import ManaV2NullableTcpMssV4
 from graphiant_sdk.models.mana_v2_nullable_tcp_mss_v6 import ManaV2NullableTcpMssV6
 from typing import Optional, Set
@@ -43,6 +44,7 @@ class ManaV2InterfaceConfig(BaseModel):
     lan: Optional[StrictStr] = None
     lldp_enabled: Optional[StrictBool] = Field(default=None, alias="lldpEnabled")
     loopback: Optional[StrictBool] = None
+    macsec: Optional[ManaV2NullableMaCsecConfiguration] = None
     max_transmission_unit: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="maxTransmissionUnit")
     security_zone: Optional[StrictStr] = Field(default=None, alias="securityZone")
     speed: Optional[StrictInt] = None
@@ -52,7 +54,7 @@ class ManaV2InterfaceConfig(BaseModel):
     tcp_mss_v6: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="tcpMssV6")
     v4_tcp_mss: Optional[ManaV2NullableTcpMssV4] = Field(default=None, alias="v4TcpMss")
     v6_tcp_mss: Optional[ManaV2NullableTcpMssV6] = Field(default=None, alias="v6TcpMss")
-    __properties: ClassVar[List[str]] = ["adminStatus", "alias", "circuit", "description", "duplex", "ipsec", "ipv4", "ipv6", "lan", "lldpEnabled", "loopback", "maxTransmissionUnit", "securityZone", "speed", "subinterfaces", "tcpMss", "tcpMssV4", "tcpMssV6", "v4TcpMss", "v6TcpMss"]
+    __properties: ClassVar[List[str]] = ["adminStatus", "alias", "circuit", "description", "duplex", "ipsec", "ipv4", "ipv6", "lan", "lldpEnabled", "loopback", "macsec", "maxTransmissionUnit", "securityZone", "speed", "subinterfaces", "tcpMss", "tcpMssV4", "tcpMssV6", "v4TcpMss", "v6TcpMss"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -102,6 +104,9 @@ class ManaV2InterfaceConfig(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of ipv6
         if self.ipv6:
             _dict['ipv6'] = self.ipv6.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of macsec
+        if self.macsec:
+            _dict['macsec'] = self.macsec.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each value in subinterfaces (dict)
         _field_dict = {}
         if self.subinterfaces:
@@ -138,6 +143,7 @@ class ManaV2InterfaceConfig(BaseModel):
             "lan": obj.get("lan"),
             "lldpEnabled": obj.get("lldpEnabled"),
             "loopback": obj.get("loopback"),
+            "macsec": ManaV2NullableMaCsecConfiguration.from_dict(obj["macsec"]) if obj.get("macsec") is not None else None,
             "maxTransmissionUnit": obj.get("maxTransmissionUnit"),
             "securityZone": obj.get("securityZone"),
             "speed": obj.get("speed"),

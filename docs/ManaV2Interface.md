@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **lag_interface** | [**ManaV2LagInterface**](ManaV2LagInterface.md) |  | [optional] 
 **lan** | **str** |  | [optional] 
 **lldp_enabled** | **bool** |  | [optional] 
+**macsec** | [**ManaV2InterfaceMaCsec**](ManaV2InterfaceMaCsec.md) |  | [optional] 
 **max_transmission_unit** | **int** |  | [optional] 
 **name** | **str** |  | [optional] 
 **oper_updated_at** | [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 

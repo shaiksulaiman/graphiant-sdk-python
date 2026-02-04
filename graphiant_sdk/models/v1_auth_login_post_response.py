@@ -29,7 +29,11 @@ class V1AuthLoginPostResponse(BaseModel):
     auth: Optional[StrictBool] = None
     token: Optional[StrictStr] = None
     account_type: Optional[StrictStr] = Field(default=None, alias="accountType")
-    __properties: ClassVar[List[str]] = ["auth", "token", "accountType"]
+    email: Optional[StrictStr] = Field(default=None, description="User email address (returned for MFA users)")
+    mfa_type: Optional[StrictStr] = Field(default=None, description="MFA type (returned for MFA users)", alias="mfaType")
+    state_token: Optional[StrictStr] = Field(default=None, description="State token for MFA verification (returned for MFA users)", alias="stateToken")
+    status: Optional[StrictStr] = Field(default=None, description="Authentication status (returned for MFA users)")
+    __properties: ClassVar[List[str]] = ["auth", "token", "accountType", "email", "mfaType", "stateToken", "status"]
 
     @field_validator('account_type')
     def account_type_validate_enum(cls, value):
@@ -94,7 +98,11 @@ class V1AuthLoginPostResponse(BaseModel):
         _obj = cls.model_validate({
             "auth": obj.get("auth"),
             "token": obj.get("token"),
-            "accountType": obj.get("accountType")
+            "accountType": obj.get("accountType"),
+            "email": obj.get("email"),
+            "mfaType": obj.get("mfaType"),
+            "stateToken": obj.get("stateToken"),
+            "status": obj.get("status")
         })
         return _obj
 

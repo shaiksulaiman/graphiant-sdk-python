@@ -23,6 +23,7 @@ from typing_extensions import Annotated
 from graphiant_sdk.models.google_protobuf_timestamp import GoogleProtobufTimestamp
 from graphiant_sdk.models.mana_v2_interface_address import ManaV2InterfaceAddress
 from graphiant_sdk.models.mana_v2_interface_i_psec import ManaV2InterfaceIPsec
+from graphiant_sdk.models.mana_v2_interface_ma_csec import ManaV2InterfaceMaCsec
 from graphiant_sdk.models.mana_v2_interface_sfp_optical_strength import ManaV2InterfaceSfpOpticalStrength
 from graphiant_sdk.models.mana_v2_interface_vlan import ManaV2InterfaceVlan
 from graphiant_sdk.models.mana_v2_lag_interface import ManaV2LagInterface
@@ -49,6 +50,7 @@ class ManaV2Interface(BaseModel):
     lag_interface: Optional[ManaV2LagInterface] = Field(default=None, alias="lagInterface")
     lan: Optional[StrictStr] = None
     lldp_enabled: Optional[StrictBool] = Field(default=None, alias="lldpEnabled")
+    macsec: Optional[ManaV2InterfaceMaCsec] = None
     max_transmission_unit: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="maxTransmissionUnit")
     name: Optional[StrictStr] = None
     oper_updated_at: Optional[GoogleProtobufTimestamp] = Field(default=None, alias="operUpdatedAt")
@@ -65,7 +67,7 @@ class ManaV2Interface(BaseModel):
     up: Optional[StrictBool] = None
     vrf_function_id: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, alias="vrfFunctionId")
     vrf_name: Optional[StrictStr] = Field(default=None, alias="vrfName")
-    __properties: ClassVar[List[str]] = ["alias", "circuit", "circuitName", "configUpdatedAt", "configuredMaxTransmissionUnit", "description", "duplex", "enabled", "id", "ipSec", "ipv4", "ipv6", "ipv6Addresses", "lagInterface", "lan", "lldpEnabled", "maxTransmissionUnit", "name", "operUpdatedAt", "phyAddress", "protocol", "securityZone", "sfpOpticalStrength", "speedMbps", "subinterfaces", "tcpMss", "tcpMssV4", "tcpMssV6", "type", "up", "vrfFunctionId", "vrfName"]
+    __properties: ClassVar[List[str]] = ["alias", "circuit", "circuitName", "configUpdatedAt", "configuredMaxTransmissionUnit", "description", "duplex", "enabled", "id", "ipSec", "ipv4", "ipv6", "ipv6Addresses", "lagInterface", "lan", "lldpEnabled", "macsec", "maxTransmissionUnit", "name", "operUpdatedAt", "phyAddress", "protocol", "securityZone", "sfpOpticalStrength", "speedMbps", "subinterfaces", "tcpMss", "tcpMssV4", "tcpMssV6", "type", "up", "vrfFunctionId", "vrfName"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -128,6 +130,9 @@ class ManaV2Interface(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of lag_interface
         if self.lag_interface:
             _dict['lagInterface'] = self.lag_interface.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of macsec
+        if self.macsec:
+            _dict['macsec'] = self.macsec.to_dict()
         # override the default output from pydantic by calling `to_dict()` of oper_updated_at
         if self.oper_updated_at:
             _dict['operUpdatedAt'] = self.oper_updated_at.to_dict()
@@ -173,6 +178,7 @@ class ManaV2Interface(BaseModel):
             "lagInterface": ManaV2LagInterface.from_dict(obj["lagInterface"]) if obj.get("lagInterface") is not None else None,
             "lan": obj.get("lan"),
             "lldpEnabled": obj.get("lldpEnabled"),
+            "macsec": ManaV2InterfaceMaCsec.from_dict(obj["macsec"]) if obj.get("macsec") is not None else None,
             "maxTransmissionUnit": obj.get("maxTransmissionUnit"),
             "name": obj.get("name"),
             "operUpdatedAt": GoogleProtobufTimestamp.from_dict(obj["operUpdatedAt"]) if obj.get("operUpdatedAt") is not None else None,

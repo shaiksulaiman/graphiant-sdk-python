@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **lan** | **str** |  | [optional] 
 **lldp_enabled** | **bool** |  | [optional] 
 **loopback** | **bool** |  | [optional] 
+**macsec** | [**ManaV2NullableMaCsecConfiguration**](ManaV2NullableMaCsecConfiguration.md) |  | [optional] 
 **max_transmission_unit** | **int** |  | [optional] 
 **security_zone** | **str** |  | [optional] 
 **speed** | **int** |  | [optional] 

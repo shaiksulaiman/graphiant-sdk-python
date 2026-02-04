@@ -44,6 +44,7 @@ Name | Type | Description | Notes
 **segments** | [**List[ManaV2Vrf]**](ManaV2Vrf.md) |  | [optional] 
 **serial_number** | **str** |  | [optional] 
 **site** | [**ManaV2Site**](ManaV2Site.md) |  | [optional] 
+**sla_conformance** | [**ManaV2SlaConformance**](ManaV2SlaConformance.md) |  | [optional] 
 **snmp** | [**ManaV2Snmp**](ManaV2Snmp.md) |  | [optional] 
 **software_version** | **str** |  | [optional] 
 **static_routes_enabled** | **bool** |  | [optional] 
