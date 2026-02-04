@@ -13,9 +13,9 @@ Refer [Graphiant Docs](https://docs.graphiant.com) to get started with [Graphian
 ## 📚 Documentation
 
 - **Official Documentation**: [Graphiant SDK Python Guide](https://docs.graphiant.com/docs/graphiant-sdk-python) <-> [Graphiant Automation Docs](https://docs.graphiant.com/docs/automation)
-- **API Reference**: [Graphiant SDK Python API Docs](docs/DefaultApi.md) <-> [Graphiant Portal REST API Guide](https://docs.graphiant.com/docs/graphiant-portal-rest-api)
+- **API Reference**: [Graphiant SDK Python API Docs](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/docs/DefaultApi.md) <-> [Graphiant Portal REST API Guide](https://docs.graphiant.com/docs/graphiant-portal-rest-api)
 - **Package**: [PyPI package - graphiant-sdk](https://pypi.org/project/graphiant-sdk)
-- **Changelog**: [CHANGELOG.md](CHANGELOG.md) - Detailed release notes and version history
+- **Changelog**: [CHANGELOG.md](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/CHANGELOG.md) - Detailed release notes and version history
 
 ## ✨ Features
 
@@ -123,7 +123,7 @@ from graphiant_sdk.models.v1_devices_device_id_config_put_response import V1Devi
 - `Put204Response` → `PutResponse`
 - `Post201Response` → `PostResponse`
 
-> **Note**: The vast majority of response classes have been updated. A few exceptions may remain (e.g., `V1AuthRefreshGet200Response`), but these are rare edge cases. When in doubt, check the current API file (`graphiant_sdk/api/default_api.py`) or the model documentation.
+> **Note**: The vast majority of response classes have been updated. A few exceptions may remain (e.g., `V1AuthRefreshGet200Response`), but these are rare edge cases. When in doubt, check the current API file ([graphiant_sdk/api/default_api.py](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/graphiant_sdk/api/default_api.py)) or the model documentation.
 
 #### 2. Find and Rename Inner Property Class Names
 
@@ -135,7 +135,7 @@ To find the new class name:
    - `V1GlobalSummaryPost200Response` → `V1GlobalSummaryPostResponse`
 
 2. **Step 2**: Check the documentation for the inner property's new class name:
-   - Open `docs/V1GlobalSummaryPostResponse.md`
+   - Open [docs/V1GlobalSummaryPostResponse.md](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/docs/V1GlobalSummaryPostResponse.md)
    - Find the property (e.g., `summaries`)
    - Note the new class name (e.g., `ManaV2GlobalObjectSummary`)
 
@@ -171,8 +171,8 @@ for summary in response.summaries:
 
 To find all endpoints and their request/response models:
 
-- **API Reference**: See `graphiant_sdk/api/default_api.py` or `docs/DefaultApi.md`
-- **Model Documentation**: Check individual model files in `docs/` directory (e.g., `docs/V1GlobalSummaryPostResponse.md`)
+- **API Reference**: See [graphiant_sdk/api/default_api.py](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/graphiant_sdk/api/default_api.py) or [docs/DefaultApi.md](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/docs/DefaultApi.md)
+- **Model Documentation**: Check individual model files in the [docs/](https://github.com/Graphiant-Inc/graphiant-sdk-python/tree/main/docs) directory (e.g., [docs/V1GlobalSummaryPostResponse.md](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/docs/V1GlobalSummaryPostResponse.md))
 
 ### Migration Checklist
 
@@ -184,8 +184,8 @@ To find all endpoints and their request/response models:
 
 ### Need Help?
 
-- Check the [API Reference](docs/DefaultApi.md) for endpoint details
-- Review model documentation in the `docs/` directory
+- Check the [API Reference](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/docs/DefaultApi.md) for endpoint details
+- Review model documentation in the [docs/](https://github.com/Graphiant-Inc/graphiant-sdk-python/tree/main/docs) directory
 - See [Support](#-support) section for additional resources
 
 ## 🔧 Advanced Usage
@@ -335,12 +335,12 @@ def get_device_info(api, bearer_token, device_id):
 
 This repository uses GitHub Actions for continuous integration and deployment:
 
-- **Linting** (`lint.yml`): Runs Flake8 and MyPy type checking on pull requests and pushes
-- **Testing** (`test.yml`): Runs pytest with coverage across Python 3.9, 3.10, 3.11, 3.12, and 3.13
-- **Building** (`build.yml`): Builds wheel and source distributions
-- **Releasing** (`release.yml`): Publishes to PyPI (manual trigger, admin-only)
+- **Linting** ([lint.yml](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/.github/workflows/lint.yml)): Runs Flake8 and MyPy type checking on pull requests and pushes
+- **Testing** ([test.yml](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/.github/workflows/test.yml)): Runs pytest with coverage across Python 3.9, 3.10, 3.11, 3.12, and 3.13
+- **Building** ([build.yml](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/.github/workflows/build.yml)): Builds wheel and source distributions
+- **Releasing** ([release.yml](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/.github/workflows/release.yml)): Publishes to PyPI (manual trigger, admin-only)
 
-See [`.github/workflows/README.md`](.github/workflows/README.md) for detailed workflow documentation.
+See [.github/workflows/README.md](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/.github/workflows/README.md) for detailed workflow documentation.
 
 ### Building from Source
 
@@ -446,7 +446,7 @@ password = os.getenv("GRAPHIANT_PASSWORD")
 host = os.getenv("GRAPHIANT_HOST", "https://api.graphiant.com")
 ```
 
-**Note**: For detailed security policies, vulnerability reporting, and security best practices, see [SECURITY.md](SECURITY.md).
+**Note**: For detailed security policies, vulnerability reporting, and security best practices, see [SECURITY.md](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/SECURITY.md).
 
 ## 🤝 Contributing
 
@@ -469,17 +469,17 @@ We welcome contributions! Please follow these steps:
 
 **Note**: All pull requests automatically run CI/CD checks (linting, testing across multiple Python versions). Ensure all checks pass before requesting review.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelines.
+See [CONTRIBUTING.md](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/CONTRIBUTING.md) for detailed contribution guidelines.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/LICENSE) file for details.
 
 ## 🆘 Support
 
 - **Official Documentation**: [Graphiant SDK Python Guide](https://docs.graphiant.com/docs/graphiant-sdk-python) <-> [Graphiant Automation Docs](https://docs.graphiant.com/docs/automation)
-- **API Reference**: [Graphiant SDK Python API Docs](docs/DefaultApi.md) <-> [Graphiant Portal REST API Guide](https://docs.graphiant.com/docs/graphiant-portal-rest-api)
-- **Changelog**: [CHANGELOG.md](CHANGELOG.md) - Detailed release notes and version history
+- **API Reference**: [Graphiant SDK Python API Docs](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/docs/DefaultApi.md) <-> [Graphiant Portal REST API Guide](https://docs.graphiant.com/docs/graphiant-portal-rest-api)
+- **Changelog**: [CHANGELOG.md](https://github.com/Graphiant-Inc/graphiant-sdk-python/blob/main/CHANGELOG.md) - Detailed release notes and version history
 - **Issues**: [GitHub Issues](https://github.com/Graphiant-Inc/graphiant-sdk-python/issues)
 - **Email**: support@graphiant.com
 
