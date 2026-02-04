@@ -23,6 +23,9 @@ on:
       - 'pyproject.toml'
       - 'setup.py'
 
+permissions:
+  contents: read
+
 jobs:
   flake8:
     name: Flake8 Linting
